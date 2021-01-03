@@ -1,7 +1,7 @@
 # JavaFX-For-Dummies-zh
 > 跟阿呆学 JavaFX
 
-<img src="assets/book-cover.jpg" alt="img" style="zoom:60%;" align="right"/>
+<img src="assets/book-cover.jpg" alt="img" style="zoom:40%;" align="right"/>
 
 ## 目录
 
@@ -10,7 +10,7 @@
   - 愚蠢的假设
   - 本书组织架构
     - Part Ⅰ: 开始使用 JavaFX
-    - Part Ⅱ: JavaFX 控件
+    - Part Ⅱ: JavaFX [控件]()
     - Part Ⅲ: 加强你的场景设计
     - Part Ⅳ: 让你的程序活起来
     - Part Ⅴ: 与“十”相关的部分
