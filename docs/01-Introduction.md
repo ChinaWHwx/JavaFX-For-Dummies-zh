@@ -74,13 +74,19 @@ Like any For Dummies book, this book is chock-full of helpful icons that draw yo
 
 Danger, Will Robinson! This icon highlights information that may help you avert disaster.
 
+
+
 <img src="assets/image-20210103235329436.png" width="80" align="left"/>
 
 Did I tell you about the memory course I took?
 
+
+
 <img src="assets/image-20210103235452916.png" width="80" align="left"/>
 
 Pay special attention to this icon; it lets you know that some particularly useful tidbit is at hand.
+
+
 
 <img src="assets/image-20210103235548312.png" width="80" align="left"/>
 
