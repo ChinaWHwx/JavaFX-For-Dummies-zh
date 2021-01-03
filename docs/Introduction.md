@@ -28,7 +28,7 @@ Whenever I describe sample Java code, I present it as follows:
 
 And Java class names, keywords, or other language elements are always shown in monospace type.
 
-## 愚蠢的假设
+## 鲁莽的假设
 
 In this book, I make very few assumptions about what you already may or may not know about JavaFX. But I do have to make two basic assumptions:
 

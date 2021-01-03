@@ -7,7 +7,7 @@
 
 - [介绍](docs/Introduction.md)
   - [关于本书](docs/Introduction.md#关于本书)
-  - [愚蠢的假设](docs/Introduction.md#愚蠢的假设)
+  - [鲁莽的假设](docs/Introduction.md#鲁莽的假设)
   - [本书组织架构](docs/Introduction.md#本书组织架构)
     - [Part Ⅰ: 开始使用 JavaFX](docs/Introduction.md#Part-I-开始使用-JavaFX)
     - [Part Ⅱ: JavaFX 控件](docs/Introduction.md#Part-II-JavaFX-控件)
