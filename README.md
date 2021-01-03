@@ -5,18 +5,18 @@
 
 ## 目录
 
-- [介绍](./docs/01-introduction.md)
-  -  [关于本书](./docs/01-introduction.md#About This Book)
-  -  [愚蠢的假设](./docs/01-introduction.md#Foolish Assumptions)
-  -  [本书组织架构](./docs/01-introduction.md#How This Book Is Organized)
-    - [Part Ⅰ: 开始使用 JavaFX](./docs/01-introduction.md#Part I: Getting Started with JavaFX)
-    - [Part Ⅱ: JavaFX 控件](./docs/01-introduction.md#Part II: JavaFX Controls)
-    - [Part Ⅲ: 加强你的场景设计](./docs/01-introduction.md#Part III: Enhancing Your Scenic Design)
-    - [Part Ⅳ: 让你的程序活起来](./docs/01-introduction.md#Part IV: Making Your Programs Come Alive)
-    - [Part Ⅴ: 与“十”相关的部分](./docs/01-introduction.md#Part V: The Part of Tens)
-  - [本书使用的图标](./docs/01-introduction.md#Icons Used in This Book)
-  - [本书之外](./docs/01-introduction.md#Beyond the Book)
-  - [下一步该去哪儿](./docs/01-introduction.md#Where to Go from Here)
+- [介绍](docs/01-introduction.md)
+  - [关于本书](docs/01-introduction.md#About This Book)
+  - [愚蠢的假设](docs/01-introduction.md#Foolish Assumptions)
+  - [本书组织架构](docs/01-introduction.md#How This Book Is Organized)
+    - [Part Ⅰ: 开始使用 JavaFX](docs/01-introduction.md#Part I: Getting Started with JavaFX)
+    - [Part Ⅱ: JavaFX 控件](docs/01-introduction.md#Part II: JavaFX Controls)
+    - [Part Ⅲ: 加强你的场景设计](docs/01-introduction.md#Part III: Enhancing Your Scenic Design)
+    - [Part Ⅳ: 让你的程序活起来](docs/01-introduction.md#Part IV: Making Your Programs Come Alive)
+    - [Part Ⅴ: 与“十”相关的部分](docs/01-introduction.md#Part V: The Part of Tens)
+  - [本书使用的图标](docs/01-introduction.md#Icons Used in This Book)
+  - [本书之外](docs/01-introduction.md#Beyond the Book)
+  - [下一步该去哪儿](docs/01-introduction.md#Where to Go from Here)
 - Part Ⅰ：开始使用 JavaFX
   - Chapter 1: 你好，JavaFX
     - JavaFX 是什么？
