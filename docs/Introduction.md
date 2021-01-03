@@ -10,23 +10,23 @@
 
 ## 关于本书
 
-This isn’t the kind of book you pick up and read from start to finish, as if it was a cheap novel. If I ever see you reading it at the beach, I’ll kick sand in your face. Beaches are for reading romance novels or murder mysteries, not programming books.
+这不是那种廉价小说，需要你从头读到尾。如果让我看到你在沙滩上读这本书，我会把沙子踢到你脸上。海滩是用来阅读爱情小说或者谋杀悬疑小说的，而不是编程书籍。
 
-Assuming, then, that you have found a more suitable location to read this book, you can, if you want, read it straight through starting with Chapter 1 and finishing with Chapter 20. However, this sequence isn’t necessary. If you are brand new to JavaFX programming, I suggest you read at least Part I in sequence so that you’ll gain a basic understanding of how JavaFX works. But after you have the basics down, you can read the chapters in whatever sequence makes sense for you. If you need to know about adding effects to a shape, skip straight to Chapter 14. For information about about animation, skip ahead to Chapter 17.
+假如你已经找到了一个更合适的阅读本书的地方，如果你愿意，你可以从第 1 章开始，到第 20 章结束。不过，这个顺序不是必需的。如果你是 JavaFX 编程新手，我建议你至少按顺序阅读第 1 部分，以便对 JavaFX 的工作原理有基本的了解。当你掌握了基础知识之后，就可以按照对你有意义的顺序来阅读这些章节。譬如你需要知道如何给图形添加效果，直接跳到第 14 章。想了解有关动画的信息，跳到第 17 章。
 
-You don’t have to memorize anything in this book. It’s a need-to-know book: You pick it up when you need to know something. Need a reminder on how to rotate a shape? Pick up the book. Can’t remember the details of the TilePane class? Pick up the book. After you find what you need, put down the book and get on with your life.
+您无需记住本书中的任何内容。这是一本“need-to-know”（需知）书籍：当你需要了解某些内容时，可以将其拿起。想知道关于旋转图形的提示？拿起这本书。忘记了 TilePane 类的详细信息？拿起这本书。在你找到需要的东西之后，放下它，继续你的生活。
 
-This book works like a reference. Start with the topic you want to find out about. Look for it in the Table of Contents or in the index. The Table of Contents is detailed enough that you can find most of the topics you’re looking for. If not, turn to the index, where you can find even more detail.
+这本书可作为参考书。从你想了解的主题开始。在目录或索引中查找它。目录很详细，足够找到你要找的大部分主题。如果没有，请转到索引，在那里你可以找到更多的细节。
 
-Of course, the book is loaded with information — so if you want to take a brief excursion into your topic, you’re more than welcome. If you want to know the big picture on the scene graph, read Chapter 7. But if you just want a reminder on how to set the maximum scene size, read just the section on the Scene class.
+当然，这本书包含了大量的信息——所以如果你想对你感兴趣的主题进行一个简短的浏览，非常欢迎。如果你想知道场景图的全貌，请阅读第 7 章。但如果你只想要如何设置场景尺寸最大值的提示，只需要阅读 Scene 类这一节。
 
-Whenever I describe sample Java code, I present it as follows:
+每当我描述 Java 代码示例时，都会将其如下所示：
 
 ```java
 @override public void start(Stage primaryStage)
 ```
 
-And Java class names, keywords, or other language elements are always shown in monospace type.
+Java 类名、关键字或其他的语言元素始终以等宽字体显示。
 
 ## 鲁莽的假设
 
