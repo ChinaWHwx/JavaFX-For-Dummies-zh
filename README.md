@@ -6,7 +6,7 @@
 ## 目录
 
 - [介绍](docs/Introduction.md)
-  - [关于本书](docs/Introduction.md#About-This-Book)
+  - [关于本书](docs/Introduction.md#关于本书)
   - [愚蠢的假设](docs/Introduction.md#Foolish-Assumptions)
   - [本书组织架构](docs/Introduction.md#How-This-Book-Is-Organized)
     - [Part Ⅰ: 开始使用 JavaFX](docs/Introduction.md#Part-I-Getting-Started-with-JavaFX)
@@ -16,7 +16,7 @@
     - [Part Ⅴ: 与“十”相关的部分](docs/Introduction.md#Part-V-The-Part-of-Tens)
   - [本书使用的图标](docs/Introduction.md#Icons-Used-in-This-Book)
   - [本书之外](docs/Introduction.md#Beyond-the-Book)
-  - [下一步该去哪儿](docs/Introduction.md#Where-to-Go-from-Here)
+  - [下一步该去哪儿](docs/Introduction.md#下一步该去哪儿)
 - [Part Ⅰ：开始使用 JavaFX](docs/Part-Ⅰ.md)
   - [Chapter 1: 你好，JavaFX](docs/Chapter-1.md)
     - JavaFX 是什么？

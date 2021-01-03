@@ -1,4 +1,4 @@
-# Introduction
+# 介绍
 
 In the beginning there was AWT, the Abstract Window Toolkit. AWT was Java’s first system for displaying window-based user interfaces in Java. AWT begat Swing, which soon became the preferred way to create user-friendly applications in Java.
 
@@ -8,7 +8,7 @@ Until recently, JavaFX was the red-headed stepchild of the Java world. It coexis
 
 So you’re holding the right book in your hands. JavaFX is an essential skill for every Java programmer to have at his or her disposal, and this book will help you master that skill.
 
-## About This Book
+## 关于本书
 
 This isn’t the kind of book you pick up and read from start to finish, as if it was a cheap novel. If I ever see you reading it at the beach, I’ll kick sand in your face. Beaches are for reading romance novels or murder mysteries, not programming books.
 
@@ -28,7 +28,7 @@ Whenever I describe sample Java code, I present it as follows:
 
 And Java class names, keywords, or other language elements are always shown in monospace type.
 
-## Foolish Assumptions
+## 愚蠢的假设
 
 In this book, I make very few assumptions about what you already may or may not know about JavaFX. But I do have to make two basic assumptions:
 
@@ -42,31 +42,31 @@ In this book, I make very few assumptions about what you already may or may not 
 
 There are no other prerequisites to this book.
 
-## How This Book Is Organized
+## 本书组织架构
 
 This book is organized into five parts. Here’s a brief description of what you find in each part.
 
-### Part I: Getting Started with JavaFX
+### Part I: 开始使用 JavaFX
 
 This part contains the information you need to get started with JavaFX programming. After a brief introduction to what JavaFX is and why it’s so popular, you discover the basics of creating simple JavaFX programs. You figure out how to create simple JavaFX scenes populated with common controls such as labels, text field, and buttons. Then, you find out how to write programs that respond to user input, such as when the user clicks a button or enters text into a text field. And finally, you read how to use basic layout managers to control the arrangement of controls in your JavaFX scene.
 
-### Part II: JavaFX Controls
+### Part II: JavaFX 控件
 
 The chapters in this part focus on the various types of controls you can use in a JavaFX application. Chapter 7 starts by explaining the details of how the JavaFX scene graph works and presents the details of the class hierarchy used by the various controls. Then, the remaining chapters in this part present information about specific types of controls, ranging from check boxes and radio buttons to tables and menus.
 
-### Part III: Enhancing Your Scenic Design
+### Part III: 加强你的场景设计
 
 The chapters in this part help you improve the appearance of your applications. First, you read about additional types of layout managers that give you more precise control over the way your user interface is arranged. Then, you discover how to use CSS styles to apply formatting details. Next, you figure out how to incorporate simple shapes into your scenes. And finally, you can read about JavaFX’s special effects, which let you embellish your display with shadows, motion blurs, and so on.
 
-### Part IV: Making Your Programs Come Alive
+### Part IV: 让你的程序活起来
 
 The chapters in this part focus on various ways to make your programs more responsive and engaging. You discover how to work with properties, which you can use to make one part of your user interface respond to changes in another part of your user interface. Then, you discover how to incorporate media including sound and video. Next, you figure out how to create sophisticated animations that make the objects on the screen dance about. And finally, you read how to create programs that respond to multi-finger gestures on touch-enabled devices.
 
-### Part V: The Part of Tens
+### Part V: 与“十”相关的部分
 
 This wouldn’t be a For Dummies book without a Part of Tens. Each of the chapters here presents ten items of special interest. Chapter 19 presents ten additional JavaFX controls that didn’t fit in Part II. And Chapter 20 presents ten steps to creating a JavaFX application that displays a three-dimensional scene.
 
-## Icons Used in This Book
+## 本书使用的图标
 
 Like any For Dummies book, this book is chock-full of helpful icons that draw your attention to items of particular importance. You find the following icons throughout this book:
 
@@ -78,7 +78,7 @@ Like any For Dummies book, this book is chock-full of helpful icons that draw yo
 
 <img src="assets/technical-stuff.png" width="80"/>Hold it — overly technical stuff is just around the corner. Obviously, because this is a programming book, almost every paragraph of the next 400 or so pages could get this icon. So I reserve it for those paragraphs that go into greater depth, down into explaining how something works under the covers probably deeper than you really need to know to use a feature, but often enlightening. You also sometimes find this icon when I want to illustrate a point with an example that uses some Java feature that hasn’t been covered so far in the book, but that is covered later. In those cases, the icon is just a reminder that you shouldn’t get bogged down in the details of the illustration, and instead focus on the larger point.
 
-## Beyond the Book
+## 本书之外
 
 A lot of extra content that you won’t find in this book is available at www. dummies.com. Go online to find the following:
 
@@ -104,6 +104,6 @@ A lot of extra content that you won’t find in this book is available at www. d
 >
 > ​	www.dummies.com/extras/javafx
 
-## Where to Go from Here
+## 下一步该去哪儿
 
 Yes, you can get there from here. With this book in hand, you’re ready to dive right into to the cool and refreshing water of the JavaFX pool. Browse through the Table of Contents and decide where you want to start. Be bold! Be courageous! Be adventurous! And above all, have fun!
