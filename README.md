@@ -13,7 +13,7 @@
     - [Part Ⅱ: JavaFX 控件](docs/01-Introduction.md#Part-II-JavaFX-Controls)
     - [Part Ⅲ: 加强你的场景设计](docs/01-Introduction.md#Part-III-Enhancing-Your-Scenic-Design)
     - [Part Ⅳ: 让你的程序活起来](docs/01-Introduction.md#Part-IV-Making-Your-Programs-Come-Alive)
-    - [Part Ⅴ: 与“十”相关的部分](docs/01-Introduction.md#Part V-The-Part-of-Tens)
+    - [Part Ⅴ: 与“十”相关的部分](docs/01-Introduction.md#Part-V-The-Part-of-Tens)
   - [本书使用的图标](docs/01-Introduction.md#Icons-Used-in-This-Book)
   - [本书之外](docs/01-Introduction.md#Beyond-the-Book)
   - [下一步该去哪儿](docs/01-Introduction.md#Where-to-Go-from-Here)
