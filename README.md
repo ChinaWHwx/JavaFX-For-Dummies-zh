@@ -17,7 +17,7 @@
   - [本书使用的图标](docs/Introduction.md#Icons-Used-in-This-Book)
   - [本书之外](docs/Introduction.md#Beyond-the-Book)
   - [下一步该去哪儿](docs/Introduction.md#Where-to-Go-from-Here)
-- Part Ⅰ：开始使用 JavaFX
+- [Part Ⅰ：开始使用 JavaFX](docs/Part-Ⅰ.md)
   - Chapter 1: 你好，JavaFX
     - JavaFX 是什么？
     - 仔细研究 JavaFX 的可能性
