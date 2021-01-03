@@ -6,9 +6,9 @@
 ## 目录
 
 - [介绍](./docs/01-introduction.md)
-  - [关于本书](./docs/01-introduction.md#About This Book)
-  - [愚蠢的假设](./docs/01-introduction.md#Foolish Assumptions)
-  - [本书组织架构](./docs/01-introduction.md#How This Book Is Organized)
+  -  [关于本书](./docs/01-introduction.md#About This Book)
+  -  [愚蠢的假设](./docs/01-introduction.md#Foolish Assumptions)
+  -  [本书组织架构](./docs/01-introduction.md#How This Book Is Organized)
     - [Part Ⅰ: 开始使用 JavaFX](./docs/01-introduction.md#Part I: Getting Started with JavaFX)
     - [Part Ⅱ: JavaFX 控件](./docs/01-introduction.md#Part II: JavaFX Controls)
     - [Part Ⅲ: 加强你的场景设计](./docs/01-introduction.md#Part III: Enhancing Your Scenic Design)
