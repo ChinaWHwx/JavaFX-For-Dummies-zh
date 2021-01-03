@@ -1,12 +1,12 @@
 # 介绍
 
-In the beginning there was AWT, the Abstract Window Toolkit. AWT was Java’s first system for displaying window-based user interfaces in Java. AWT begat Swing, which soon became the preferred way to create user-friendly applications in Java.
+最初有 AWT，抽象窗口工具包。 AWT 是 Java 第一个用于显示基于窗口的用户界面的系统。AWT 诞生了 Swing，它很快成为使用 Java 创建用户友好应用程序的首选方式。
 
-But then there was JavaFX, the worthy successor to the GUI throne. JavaFX is designed to create stunning user interfaces that can run on a wide variety of devices, including traditional desktop and portable computers, tablets, smartphones, TV set-top boxes, game consoles, and many other types of devices.
+但随后出现了JavaFX，GUI 宝座名副其实的继承者。JavaFX 旨在创建可在各种设备上运行的出色的用户界面，这些设备包括传统的台式机和手提电脑，平板电脑，智能手机，电视机顶盒，游戏机以及许多其他类型的设备。
 
-Until recently, JavaFX was the red-headed stepchild of the Java world. It coexisted with Java, but wasn’t an official part of Java. But beginning with Java version 8, JavaFX is now fully integrated into Java. And while JavaFX and Swing coexist today, Oracle has made it clear that Swing is in its twilight and JavaFX represents the future of user-interface programming.
+直到最近，JavaFX 还是 Java 世界的红发继子（比喻受到不公平对待）。它与 Java 共存，却不是 Java 的正式组成部分。但是从 Java 8 开始，JavaFX 已完全集成到 Java 中。虽然 JavaFX 和 Swing 现在是共存的，但 Oracle 已经明确表示 Swing 正处于黄昏时期，而 JavaFX 代表着用户界面编程的未来。
 
-So you’re holding the right book in your hands. JavaFX is an essential skill for every Java programmer to have at his or her disposal, and this book will help you master that skill.
+所以你手里拿的书是正确的。 JavaFX 是每个 Java 程序员都可以拥有的基本技能，本书将帮助你掌握它。
 
 ## 关于本书
 
