@@ -70,21 +70,13 @@ This wouldn’t be a For Dummies book without a Part of Tens. Each of the chapte
 
 Like any For Dummies book, this book is chock-full of helpful icons that draw your attention to items of particular importance. You find the following icons throughout this book:
 
-<img src="assets/warning.png" width="80"/>
+<img src="assets/warning.png" width="80"/>Danger, Will Robinson! This icon highlights information that may help you avert disaster.
 
-Danger, Will Robinson! This icon highlights information that may help you avert disaster.
+<img src="assets/remember.png" width="80"/>Did I tell you about the memory course I took?
 
-<img src="assets/remember.png" width="80"/>
+<img src="assets/tip.png" width="80"/>Pay special attention to this icon; it lets you know that some particularly useful tidbit is at hand.
 
-Did I tell you about the memory course I took?
-
-<img src="assets/tip.png" width="80"/>
-
-Pay special attention to this icon; it lets you know that some particularly useful tidbit is at hand.
-
-<img src="assets/technical-stuff.png" width="80"/>
-
-Hold it — overly technical stuff is just around the corner. Obviously, because this is a programming book, almost every paragraph of the next 400 or so pages could get this icon. So I reserve it for those paragraphs that go into greater depth, down into explaining how something works under the covers probably deeper than you really need to know to use a feature, but often enlightening. You also sometimes find this icon when I want to illustrate a point with an example that uses some Java feature that hasn’t been covered so far in the book, but that is covered later. In those cases, the icon is just a reminder that you shouldn’t get bogged down in the details of the illustration, and instead focus on the larger point.
+<img src="assets/technical-stuff.png" width="80"/>Hold it — overly technical stuff is just around the corner. Obviously, because this is a programming book, almost every paragraph of the next 400 or so pages could get this icon. So I reserve it for those paragraphs that go into greater depth, down into explaining how something works under the covers probably deeper than you really need to know to use a feature, but often enlightening. You also sometimes find this icon when I want to illustrate a point with an example that uses some Java feature that hasn’t been covered so far in the book, but that is covered later. In those cases, the icon is just a reminder that you shouldn’t get bogged down in the details of the illustration, and instead focus on the larger point.
 
 ## Beyond the Book
 
