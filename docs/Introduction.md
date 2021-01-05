@@ -56,11 +56,7 @@ Java 类名、关键字或其他语言元素始终以等宽字体显示。
 
 ### Part III: 加强你的场景设计
 
-本部分中的各章可帮助您改善应用程序的外观。首先，您了解了布局管理器的其他类型，这些类型的布局管理器使您可以更精确地控制用户界面的排列方式。然后，您发现如何使用CSS样式来应用格式设置详细信息。接下来，您将了解如何将简单的形状合并到场景中。最后，您可以阅读有关JavaFX的特殊效果的信息，这些效果可以使您的显示具有阴影，运动模糊等效果。
-
-本部分的章节将帮助您改进应用程序的外观。首先，您将了解到其他类型的布局管理器，它们可以让您更精确地控制用户界面的安排方式。然后，您将了解如何使用CSS样式来应用格式化细节。接下来，你要弄清楚如何将简单的形状整合到你的场景中。最后，您可以阅读关于JavaFX的特效，它允许您使用阴影、运动模糊等来修饰您的显示。
-
-The chapters in this part help you improve the appearance of your applications. First, you read about additional types of layout managers that give you more precise control over the way your user interface is arranged. Then, you discover how to use CSS styles to apply formatting details. Next, you figure out how to incorporate simple shapes into your scenes. And finally, you can read about JavaFX’s special effects, which let you embellish your display with shadows, motion blurs, and so on.
+这个部分的章节将帮助你改进应用程序的外观。首先，你将了解到其他类型的布局管理器，它们可以让你更精确地控制用户界面的排列方式。然后，你将看到如何使用 CSS 样式来设置格式细节。接下来，你会学到如何将简单的形状整合到你的场景中。最后，你会读到关于 JavaFX 特效相关的信息，这些效果可以为你的显示添加阴影，运动模糊等效果。
 
 ### Part IV: 让你的程序活起来
 
