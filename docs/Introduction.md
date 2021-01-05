@@ -64,82 +64,46 @@ Java 类名、关键字或其他语言元素始终以等宽字体显示。
 
 ### Part V: 与“十”相关的部分
 
-没有几分之一就不是一本傻瓜书。这里的每一章都提出十个特别感兴趣的项目。第19章介绍了另外10个第二部分不适合的JavaFX控件。第20章介绍创建显示三维场景的JavaFX应用程序的十个步骤。
-
-这不是一本“傻瓜书”如果没有几十个部分的话。这里的每一章都有十个特别有趣的项目。第19章介绍了另外10个JavaFX控件，它们在第二部分中没有出现。第20章介绍了创建一个显示三维场景的JavaFX应用程序的10个步骤。
-
-This wouldn’t be a For Dummies book without a Part of Tens. Each of the chapters here presents ten items of special interest. Chapter 19 presents ten additional JavaFX controls that didn’t fit in Part II. And Chapter 20 presents ten steps to creating a JavaFX application that displays a three-dimensional scene.
+如果缺了“十”相关的部分的话，这就不算是一本“傻瓜书”。这里的每一章都有 10 个特别有趣的项目。第19章介绍了在第二部分中没有出现的 10 个 JavaFX 控件。第 20 章展示了创建一个显示三维场景的 JavaFX 应用程序所需要的 10 个步骤。
 
 ## 本书使用的图标
 
-像任何《傻瓜书》一样，这本书充满了有用的图标，吸引您注意特别重要的项目。您可以在本书中找到以下图标：
+像其他“傻瓜书”一样，本书充满了有用的图标，吸引你注意特别重要的项目。你可以在本书中找到以下图标：
 
-像任何一本“傻瓜书”一样，这本书充满了有用的图标，可以吸引你对特别重要项目的注意。你可以在本书中找到以下图标:
+<img src="assets/warning.png" width="80"/>危险，威尔·鲁滨逊！此图标突出显示可以帮你避免灾难的信息。
 
-Like any For Dummies book, this book is chock-full of helpful icons that draw your attention to items of particular importance. You find the following icons throughout this book:
+<img src="assets/remember.png" width="80"/>我跟你说过我上的记忆课吗?
 
-<img src="assets/warning.png" width="80"/>危险，威尔·鲁滨逊！此图标突出显示可以帮助您避免灾难的信息。
+<img src="assets/tip.png" width="80"/>要特别注意这个图标，它告诉你一些特别有用的趣闻即将到来。
 
-危险,威尔•罗宾逊此图标突出显示可能帮助您避免灾难的信息。
-
-Danger, Will Robinson! This icon highlights information that may help you avert disaster.
-
-<img src="assets/remember.png" width="80"/>我是否告诉过我我的记忆课程？
-
-我跟你说过我上的记忆课吗?
-
-Did I tell you about the memory course I took?
-
-<img src="assets/tip.png" width="80"/>
-
-请特别注意此图标；它使您知道手头有一些特别有用的花絮。
-
-要特别注意这个图标;它让您知道一些特别有用的珍闻在手边。
-
-Pay special attention to this icon; it lets you know that some particularly useful tidbit is at hand.
-
-<img src="assets/technical-stuff.png" width="80"/>
-
-抓住它-过于技术性的东西指日可待。显然，由于这是一本编程书籍，因此接下来的约400页左右的几乎每个段落都可以显示此图标。因此，我将其保留给那些更深入的段落，以解释某些事物在幕后的工作方式，其作用可能比您真正想使用某功能所需的深度要大，但通常会启发人。当我想用一个示例来说明一个点时，有时也会找到该图标，该示例使用了本书中到目前为止尚未介绍的某些Java功能，但稍后会介绍。在这种情况下，该图标只是提醒您，您不应陷入插图的细节之中，而应专注于较大的点。
-
-慢着——技术含量过高的东西就在眼前。显然，因为这是一本编程书，接下来400页左右的几乎每一段都可以得到这个图标。所以我把它留给那些更深入的段落，深入地解释某些东西是如何工作的，可能比你使用一个特性所需要知道的还要深入，但通常很有启发性。当我想用一个示例来说明某一点时，您有时也会发现这个图标，该示例使用一些Java特性，这些特性目前在本书中还没有介绍，但稍后会介绍。在这种情况下，图标只是一个提醒，你不应该拘泥于插图的细节，而应该关注更大的一点。
-
-Hold it — overly technical stuff is just around the corner. Obviously, because this is a programming book, almost every paragraph of the next 400 or so pages could get this icon. So I reserve it for those paragraphs that go into greater depth, down into explaining how something works under the covers probably deeper than you really need to know to use a feature, but often enlightening. You also sometimes find this icon when I want to illustrate a point with an example that uses some Java feature that hasn’t been covered so far in the book, but that is covered later. In those cases, the icon is just a reminder that you shouldn’t get bogged down in the details of the illustration, and instead focus on the larger point.
+<img src="assets/technical-stuff.png" width="80"/>且慢——极具技术含量的东西就在眼前。显然，因为这是一本编程书，接下来 400 页左右几乎每一段都可以显示这个图标。所以我把它留给那些更深入的段落，这些段落会深入地解释某些事物表层下的工作原理，可能比使用一个功能所需要知道的还要深入，但通常很有启发性。当我想用一个示例来说明某一点时，你有时也会发现这个图标，该示例使用了一些目前在本书中尚未讲解的 Java 特性，但稍后会对它们进行介绍。在这种情况下，图标只是一个提醒，你不应该拘泥于例证的细节，而应该关注更大的方面。
 
 ## 本书之外
 
-您可以在www上找到本书中找不到的许多其他内容。 dummies.com。联机查找以下内容：
+<www.dummies.com> 网站提供了很多你在本书找不到的额外内容，请上网查阅以下资料:
 
-很多你在这本书中找不到的额外内容可以在www上找到。dummies.com。请上网查阅以下资料:
-
-A lot of extra content that you won’t find in this book is available at www.dummies.com. Go online to find the following:
-
-> ✓ Online articles covering additional topics at
+> ✓ 涵盖其他主题的在线文章在
+>
+> ​	<www.dummies.com/extras/javafx>
+>
+> ​	在这里，你可以找到一些涵盖了 JavaFX 其他特性但不适合放在本书的文章。
+>
+> ✓ 这本书的速查表在
+>
+> ​	<www.dummies.com/cheatsheet/javafx>
+>
+> ​	在这里，你可以找到 JavaFX 中一些最重要的类的便捷摘要。
+>
+> ✓ 这本书的代码清单在
 >
 > ​	www.dummies.com/extras/javafx
 >
-> ​	Here you find articles covering additional features of JavaFX that didn’t quite fit in the book.
+> ​	本书使用的所有代码都可以下载。
 >
-> ✓ The Cheat Sheet for this book is at
->
-> ​	www.dummies.com/cheatsheet/javafx
->
-> ​	Here you’ll find a convenient summary of some of the most important JavaFX classes.
->
-> ✓ Code listings for this book at
->
-> ​	www.dummies.com/extras/javafx
->
-> ​	All the code listings used in this book are available for download.
->
-> ✓ Updates to this book, if I have any, are also available at
+> ✓ 如果我对本书进行了更新，可以在这里获取
 >
 > ​	www.dummies.com/extras/javafx
 
 ## 下一步该去哪儿
 
-是的，您可以从这里到达那里。有了本书，您就可以直接深入JavaFX池的凉爽水域。浏览目录并确定要从哪里开始。大胆！要勇敢！冒险！最重要的是，玩得开心！
-
-是的，你可以从这里到那里。有了这本书，您就可以直接进入JavaFX池的清凉之水了。浏览目录，决定从哪里开始。大胆的!是勇敢的!冒险!最重要的是，玩得开心!
-
-Yes, you can get there from here. With this book in hand, you’re ready to dive right into to the cool and refreshing water of the JavaFX pool. Browse through the Table of Contents and decide where you want to start. Be bold! Be courageous! Be adventurous! And above all, have fun!
+如你所愿，当你拿上这本书，你就可以潜入 JavaFX 之池的清凉之水。翻开目录，看看你想先从哪里出发。怀揣大胆、勇敢和冒险之心！最重要的是，玩得开心！
