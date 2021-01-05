@@ -48,19 +48,11 @@ Java 类名、关键字或其他语言元素始终以等宽字体显示。
 
 ### Part I: 开始使用 JavaFX
 
-这一部分包含开始使用JavaFX编程所需的信息。在简要介绍什么是JavaFX以及它为什么如此流行之后，您将了解创建简单JavaFX程序的基础。您将弄清楚如何创建简单的JavaFX场景，其中填充了常用控件，例如标签，文本字段和按钮。然后，您了解如何编写响应用户输入的程序，例如当用户单击按钮或在文本字段中输入文本时。最后，您将学习如何使用基本的布局管理器来控制JavaFX场景中控件的排列。
-
-这一部分包含了开始使用JavaFX编程所需的信息。在简要介绍JavaFX是什么以及它为什么如此流行之后，您将了解创建简单JavaFX程序的基础知识。您将了解如何创建简单的JavaFX场景，这些场景使用常见的控件填充，如标签、文本字段和按钮。然后，您将了解如何编写响应用户输入的程序，例如当用户单击按钮或向文本字段输入文本时。最后，您将了解如何使用基本的布局管理器来控制JavaFX场景中控件的安排。
-
-This part contains the information you need to get started with JavaFX programming. After a brief introduction to what JavaFX is and why it’s so popular, you discover the basics of creating simple JavaFX programs. You figure out how to create simple JavaFX scenes populated with common controls such as labels, text field, and buttons. Then, you find out how to write programs that respond to user input, such as when the user clicks a button or enters text into a text field. And finally, you read how to use basic layout managers to control the arrangement of controls in your JavaFX scene.
+这一部分包含了开始使用 JavaFX 编程所需的信息。在简要介绍什么是 JavaFX 以及它为什么如此流行之后，你将了解到创建一个简单 JavaFX 程序的基础知识。带你弄清楚如何创建简单的，使用常见的控件，如标签、文本字段和按钮进行填充 JavaFX 场景。之后，你将学到如何编写如用户单击按钮或向文本字段输入文本时响应用户输入的程序。最后，你将学到如何使用基本的布局管理器来控制 JavaFX 场景中控件的排列。
 
 ### Part II: JavaFX 控件
 
-本部分的各章重点介绍可在JavaFX应用程序中使用的各种控件。第7章首先说明JavaFX场景图的工作原理，并介绍各种控件使用的类层次结构。然后，本部分的其余章节介绍了有关特定类型的控件的信息，从复选框和单选按钮到表格和菜单，不一而足。
-
-本部分的章节主要关注在JavaFX应用程序中可以使用的各种类型的控件。第7章从解释JavaFX场景图的工作细节开始，并展示了各种控件使用的类层次结构的细节。然后，本部分的其余章节将介绍有关特定类型控件的信息，从复选框和单选按钮到表格和菜单。
-
-The chapters in this part focus on the various types of controls you can use in a JavaFX application. Chapter 7 starts by explaining the details of how the JavaFX scene graph works and presents the details of the class hierarchy used by the various controls. Then, the remaining chapters in this part present information about specific types of controls, ranging from check boxes and radio buttons to tables and menus.
+本部分的章节主要关注 JavaFX 应用程序中可以使用的各种控件。第 7 章首先说明 JavaFX 场景图的工作原理，并展示了各种控件使用的类层次结构的细节。其余章节则介绍了特定类型控件的信息，从复选框和单选按钮到表格和菜单。
 
 ### Part III: 加强你的场景设计
 
