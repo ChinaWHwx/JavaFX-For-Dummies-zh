@@ -60,11 +60,7 @@ Java 类名、关键字或其他语言元素始终以等宽字体显示。
 
 ### Part IV: 让你的程序活起来
 
-本部分的各章重点介绍使程序更具响应性和吸引力的各种方法。您会发现如何使用属性，这些属性可用于使用户界面的一部分响应用户界面另一部分的更改。然后，您发现如何合并包括声音和视频在内的媒体。接下来，您将了解如何创建复杂的动画来使屏幕上的对象跳动。最后，您将学习如何在支持触摸的设备上创建响应多手指手势的程序。
-
-这一部分的章节着重于各种方法来使你的程序更有响应性和吸引力。您将了解如何使用属性，您可以使用属性使用户界面的一部分响应用户界面另一部分的更改。然后，您将了解如何合并包括声音和视频在内的媒体。接下来，您将了解如何创建复杂的动画，使屏幕上的对象跳舞。最后，您将了解如何创建程序来响应支持触摸的设备上的多手指手势。
-
-The chapters in this part focus on various ways to make your programs more responsive and engaging. You discover how to work with properties, which you can use to make one part of your user interface respond to changes in another part of your user interface. Then, you discover how to incorporate media including sound and video. Next, you figure out how to create sophisticated animations that make the objects on the screen dance about. And finally, you read how to create programs that respond to multi-finger gestures on touch-enabled devices.
+本部分的各章重点介绍使程序更具响应性和吸引力的各种方法。你将了解如何运用属性使用户界面的一部分响应另一部分的更改。然后，你将了解如何加入包括声音和视频在内的媒体。接下来，你将了解如何通过创建复杂的动画来使屏幕上的对象跳起舞来。最后，你将学习如何在支持触摸技术的设备上创建响应多手指手势的程序。
 
 ### Part V: 与“十”相关的部分
 
