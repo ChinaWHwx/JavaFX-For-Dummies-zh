@@ -80,17 +80,17 @@ Java 类名、关键字或其他语言元素始终以等宽字体显示。
 
 ## 本书之外
 
-<www.dummies.com> 网站提供了很多你在本书找不到的额外内容，请上网查阅以下资料:
+www.dummies.com 网站提供了很多你在本书找不到的额外内容，请上网查阅以下资料:
 
 > ✓ 涵盖其他主题的在线文章在
 >
-> ​	<www.dummies.com/extras/javafx>
+> ​	www.dummies.com/extras/javafx
 >
 > ​	在这里，你可以找到一些涵盖了 JavaFX 其他特性但不适合放在本书的文章。
 >
 > ✓ 这本书的速查表在
 >
-> ​	<www.dummies.com/cheatsheet/javafx>
+> ​	www.dummies.com/cheatsheet/javafx
 >
 > ​	在这里，你可以找到 JavaFX 中一些最重要的类的便捷摘要。
 >
