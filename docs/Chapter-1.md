@@ -1,37 +1,69 @@
 # Chapter 1 你好， JavaFX！
 
-> **In This Chapter**
+> **在本章节，你将**
 >
-> - Getting a quick overview of what JavaFX is and what you can do with it 
-> - Looking at a basic JavaFX program
-> - Downloading, installing, and configuring Java 8 so you can build your own JavaFX programs
-> - Building a JavaFX program the hard way, using nothing but Notepad and a command prompt
-> - Using TextPad to simplify JavaFX programming
-> - Using an IDE, such as Eclipse or NetBeans, for JavaFX programming
+> - 快速了解什么是 JavaFX 以及可以使用它做什么
+> - 查看一个基本的 JavaFX 程序
+> - 下载，安装和配置 Java 8，以便构建你自己的 JavaFX 程序
+> - 采用困难的方式，只使用记事本和命令提示符构建 JavaFX 程序
+> - 使用 TextPad 简化 JavaFX 编程
+> - 使用 IDE（例如 Eclipse 或 NetBeans）进行 JavaFX 编程
 
-Welcome to the wonderful world of JavaFX programming!
+欢迎来到 JavaFX 编程的奇妙世界！
 
-This chapter offers a gentle introduction to JavaFX programming. In the next few pages, you find out what JavaFX is, where it came from, and where it’s going. You see an example of the classic Hello, World! program implemented in JavaFX. And you discover how to set up your computer to develop your own JavaFX programs using several popular development tools for JavaFX.
+本章对 JavaFX 编程进行了平缓地介绍。在接下来的几页中，你将了解JavaFX是什么，来自哪里又去向何方。你会看到借助 JavaFX 实现的经典的 Hello World! 示例。你还将了解如何设置计算机，以便使用几种流行的 JavaFX 开发工具来开发 JavaFX 程序。
 
-Incidentally, I assume that you’re already somewhat familiar with Java programming. You don’t need to be a master programmer by any means, but you should have a solid understanding of the basics, such as creating programs that work with variables and statements (such as `if` and `for`) as well as creating your own classes and using the various classes that are part of the Java API (Application Programming Interface). I don’t take the time to explain such basics in this book, so if you need an introduction to Java before you dive into the details of JavaFX, I suggest you get a copy of my masterpiece, *Java All-in-One For Dummies* (Wiley Publishing, Inc.).
+顺带一提，我假设你已经对 Java 编程有所了解。不需要你精通，但应该掌握基础知识，比如创建使用了一些变量和语句（例如 `if` 和 `for`）的程序，创建自己的类或者使用 Java API（应用程序编程接口）中包含的各种类。我不会花时间在本书中解释这些基础知识，所以如果你在深入研究 JavaFX 的细节之前需要 Java 的入门知识，建议你阅读我的杰作《 Java All-in-One For Dummies (Wiley Publishing, Inc.)》。
+
+本章的目的是让您准备开始学习如何编写JavaFX程序。这样，您将在本章中看到一个简单的JavaFX程序的简短示例，在JavaFX旅程的早期阶段，这可能并不完整。请不要气disc。在第2章中，我逐行剖析了这个简单的JavaFX程序，因此您可以了解它的作用。在本章中，我将重点介绍JavaFX是什么，它可以做什么以及如何为JavaFX编程设置计算机的高级细节。
+
+本章的目的是让你准备好开始学习如何编写JavaFX程序。因此，在本章中，您将看到一个简单的JavaFX程序的简单示例，在您JavaFX之旅的早期阶段，它可能没有完全的意义。请不要气馁。在第2章中，我将逐行分析这个简单的JavaFX程序，以便您了解它的作用所在。在这一章中，我主要关注JavaFX是什么，你可以用它做什么，以及如何为JavaFX编程设置你的计算机。
 
 The intent of this chapter is to get you ready to start learning how to write JavaFX programs. As such, you see a brief example of a simple JavaFX program in this chapter, which might not make complete sense at this early stage of your JavaFX journey. Please don’t become discouraged. In Chapter 2, I dissect that simple JavaFX program line-by-line so you can see what makes it tick. For this chapter, I focus on the high-level details of what JavaFX is, what you can do with it, and how to get your computer set up for JavaFX programming.
+
+本书中使用的所有代码清单都可以从www.dummies.com/extras/javafx下载。
+
+本书中使用的所有代码清单都可以从www.dummies.com/extras/javafx下载。
 
 <img src="assets/remember.png" width="80" />All the code listings used in this book are available for download at www.dummies.com/extras/javafx.
 
 ## JavaFX 是什么？
 
+简而言之，JavaFX是Java软件包的集合，可让您向Java应用程序中添加精美的图形用户界面。使用JavaFX，您可以创建传统的Windows风格的用户界面，其中包括熟悉的控件，例如标签，按钮，文本框，复选框，下拉列表等。但是，您也可以为这些用户界面装饰一些精美的效果，例如光源，透视图和动画。因此，JavaFX中的FX。
+
+简单地说，JavaFX是一个Java包的集合，它允许您向Java应用程序添加精美的图形用户界面。使用JavaFX，您可以创建传统的windows风格的用户界面，其中包括熟悉的控件，如标签、按钮、文本框、复选框、下拉列表等。但是，您也可以用奇特的效果(如光源、透视和动画)装饰这些用户界面。因此JavaFX中出现了FX。
+
 Simply put, JavaFX is a collection of Java packages that lets you add fancy graphical user interfaces to your Java applications. With JavaFX, you can create traditional windows-style user interfaces that include familiar controls such as labels, buttons, text boxes, check boxes, drop-down lists, and so on. But you can also adorn these user interfaces with fancy effects such as light sources, perspective, and animation. Hence the *FX* in *JavaFX*.
+
+在JavaFX之前，在Java中创建图形用户界面的主要方法是通过Swing API。 JavaFX在许多方面与Swing相似，因此，如果您曾经使用Swing为Java程序创建用户界面，那么在学习JavaFX方面将是一个很好的起点。
+
+在JavaFX之前，在Java中创建图形用户界面的主要方法是通过Swing API。JavaFX在许多方面与Swing相似，因此，如果您曾经使用Swing为Java程序创建用户界面，那么在学习JavaFX方面就有了一个良好的开端。
 
 <img src="assets/technical-stuff.png" width="80"/>Prior to JavaFX, the main way to create graphical user interfaces in Java was through the Swing API. JavaFX is similar to Swing in many ways, so if you’ve ever used Swing to create a user interface for a Java program, you have a good head start at learning JavaFX.
 
+JavaFX作为附加软件包已经存在了一段时间，但是从Java版本8开始，JavaFX现在已经成为Java平台的官方标准部分。因此，在安装Java 8开发工具包（JDK 8）之后，您就可以开始使用自己喜欢的开发工具来开发自己的JavaFX应用程序了。在本章的后面，您将发现如何下载和安装JDK 8，并弄清楚如何使用三种流行的Java开发工具（TextPad，Eclipse和NetBeans）创建一个简单的JavaFX程序。
+
+JavaFX作为附加包出现已经有一段时间了，但是从Java version 8开始，JavaFX现在是Java平台的官方标准部分。因此，在安装了Java 8开发工具包(JDK 8)之后，您就可以开始使用您喜欢的开发工具开发自己的JavaFX应用程序了。在本章的后面，你会发现如何下载和安装JDK 8，以及如何使用三个流行的Java开发工具:TextPad、Eclipse和NetBeans创建一个简单的JavaFX程序。
+
 JavaFX has been around as an add-on package for a while, but beginning with Java version 8, JavaFX is now an official standard part of the Java platform. Thus, after you install the Java 8 Development Kit (*JDK 8*), you can begin developing your own JavaFX applications with your favorite development tools. Later in this chapter, you discover how to download and install JDK 8, and you figure out how to create a simple JavaFX program using three popular Java development tools: TextPad, Eclipse, and NetBeans.
 
+因为JavaFX现在是Java的标准部分，所以您可以在任何包含Java Runtime Environment（JRE）版本8的设备上运行JavaFX程序。其中包括计算机，平板电脑设备，智能手机以及任何其他可支持JDK8的设备。
+
+因为JavaFX现在是Java的一个标准部分，所以您可以在任何包含Java运行时环境(JRE)第8版的设备上运行JavaFX程序。这包括计算机、平板设备、智能手机和任何支持JDK8的其他设备。
+
 Because JavaFX is now a standard part of Java, you can run your JavaFX programs on any device that includes version 8 of the Java Runtime Environment (JRE). That includes computers, tablet devices, smartphones, and any other device that can support JDK8.
+
+甲骨文宣布JavaFX将最终取代Swing。尽管Java 8仍支持Swing，并且在可预见的将来将支持Swing，但是Oracle正在将新功能集中在JavaFX上。最终，Swing将变得过时。
+
+Oracle已经宣布JavaFX将最终取代Swing。尽管Java 8仍然支持Swing，而且在可预见的将来也会支持，但Oracle正在集中精力开发JavaFX上的新特性。最终，Swing将被淘汰。
 
 <img src="assets/technical-stuff.png" width="80" />Oracle has announced that JavaFX will eventually replace Swing. Although Swing is still supported in Java 8 and will be supported for the foreseeable future, Oracle is concentrating new features on JavaFX. Eventually, Swing will become obsolete.
 
 ## 仔细研究 JavaFX 的可能性
+
+JavaFX的基本优势之一是它可以让您轻松创建复杂的图形用户界面，以及大家都熟悉和喜爱的所有经典用户界面。因此，JavaFX提供了全方位的控件-实际上有数十种控件，包括诸如按钮，标签，文本框，复选框，下拉列表和菜单之类的经典控件，以及诸如选项卡式窗格和手风琴窗格。图1-1显示了一个典型的JavaFX用户界面，该界面使用这些控件类型中的几种来创建数据输入表单。
+
+JavaFX的一个基本优势是，它能够让您轻松地使用所有众所周知和喜爱的经典用户界面创建复杂的图形用户界面。因此，JavaFX提供了各种各样的控件——实际上有几十种控件，包括经典的按钮、标签、文本框、复选框、下拉列表和菜单，以及一些外来的控件，如选项卡窗格和手风琴窗格。图1-1显示了一个典型的JavaFX用户界面，它使用了几种控件类型来创建一个用于数据输入的表单。
 
 One of the basic strengths of JavaFX is its ability to let you easily create complicated graphical user interfaces with all the classic user interface gizmos everyone knows and loves. Thus, JavaFX provides a full range of controls — dozens of them in fact, including the classics such as buttons, labels, text boxes, check boxes, drop-down lists, and menus, as well as more exotic controls such as tabbed panes and accordion panes. Figure 1-1 shows a typical JavaFX user interface that uses several of these control types to create a form for data entry.
 
@@ -39,11 +71,27 @@ One of the basic strengths of JavaFX is its ability to let you easily create com
 
 ![Figure 1-1](./assets/Figure-1-1.png)
 
+确实，图1-1中显示的数据输入表单不是很引人注目。实际上，您可以使用Swing花费几乎相同的工作量轻松地创建这样的数据输入表单。在开始使用一些更高级的JavaFX功能之前，使用JavaFX而不是Swing的真正优势才变得显而易见。
+
+事实上，图1-1所示的数据输入表单并不是很显著。实际上，使用Swing可以很容易地创建这样的数据输入表单，而且花费的工作量差不多。在开始使用一些更高级的JavaFX特性之前，使用JavaFX相对于Swing的真正优势并不明显。
+
 Truthfully, the data-entry form shown in Figure 1-1 isn’t very remarkable. In fact, you can easily create data-entry forms like this using Swing with about the same amount of effort. The real advantages of using JavaFX over Swing don’t become apparent until you start using some of the more advanced JavaFX features.
+
+对于初学者，请考虑图1-1中所示的数据输入表单的一般外观。按钮，标签，文本字段，单选按钮和复选框的外观有些陈旧。图1-1中所示的对话框与20年前在Windows 95计算机上的Visual Basic中创建的对话框之间的视觉差异很小。
+
+对于初学者，考虑图1-1中所示的数据输入表单的一般外观。按钮、标签、文本字段、单选按钮和复选框的外观有些过时。图1-1所示的对话框与20年前在Windows 95电脑上用visual Basic创建的对话框在视觉上的区别很小。
 
 For starters, consider the general appearance of the data-entry form shown in Figure 1-1. The appearance of the buttons, labels, text fields, radio buttons, and check boxes are a bit dated. The visual differences between the dialog box shown in Figure 1-1 and one you could’ve created in Visual Basic on a Windows 95 computer 20 years ago are minor.
 
+JavaFX开始大放异彩的地方在于它能够通过使用级联样式表（CSS）轻松地改善用户界面的外观。通过将所有格式设置信息放在一个单独的文件（称为样式表）中，CSS使自定义用户界面控件外观的许多方面变得容易。样式表是一个简单的文本文件，提供了一组用于设置用户界面各种元素格式的规则。您可以使用CSS来控制数百种格式化属性。例如，您可以轻松更改文本属性，例如字体，大小，颜色和粗细，还可以添加背景图像，渐变填充，边框和特殊效果（例如阴影，模糊和光源）。
+
+JavaFX的突出之处在于它可以通过使用级联样式表(Cascading Style sheet, CSS)轻松地改善用户界面的外观。CSS通过将所有格式化信息放在一个称为样式表的单独文件中，使定制用户界面控件外观的许多方面变得容易。样式表是一个简单的文本文件，它提供一组规则来格式化用户界面的各种元素。您可以使用CSS来控制数百个格式化属性。例如，您可以轻松地更改文本属性(如字体、大小、颜色和重量)，还可以添加背景图像、渐变填充、边框和特殊效果(如阴影、模糊和光源)。
+
 Where JavaFX begins to shine is in its ability to easily allow you to improve the appearance of your user interface by using Cascading Style Sheets (*CSS*). CSS makes it easy to customize many aspects of the appearance of your user interface controls by placing all the formatting information in a separate file dubbed a style sheet. A style sheet is a simple text file that provides a set of rules for formatting the various elements of the user interface. You can use CSS to control literally hundreds of formatting properties. For example, you can easily change the text properties such as font, size, color, and weight, and you can add a background image, gradient fills, borders, and special effects such as shadows, blurs, and light sources.
+
+图1-2显示了图1-1中所示形式的一种变体，这次是使用CSS格式化的。用于此表单的简单CSS文件可添加背景图像，增强文本格式并修改按钮的外观。
+
+图1-2显示了图1-1中表单的变化，这次使用CSS格式。这个表单的简单CSS文件添加了一个背景图像，增强了文本格式，并修改了按钮的外观。
 
 Figure 1-2 shows a variation of the form that was shown in Figure 1-1, this time formatted with CSS. The simple CSS file for this form adds a background image, enhances the text formatting, and modifies the appearance of the buttons.
 
