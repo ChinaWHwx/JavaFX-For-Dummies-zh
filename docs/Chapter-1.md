@@ -2,10 +2,10 @@
 
 > **在本章节，你将**
 >
-> - 快速了解什么是 JavaFX 以及可以使用它做什么
+> - 快速了解什么是 JavaFX，可以使用它做什么
 > - 查看一个基本的 JavaFX 程序
-> - 下载，安装和配置 Java 8，以便构建你自己的 JavaFX 程序
-> - 采用困难的方式，只使用记事本和命令提示符构建 JavaFX 程序
+> - 下载，安装和配置 Java 8 以便构建你自己的 JavaFX 程序
+> - 使用记事本和命令提示符这种较困难的方式构建 JavaFX 程序
 > - 使用 TextPad 简化 JavaFX 编程
 > - 使用 IDE（例如 Eclipse 或 NetBeans）进行 JavaFX 编程
 
