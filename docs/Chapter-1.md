@@ -9,11 +9,11 @@
 > - 使用 TextPad 简化 JavaFX 编程
 > - 使用 IDE（例如 Eclipse 或 NetBeans）进行 JavaFX 编程
 
-欢迎来到 JavaFX 编程的奇妙世界！
+欢迎来到奇妙的 JavaFX 编程世界！
 
-本章对 JavaFX 编程进行了平缓地介绍。在接下来的几页中，你将了解JavaFX是什么，来自哪里又去向何方。你会看到借助 JavaFX 实现的经典的 Hello World! 示例。你还将了解如何设置计算机，以便使用几种流行的 JavaFX 开发工具来开发 JavaFX 程序。
+本章对 JavaFX 编程进行了简单的介绍。在接下来的几页中，你将了解 JavaFX 是什么，来自哪里又去向何方。你会看到借助 JavaFX 实现的经典的 Hello World! 示例。你还将了解如何设置计算机，使用几种流行的 JavaFX 开发工具来开发 JavaFX 程序。
 
-顺带一提，我假设你已经对 Java 编程有所了解。不需要你精通，但应该掌握基础知识，比如创建使用了一些变量和语句（例如 `if` 和 `for`）的程序，创建自己的类或者使用 Java API（应用程序编程接口）中包含的各种类。我不会花时间在本书中解释这些基础知识，所以如果你在深入研究 JavaFX 的细节之前需要 Java 的入门知识，建议你阅读我的杰作《 Java All-in-One For Dummies (Wiley Publishing, Inc.)》。
+顺带一提，我假设你已经对 Java 编程有所了解。不需要你精通，但应该掌握基础知识，比如创建使用了一些变量和语句（例如 `if` 和 `for`）的程序，创建自己的类或者使用 Java API（应用程序编程接口）中包含的各种类。我不会花时间在本书中解释这些基础知识，如果深入研究 JavaFX 的细节之前需要 Java 的入门知识，建议你阅读我的杰作《 Java All-in-One For Dummies (Wiley Publishing, Inc.)》。
 
 本章的目的是让您准备开始学习如何编写JavaFX程序。这样，您将在本章中看到一个简单的JavaFX程序的简短示例，在JavaFX旅程的早期阶段，这可能并不完整。请不要气disc。在第2章中，我逐行剖析了这个简单的JavaFX程序，因此您可以了解它的作用。在本章中，我将重点介绍JavaFX是什么，它可以做什么以及如何为JavaFX编程设置计算机的高级细节。
 
