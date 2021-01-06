@@ -1,4 +1,4 @@
-# Chapter 1 Hello, JavaFX!
+# Chapter 1 你好， JavaFX！
 
 > **In This Chapter**
 >
@@ -226,3 +226,217 @@ After you install the JDK, you need to configure your operating system so that i
 
 For Linux or Solaris, the procedure depends on which shell you’re using. For more information, consult the documentation for the shell you’re using. Note that this step is not necessary on Mac systems.
 
+## Developing the Click Me Program with Notepad
+
+After you install JDK 8, JavaFX is at your disposal. Strictly speaking, the only other tools besides JDK 8 you need to develop Java programs is a text editor and access to a command prompt. With the text editor, you create the Java source file, saving the file with the extension .java. Then, at the command prompt, you use Java’s command-line tools to compile and run the program.
+
+Windows comes with the free text-editor Notepad that is adequate enough for creating simple Java source files. Notepad is a generic text editor that doesn’t know anything about the peculiarities of Java source code. As a result, Notepad doesn’t give you any assistance with details such as indenting, matching up left and right braces, or drawing your attention to syntax errors.
+
+Nor will Notepad give you any help with compiling, running, or debugging a Java program. But Notepad does have the advantage of being free and simple to use. And, it’s already on your computer, so there’s nothing else to install.
+
+Here are the steps for creating the Click Me program using Notepad and Java’s command-line tools:
+
+1. Start Notepad.
+
+   To do that in Windows 7 or 8:
+
+   ​	a. Click the Start button (or press the Windows key on your keyboard).
+
+   ​	b. Type notepad and then press Enter.
+
+   Notepad comes to life, presenting you with an empty text editing window.
+
+2. Type the Click Me program text shown in Listing 1-1 into the editing window.
+
+   <img src="assets/warning.png" width="80"/>Be sure to type the text exactly as it appears in the listing. When you’re done, carefully review your work to make sure you typed it correctly.
+
+   Figure 1-5 shows how the Click Me program appears when correctly entered into Notepad. (Note that the Notepad window shown in the figure is not large enough to display the entire source file; you must scroll the window to see the entire file.)
+
+   > Figure 1-5: The Click Me program in Notepad.
+
+   ![Figure 1-5](assets/Figure 1-5.png)
+
+3. Choose File➪Save to save the file using the name ClickMe.java.
+
+   You can save the file in any folder you wish, but it is very important that the name be exactly ClickMe.java.
+
+   <img src="assets/tip.png" width="80"/>The name of a Java source file must exactly match the name of the class it contains, right down to capitalization. Thus, if you save the file as clickme.java instead of ClickMe.java, the Click Me program won’t work.
+
+4. Open a command prompt window.
+
+   In Windows 7 or 8, to open the window:
+
+   ​	a. Click the Start button or press the Windows key
+
+   ​	b. Type cmd and press Enter.
+
+5. Use the cd command to change to the folder in which you saved the source file in Step 3.
+
+   For example, if you saved the file in C:\Java, enter the following command:
+
+   ```
+   cd C:\Java
+   ```
+
+6. Use the javac command to compile the program.
+
+   Enter the following command:
+
+   ```
+   javac ClickMe.java
+   ```
+
+   Assuming you typed the program exactly right, the javac command doesn’t display any messages at all. If the program contains any errors, the compiler displays one or more error messages. If that happens, open the source file in Notepad, edit the text to correct the errors, save the file, and then repeat this step until no errors display.
+
+7. Use the java command to run the program.
+
+   Enter the following command:
+
+   ```
+   java ClickMe
+   ```
+
+   The window, as shown in Figure 1-6, appears.
+
+   > Figure 1-6: The Click Me program in action.
+
+   ![Figure 1-6](assets/Figure 1-6.png)
+
+8. Click the Click Me Please! button.
+
+   When you click the button, the text displayed on the button changes to You clicked me!.
+
+9. Close the Click Me program by clicking its Close button.
+
+   Congratulations! You’ve successfully created your first JavaFX program!
+
+## Developing the Click Me Program with TextPad
+
+TextPad is an inexpensive ($33) text editor that you can integrate with the Java Development Kit (JDK) to simplify the task of coding, compiling, and running Java programs. It isn’t a true integrated development environment (IDE), as it lacks features such as integrated debugging, code generators, and drag-and-drop tools for creating graphical user interfaces.
+
+TextPad is a popular tool for developing Java programs because of its simplicity and speed. It’s ideal for learning Java because it’s easy to use, so you can concentrate on learning Java rather than on learning how to use a complicated development environment.
+
+You can download a free evaluation version of TextPad from Helios Software Solutions at www.textpad.com. You can use the evaluation version free of charge, but if you decide to keep the program, you must pay for it. (Helios accepts credit card payments online.)
+
+If the Java JDK is already installed on your computer, when you install TextPad, TextPad automatically configures itself to compile and run Java programs. If you install the JDK after you install TextPad, you need to configure TextPad for Java by opening the Preferences dialog box (by choosing Configure➪Preferences), selecting Tools in the tree on the left side of the dialog box, and then choosing Add➪Java SDK Commands.
+
+After you configure TextPad to compile and run Java programs, you can create the Click Me program by following these steps:
+
+1. Start TextPad.
+
+   TextPad automatically opens with an empty source document named Document1.
+
+2. Choose File➪Save, type ClickMe.java, and then click Save.
+
+   This saves the file with the name ClickMe.java. Saving the file with a name that uses the extension .java before you enter any text into the file lets TextPad slip into Java editing mode, which makes it easier for you to enter and edit the Java source code for the Click Me program.
+
+3. Type the text of the Click Me program from Listing 1-1 into the Document1 window.
+
+   The basic text-editing capabilities of TextPad are similar to just about any other text editor you’ve worked with, so you should have no trouble entering and editing the text of the Click Me program.
+
+   As you edit the text, you may notice some of TextPad’s useful Java editing features. For example, TextPad automatically indents your code whenever you type an opening bracket, and then reverts to the previous indent when you type a closing bracket. TextPad also uses different colors to indicate keywords, variables, and other Java programming elements.
+
+   Figure 1-7 shows how the Click Me program appears in TextPad.
+
+   > Figure 1-7: The Click Me program in TextPad.
+
+   ![Figure 1-7](assets/Figure 1-7.png)
+
+4. Choose Tools➪Compile Java to compile the program.
+
+   If you prefer, you can use the keyboard shortcut Ctrl+1. Either way, the changes to your source file are automatically saved and the javac command is invoked to compile the program. If the program compiles successfully, the message Tool completed successfully appears in the Tool Results pane.
+
+   If you made a mistake entering the Click Me program, the compiler generates error messages that display in the Tool Results pane. If you double-click the first line of each error message, TextPad takes you to the spot where the error occurred so you can correct the error.
+
+5. Choose Tools➪Run Java Application to run the program.
+
+   A command prompt window opens and then the Click Me program window opens (refer to Figure 1-6).
+
+6. Click the Click Me Please! button.
+
+   When you click the button, the text displayed on the button changes to You clicked me!.
+
+7. Close the Click Me program by clicking its Close button.
+
+   The Click Me program window is closed, but the command prompt window remains visible, displaying the message Press any key to continue. . .
+
+8. Press any key to close the command prompt window.
+
+   That’s all there is to it!
+
+## Using an IDE to Create the Click Me Program
+
+An IDE, or integrated development environment, is a powerful tool that combines sophisticated text-editing features along with the ability to compile, execute, and debug programs in a variety of programming languages. An IDE can keep track of multiple source files that make up a single Java programming project and can even keep track of multiple versions of the source files.
+
+The two most popular IDEs for Java programming are Eclipse and NetBeans. Both are free, and both are comparable in their features. So the choice of which to use is a matter of preference. You can download Eclipse from www.eclipse.org. You can get NetBeans at https://netbeans.org.
+
+In the rest of this chapter, I show you how to create the Click Me program in Eclipse. Although the steps for creating the Click Me program in NetBeans are different, the concepts are the same.
+
+To get started with Eclipse, go to www.eclipse.org, click the Download Eclipse button, and download the current version of Eclipse IDE for Java Developers. Unlike most programs, Eclipse doesn’t have a complicated setup program. You just download the Zip file, extract all the files, and then run the Eclipse executable file (eclipse.exe) directly from the folder you extracted it to.
+
+<img src="assets/tip.png" width="80"/>If you’re using Windows, you may want to add a desktop shortcut for Eclipse to make it more convenient to start. To do that, open the folder that contains the eclipse.exe file, right-click the file and drag it to the desktop, release the mouse button, and choose Create Shortcut from the menu that appears. Then you can start Eclipse by double-clicking this desktop shortcut.
+
+Here are the steps for creating the Click Me program in Eclipse:
+
+1. Start Eclipse by running the Eclipse.exe program file or doubleclicking its desktop shortcut.
+
+   Eclipse comes to life, as shown in Figure 1-8.
+
+   > Figure 1-8: Eclipse awaits your command.
+
+   ![Figure 1-8](assets/Figure 1-8.png)
+
+2. Choose File➪New➪Java Project.
+
+   The New Java Project dialog box appears, as shown in Figure 1-9.
+
+   > Figure 1-9: Creating a new Java project.
+
+   ![Figure 1-9](assets/Figure 1-9.png)
+
+   3. Type ClickMe in the Project Name field and then click Finish.
+
+      Eclipse sets up the project and adds the project to the Package Explorer pane at the left side of the screen, as shown in Figure 1-10. (Initially, the project is collapsed so that just the top line of the project appears. For this figure, I expanded the project to reveal the subfolders named src and JRE System Library.)
+
+      > Figure 1-10: The ClickMe project shows up in the Package Explorer pane.
+
+      ![Figure 1-10](assets/Figure 1-10.png)
+
+
+4. Choose File➪New➪Class.
+
+   The New Java Class dialog box appears, as shown in Figure 1-11.
+
+5. Type ClickMe in the Name field and then click Finish.
+
+   Eclipse adds a file named ClickMe.java to the src folder and opens the file in the editing pane, as shown in Figure 1-12. Notice that Eclipse has also added a short stub of code to help you get started with the class.
+
+6. Delete the code stub in the ClickMe.java file; then type the text from Listing 1-1 into the editing pane.
+
+   Figure 1-13 shows what the ClickMe.java file looks like when you have correctly entered the program text.
+
+   > Figure 1-11: Adding a class file to the ClickMe project.
+
+   ![Figure 1-11](assets/Figure 1-11.png)
+
+7. Choose Run➪Run to run the program.
+
+   The Click Me program window opens, as shown earlier in Figure 1-6.
+
+8. Click the Click Me Please! button.
+
+   When you click the button, the text displayed on the button changes to You clicked me!.
+
+9. Close the Click Me program by clicking its Close button.
+
+   Congratulations! You have successfully created and run the Click Me program using Eclipse.
+
+Now that you’ve seen you can develop the simple Click Me program using Notepad and command-line tools, the simple TextPad Java text editor, or a more complicated IDE such as Eclipse, you’re ready to start discovering the specifics of how JavaFX programs work. So, in Chapter 2, I detail what every line of this simple program does. Onward and upward!
+
+> Figure 1-12: Eclipse displays the newly created ClickMe. java file.
+
+![Figure 1-12](assets/Figure 1-12.png)
+
+> Figure 1-13: The finished Click Me program in Eclipse.
+
+![Figure 1-13](assets/Figure 1-13.png)
