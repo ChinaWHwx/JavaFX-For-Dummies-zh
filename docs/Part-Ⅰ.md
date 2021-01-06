@@ -1,16 +1,16 @@
-# Part I Getting Started with JavaFX
+# Part I 开始使用 JavaFX
 
-**In this part . . .**
+**在这个部分，你将……**
 
-✓ Figuring out a basic program 
+✓ 弄清楚一个基本程序
 
-✓ Handling events 
+✓ 处理事件
 
-✓ Displaying simple scenes 
+✓ 简单场景展示
 
-✓ Arranging nodes 
+✓ 摆放节点
 
-✓ Responding to input controls 
+✓ 响应输入控件
 
-✓ Visit www.dummies.com for great Dummies content online.
+✓ 浏览网站 www.dummies.com 在线获取大量的傻瓜（阿呆）系列内容
 
