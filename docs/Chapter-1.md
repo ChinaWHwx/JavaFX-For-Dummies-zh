@@ -37,7 +37,7 @@ One of the basic strengths of JavaFX is its ability to let you easily create com
 
 > Figure 1-1: A typical JavaFX program.
 
-![Figure 1-1](./assets/Figure 1-1.png)
+![Figure 1-1](./assets/Figure-1-1.png)
 
 Truthfully, the data-entry form shown in Figure 1-1 isn’t very remarkable. In fact, you can easily create data-entry forms like this using Swing with about the same amount of effort. The real advantages of using JavaFX over Swing don’t become apparent until you start using some of the more advanced JavaFX features.
 
