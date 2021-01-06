@@ -49,7 +49,7 @@ Figure 1-2 shows a variation of the form that was shown in Figure 1-1, this time
 
 > Figure 1-2: JavaFX lets you use CSS to specify formatting for user interface elements.
 
-![Figure 1-2](assets/Figure 1-2.png)
+![Figure 1-2](assets/Figure-1-2.png)
 
 Besides CSS, JavaFX offers many other capabilities. These are the most important:
 
@@ -73,7 +73,7 @@ Figure 1-3 shows the user interface for a very simple JavaFX program that includ
 
 > Figure 1-3: The Click Me program.
 
-![Figure 1-3](assets/Figure 1-3.png)
+![Figure 1-3](assets/Figure-1-3.png)
 
 To give you an idea of what JavaFX programming looks like, Listing 1-1 shows the complete listing for this program. I won’t explain the details of how this program works — I examine this program in painstaking detail in Chapter 2. For now, I just want you to get the big picture to give you a feel for what JavaFX programming looks like.
 
@@ -204,7 +204,7 @@ After you install the JDK, you need to configure your operating system so that i
 
    > Figure 1-4: The Environment Variables dialog box.
 
-   ![Figure 1-4](assets/Figure 1-4.png)
+   ![Figure 1-4](assets/Figure-1-4.png)
 
 4. In the System Variables list, scroll to the Path variable, select it, and then click the Edit button.
 
@@ -254,7 +254,7 @@ Here are the steps for creating the Click Me program using Notepad and Java’s 
 
    > Figure 1-5: The Click Me program in Notepad.
 
-   ![Figure 1-5](assets/Figure 1-5.png)
+   ![Figure 1-5](assets/Figure-1-5.png)
 
 3. Choose File➪Save to save the file using the name ClickMe.java.
 
@@ -300,7 +300,7 @@ Here are the steps for creating the Click Me program using Notepad and Java’s 
 
    > Figure 1-6: The Click Me program in action.
 
-   ![Figure 1-6](assets/Figure 1-6.png)
+   ![Figure 1-6](assets/Figure-1-6.png)
 
 8. Click the Click Me Please! button.
 
@@ -340,7 +340,7 @@ After you configure TextPad to compile and run Java programs, you can create the
 
    > Figure 1-7: The Click Me program in TextPad.
 
-   ![Figure 1-7](assets/Figure 1-7.png)
+   ![Figure 1-7](assets/Figure-1-7.png)
 
 4. Choose Tools➪Compile Java to compile the program.
 
@@ -384,7 +384,7 @@ Here are the steps for creating the Click Me program in Eclipse:
 
    > Figure 1-8: Eclipse awaits your command.
 
-   ![Figure 1-8](assets/Figure 1-8.png)
+   ![Figure 1-8](assets/Figure-1-8.png)
 
 2. Choose File➪New➪Java Project.
 
@@ -392,7 +392,7 @@ Here are the steps for creating the Click Me program in Eclipse:
 
    > Figure 1-9: Creating a new Java project.
 
-   ![Figure 1-9](assets/Figure 1-9.png)
+   ![Figure 1-9](assets/Figure-1-9.png)
 
    3. Type ClickMe in the Project Name field and then click Finish.
 
@@ -400,7 +400,7 @@ Here are the steps for creating the Click Me program in Eclipse:
 
       > Figure 1-10: The ClickMe project shows up in the Package Explorer pane.
 
-      ![Figure 1-10](assets/Figure 1-10.png)
+      ![Figure 1-10](assets/Figure-1-10.png)
 
 
 4. Choose File➪New➪Class.
@@ -417,7 +417,7 @@ Here are the steps for creating the Click Me program in Eclipse:
 
    > Figure 1-11: Adding a class file to the ClickMe project.
 
-   ![Figure 1-11](assets/Figure 1-11.png)
+   ![Figure 1-11](assets/Figure-1-11.png)
 
 7. Choose Run➪Run to run the program.
 
@@ -435,8 +435,8 @@ Now that you’ve seen you can develop the simple Click Me program using Notepad
 
 > Figure 1-12: Eclipse displays the newly created ClickMe. java file.
 
-![Figure 1-12](assets/Figure 1-12.png)
+![Figure 1-12](assets/Figure-1-12.png)
 
 > Figure 1-13: The finished Click Me program in Eclipse.
 
-![Figure 1-13](assets/Figure 1-13.png)
+![Figure 1-13](assets/Figure-1-13.png)
