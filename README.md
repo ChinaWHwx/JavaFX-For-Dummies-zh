@@ -18,14 +18,14 @@
   - [本书之外](docs/Introduction.md#本书之外)
   - [下一步该去哪儿](docs/Introduction.md#下一步该去哪儿)
 - [Part Ⅰ：开始使用 JavaFX](docs/Part-Ⅰ.md)
-  - [Chapter 1: 你好，JavaFX](docs/Chapter-1.md)
+  - [Chapter 1: 你好，JavaFX！](docs/Chapter-1.md)
     - JavaFX 是什么？
     - 仔细研究 JavaFX 的可能性
     - 看看一个简单的 JavaFX 程序
     - 下载和安装 JavaFX
       - 下载 JDK 8
       - 安装 JDK 8
-      - 设置 Path
+      - 设置环境变量
     - 使用 Notepad 开发 Click Me 程序
     - 使用 TextPad 开发 Click Me 程序
     - 使用 IDE 创建 Click Me 程序
