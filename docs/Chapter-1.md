@@ -15,17 +15,9 @@
 
 顺带一提，我假设你已经对 Java 编程有所了解。不需要你精通，但应该掌握基础知识，比如创建使用了一些变量和语句（例如 `if` 和 `for`）的程序，创建自己的类或者使用 Java API（应用程序编程接口）中包含的各种类。我不会花时间在本书中解释这些基础知识，如果深入研究 JavaFX 的细节之前需要 Java 的入门知识，建议你阅读我的杰作《 Java All-in-One For Dummies (Wiley Publishing, Inc.)》。
 
-本章的目的是让您准备开始学习如何编写JavaFX程序。这样，您将在本章中看到一个简单的JavaFX程序的简短示例，在JavaFX旅程的早期阶段，这可能并不完整。请不要气disc。在第2章中，我逐行剖析了这个简单的JavaFX程序，因此您可以了解它的作用。在本章中，我将重点介绍JavaFX是什么，它可以做什么以及如何为JavaFX编程设置计算机的高级细节。
+本章的目的是让你准备好开始学习如何编写JavaFX程序。因此，在本章中你将看到一个简单的 JavaFX 程序示例。在 JavaFX 之旅的早期阶段，你可能不能完全理解这个程序。但不要气馁，在第 2 章中，我会对它逐行分析，以便你了解它的作用所在。在这一章中，我主要从高层关注 JavaFX 是什么，你可以用它做什么，以及如何为 JavaFX 编程设置你的计算机。
 
-本章的目的是让你准备好开始学习如何编写JavaFX程序。因此，在本章中，您将看到一个简单的JavaFX程序的简单示例，在您JavaFX之旅的早期阶段，它可能没有完全的意义。请不要气馁。在第2章中，我将逐行分析这个简单的JavaFX程序，以便您了解它的作用所在。在这一章中，我主要关注JavaFX是什么，你可以用它做什么，以及如何为JavaFX编程设置你的计算机。
-
-The intent of this chapter is to get you ready to start learning how to write JavaFX programs. As such, you see a brief example of a simple JavaFX program in this chapter, which might not make complete sense at this early stage of your JavaFX journey. Please don’t become discouraged. In Chapter 2, I dissect that simple JavaFX program line-by-line so you can see what makes it tick. For this chapter, I focus on the high-level details of what JavaFX is, what you can do with it, and how to get your computer set up for JavaFX programming.
-
-本书中使用的所有代码清单都可以从www.dummies.com/extras/javafx下载。
-
-本书中使用的所有代码清单都可以从www.dummies.com/extras/javafx下载。
-
-<img src="assets/remember.png" width="80" />All the code listings used in this book are available for download at www.dummies.com/extras/javafx.
+<img src="assets/remember.png" width="80" />本书中使用的所有代码清单都可以从 www.dummies.com/extras/javafx 下载。
 
 ## JavaFX 是什么？
 
