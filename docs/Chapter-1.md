@@ -21,17 +21,9 @@
 
 ## JavaFX 是什么？
 
-简而言之，JavaFX是Java软件包的集合，可让您向Java应用程序中添加精美的图形用户界面。使用JavaFX，您可以创建传统的Windows风格的用户界面，其中包括熟悉的控件，例如标签，按钮，文本框，复选框，下拉列表等。但是，您也可以为这些用户界面装饰一些精美的效果，例如光源，透视图和动画。因此，JavaFX中的FX。
+简而言之，JavaFX 是一系列 Java 包的集合，它允许你为 Java 应用程序添加精美的图形用户界面。借助 JavaFX，你可以创建传统 Windows 风格的用户界面，其中包括熟悉的控件，如标签、按钮、文本框、复选框、下拉列表等。你还可以为这些用户界面添加一些特殊效果，例如光源，透视图和动画。这就是 JavaFX 中的 FX 由来。
 
-简单地说，JavaFX是一个Java包的集合，它允许您向Java应用程序添加精美的图形用户界面。使用JavaFX，您可以创建传统的windows风格的用户界面，其中包括熟悉的控件，如标签、按钮、文本框、复选框、下拉列表等。但是，您也可以用奇特的效果(如光源、透视和动画)装饰这些用户界面。因此JavaFX中出现了FX。
-
-Simply put, JavaFX is a collection of Java packages that lets you add fancy graphical user interfaces to your Java applications. With JavaFX, you can create traditional windows-style user interfaces that include familiar controls such as labels, buttons, text boxes, check boxes, drop-down lists, and so on. But you can also adorn these user interfaces with fancy effects such as light sources, perspective, and animation. Hence the *FX* in *JavaFX*.
-
-在JavaFX之前，在Java中创建图形用户界面的主要方法是通过Swing API。 JavaFX在许多方面与Swing相似，因此，如果您曾经使用Swing为Java程序创建用户界面，那么在学习JavaFX方面将是一个很好的起点。
-
-在JavaFX之前，在Java中创建图形用户界面的主要方法是通过Swing API。JavaFX在许多方面与Swing相似，因此，如果您曾经使用Swing为Java程序创建用户界面，那么在学习JavaFX方面就有了一个良好的开端。
-
-<img src="assets/technical-stuff.png" width="80"/>Prior to JavaFX, the main way to create graphical user interfaces in Java was through the Swing API. JavaFX is similar to Swing in many ways, so if you’ve ever used Swing to create a user interface for a Java program, you have a good head start at learning JavaFX.
+<img src="assets/technical-stuff.png" width="80"/>JavaFX 出现之前，在 Java 中创建图形用户界面的主要方法是通过 Swing API。JavaFX 在许多方面与 Swing 有相似之处，所以如果你曾经使用过 Swing 为 Java 程序创建用户界面，这对学习 JavaFX 来说会是一个良好的开端。
 
 JavaFX作为附加软件包已经存在了一段时间，但是从Java版本8开始，JavaFX现在已经成为Java平台的官方标准部分。因此，在安装Java 8开发工具包（JDK 8）之后，您就可以开始使用自己喜欢的开发工具来开发自己的JavaFX应用程序了。在本章的后面，您将发现如何下载和安装JDK 8，并弄清楚如何使用三种流行的Java开发工具（TextPad，Eclipse和NetBeans）创建一个简单的JavaFX程序。
 
