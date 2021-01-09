@@ -19,16 +19,16 @@
   - [下一步该去哪儿](docs/Introduction.md#下一步该去哪儿)
 - [Part Ⅰ：开始使用 JavaFX](docs/Part-Ⅰ.md)
   - [Chapter 1: 你好，JavaFX！](docs/Chapter-1.md)
-    - JavaFX 是什么？
-    - 仔细研究 JavaFX 的可能性
-    - 看看一个简单的 JavaFX 程序
-    - 下载和安装 JavaFX
-      - 下载 JDK 8
-      - 安装 JDK 8
-      - 设置环境变量
-    - 使用 Notepad 开发 Click Me 程序
-    - 使用 TextPad 开发 Click Me 程序
-    - 使用 IDE 创建 Click Me 程序
+    - [JavaFX 是什么？](docs/Chapter-1.md#Javafx-是什么)
+    - [仔细研究 JavaFX 的可能性](docs/Chapter-1.md#仔细研究-JavaFX-的可能性)
+    - [看看一个简单的 JavaFX 程序](docs/Chapter-1.md#看看一个简单的-JavaFX-程序)
+    - [下载和安装 JavaFX](docs/Chapter-1.md#下载和安装-JavaFX)
+      - [下载 JDK 8](docs/Chapter-1.md#下载-JDK-8)
+      - [安装 JDK 8](docs/Chapter-1.md#安装-JDK-8)
+      - [设置环境变量](docs/Chapter-1.md#设置环境变量)
+    - [使用记事本开发 Click Me 程序](docs/Chapter-1.md#使用记事本开发-Click-Me-程序)
+    - [使用 TextPad 开发 Click Me 程序](docs/Chapter-1.md#使用-TextPad-开发-Click-Me-程序)
+    - [使用 IDE 创建 Click Me 程序](docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
   - Chapter 2: 深入 JavaFX 程序设计
     - 再看 Click Me 程序
     - 导入 JavaFX 相关包
