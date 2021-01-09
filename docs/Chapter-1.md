@@ -43,93 +43,45 @@ JavaFX 的基本优势之一是它能够让你轻松地使用所有大家都知�
 
 站在初学者的角度观察图 1-1 中所示的数据输入表单的整体外观，可以看出按钮、标签、文本字段、单选按钮和复选框的外观都有些过时，对话框也与 20 年前在 Windows 95 电脑上用 Visual Basic 创建的对话框看不出什么差别。
 
-JavaFX 开始大放异彩的地方在于它能够使用级联样式表（*CSS*）轻松地改善用户界面的外观。CSS 通过将所有的格式化信息放在一个称为样式表的单独文件中，使得定制用户界面控件外观的许多方面变得容易。样式表是一个简单的文本文件，它提供一组规则来格式化用户界面的各种元素。您可以使用 CSS 来控制数百个格式化属性。例如，你可以更改文本属性（如字体、大小、颜色和粗细），添加背景图片、渐变填充、边框和特殊效果（如阴影、模糊和光源）。
+JavaFX 开始大放异彩的地方在于它能够使用级联样式表（*CSS*）轻松地改善用户界面的外观。CSS 通过将所有的格式化信息放在一个称为样式表的单独文件中，使得定制用户界面控件外观的许多方面变得容易。样式表是一个简单的文本文件，它提供一组规则来格式化用户界面的各种元素。你可以使用 CSS 控制数百个格式化属性。例如，更改文本属性（如字体、大小、颜色和粗细），添加背景图片、渐变填充、边框和特殊效果（如阴影、模糊和光源）。
 
-图1-2显示了图1-1中所示形式的一种变体，这次是使用CSS格式化的。用于此表单的简单CSS文件可添加背景图像，增强文本格式并修改按钮的外观。
+图 1-2 显示了图 1-1 中所示形式的一种变体，这次使用了 CSS 进行格式化，为表单添加了背景图片，增强了文本格式，并修改了按钮的外观。
 
-图1-2显示了图1-1中表单的变化，这次使用CSS格式。这个表单的简单CSS文件添加了一个背景图像，增强了文本格式，并修改了按钮的外观。
-
-Figure 1-2 shows a variation of the form that was shown in Figure 1-1, this time formatted with CSS. The simple CSS file for this form adds a background image, enhances the text formatting, and modifies the appearance of the buttons.
-
-> 图1-2:JavaFX允许你使用CSS来指定用户界面元素的格式。
+> 图 1-2：JavaFX 允许你使用 CSS 指定用户界面元素的格式。
 >
-> 图1-2：JavaFX允许您使用CSS为用户界面元素指定格式。
->
-> Figure 1-2: JavaFX lets you use CSS to specify formatting for user interface elements.
 
 ![Figure 1-2](assets/Figure-1-2.png)
 
-除了CSS，JavaFX还提供许多其他功能。这些是最重要的：
+除了 CSS，JavaFX 还提供了许多其他功能。其中最重要的有：
 
-除了CSS, JavaFX还提供了许多其他功能。这些是最重要的:
+> **✓ 视觉效果：**你可以为用户界面元素添加各种视觉效果，包括阴影，反射，模糊，照明和透视。
+>
+> **✓ 动画：**你可以指定随时间逐渐过渡的动画效果。
+>
+> **✓ 图表：** 你可以使用 `javafx.scene.chart` 包的许多类来创建条形图，饼图和其他类型的图表。
+>
+> **✓ 3-D 对象：**你可以绘制三维对象，例如立方体，圆柱体，球体以及更复杂的形状。
+>
+> **✓ 触摸界面：** JavaFX 可以轻松应对触屏设备，例如智能手机和平板电脑。
+>
+> **✓ 属性绑定：**JavaFX 允许你创建可以绑定到用户界面控件的特殊数据类型 *properties*（属性）。例如，你可以创建一个属性来表示所购买商品的价格，然后把它与一个标签进行绑定。当价格的值发生变化时，标签上显示的值就会自动更新。
 
-Besides CSS, JavaFX offers many other capabilities. These are the most important:
-
-> ✓视觉效果：您可以在用户界面元素中添加各种视觉效果，包括阴影，反射，模糊，照明和透视效果。
->
-> ✓视觉效果:你可以添加各种各样的视觉效果到你的用户界面元素，包括阴影，反射，模糊，照明，透视效果。
->
-> **✓ Visual effects:** You can add a wide variety of visual effects to your user interface elements, including shadows, reflections, blurs, lighting, and perspective effects.
->
-> ✓动画：您可以指定动画效果，这些效果会随着时间的推移逐渐应用过渡效果。
->
-> 动画:你可以指定动画效果，随着时间的推移应用渐变。
->
-> **✓ Animation:** You can specify animation effects that apply transitions gradually over time.
->
-> ✓图表：您可以使用javafx.scene.chart包的许多类来创建条形图，饼图和许多其他图表类型。
->
-> 使用javafx.scene中的许多类，你可以创建柱状图、饼状图和许多其他图表类型。图包。
->
-> **✓ Charts:** You can create bar charts, pie charts, and many other chart types using the many classes of the `javafx.scene.chart package`.
->
-> ✓3-D对象：您可以绘制三维对象，例如立方体，圆柱体，球体和更复杂的形状。
->
-> 三维对象:您可以绘制三维对象，如立方体，圆柱体，球体，和更复杂的形状。
->
-> **✓ 3-D objects:** You can draw three-dimensional objects such as cubes, cylinders, spheres, and more complex shapes.
->
-> ✓触摸界面：JavaFX可以轻松处理触摸屏设备，例如智能手机和平板电脑。
->
-> 触摸界面:JavaFX可以轻松处理触屏设备，如智能手机和平板电脑。
->
-> **✓ Touch interface:** JavaFX can handle touchscreen devices, such as smartphones and tablet computers with ease.
->
-> ✓属性绑定：JavaFX允许您创建属性，这些属性是可以绑定到用户界面控件的特殊数据类型。例如，您可以创建一个表示所购买商品价格的属性，然后将标签绑定到该商品。然后，每当价格值更改时，标签显示的值就会自动更新。
->
-> 属性绑定:JavaFX允许你创建属性，这些属性是可以绑定到用户界面控件的特殊数据类型。例如，您可以创建一个表示所购买商品价格的属性，然后将标签绑定到它。然后，当价格的值发生变化时，标签显示的值就会自动更新。
->
-> **✓ Property bindings:** JavaFX lets you create *properties*, which are special data types that can be bound to user interface controls. For example, you can create a property that represents the price of an item being purchased and then bind a label to it. Then, whenever the value of the price changes, the value displayed by the label is updated automatically.
-
-在本书的后续章节中，您将发现所有这些功能以及更多内容。但是，现在是时候来看一个简单的JavaFX程序了，这样您就可以了解JavaFX程序的外观了。
-
-你会在本书后面的章节中发现所有这些特征和更多。但是现在，我们来看看一个简单的JavaFX程序，这样您就可以对JavaFX程序有个大致的了解。
-
-You discover all these features and more in later chapters of this book. But for now, it’s time to have a look at a simple JavaFX program so you can get a feel for what JavaFX programs look like.
+在本书后续章节，你会了解到以上所有及更多的特性。但是现在，我们先来看看一个简单的 JavaFX 程序，这样可以让你对 JavaFX 程序有个大致的了解。
 
 ## 看看一个简单的 JavaFX 程序
 
-图1-3显示了一个非常简单的JavaFX程序的用户界面，该程序仅包含一个按钮。最初，此按钮的文本显示“请点击我！”单击后，按钮的文本将更改为“您单击了我！”。如果再次单击该按钮，则文本将更改为“请点击我”！此后，每次您单击按钮时，文本在“请点击我”之间循环！然后你点击了我！
+图 1-3 显示了一个非常简单的 JavaFX 程序的用户界面，它只包含一个按钮。最初，按钮上显示的文字是 `Click me please!`。当按钮被点击后，文本变成了 `You clicked me!`。如果再次点击，文本会变回 `Click me please!` 。此后，每次单击按钮时，文本在 `Click me please!` 和 `You clicked me!` 之前交替变换。
 
-图1-3显示了一个非常简单的JavaFX程序的用户界面，它只包含一个按钮。最初，这个按钮的文字是请点击我!当点击时，按钮的文字变为你点击了我!如果您再次点击按钮，文本变回请点击我!此后，每次你点击按钮，文本之间循环点击我!然后你打了我!
-
-Figure 1-3 shows the user interface for a very simple JavaFX program that includes just a single button. Initially, the text of this button says `Click me please!` When clicked, the text of the button changes to `You clicked me!` If you click the button again, the text changes back to `Click me please!` Thereafter, each time you click the button, the text cycles between `Click me please!` and `You clicked me!`
-
-> 图1-3：Click Me程序。
+> 图 1-3：Click Me 程序。
 >
-> Figure 1-3: The Click Me program.
 
 ![Figure 1-3](assets/Figure-1-3.png)
 
-为了让您了解JavaFX编程的外观，清单1-1显示了该程序的完整清单。我不会解释该程序的工作原理，而是在第二章中详细研究该程序。现在，我只想让您对JavaFX编程的外观有个全面了解。
+为了让你了解 JavaFX 编程是什么样的，清单 1-1 完整展示了这个程序。这里我不会解释程序工作的细节 —— 我会在第 2 章对它进行详细研究。现在，我只想让你对 JavaFX 编程有个总体认知。
 
-为了让您了解JavaFX编程是什么样的，清单1-1显示了这个程序的完整清单。我不会解释这个程序如何工作的细节——我将在第2章详细地检查这个程序。现在，我只是想让您从总体上了解一下JavaFX编程是什么样的。
 
-To give you an idea of what JavaFX programming looks like, Listing 1-1 shows the complete listing for this program. I won’t explain the details of how this program works — I examine this program in painstaking detail in Chapter 2. For now, I just want you to get the big picture to give you a feel for what JavaFX programming looks like.
 
-清单1-1:Click Me程序
-
-**Listing 1-1: The Click Me Program**
+**清单1-1：Click Me 程序**
 
 ```java
 import javafx.application.*; 
@@ -148,18 +100,18 @@ public class ClickMe extends Application {
 
   @Override 
   public void start(Stage primaryStage) {
-    // Create the button 
+    // 创建按钮
     btn = new Button(); 
     btn.setText("Click me please!"); 
     btn.setOnAction(e -> buttonClick());
 
-    // Add the button to a layout pane 
+    // 将按钮添加到布局面板中
     BorderPane pane = new BorderPane(); 
     pane.setCenter(btn); 
-    // Add the layout pane to a scene 
+    // 将布局面板添加到场景中
     Scene scene = new Scene(pane, 300, 250);
 
-    // Finalize and show the stage 
+    // 完成并展示舞台
     primaryStage.setScene(scene); 
     primaryStage.setTitle("The Click Me App"); 
     primaryStage.show();
@@ -175,56 +127,28 @@ public class ClickMe extends Application {
 }
 ```
 
-以下段落简要说明Click Me程序的关键要素:
+以下段落简要说明了 Click Me 程序的关键点：
 
-以下段落简要说明了“单击我”程序的关键元素：
-
-The following paragraphs give a brief explanation of the key elements of the Click Me program:
-
-> 与其他Java程序一样，JavaFX程序以大量的import语句开始，这些语句引用了该程序将要使用的各种包。
+> ✓ 与其他 Java 程序一样，JavaFX 程序以大量的 `import` 语句开始，这些语句引用了该程序将要使用的各种包。
 >
-> 与任何其他Java程序一样，JavaFX程序以大量的import语句开始，这些语句引用程序将使用的各种包。
+>   在本例中，导入了 5 个包。大多数 JavaFX 程序都需要这 5 个包，以及提供更多高级功能的附加包。
 >
-> ✓ As with any other Java program, JavaFX programs begin with a slew of `import` statements that reference the various packages that will be used by the program.
+> ✓ 所有的 JavaFX 程序都要继承一个核心类 `Application`，它提供了程序的基本功能。继承 `Application` 类时必须重写 `start` 方法，JavaFX 会在应用程序启动时调用此方法。
 >
-> 对于本例，导入了五个包。大多数JavaFX程序需要这5个包，以及提供更高级特性的附加包。
+> ✓ 与其他 Java 程序一样，JavaFX 程序必须有一个 `main` 方法。在 JavaFX 程序中，`main` 方法调用 `Application` 类的 `launch` 方法来启动应用程序并调用 `start` 方法。
 >
-> 在本例中，导入了五个包。大多数JavaFX程序都需要这五个包以及提供更高级功能的附加包。
+> ✓ JavaFX 程序的用户界面元素按照容器层次结构进行排列。最顶层的是 `stage`（舞台），它代表一个窗口。在舞台内的是 `scene`（场景），其中包含用户界面控件。控件本身（例如按钮、标签、下拉列表等）通常包含在一个或多个布局面板（*layout panes*）中，这些面板管理着控件的位置布局。
 >
-> ​	For this example, five packages are imported. Most JavaFX programs will require these five packages as well as additional packages that provide more advanced features.
->
-> ✓所有JavaFX程序都扩展了名为Application的核心类，该类提供了程序的基本功能。扩展Application类时，必须重写start方法；应用程序启动时，JavaFX调用此方法。
->
-> 所有的JavaFX程序都扩展了一个核心类Application，它提供了程序的基本功能。当扩展应用程序类时，必须重写start方法;JavaFX在应用程序启动时调用这个方法。
->
-> ✓ All JavaFX programs extend a core class named `Application`, which provides the basic functionality of the program. When you extend the `Application` class, you must override a `start` method; JavaFX calls this method when the application starts.
->
-> ✓与任何Java程序一样，JavaFX程序必须具有main方法。在JavaFX程序中，main方法仅调用Application类的launch方法，而后者又将启动应用程序并调用start方法。
->
-> 与任何Java程序一样，JavaFX程序必须有一个main方法。在JavaFX程序中，main方法只是调用Application类的launch方法，而Application类又会启动应用程序并调用start方法。
->
-> ✓ Like any Java program, a JavaFX program must have a `main` method. In a JavaFX program, the `main` method simply calls the `launch` method of the `Application` class, which in turn launches the application and calls the `start` method.
->
-> ✓JavaFX程序的用户界面元素按容器层次结构排列。在最高级别是一个阶段，代表一个窗口。舞台内是一个场景，其中包含用户界面控件。控件本身（例如按钮，标签，下拉列表等）通常包含在一个或多个布局窗格中，这些窗格控制着控件的位置布局。
->
-> JavaFX程序的用户界面元素按照容器的层次结构进行排列。最高的层次是一个阶段，它代表一个窗口。在舞台中有一个场景，其中包含用户界面控件。控件本身(如按钮、标签、下拉列表等等)通常包含在一个或多个控制控件位置布局的布局窗格中。
->
-> ✓ The user interface elements of a JavaFX program are arranged in a hierarchy of containers. At the highest level is a *stage*, which represents a window. Within the stage is a *scene*, which contains user interface controls. The controls themselves (such as buttons, labels, drop-down lists, and so on) are usually contained in one or more *layout panes* that govern the positional layout of the controls.
->
-> **如果您研究start方法中的代码，则会发现这些元素是自下而上构建的：
->
-> 如果你研究了start方法中的代码，你会发现这些元素是自下而上构建的:
->
-> ​	If you study the code in the `start` method, you see that these elements are built from the bottom up:
+>   如果你研究过 `start` 方法中的代码，会发现这些元素是自下而上构建的：
 >
 > 创建一个按钮。
-> •按钮被添加到布局窗格（特别是StackPane，这是可用的几种类型的布局窗格之一）。
+>•按钮被添加到布局窗格（特别是StackPane，这是可用的几种类型的布局窗格之一）。
 > •将布局窗格添加到场景，然后将场景添加到舞台。
-> 舞台的show方法被调用以显示应用程序的GUI（图形用户界面）。
->
-> •创建一个按钮。
+>舞台的show方法被调用以显示应用程序的GUI（图形用户界面）。
+> 
+>•创建一个按钮。
 > •按钮被添加到布局窗格(具体来说，一个StackPane，这是几种类型的布局窗格之一可用)。
-> •布局窗格被添加到场景中，然后场景被添加到舞台中。
+>•布局窗格被添加到场景中，然后场景被添加到舞台中。
 > •调用stage的show方法来显示应用程序的GUI(图形用户界面)。
 >
 > ​		• A button is created.
@@ -234,13 +158,13 @@ The following paragraphs give a brief explanation of the key elements of the Cli
 > ​		• The layout pane is added to a scene and then the scene is added to the stage.
 >
 > ​		• The stage’s show method is called to display the application’s GUI (Graphical User Interface).
->
+> 
 > ✓每当用户单击按钮时，都会调用buttonClick方法。此方法检查按钮显示的当前文本，并相应地更改文本。因此，每次用户单击该按钮时，该按钮的文本都会从“请点击我”更改！给你点击了我！或相反亦然。
->
-> 每当用户点击按钮时，buttonClick方法就会被调用。此方法检查按钮显示的当前文本，并相应地更改文本。因此，每次用户单击按钮时，按钮的文本从“请点击我!”对你一见倾心!反之亦然。
->
+> 
+>每当用户点击按钮时，buttonClick方法就会被调用。此方法检查按钮显示的当前文本，并相应地更改文本。因此，每次用户单击按钮时，按钮的文本从“请点击我!”对你一见倾心!反之亦然。
+> 
 > ✓ The `buttonClick` method is called whenever the user clicks the button. This method examines the current text displayed by the button and changes the text accordingly. Thus, each time the user clicks the button, the button’s text changes from `Click me please!` to `You clicked me!` or vice-versa.
->
+> 
 
 如果您发现此程序的某些（或全部）混乱，请不要担心。本章的目的只是为了让您了解一个简单的JavaFX程序，而不是让您不知该程序如何工作的细节。如前所述，我将在第2章逐行回顾此程序的详细信息。
 
@@ -785,6 +709,7 @@ Here are the steps for creating the Click Me program in Eclipse:
    选择文件➪新建➪Java项目。
 出现“新建Java项目”对话框，如图1-9所示。
    
+
 选择文件➪新的➪Java项目。
    系统弹出“新建Java项目”对话框，如图1-9所示。
 
