@@ -141,30 +141,16 @@ public class ClickMe extends Application {
 >
 >   如果你研究过 `start` 方法中的代码，会发现这些元素是自下而上构建的：
 >
-> 创建一个按钮。
->•按钮被添加到布局窗格（特别是StackPane，这是可用的几种类型的布局窗格之一）。
-> •将布局窗格添加到场景，然后将场景添加到舞台。
->舞台的show方法被调用以显示应用程序的GUI（图形用户界面）。
-> 
->•创建一个按钮。
-> •按钮被添加到布局窗格(具体来说，一个StackPane，这是几种类型的布局窗格之一可用)。
->•布局窗格被添加到场景中，然后场景被添加到舞台中。
-> •调用stage的show方法来显示应用程序的GUI(图形用户界面)。
+> ​    • 创建一个按钮。
 >
-> ​		• A button is created.
+> ​    • 将按钮添加到布局面板（具体来说是一个 `StackPane`，这是几种可用的布局面板之一）。
 >
-> ​		• The button is added to a layout pane (specifically, a `StackPane`, which is one of several types of layout panes available).
+> ​    • 将布局面板添加到场景中，然后把场景添加到舞台中。
 >
-> ​		• The layout pane is added to a scene and then the scene is added to the stage.
+> ​    • 调用舞台的 `show` 方法显示应用程序的 GUI（图形用户界面）。 
 >
-> ​		• The stage’s show method is called to display the application’s GUI (Graphical User Interface).
-> 
-> ✓每当用户单击按钮时，都会调用buttonClick方法。此方法检查按钮显示的当前文本，并相应地更改文本。因此，每次用户单击该按钮时，该按钮的文本都会从“请点击我”更改！给你点击了我！或相反亦然。
-> 
->每当用户点击按钮时，buttonClick方法就会被调用。此方法检查按钮显示的当前文本，并相应地更改文本。因此，每次用户单击按钮时，按钮的文本从“请点击我!”对你一见倾心!反之亦然。
-> 
-> ✓ The `buttonClick` method is called whenever the user clicks the button. This method examines the current text displayed by the button and changes the text accordingly. Thus, each time the user clicks the button, the button’s text changes from `Click me please!` to `You clicked me!` or vice-versa.
-> 
+> ✓ 每当用户单击按钮时，都会调用 `buttonClick` 方法。此方法检查按钮当前显示的文本，并进行相应更改。因此，每次用户单击该按钮时，按钮的文本都会从 `Click me please!` 变为 `You clicked me!` ，反之亦然。
+>
 
 如果您发现此程序的某些（或全部）混乱，请不要担心。本章的目的只是为了让您了解一个简单的JavaFX程序，而不是让您不知该程序如何工作的细节。如前所述，我将在第2章逐行回顾此程序的详细信息。
 
