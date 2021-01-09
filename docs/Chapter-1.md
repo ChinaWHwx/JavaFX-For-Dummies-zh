@@ -25,53 +25,25 @@
 
 <img src="assets/technical-stuff.png" width="80"/>JavaFX 出现之前，在 Java 中创建图形用户界面的主要方法是通过 Swing API。JavaFX 在许多方面与 Swing 有相似之处，所以如果你曾经使用过 Swing 为 Java 程序创建用户界面，这对学习 JavaFX 来说会是一个良好的开端。
 
-JavaFX作为附加软件包已经存在了一段时间，但是从Java版本8开始，JavaFX现在已经成为Java平台的官方标准部分。因此，在安装Java 8开发工具包（JDK 8）之后，您就可以开始使用自己喜欢的开发工具来开发自己的JavaFX应用程序了。在本章的后面，您将发现如何下载和安装JDK 8，并弄清楚如何使用三种流行的Java开发工具（TextPad，Eclipse和NetBeans）创建一个简单的JavaFX程序。
+JavaFX 作为附加包出现已经有一段时间了，但是从 Java 8 开始，它成为了 Java 平台官方标准的一部分。因此，在安装了 Java 8 开发工具包（*JDK 8*）之后，你就可以开始使用喜欢的开发工具开发 JavaFX 应用程序了。在本章的后面，你将知道如何下载和安装 JDK 8，以及如何使用三款流行的 Java 开发工具：TextPad、Eclipse 和 NetBeans 来创建一个简单的 JavaFX 程序。
 
-JavaFX作为附加包出现已经有一段时间了，但是从Java version 8开始，JavaFX现在是Java平台的官方标准部分。因此，在安装了Java 8开发工具包(JDK 8)之后，您就可以开始使用您喜欢的开发工具开发自己的JavaFX应用程序了。在本章的后面，你会发现如何下载和安装JDK 8，以及如何使用三个流行的Java开发工具:TextPad、Eclipse和NetBeans创建一个简单的JavaFX程序。
+因为 JavaFX 现在是 Java 标准的一部分，所以可以在任何包含 Java 8 运行时环境（JRE）的设备上运行 JavaFX 程序。这些设备包括计算机、平板、智能手机和其他支持 JDK8 的设备。
 
-JavaFX has been around as an add-on package for a while, but beginning with Java version 8, JavaFX is now an official standard part of the Java platform. Thus, after you install the Java 8 Development Kit (*JDK 8*), you can begin developing your own JavaFX applications with your favorite development tools. Later in this chapter, you discover how to download and install JDK 8, and you figure out how to create a simple JavaFX program using three popular Java development tools: TextPad, Eclipse, and NetBeans.
-
-因为JavaFX现在是Java的标准部分，所以您可以在任何包含Java Runtime Environment（JRE）版本8的设备上运行JavaFX程序。其中包括计算机，平板电脑设备，智能手机以及任何其他可支持JDK8的设备。
-
-因为JavaFX现在是Java的一个标准部分，所以您可以在任何包含Java运行时环境(JRE)第8版的设备上运行JavaFX程序。这包括计算机、平板设备、智能手机和任何支持JDK8的其他设备。
-
-Because JavaFX is now a standard part of Java, you can run your JavaFX programs on any device that includes version 8 of the Java Runtime Environment (JRE). That includes computers, tablet devices, smartphones, and any other device that can support JDK8.
-
-甲骨文宣布JavaFX将最终取代Swing。尽管Java 8仍支持Swing，并且在可预见的将来将支持Swing，但是Oracle正在将新功能集中在JavaFX上。最终，Swing将变得过时。
-
-Oracle已经宣布JavaFX将最终取代Swing。尽管Java 8仍然支持Swing，而且在可预见的将来也会支持，但Oracle正在集中精力开发JavaFX上的新特性。最终，Swing将被淘汰。
-
-<img src="assets/technical-stuff.png" width="80" />Oracle has announced that JavaFX will eventually replace Swing. Although Swing is still supported in Java 8 and will be supported for the foreseeable future, Oracle is concentrating new features on JavaFX. Eventually, Swing will become obsolete.
+<img src="assets/technical-stuff.png" width="80" />Oracle 已经宣布 JavaFX 最终将取代Swing。尽管 Java 8 仍然支持Swing，并且短期不会改变，但 Oracle 把主要精力放在 JavaFX 的新特性上。最终，Swing 将被淘汰。
 
 ## 仔细研究 JavaFX 的可能性
 
-JavaFX的基本优势之一是它可以让您轻松创建复杂的图形用户界面，以及大家都熟悉和喜爱的所有经典用户界面。因此，JavaFX提供了全方位的控件-实际上有数十种控件，包括诸如按钮，标签，文本框，复选框，下拉列表和菜单之类的经典控件，以及诸如选项卡式窗格和手风琴窗格。图1-1显示了一个典型的JavaFX用户界面，该界面使用这些控件类型中的几种来创建数据输入表单。
+JavaFX 的基本优势之一是它能够让你轻松地使用所有大家都知道并且喜爱的经典用户界面元素了来创建复杂的图形用户界面。因此，JavaFX 提供了各种各样的控件 —— 实际上有几十种，囊括了经典的按钮、标签、文本框、复选框、下拉列表和菜单，以及一些独特的控件，如选项面板和折叠面板。图 1-1 显示了一个典型的 JavaFX 用户界面，它使用几种控件创建了一个用于数据输入的表单。
 
-JavaFX的一个基本优势是，它能够让您轻松地使用所有众所周知和喜爱的经典用户界面创建复杂的图形用户界面。因此，JavaFX提供了各种各样的控件——实际上有几十种控件，包括经典的按钮、标签、文本框、复选框、下拉列表和菜单，以及一些外来的控件，如选项卡窗格和手风琴窗格。图1-1显示了一个典型的JavaFX用户界面，它使用了几种控件类型来创建一个用于数据输入的表单。
-
-One of the basic strengths of JavaFX is its ability to let you easily create complicated graphical user interfaces with all the classic user interface gizmos everyone knows and loves. Thus, JavaFX provides a full range of controls — dozens of them in fact, including the classics such as buttons, labels, text boxes, check boxes, drop-down lists, and menus, as well as more exotic controls such as tabbed panes and accordion panes. Figure 1-1 shows a typical JavaFX user interface that uses several of these control types to create a form for data entry.
-
-> Figure 1-1: A typical JavaFX program.
+> 图 1-1：一个典型的JavaFX程序。
 
 ![Figure 1-1](./assets/Figure-1-1.png)
 
-确实，图1-1中显示的数据输入表单不是很引人注目。实际上，您可以使用Swing花费几乎相同的工作量轻松地创建这样的数据输入表单。在开始使用一些更高级的JavaFX功能之前，使用JavaFX而不是Swing的真正优势才变得显而易见。
+坦白讲，图 1-1 显示的数据输入表单不是很引人注目。实际上，使用 Swing 可以很容易地创建这样的数据输入表单，而且花费的工作量差不多。在开始使用一些更高级的 JavaFX 特性之前，相对于 Swing 的真正优势并不明显。
 
-事实上，图1-1所示的数据输入表单并不是很显著。实际上，使用Swing可以很容易地创建这样的数据输入表单，而且花费的工作量差不多。在开始使用一些更高级的JavaFX特性之前，使用JavaFX相对于Swing的真正优势并不明显。
+站在初学者的角度观察图 1-1 中所示的数据输入表单的整体外观，可以看出按钮、标签、文本字段、单选按钮和复选框的外观都有些过时，对话框也与 20 年前在 Windows 95 电脑上用 Visual Basic 创建的对话框看不出什么差别。
 
-Truthfully, the data-entry form shown in Figure 1-1 isn’t very remarkable. In fact, you can easily create data-entry forms like this using Swing with about the same amount of effort. The real advantages of using JavaFX over Swing don’t become apparent until you start using some of the more advanced JavaFX features.
-
-对于初学者，请考虑图1-1中所示的数据输入表单的一般外观。按钮，标签，文本字段，单选按钮和复选框的外观有些陈旧。图1-1中所示的对话框与20年前在Windows 95计算机上的Visual Basic中创建的对话框之间的视觉差异很小。
-
-对于初学者，考虑图1-1中所示的数据输入表单的一般外观。按钮、标签、文本字段、单选按钮和复选框的外观有些过时。图1-1所示的对话框与20年前在Windows 95电脑上用visual Basic创建的对话框在视觉上的区别很小。
-
-For starters, consider the general appearance of the data-entry form shown in Figure 1-1. The appearance of the buttons, labels, text fields, radio buttons, and check boxes are a bit dated. The visual differences between the dialog box shown in Figure 1-1 and one you could’ve created in Visual Basic on a Windows 95 computer 20 years ago are minor.
-
-JavaFX开始大放异彩的地方在于它能够通过使用级联样式表（CSS）轻松地改善用户界面的外观。通过将所有格式设置信息放在一个单独的文件（称为样式表）中，CSS使自定义用户界面控件外观的许多方面变得容易。样式表是一个简单的文本文件，提供了一组用于设置用户界面各种元素格式的规则。您可以使用CSS来控制数百种格式化属性。例如，您可以轻松更改文本属性，例如字体，大小，颜色和粗细，还可以添加背景图像，渐变填充，边框和特殊效果（例如阴影，模糊和光源）。
-
-JavaFX的突出之处在于它可以通过使用级联样式表(Cascading Style sheet, CSS)轻松地改善用户界面的外观。CSS通过将所有格式化信息放在一个称为样式表的单独文件中，使定制用户界面控件外观的许多方面变得容易。样式表是一个简单的文本文件，它提供一组规则来格式化用户界面的各种元素。您可以使用CSS来控制数百个格式化属性。例如，您可以轻松地更改文本属性(如字体、大小、颜色和重量)，还可以添加背景图像、渐变填充、边框和特殊效果(如阴影、模糊和光源)。
-
-Where JavaFX begins to shine is in its ability to easily allow you to improve the appearance of your user interface by using Cascading Style Sheets (*CSS*). CSS makes it easy to customize many aspects of the appearance of your user interface controls by placing all the formatting information in a separate file dubbed a style sheet. A style sheet is a simple text file that provides a set of rules for formatting the various elements of the user interface. You can use CSS to control literally hundreds of formatting properties. For example, you can easily change the text properties such as font, size, color, and weight, and you can add a background image, gradient fills, borders, and special effects such as shadows, blurs, and light sources.
+JavaFX 开始大放异彩的地方在于它能够使用级联样式表（*CSS*）轻松地改善用户界面的外观。CSS 通过将所有的格式化信息放在一个称为样式表的单独文件中，使得定制用户界面控件外观的许多方面变得容易。样式表是一个简单的文本文件，它提供一组规则来格式化用户界面的各种元素。您可以使用 CSS 来控制数百个格式化属性。例如，你可以更改文本属性（如字体、大小、颜色和粗细），添加背景图片、渐变填充、边框和特殊效果（如阴影、模糊和光源）。
 
 图1-2显示了图1-1中所示形式的一种变体，这次是使用CSS格式化的。用于此表单的简单CSS文件可添加背景图像，增强文本格式并修改按钮的外观。
 
