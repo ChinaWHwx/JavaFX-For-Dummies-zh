@@ -1,7 +1,7 @@
 # JavaFX-For-Dummies-zh
 > 跟阿呆学 JavaFX
 
-<img src="assets/book-cover.jpg" alt="JavaFX For Dummies" width="380" align="right"/>
+<img src="assets/book-cover.jpg" alt="JavaFX For Dummies" width="320" align="right"/>
 
 ## 目录
 
