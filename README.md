@@ -29,7 +29,7 @@
     - [使用记事本开发 Click Me 程序](docs/Chapter-1.md#使用记事本开发-Click-Me-程序)
     - [使用 TextPad 开发 Click Me 程序](docs/Chapter-1.md#使用-TextPad-开发-Click-Me-程序)
     - [使用 IDE 创建 Click Me 程序](docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
-  - [Chapter 2: 深入 JavaFX 程序设计](docs/Chapter-1.md)
+  - [Chapter 2: 深入 JavaFX 程序设计](docs/Chapter-2.md)
     - 再看 Click Me 程序
     - 导入 JavaFX 相关包
     - 继承 Application 类
