@@ -405,7 +405,7 @@ Listing 2-2 shows the source code for the Click Counter program, and the followi
 **Listing 2-2: The Click Counter Program**
 
 ```java
-import javafx.application.*;                                           // →1
+import javafx.application.*;                                          // →1
 import javafx.stage.*; 
 import javafx.scene.*;
 import javafx.scene.layout.*; 
