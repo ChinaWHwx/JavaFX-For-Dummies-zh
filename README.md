@@ -41,7 +41,7 @@
     - 场景搭建
     - 舞台设置
     - 检查 Click Counter 程序
-  - Chapter 3: 事件处理
+  - [Chapter 3: 事件处理](docs/Chapter-3.md)
     - 检查事件
     - 事件处理 
     - 实现 EventHandler 接口
