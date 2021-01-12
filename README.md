@@ -48,7 +48,7 @@
     - 使用内部类处理事件
     - 使用匿名内部类处理事件
     - 使用 Lambda 表达式处理事件
-  - Chapter 4: 设置窗口和场景布局
+  - [Chapter 4: 设置窗口和场景布局](docs/Chapter-4.md)
     - 检验 Stage 类
     - 检验 Scene 类
     - 切换场景
