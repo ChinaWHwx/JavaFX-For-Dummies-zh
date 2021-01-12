@@ -405,59 +405,59 @@ Listing 2-2 shows the source code for the Click Counter program, and the followi
 **Listing 2-2: The Click Counter Program**
 
 ```java
-import javafx.application.*;                                          // →1
+import javafx.application.*;                                                      // →1
 import javafx.stage.*; 
 import javafx.scene.*;
 import javafx.scene.layout.*; 
 import javafx.scene.control.*;
 
-public class ClickCounter extends Application                         // →7
+public class ClickCounter extends Application                                     // →7
 { 
-  public static void main(String[] args)                              // →9
+  public static void main(String[] args)                                          // →9
   { 
-    launch(args);                                                     // →11
+    launch(args);                                                                 // →11
   }
 
-  Button btn;                                                         // →14
-  Label lbl;                                                          // →15
-  int iClickCount = 0;                                                // →16
+  Button btn;                                                                     // →14
+  Label lbl;                                                                      // →15
+  int iClickCount = 0;                                                            // →16
 
-  @Override public void start(Stage primaryStage)                     // →18
+  @Override public void start(Stage primaryStage)                                 // →18
   { 
     // Create the button 
-    btn = new Button();                                               // →21
-    btn.setText("Click me please!");                                  // →22
-    btn.setOnAction(e -> buttonClick());                              // →23
+    btn = new Button();                                                           // →21
+    btn.setText("Click me please!");                                              // →22
+    btn.setOnAction(e -> buttonClick());                                          // →23
 
     // Create the Label 
-    lbl = new Label();                                                // →26
-    lbl.setText("You have not clicked the button.");                  // →27
+    lbl = new Label();                                                            // →26
+    lbl.setText("You have not clicked the button.");                              // →27
 
     // Add the label and the button to a layout pane 
-    BorderPane pane = new BorderPane();                               // →30
-    pane.setTop(lbl);                                                 // →31
-    pane.setCenter(btn);                                              // →32
+    BorderPane pane = new BorderPane();                                           // →30
+    pane.setTop(lbl);                                                             // →31
+    pane.setCenter(btn);                                                          // →32
 
     // Add the layout pane to a scene 
-    Scene scene = new Scene(pane, 250, 150);                          // →35
+    Scene scene = new Scene(pane, 250, 150);                                      // →35
 
     // Add the scene to the stage, set the title 
     // and show the stage 
-    primaryStage.setScene(scene);                                     // →39
-    primaryStage.setTitle("Click Counter");                           // →40
-    primaryStage.show();                                              // →41
+    primaryStage.setScene(scene);                                                 // →39
+    primaryStage.setTitle("Click Counter");                                       // →40
+    primaryStage.show();                                                          // →41
   }
 
-  public void buttonClick()                                           // →44
+  public void buttonClick()                                                       // →44
   { 
-    iClickCount++;                                                    // →46
-    if (iClickCount == 1)                                             // →47
+    iClickCount++;                                                                // →46
+    if (iClickCount == 1)                                                         // →47
     {
-      lbl.setText("You have clicked once.");                          // →49
+      lbl.setText("You have clicked once.");                                      // →49
     }  
     else 
     {
-      lbl.setText("You have clicked " + iClickCount + " times." );    // →53
+      lbl.setText("You have clicked " + iClickCount + " times." );                // →53
     }
   }
 }
