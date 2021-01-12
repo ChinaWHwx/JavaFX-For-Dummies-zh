@@ -310,5 +310,292 @@ public class AddSubtract2 extends Application                                   
 }
 ```
 
+This program works essentially the same way as the program shown in Listing 3-1, so I don’t review every detail. Instead, I just highlight the differences:
 
+➝ 6：The AddSubtract2 class still extends Application but doesn’t implement EventHandler.
 
+➝ 23：This statement creates an instance of the ClickHandler class (the inner class) and assigns it to the variable ch.
+
+➝ 28：This statement sets ch as the action listener for the Add button.
+
+➝ 33：This statement sets ch as the action listener for the Subtract button.
+
+➝ 53：The ClickHandler class is declared as an inner class by placing its declaration completely within the AddSubtract2 class. The ClickHandler class implements the EventHandler interface so that it can handle events.
+
+➝ 56：The handle method here is identical to the handle method in the AddSubtract1 program (see Listing 3-1) but resides in the inner ClickHandler class instead of in the outer class.
+
+## Handling Events with Anonymous Inner Classes
+
+An anonymous inner class, usually just called an anonymous class, is a class that’s defined on the spot, right at the point where you need it. Because you code the body of the class right where you need it, you don’t have to give it a name; that’s why it’s called an anonymous class.
+
+Anonymous classes are often used for event handlers to avoid the need to create a separate class that explicitly implements the EventHandler interface.
+
+One advantage of using anonymous classes for event handlers is that you can easily create a separate event handler for each control that generates events. Then, in the handle method for those event handlers, you can dispense with the if statements that check the event source.
+
+Consider the event handler for the AddSubtract2 program shown earlier in Listing 3-2: It must check the event source to determine whether to increment or decrement the iCounter variable. By using anonymous classes, you can create separate event handlers for the Add and Subtract buttons. The event handler for the Add button increments iCounter, and the event handler for the Subtract button decrements it. Neither event handler needs to check the event source because the event handler’s handle method will be called only when an event is raised on the button with which the handler is associated.
+
+Listing 3-3 shows the AddSubtract3 program, which uses anonymous inner classes in this way.
+
+**Listing 3-3: The AddSubtract3 Program with Anonymous Inner Classes**
+
+```java
+import javafx.application.*; 
+import javafx.stage.*; 
+import javafx.scene.*; 
+import javafx.scene.layout.*; 
+import javafx.scene.control.*; 
+import javafx.event.*;
+
+public class AddSubtract3 extends Application 
+{
+  public static void main(String[] args) 
+  { 
+    launch(args); 
+  }
+
+  Button btnAdd; 
+  Button btnSubtract; 
+  Label lbl; 
+  int iCounter = 0;
+
+  @Override public void start(Stage primaryStage) {
+
+    // Create the Add button 
+    btnAdd = new Button(); 
+    btnAdd.setText("Add"); 
+    btnAdd.setOnAction(
+      new EventHandler<ActionEvent>()                                             // →26
+      {
+        public void handle(ActionEvent e)                                         // →28
+        { 
+          iCounter++;                                                             // →30
+          lbl.setText(Integer.toString(iCounter));
+        }
+      });
+
+    // Create the Subtract button 
+    btnSubtract = new Button(); 
+    btnSubtract.setText("Subtract"); 
+    btnSubtract.setOnAction(
+      new EventHandler<ActionEvent>()                                             // →39
+      { 
+        public void handle(ActionEvent e)                                         // →41
+        { 
+          iCounter--; 
+          lbl.setText(Integer.toString(iCounter)); 
+        } 
+      });
+
+    // Create the Label 
+    lbl = new Label();  
+    lbl.setText(Integer.toString(iCounter));
+
+    // Add the buttons and label to an HBox pane 
+    HBox pane = new HBox(10); 
+    pane.getChildren().addAll(lbl, btnAdd, btnSubtract);
+
+    // Add the layout pane to a scene
+    Scene scene = new Scene(pane, 200, 75);
+
+    // Add the scene to the stage, set the title 
+    // and show the stage 
+    primaryStage.setScene(scene); 
+    primaryStage.setTitle("Add/Sub"); 
+    primaryStage.show();
+  }
+}
+```
+
+The following paragraphs highlight the key points of how this program uses anonymous inner classes to handle the button events:
+
+➝ 26：This line calls the setOnAction method of the Add button and creates an anonymous instance of the EventHandler class, specifying ActionEvent as the type.
+
+➝ 28：The handle method must be defined within the body of the anonymous class.
+
+➝ 30：Because this handle method will be called only when the Add button is clicked (not when the Subtract button is clicked), it does not need to determine the event source. Instead, the method simply increments the counter variable and sets the label text to display the new value of the counter.
+
+➝ 39：This line calls the setOnAction method of the Subtract button and creates another anonymous instance of the EventHandler class.
+
+➝ 41：This time, the handle method decrements the counter variable and updates the label text to display the new counter value.
+
+## Using Lambda Expressions to Handle Events
+
+Java 8 introduces a new feature that in some ways is similar to anonymous classes, but with more concise syntax. More specifically, a Lambda expression lets you create an anonymous class that implements a specific type of interface — a functional interface — which has one and only one abstract method.
+
+The EventHandler interface used to handle JavaFX events meets that definition: It has just one abstract method, handle. Thus, EventHandler is a functional interface and can be used with Lambda expressions.
+
+A Lambda expression is a concise way to create an anonymous class that implements a functional interface. Instead of providing a formal method declaration that includes the return type, method name, parameter types, and method body, you simply define the parameter types and the method body. The Java compiler infers the rest based on the context in which you use the Lambda expression.
+
+The parameter types are separated from the method body by a new operator — the arrow operator — which consists of a hyphen followed by a greaterthan symbol. Here’s an example of a Lambda expression that implements the EventHandler interface:
+
+```java
+e -> {
+  iCounter++; lbl.setText(Integer.toString(iCounter);
+}
+```
+
+In this case the Lambda expression implements a functional interface whose single method accepts a single parameter, identified as e. When the method is called, the iCounter variable is incremented and the label text is updated to display the new counter value.
+
+Here’s how you’d register this Lambda expression as the event handler for a button:
+
+```java
+btnAdd.setOnAction( e -> {
+  iCounter++; 
+  lbl.setText(Integer.toString(iCounter)); 
+});
+```
+
+One of the interesting things about Lambda expressions is that you don’t need to know the name of the method being called. This is possible because a functional interface used with a Lambda expression can have only one abstract method. In the case of the EventHandler interface, the method is named handle.
+
+You also do not need to know the name of the interface being implemented. This is possible because the interface is determined by the context. The setOnAction method takes a single parameter of type EventHandler. Thus, when you use a Lambda expression in a call to setOnAction, the Java compiler can deduce that the Lambda expression will implement the EventHandler interface. And because the only abstract method of EventHandler is the handle method, the compiler can deduce that the method body you supply is an implementation of the handle method.
+
+In a way, Lambda expressions take the concept of anonymous classes two steps further. When you use an anonymous class to set an event handler, you must know and specify the name of the class (EventHandler) and the name of the method to be called (handle), so the only sense in which the class is anonymous is that you don’t need to provide a name for a variable that will reference the class. But when you use a Lambda expression, you don’t have to know or specify the name of the class, the method, or a variable used to reference it. All you have to do, essentially, is provide the body of the handle method.
+
+Listing 3-4 shows the AddSubtract4 program, which uses Lambda expressions to handle the button clicks.
+
+**Listing 3-4: The AddSubtract4 Program with Lambda Expressions**
+
+```java
+import javafx.application.*; 
+import javafx.stage.*; 
+import javafx.scene.*; 
+import javafx.scene.layout.*; 
+import javafx.scene.control.*; 
+import javafx.event.*;
+
+public class AddSubtract4 extends Application 
+{
+  public static void main(String[] args) 
+  { 
+    launch(args); 
+  }
+
+  Button btnAdd; 
+  Button btnSubtract; 
+  Label lbl; 
+  int iCounter = 0;
+
+  @Override public void start(Stage primaryStage) {
+
+    // Create the Add button 
+    btnAdd = new Button(); 
+    btnAdd.setText("Add"); 
+    btnAdd.setOnAction( e ->                                                      // →25
+                       {
+                         iCounter++;
+                         lbl.setText(Integer.toString(iCounter));
+                       });
+
+    // Create the Subtract button 
+    btnSubtract = new Button(); 
+    btnSubtract.setText("Subtract"); 
+    btnSubtract.setOnAction( e ->                                                 // →34
+                            {
+                              iCounter--; 
+                              lbl.setText(Integer.toString(iCounter)); } );
+
+    // Create the Label 
+    lbl = new Label(); 
+    lbl.setText(Integer.toString(iCounter));
+
+    // Add the buttons and label to an HBox pane 
+    HBox pane = new HBox(10); 
+    pane.getChildren().addAll(lbl, btnAdd, btnSubtract);
+
+    // Add the layout pane to a scene 
+    Scene scene = new Scene(pane, 200, 75);
+
+    // Add the scene to the stage, set the title 
+    // and show the stage 
+    primaryStage.setScene(scene); 
+    primaryStage.setTitle("Add/Sub"); 
+    primaryStage.show();
+  }
+}
+```
+
+This program works essentially the same way as the program shown in Listing 3-3, so I just point out the features directly related to the use of the Lambda expression:
+
+➝ 25：This statement uses a Lambda expression to add an event handler to the Add button. The method body of this Lambda expression increments the counter variable and then sets the label text to reflect the updated value.
+
+➝ 34：This statement uses a similar Lambda expression to create the event handler for the Subtract button. The only difference between this Lambda expression and the one for the Add button is that here the counter variable is decremented instead of incremented.
+
+Note that in this example, the Lambda expressions for the two event handlers are simple because very little processing needs to be done when either of the buttons in this program are clicked. What would the program look like, however, if the processing required for one or more of the button clicks required hundreds of lines of Java code to implement? The Lambda expression would become unwieldy. For this reason, I often prefer to isolate the actual processing to be done by an event handler in a separate method. Then, the Lambda expression itself includes just one line of code that simply calls the method.
+
+Listing 3-5 shows another variation of the AddSubtract5 program implemented using that technique. Note that the technique used in Listing 3-5 is the technique that most of the remaining programs in this book use.
+
+**Listing 3-5: The AddSubtract5 Program with Lambda Expressions**
+
+```java
+import javafx.application.*; 
+import javafx.stage.*; 
+import javafx.scene.*; 
+import javafx.scene.layout.*; 
+import javafx.scene.control.*; 
+import javafx.event.*;
+
+public class AddSubtract5 extends Application 
+{
+  public static void main(String[] args) 
+  { 
+    launch(args); 
+  }
+
+  Button btnAdd; 
+  Button btnSubtract; 
+  Label lbl; 
+  int iCounter = 0;
+
+  @Override public void start(Stage primaryStage) 
+  {
+    // Create the Add button 
+    btnAdd = new Button();
+    btnAdd.setText("Add"); 
+    btnAdd.setOnAction( e -> btnAdd_Click() );                                    // →25
+
+    // Create the Subtract button 
+    btnSubtract = new Button(); 
+    btnSubtract.setText("Subtract"); 
+    btnSubtract.setOnAction( e -> btnSubtract_Click() );                          // →30
+
+    // Create the Label l
+    bl = new Label(); 
+    lbl.setText(Integer.toString(iCounter));
+
+    // Add the buttons and label to an HBox pane 
+    HBox pane = new HBox(10); 
+    pane.getChildren().addAll(lbl, btnAdd, btnSubtract);
+
+    // Add the layout pane to a scene 
+    Scene scene = new Scene(pane, 200, 75);
+
+    // Add the scene to the stage, set the title 
+    // and show the stage 
+    primaryStage.setScene(scene); 
+    primaryStage.setTitle("Add/Sub"); 
+    primaryStage.show();
+  }
+
+  private void btnAdd_Click()                                                     // →50
+  {
+    iCounter++; 
+    lbl.setText(Integer.toString(iCounter));
+  }
+
+  private void btnSubtract_Click()                                                // →56
+  {
+    iCounter--;
+    lbl.setText(Integer.toString(iCounter)); 
+  }
+}
+```
+
+The following paragraphs highlight the important points of this version of the program:
+
+➝ 25：The setOnAction method for the Add button uses a Lambda expression to specify that the method named btnAdd_Click should be called when the user clicks the button.
+
+➝ 30：The setOnAction method for the Subtract button uses a Lambda expression to specify that the method named btnSubtract_ Click should be called when the user clicks the button.
+
+➝ 50：The btnAdd_Click method increments the counter and updates the label’s text to reflect the updated counter value.
+
+➝ 56：Likewise, the btnSubtract_Click method decrements the counter and updates the label’s text accordingly.
