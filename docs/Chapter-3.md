@@ -480,7 +480,7 @@ public class AddSubtract4 extends Application
     // Create the Add button 
     btnAdd = new Button(); 
     btnAdd.setText("Add"); 
-    btnAdd.setOnAction( e ->                                                      // →25
+    btnAdd.setOnAction(e ->                                                      // →25
                        {
                          iCounter++;
                          lbl.setText(Integer.toString(iCounter));
@@ -489,10 +489,11 @@ public class AddSubtract4 extends Application
     // Create the Subtract button 
     btnSubtract = new Button(); 
     btnSubtract.setText("Subtract"); 
-    btnSubtract.setOnAction( e ->                                                 // →34
+    btnSubtract.setOnAction(e ->                                                 // →34
                             {
                               iCounter--; 
-                              lbl.setText(Integer.toString(iCounter)); } );
+                              lbl.setText(Integer.toString(iCounter)); 
+                            });
 
     // Create the Label 
     lbl = new Label(); 
@@ -551,12 +552,12 @@ public class AddSubtract5 extends Application
     // Create the Add button 
     btnAdd = new Button();
     btnAdd.setText("Add"); 
-    btnAdd.setOnAction( e -> btnAdd_Click() );                                    // →25
+    btnAdd.setOnAction(e -> btnAdd_Click());                                      // →25
 
     // Create the Subtract button 
     btnSubtract = new Button(); 
     btnSubtract.setText("Subtract"); 
-    btnSubtract.setOnAction( e -> btnSubtract_Click() );                          // →30
+    btnSubtract.setOnAction(e -> btnSubtract_Click());                            // →30
 
     // Create the Label l
     bl = new Label(); 
