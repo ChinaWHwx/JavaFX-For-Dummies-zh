@@ -13,7 +13,7 @@
     - [第二部分：JavaFX 控件](docs/Introduction.md#第二部分JavaFX-控件)
     - [第三部分：加强你的场景设计](docs/Introduction.md#第三部分加强你的场景设计)
     - [第四部分：让你的程序活起来](docs/Introduction.md#第四部分让你的程序活起来)
-    - [第五部分：“十”之部](docs/Introduction.md#第五部分十之部)
+    - [第五部分：“十”之部分](docs/Introduction.md#第五部分十之部分)
   - [本书使用的图标](docs/Introduction.md#本书使用的图标)
   - [本书之外](docs/Introduction.md#本书之外)
   - [下一步该去哪儿](docs/Introduction.md#下一步该去哪儿)
@@ -198,7 +198,7 @@
     - 手势和触摸事件介绍
     - 手势监听
     - 查看一个示例程序
-- 第五部分：“十”之部
+- 第五部分：“十”之部分
   - 第 19 章：10 个 JavaFX 控件
     - TitledPane
     - Accordion
