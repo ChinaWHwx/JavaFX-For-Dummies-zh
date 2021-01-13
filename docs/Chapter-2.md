@@ -1,4 +1,4 @@
-# Chapter 2 Looking Closer at JavaFX Programming
+# 第 2 章  深入 JavaFX 程序设计
 
 > In This Chapter
 >
@@ -10,7 +10,7 @@
 
 In Chapter 1, I introduce you to a simple JavaFX program called the Click Me program and briefly describe how that program works. In this chapter, I put this program under the microscope and examine it in close detail. By the time you finish this chapter, you’ll understand how every line of the Click Me program works and why it’s required. Then, you’ll be ready to start figuring out more nuanced techniques of JavaFX programming.
 
-## Looking Again at the Click Me Program
+## 再看 Click Me 程序
 
 Figure 2-1 shows the Click Me program in action. As you can see, this program displays a simple button that contains the words Click me please!. What the figure does not show is that when the user clicks the button, the text on the button becomes I’ve Been Clicked!.
 
@@ -77,7 +77,7 @@ public class ClickMe extends Application {
 }
 ```
 
-## Importing JavaFX Packages
+## 导入 JavaFX 相关包
 
 Like any Java program, JavaFX programs begin with a series of import statements that reference the various JavaFX packages that the program will use. The Click Me program includes the following five import statements:
 
@@ -109,7 +109,7 @@ As you can see, all the JavaFX packages begin with javafx. The Click Me program 
 >
 > The Click Me program uses just one class from this package: Button, which represents a button that the user can click.
 
-## Extending the Application Class
+## 继承 Application 类
 
 A JavaFX application is a Java class that extends the javafx.application. Application class. Thus, the declaration for the Click Me application’s main class is this:
 
@@ -145,7 +145,7 @@ The Application class is responsible for managing what is called the lifecycle o
 
    Like the init method, the default implementation of the stop method doesn’t do anything, but you can override it to perform any processing necessary as the program terminates, such as closing database resources or saving files.
 
-## Launching the Application
+## 启动应用程序
 
 As you know, the standard entry-point for Java programs is the main method. Here is the main method for the Click Me program:
 
@@ -171,7 +171,7 @@ public static void main(String[] args) {
 
 Then, you would see Launching JavaFX displayed in the console window while the JavaFX application window opens. When you close the JavaFX application window, you would then see Finished in the console window.
 
-## Overriding the start Method
+## 重写 start 方法
 
 Every JavaFX application must include a start method. You write the code that creates the user interface elements your program’s user will interact with in the start method. For example, the start method in Listing 2-1 contains code that displays a button with the text Click me please!
 
@@ -230,7 +230,7 @@ You find pertinent details of each of these blocks of code later in this chapter
 >
 > the application’s user interface will display. When the application calls your start method, the application passes the main stage — known as the primary stage — via the primaryStage parameter. Thus, you can use the primaryStage parameter later in the start method to refer to the application’s stage.
 
-## Creating a Button
+## 创建按钮
 
 The button displayed by the Click Me program is created using a class named Button. This class is one of many classes that you can use to create user interface controls. The Button class and most of the other control classes are found in the package javafx.scene.control.
 
@@ -265,7 +265,7 @@ Here are a few additional tidbits about buttons:
 >
 > from higher-level parent class called javafx.scene.Node. Node is the base class of all user-interface elements that can be displayed in a scene. A control is a specific type of node, but there are other types of nodes. In other words, all controls are nodes, but not all nodes are controls. You can read more about several other types of nodes later in this book.
 
-## Handling an Action Event
+## 处理活动事件
 
 When the user clicks a button, an action event is triggered. Your program can respond to the event by providing an event handler, which is simply a bit of code that will be executed whenever the event occurs. The Click Me program works by setting up an event handler for the button; the code for the event handler changes the text displayed on the button.
 
@@ -311,7 +311,7 @@ The buttonClicked method uses two methods of the Button class to perform its wor
 
 <img src="assets/cross-reference.png" width="80"/>For more information about handling events, see Chapter 3.
 
-## Creating a Layout Pane
+## 创建布局面板
 
 By itself, a button is not very useful. You must actually display it on the screen for the user to be able to click it. And any realistic JavaFX program will have more than one control. The moment you add a second control to your user interface, you need a way to specify how the controls are positioned relative to one another. For example, if your application has two buttons, do you want them to be stacked vertically, one above the other, or side by side?
 
@@ -344,7 +344,7 @@ Here are a few other interesting details about layout panes:
 >
 > <img src="assets/cross-reference.png" width="50"/>✓ You read more about the BorderPane class and a few other commonly used layout panes in Chapter 5. You also can read about the layout panes that aren’t as commonly used in Chapter 13.
 
-## Making a Scene
+## 场景搭建
 
 After you create a layout pane that contains the controls you want to display, the next step is to create a scene that will display the layout pane. You can do that in a single line of code that declares a variable of type Scene and calls the Scene class constructor. Here’s how I did it in the Click Me program:
 
@@ -366,7 +366,7 @@ Note: If you omit the width and height, the scene will be sized automatically ba
 
 <img src="assets/cross-reference.png" width="80"/>You can find out about some additional capabilities of the Scene class in Chapter 4.
 
-## Setting the Stage
+## 舞台设置
 
 If the scene represents the nodes (controls and layout panes) that are displayed by the application, the stage represents the window in which the scene is displayed. When the JavaFX framework calls your application’s start method, it passes you an instance of the Stage class that represents the application’s primary stage — that is, the stage that represents the application’s main window. This reference is passed via the primaryStage argument.
 
@@ -390,7 +390,7 @@ When the last line calls the show method, the Stage displays — in other words,
 
 <img src="assets/cross-reference.png" width="80"/>You can read about additional capabilities of the Stage class in Chapter 4.
 
-## Examining the Click Counter Program
+## 检查 Click Counter 程序
 
 Now that I’ve explained the details of every line of the Click Me program, I look at a slightly enhanced version of the Click Me program called the Click Counter program. In the Click Me program that was shown in Listing 1-1 (in Chapter 1), the text displayed on the button changes when the user clicks the button. In the Click Counter program, an additional type of control called a label displays the number of times the user has clicked the button.
 
