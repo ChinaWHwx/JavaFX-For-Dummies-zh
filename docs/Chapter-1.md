@@ -173,80 +173,35 @@ JDK 提供两个版本供用户下载：
 
 ### 安装 JDK 8
 
-下载JDK文件后，可以通过运行下载的可执行文件来安装它。该过程视您的操作系统而略有不同，但是基本上，您只是在下载JDK安装程序文件后才运行它，如下所示：
+下载 JDK 文件后，可通过运行下载的可执行文件进行安装。这个过程根据操作系统而略有不同，但基本上，只需在下载 JDK 安装程序文件后运行它，如下：
 
-下载JDK文件后，可以通过运行下载的可执行文件来安装它。根据操作系统的不同，过程略有不同，但基本上，你只需在下载JDK安装程序文件后运行它，如下所示:
+> **✓ 在 Windows 系统上，**打开你保存安装程序的文件夹，双击安装程序图标。
+>
+> **✓ 在 Linux 或 Solaris 系统上，**使用控制台命令进入文件下载目录，然后运行程序。
+>
+> **✓ 在 Mac 上，**打开“下载”窗口，双击下载的 JDK.dmg 文件。此时将出现一个 Finder 窗口，这其中包含一个开箱图标，双击这个图标即可启动安装程序。
 
-After you download the JDK file, you can install it by running the executable file you downloaded. The procedure varies slightly depending on your operating system, but basically, you just run the JDK installation program file after you download it, as follows:
-
-> ✓在Windows系统上，打开用于保存安装程序的文件夹，然后双击安装程序的图标。
->
-> 在Windows系统下，打开你保存安装程序的文件夹，双击安装程序图标。
->
-> ✓ On a Windows system, open the folder in which you saved the installation program and double-click the installation program’s icon.
->
-> ✓在Linux或Solaris系统上，使用控制台命令更改为
-> 文件下载到的目录，然后运行该程序。
->
-> 在Linux或Solaris系统上，使用控制台命令更改
-> 您将文件下载到的目录，然后运行程序。
->
-> ✓ On a Linux or Solaris system, use console commands to change to the directory to which you downloaded the file and then run the program.
->
-> ✓在Mac上，打开“下载”窗口，然后双击您下载的JDK .dmg文件。将出现一个Finder窗口，其中包含一个打开框的图标。双击此图标以启动安装程序。
->
-> 在Mac上，打开下载窗口，双击你下载的JDK .dmg文件。将出现一个Finder窗口，其中包含一个打开框的图标。双击这个图标来启动安装程序。
->
-> ✓ On a Mac, open the Downloads window and double-click the JDK .dmg file you downloaded. A Finder window appears containing an icon of an open box. Double-click this icon to launch the installer.
-
-启动安装程序后，它将提示您输入正确安装JDK所需的所有信息，例如要安装的功能以及要在其中安装JDK的文件夹。您可以安全地为每个选择默认答案选项。
-
-在您启动安装程序后，它会提示您正确安装JDK所需的任何信息，比如您想安装哪个特性以及您想将JDK安装在哪个文件夹中。您可以安全地为每个选项选择默认答案。
-
-After you start the installation program, it prompts you for any information that it needs to install the JDK properly, such as which features you want to install and what folder you want to install the JDK in. You can safely choose the default answer for each option.
+启动安装程序后，它将提示你输入正确安装 JDK 所需的信息，例如要安装的功能以及你想将 JDK 安装在哪个文件夹中。你可以安全地为每个选项选择默认设置。
 
 ### 设置环境变量
 
-安装JDK后，需要配置操作系统，以便它可以找到JDK命令行工具。为此，您必须设置Path环境变量-操作系统用来查找可执行程序的文件夹列表。为此请在Windows系统上，请按照下列步骤操作。您必须以管理员身份登录才能进行此过程中描述的更改。
+安装 JDK 之后，需要对操作系统进行配置，以便能够找到 JDK 命令行工具。为此，必须设置 Path 环境变量 —— 操作系统用来查找可执行程序的文件夹列表。要在 Windows 上执行此操作，需遵循以下步骤。你必须以管理员身份登录才能进行此过程中描述的更改。
 
-安装JDK之后，需要配置操作系统，以便它能够找到JDK命令行工具。为此，必须设置Path环境变量—操作系统用来定位可执行程序的文件夹列表。要在Windows系统上执行此操作，请遵循以下步骤。您必须以管理员身份登录才能进行本操作过程中描述的更改。
+1. **打开控制面板。**
 
-After you install the JDK, you need to configure your operating system so that it can find the JDK command-line tools. To do that, you must set the Path environment variable — a list of folders that the operating system uses to locate executable programs. To do this on a Windows system, follow these steps. You must be logged in as an administrator to make the changes described in this procedure.
+   - 在 Windows 7 或更早版本的系统上，打开“开始”菜单，选择“控制面板”。
+   - 在 Windows 8 或更高版本的系统上，单击“开始”按钮或按 Windows 键，输入“控制面板”，按下回车。
 
-打开控制面板。
-在Windows 7或更早版本的系统上，打开“开始”菜单，然后选择“控制面板”。
-在Windows 8或更高版本的系统上，单击“开始”按钮或按Windows键，键入“控制面板”，然后按Enter。
+2. **双击系统图标。**
 
-打开控制面板。
-在Windows 7或更早版本的系统中，打开“开始”菜单，选择“控制面板”。
-在Windows 8或更高版本的系统中，单击“开始”按钮或按“Windows”键，输入“控制面板”，然后按“Enter”。
-
-1. Open the Control Panel.
-   + On a Windows 7 or earlier system, open the Start menu and choose Control Panel.
-   + On a Windows 8 or later system, click the Start button or press the Windows key, type Control Panel, and then press Enter.
-
-2. Double-click the System icon.
-
-   The System Properties page appears.
-
-   双击系统图标。
    出现“系统属性”页面。
 
-   双击系统图标。
-   系统显示“系统属性”页面。
+3. **选择高级系统设置，点击“环境变量”按钮。**
 
-3. Click the Advanced System Settings link and then click the Environment Variables button.
-
-   The Environment Variables dialog box appears, as shown in Figure 1-4.
-
-   单击高级系统设置链接，然后单击环境变量按钮。
-   弹出“环境变量”对话框，如图1-4所示。
-
-   单击“高级系统设置”链接，然后单击“环境变量”按钮。
-   系统弹出“环境变量”对话框，如图1-4所示。
-
-   > Figure 1-4: The Environment Variables dialog box. 环境变量对话框。 “环境变量”对话框。
-
+   系统弹出“环境变量”对话框，如图 1-4 所示。
+   
+   > 图 1-4： “环境变量”对话框。
+   
    ![Figure 1-4](assets/Figure-1-4.png)
 
 4. In the System Variables list, scroll to the Path variable, select it, and then click the Edit button.
