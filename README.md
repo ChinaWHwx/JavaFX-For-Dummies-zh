@@ -25,7 +25,7 @@
     - [下载和安装 JavaFX](docs/Chapter-1.md#下载和安装-JavaFX)
       - [下载 JDK 8](docs/Chapter-1.md#下载-JDK-8)
       - [安装 JDK 8](docs/Chapter-1.md#安装-JDK-8)
-      - [设置环境变量](docs/Chapter-1.md#设置环境变量)
+      - [设置 Path](docs/Chapter-1.md#设置-Path)
     - [使用记事本开发 Click Me 程序](docs/Chapter-1.md#使用记事本开发-Click-Me-程序)
     - [使用 TextPad 开发 Click Me 程序](docs/Chapter-1.md#使用-TextPad-开发-Click-Me-程序)
     - [使用 IDE 创建 Click Me 程序](docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
