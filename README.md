@@ -9,16 +9,16 @@
   - [关于本书](docs/Introduction.md#关于本书)
   - [鲁莽的假设](docs/Introduction.md#鲁莽的假设)
   - [本书组织架构](docs/Introduction.md#本书组织架构)
-    - [Part Ⅰ: 开始使用 JavaFX](docs/Introduction.md#Part-I-开始使用-JavaFX)
-    - [Part Ⅱ: JavaFX 控件](docs/Introduction.md#Part-II-JavaFX-控件)
-    - [Part Ⅲ: 加强你的场景设计](docs/Introduction.md#Part-III-加强你的场景设计)
-    - [Part Ⅳ: 让你的程序活起来](docs/Introduction.md#Part-IV-让你的程序活起来)
-    - [Part Ⅴ: 与“十”相关的部分](docs/Introduction.md#Part-V-与十相关的部分)
+    - [第一部分：开始使用 JavaFX](docs/Introduction.md#第一部分开始使用-JavaFX)
+    - [第二部分：JavaFX 控件](docs/Introduction.md#第二部分JavaFX-控件)
+    - [第三部分：加强你的场景设计](docs/Introduction.md#第三部分加强你的场景设计)
+    - [第四部分：让你的程序活起来](docs/Introduction.md#第四部分让你的程序活起来)
+    - [第五部分：“十”之部](docs/Introduction.md#第五部分十之部)
   - [本书使用的图标](docs/Introduction.md#本书使用的图标)
   - [本书之外](docs/Introduction.md#本书之外)
   - [下一步该去哪儿](docs/Introduction.md#下一步该去哪儿)
-- [Part Ⅰ：开始使用 JavaFX](docs/Part-Ⅰ.md)
-  - [Chapter 1: 你好，JavaFX！](docs/Chapter-1.md)
+- [第一部分：开始使用 JavaFX](docs/Part-Ⅰ.md)
+  - [第 1 章：你好，JavaFX！](docs/Chapter-1.md)
     - [JavaFX 是什么？](docs/Chapter-1.md#Javafx-是什么)
     - [仔细研究 JavaFX 的可能性](docs/Chapter-1.md#仔细研究-JavaFX-的可能性)
     - [看看一个简单的 JavaFX 程序](docs/Chapter-1.md#看看一个简单的-JavaFX-程序)
@@ -29,7 +29,7 @@
     - [使用记事本开发 Click Me 程序](docs/Chapter-1.md#使用记事本开发-Click-Me-程序)
     - [使用 TextPad 开发 Click Me 程序](docs/Chapter-1.md#使用-TextPad-开发-Click-Me-程序)
     - [使用 IDE 创建 Click Me 程序](docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
-  - [Chapter 2: 深入 JavaFX 程序设计](docs/Chapter-2.md)
+  - [第 2 章：深入 JavaFX 程序设计](docs/Chapter-2.md)
     - 再看 Click Me 程序
     - 导入 JavaFX 相关包
     - 继承 Application 类
@@ -41,14 +41,14 @@
     - 场景搭建
     - 舞台设置
     - 检查 Click Counter 程序
-  - [Chapter 3: 事件处理](docs/Chapter-3.md)
+  - [第 3 章：事件处理](docs/Chapter-3.md)
     - 检查事件
     - 事件处理 
     - 实现 EventHandler 接口
     - 使用内部类处理事件
     - 使用匿名内部类处理事件
     - 使用 Lambda 表达式处理事件
-  - [Chapter 4: 设置窗口和场景布局](docs/Chapter-4.md)
+  - [第 4 章：设置窗口和场景布局](docs/Chapter-4.md)
     - 检验 Stage 类
     - 检验 Scene 类
     - 切换场景
@@ -58,7 +58,7 @@
       - 创建关闭按钮
       - 处理 CloseRequest 事件
       - 把它们放在一起
-  - Chapter 5: 使用布局面板布置你的场景
+  - 第 5 章：使用布局面板布置你的场景
     - 使用布局面板
       - JavaFX 布局面板介绍
       - 创建布局面板
@@ -72,20 +72,20 @@
     - 使节点宽度保持一致
     - 使用 Flow 布局
     - 使用 Border 布局
-  - Chapter 6: 获取用户输入
+  - 第 6 章：获取用户输入
     - 使用文本框
     - 验证数值数据
     - 使用多选框
     - 使用单选按钮
     - 查看一个披萨订单应用程序
-- Part Ⅱ：JavaFX 控件
-  - Chapter 7: JavaFX 节点层级介绍
+- 第二部分：JavaFX 控件
+  - 第 7 章：JavaFX 节点层级介绍
     - JavaFX 包概述
     - Node 类
     - Parent 类
     - Region 类
     - Control 类
-  - Chapter 8: 从列表中选择
+  - 第 8 章：从列表中选择
     - 使用选择框
       - 创建选择框
       - 设置默认值
@@ -104,7 +104,7 @@
       - 创建一个 TreeView 控件
       - 获取选中的节点
       - 查看一个使用树形视图的完整程序
-  - Chapter 9: 表格使用
+  - 第 9 章：表格使用
     - 为表格创建数据
     - 创建只读表格
       - 使用 TableColumn 类
@@ -115,7 +115,7 @@
       - 删除行
       - 编辑单元格
     - 创建可编辑表格的程序
-  - Chapter 10: 创建菜单
+  - 第 10 章：创建菜单
     - 介绍用于创建菜单的类
     - 创建一个基本菜单栏
     - 创建菜单
@@ -126,8 +126,8 @@
     - 使用多选和单选菜单项
     - 创建子菜单
     - 创建自定义菜单项
-- Part Ⅲ：加强你的场景设计
-  - Chapter 11: 更多与精确场景设计有关的布局面板
+- 第三部分：加强你的场景设计
+  - 第 11 章：更多与精确场景设计有关的布局面板
     - 使用 StackPane 布局
     - 使用 TilePane 布局
     - 使用 ScrollPane 布局
@@ -136,7 +136,7 @@
       - 创建一个网格面板
       - 使用网格面板的约束条件
       - 查看网格面板示例
-  - Chapter 12: 使用 CSS 为你的程序换肤
+  - 第 12 章：使用 CSS 为你的程序换肤
     - 使用默认样式表
     - 为场景添加样式表
     - 使用内联样式
@@ -149,7 +149,7 @@
       - 指定字体属性
       - 指定背景颜色
       - 指定边框属性
-  - Chapter 13: 图形绘制
+  - 第 13 章：图形绘制
     - Shape 类介绍
       - 创建线条
       - 创建矩形
@@ -162,7 +162,7 @@
     - 平移，缩放和旋转
     - 绘制文本
     - 图形组合
-  - Chapter 14: 添加特殊效果
+  - 第 14 章：添加特殊效果
     - 特殊效果介绍
     - 添加阴影
     - 创建反射
@@ -170,8 +170,8 @@
     - Blooming 和 Glowing
     - 获取透视图
     - 效果组合
-- Part Ⅳ：让你的程序活起来
-  - Chapter 15: 使用属性创建动态场景
+- 第四部分：让你的程序活起来
+  - 第 15 章：使用属性创建动态场景
     - JavaFX 属性介绍
     - Java API 属性
     - JavaFX 属性类
@@ -180,26 +180,26 @@
     - 更高效地创建属性
     - 使用属性事件
     - 属性绑定
-  - Chapter 16: 使用图像和媒体
+  - 第 16 章：使用图像和媒体
     - 使用图像
       - 使用 Image 类
       - 使用 ImageView 类
       - 查看图像示例
     - 播放音频文件
     - 播放视频文件
-  - Chapter 17: 设置场景动画
+  - 第 17 章：设置场景动画
     - JavaFX 动画介绍
     - 使用转换类
     - 看看一个转换例子
     - 转换组合
     - 用艰难的方式制作动画
     - 改进 Ball Bouncer
-  - Chapter 18: 针对触摸设备
+  - 第 18 章：针对触摸设备
     - 手势和触摸事件介绍
     - 手势监听
     - 查看一个示例程序
-- Part Ⅴ：“十”的部分
-  - Chapter 19: 10 个 JavaFX 控件
+- 第五部分：“十”之部
+  - 第 19 章：10 个 JavaFX 控件
     - TitledPane
     - Accordion
     - ColorPicker
@@ -209,18 +209,18 @@
     - Slider
     - ScrollBar
     - PasswordField
-  - Chapter 20: 构建 3D 世界的 10 个步骤
-    - 步骤 1: 添加透视相机
-    - 步骤 2: 添加圆柱
-    - 步骤 3: 创建材质
-    - 步骤 4: 移动圆柱
-    - 步骤 5: 添加盒子
-    - 步骤 6: 旋转盒子
-    - 步骤 7: 添加球体
-    - 步骤 8: 添加网格对象
-    - 步骤 9: 添加动画
-    - 步骤 10: 添加光源
-    - 放在一起: 完整的 3D 世界程序
+  - 第 20 章：构建 3D 世界的 10 个步骤
+    - 步骤 1：添加透视相机
+    - 步骤 2：添加圆柱
+    - 步骤 3：创建材质
+    - 步骤 4：移动圆柱
+    - 步骤 5：添加盒子
+    - 步骤 6：旋转盒子
+    - 步骤 7：添加球体
+    - 步骤 8：添加网格对象
+    - 步骤 9：添加动画
+    - 步骤 10：添加光源
+    - 合体：完整的 3D 世界程序
 - 索引
 
 
