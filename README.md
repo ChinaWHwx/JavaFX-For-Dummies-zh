@@ -30,17 +30,17 @@
     - [使用 TextPad 开发 Click Me 程序](docs/Chapter-1.md#使用-TextPad-开发-Click-Me-程序)
     - [使用 IDE 创建 Click Me 程序](docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
   - [第 2 章：深入 JavaFX 程序设计](docs/Chapter-2.md)
-    - 再看 Click Me 程序
-    - 导入 JavaFX 相关包
-    - 继承 Application 类
-    - 启动应用程序
-    - 重写 start 方法
-    - 创建按钮
-    - 处理操作时间
-    - 创建布局面板
-    - 场景搭建
-    - 舞台设置
-    - 检查 Click Counter 程序
+    - [再看 Click Me 程序](docs/Chapter-2.md#再看-Click-Me-程序)
+    - [导入 JavaFX 相关包](docs/Chapter-2.md#导入-JavaFX-相关包)
+    - [继承 Application 类](docs/Chapter-2.md#继承-Application-类)
+    - [启动应用程序](docs/Chapter-2.md#启动应用程序)
+    - [重写 start 方法](docs/Chapter-2.md#重写-start-方法)
+    - [创建按钮](docs/Chapter-2.md#创建按钮)
+    - [处理活动事件](docs/Chapter-2.md处理活动事件#)
+    - [创建布局面板](docs/Chapter-2.md#创建布局面板)
+    - [场景搭建](docs/Chapter-2.md#场景搭建)
+    - [舞台设置](docs/Chapter-2.md#舞台设置)
+    - [检查 Click Counter 程序](docs/Chapter-2.md#检查-Click-Counter-程序)
   - [第 3 章：事件处理](docs/Chapter-3.md)
     - 检查事件
     - 事件处理 
