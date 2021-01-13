@@ -79,8 +79,6 @@ JavaFX 开始大放异彩的地方在于它能够使用级联样式表（*CSS*�
 
 为了让你了解 JavaFX 编程是什么样的，清单 1-1 完整展示了这个程序。这里我不会解释程序工作的细节 —— 我会在第 2 章对它进行详细研究。现在，我只想让你对 JavaFX 编程有个总体认知。
 
-
-
 **清单1-1：Click Me 程序**
 
 ```java
@@ -149,63 +147,29 @@ public class ClickMe extends Application {
 >✓ 每当用户单击按钮时，都会调用 `buttonClick` 方法。此方法检查按钮当前显示的文本，并进行相应更改。因此，每次用户单击该按钮时，按钮的文本都会从 `Click me please!` 变为 `You clicked me!` ，反之亦然。
 > 
 
-如果您发现此程序的某些（或全部）混乱，请不要担心。本章的目的只是为了让您了解一个简单的JavaFX程序，而不是让您不知该程序如何工作的细节。如前所述，我将在第2章逐行回顾此程序的详细信息。
+如果你发现这个程序的某些地方（或者全部）让你感到困惑，请不要担心。我写这一章的目的是让你看一眼这个简单的 JavaFX 程序，而不是让你对这个程序如何工作的细节感到不知所措。正如前面提到的，我将在第 2 章逐行回顾这个程序的细节。
 
-如果您在这一点上发现一些(甚至全部)程序令人困惑，请不要担心。我写这一章的目的只是让你看一眼一个简单的JavaFX程序，而不是让你对这个程序如何工作的细节感到不知所措。正如我前面提到的，我将在第2章逐行回顾这个程序的细节。
-
-Please don’t worry if you find some (or even all) of this program confusing at this point. My intent for this chapter is simply to give you a peek at a simple JavaFX program, but not to overwhelm you with the details of how this program works. As I mention earlier, I will review the details of this program lineby-line in Chapter 2.
-
-在本章的其余部分，您将了解如何下载，安装和配置Java开发工具包，以及如何使用流行的Java开发工具来编译和测试Click Me程序。
-
-在本章的其余部分中，您将了解如何下载、安装和配置Java开发工具包，以及如何使用流行的Java开发工具编译和测试Click Me程序。
-
-In the remaining sections of this chapter, you figure out how to download, install, and configure the Java Development Kit and how to compile and test the Click Me program using popular Java development tools.
+在本章的剩余部分，你将了解如何下载、安装和配置 Java 开发工具包，以及如何使用流行的 Java 开发工具来编译和测试 Click Me 程序。
 
 ## 下载和安装 JavaFX
 
-实际上，上面的标题有些技巧。在Java 8之前，JavaFX是与Java分离的实体。因此，要使用JavaFX，您必须下载并安装一个单独的JavaFX软件包。但是从Java 8开始，JavaFX现在已成为Java不可或缺的一部分。因此，如果您已经下载并安装了Java 8，那么您已经拥有JavaFX。
+实际上，上面的标题耍了点花招。在 Java 8 之前，JavaFX 是一个独立于 Java 的实体。因此，要使用 JavaFX，你必须下载并安装一个单独的 JavaFX 软件包。但是从 Java 8 开始，JavaFX 便成为了 Java 的一部分。所以，如果已经下载并安装了 Java 8，那么你就已经拥有了 JavaFX。
 
-实际上，上面的标题是一个小技巧。在Java 8之前，JavaFX是一个独立于Java的实体。因此，要使用JavaFX，您必须下载并安装一个单独的JavaFX包。但从Java 8开始，JavaFX现在是Java不可或缺的一部分。因此，如果您已经下载并安装了Java 8，那么您已经拥有了JavaFX。
-
-Actually, the above heading is a bit of a trick. Prior to Java 8, JavaFX was a separate entity from Java. Thus, to use JavaFX, you had to download and install a separate JavaFX package. But beginning with Java 8, JavaFX is now an integral part of Java. So if you’ve downloaded and installed Java 8, you already have JavaFX.
-
-在以下各节中，我将讨论如何下载，安装和配置Java 8 Development Kit（JDK 8），以便您可以编码和测试JavaFX程序。如果您已经安装了JDK 8，则可以跳过本节的其余部分。
-
-在下面几节中，我将讨论如何下载、安装和配置Java 8开发工具包(JDK 8)，以便编写和测试JavaFX程序。如果您已经安装了JDK 8，您可以跳过本节的其余部分。
-
-In the following sections, I discuss how to download, install, and configure the Java 8 Development Kit (JDK 8) so that you can code and test JavaFX programs. If you’ve already installed JDK 8, you can skip the rest of this section.
+在下面的章节中，我将说明如何下载、安装和配置 Java 8 开发工具包（JDK 8），以便编写和测试 JavaFX 程序。如果你已经安装了 JDK 8，可以跳过本章节。
 
 ### 下载 JDK 8
 
-要进入下载页面，请将浏览器指向http://java.oracle。 com / technetwork / java，然后按照相应的链接下载适用于您的操作系统的JDK 8。
+在浏览器输入 http://java.oracle.com/technetwork/java 进入下载页面，根据你的操作系统选择相应的链接下载 JDK 8。
 
-要进入下载页面，请将浏览器指向http://java.oracle。com/technetwork/java，然后根据相应的链接下载适合你的操作系统的JDK 8。
-
-To get to the download page, point your browser to http://java.oracle. com/technetwork/java and then follow the appropriate links to download the JDK 8 for your operating system.
-
-当您到达Java下载页面时，您会找到下载JDK或JRE的链接。遵循JDK链接； JRE链接只会为您提供Java Runtime Environment，而不是完整的Java Development Kit。
-
-当您进入Java下载页面时，您会找到下载JDK或JRE的链接。跟随JDK链接;JRE链接只提供Java运行时环境，而不是完整的Java开发工具包。
-
-When you get to the Java download page, you find links to download the JDK or the JRE. Follow the JDK link; the JRE link gets you only the Java Runtime Environment, not the complete Java Development Kit.
+进入 Java 下载页面，你会发现下载 JDK 或 JRE 的链接。请选择 JDK 下载链接。JRE 只提供了 Java 运行时环境，不是完整的 Java 开发工具包。
 
 JDK 提供两个版本供用户下载：
 
-The JDK download comes in two versions:
-
-> 联机版本需要活动的Internet连接才能安装JDK。
+> ✓ 联机版本需要网络连接才能安装 JDK。
 >
-> 在线版本需要活跃的Internet连接才能安装JDK。
->
-> ✓ The online version requires an active Internet connection to install the JDK.
->
-> ​	The offline version lets you download the JDK installation file to your computer and install it later.
+>   离线版本需要先下载 JDK 安装包文件到你的电脑，然后再安装。
 
-我建议您使用脱机版本。它的安装速度更快，如果需要，您可以稍后重新安装JDK，而无需再次下载。
-
-我建议您使用脱机版本;它安装得更快，如果需要的话，你可以稍后重新安装JDK，而无需再次下载。
-
-<img src="assets/tip.png" width="80"/>I recommend that you use the offline version; it installs faster, and you can reinstall the JDK later if you need to without downloading it again.
+<img src="assets/tip.png" width="80"/>建议你使用离线版本，不仅安装速度更快，而且在下次需要重新安装 JDK 时也不需要再次下载。
 
 ### 安装 JDK 8
 
