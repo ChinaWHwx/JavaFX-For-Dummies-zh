@@ -1,4 +1,4 @@
-# Chapter 1 你好， JavaFX！
+# 第 1 章  你好， JavaFX！
 
 > **在本章节**
 >
