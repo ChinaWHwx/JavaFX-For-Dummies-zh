@@ -1,4 +1,4 @@
-# Chapter 10 Making Menus
+# 第 10 章  创建菜单
 
 > **In This Chapter**
 >
@@ -9,7 +9,7 @@
 
 In this chapter, you find out how to adorn your programs with menus. You work with menus in applications, so you’re probably already familiar with what menus are and how they work. I don’t review those basics in this chapter. Instead, I jump right into the details of how to create a menu and add it to a scene.
 
-## Introducing Classes for Creating Menus
+## 介绍用于创建菜单的类
 
 The following paragraphs describe the classes you use most often when you create menus:
 
@@ -33,7 +33,7 @@ The following paragraphs describe the classes you use most often when you create
 
 ![Figure 10-1](./assets/Figure-10-1.png)
 
-## Creating a Basic Menu Bar
+## 创建基本菜单栏
 
 The basics of creating menus are pretty straightforward. First, you create a menu bar by calling the MenuBar constructor:
 
@@ -59,7 +59,7 @@ For your reference, Table 10-1 lists the most useful constructors and methods of
 | ------------------------- | ------------------------------------------------------------ |
 | ObservableList getMenus() | Returns the list of menus contained in this menu bar. You can use any of the methods of the ObservableList interface to add or remove menus from the menu bar. |
 
-## Creating Menus
+## 创建菜单
 
 To create each menu, you use the Menu and MenuItem classes, whose constructors and methods I discuss in the next two tables in this chapter. Start by calling the Menu constructor and giving a name to the menu:
 
@@ -85,7 +85,7 @@ Table 10-2 lists the most important constructors and methods of the Menu class f
 | String getText()          | Gets the menu’s text.                                        |
 | void setText(String text) | Sets the menu’s text.                                        |
 
-## Creating Menu Items
+## 创建菜单项
 
 After you create a menu, the next step is creating menu items and adding them to the menu. To create a menu item, simply call the MenuItem constructor, passing the text to be displayed as a parameter:
 
@@ -151,7 +151,7 @@ Table 10-3 lists some constructors and methods of the MenuItem class in case you
 | void setDisable(boolean value)                  | If value is true, disables the menu item. Otherwise, enables the menu item. |
 | setOnAction(EventHandler \<ActionEvent\> value) | Sets an action event handler that is called when the user selects this menu item. |
 
-## Using Separators
+## 使用分割线
 
 A menu separator is a menu item whose only purpose is to create visual separation within a menu so that items appear grouped logically. The menu that was shown in Figure 10-1 includes a separator that divides the three menu items that start, pause, or end games from the item that exits the program.
 
@@ -169,7 +169,7 @@ menuGame.getChildren().add(menuItemQuitGame);
 menuGame.getChildren().add(new SeparatorMenuItem()); menuGame.getChildren().add(menuItemExit);
 ```
 
-## Using Action Listeners
+## 使用操作监听器
 
 Menu items generate action events when selected by the user. As with any other action event, you handle the action events for menus by creating an action event handler that is called when the action event is generated. The easiest way to do that is by creating a method to call when the action event occurs, and then using a Lambda expression with the menu item’s setOnAction method to call the method you created.
 
@@ -226,7 +226,7 @@ public void menuAction(ActionEvent e){
 }
 ```
 
-## Creating Menus That Change
+## 创建可更改的菜单
 
 In many applications, menu items change as you work with the program. Some items may be disabled in certain situations, and the text of a menu item may change depending on the context in which the command could be used.
 
@@ -254,7 +254,7 @@ else {
 }
 ```
 
-## Using Check and Radio Menu Items
+## 使用多选和单选菜单项
 
 A check menu item is a menu item that resembles a check box that the user can click to check or uncheck. Check menu’s ideal for menu items that allow users to select program options.
 
@@ -336,7 +336,7 @@ menuItemEasy.setToggleGroup(groupDifficulty);
 menuItemMedium.setToggleGroup(groupDifficulty); menuItemHard.setToggleGroup(groupDifficulty);
 ```
 
-## Creating Submenus
+## 创建子菜单
 
 A submenu is a menu within a menu. Submenus are possible because the Menu class is itself a subclass of the MenuItem class, which means that any item in a menu can itself be another menu. When the user clicks a submenu, the submenu opens to reveal its menu items. Submenus can be created within submenus, as many levels deep as you wish. But few menus are nested more than two or three levels deep.
 
@@ -370,7 +370,7 @@ Figure 10-3 shows this menu in action.
 
 ![Figure 10-3](./assets/Figure-10-3.png)
 
-## Creating Custom Menu Items
+## 创建自定义菜单项
 
 A custom menu item is a menu item that can contain any JavaFX node. This allows you to easily convert any JavaFX node into a menu item. For example, you can turn a text field, choice box, or combo box into a menu item by adding it to a custom menu item and then adding the custom menu item to a menu. Figure 10-4 shows an example of a custom menu item that contains a text field.
 
