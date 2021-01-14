@@ -341,3 +341,77 @@ menuItemMedium.setToggleGroup(groupDifficulty); menuItemHard.setToggleGroup(grou
 A submenu is a menu within a menu. Submenus are possible because the Menu class is itself a subclass of the MenuItem class, which means that any item in a menu can itself be another menu. When the user clicks a submenu, the submenu opens to reveal its menu items. Submenus can be created within submenus, as many levels deep as you wish. But few menus are nested more than two or three levels deep.
 
 The following example creates a version of the Options menu that isolates the three difficulty choices into a separate submenu named Difficulty:
+
+```java
+// Create the check menu items 
+CheckMenuItem menuItemSound = new CheckMenuItem("_Sound"); 
+CheckMenuItem menuItemMusic = new CheckMenuItem("_Music");
+
+// Create the radio menu items 
+RadioMenuItem menuItemEasy = new RadioMenuItem("_Easy"); 
+RadioMenuItem menuItemMedium = new RadioMenuItem("_Medium"); 
+RadioMenuItem menuItemHard = new RadioMenuItem("_Hard"); 
+ToggleGroup difficultyGroup = new ToggleGroup();
+menuItemEasy.setToggleGroup(difficultyGroup); menuItemMedium.setToggleGroup(difficultyGroup); menuItemHard.setToggleGroup(difficultyGroup);
+
+// Create the Difficulty submenu 
+Menu menuDifficulty = new Menu("_Difficulty"); menuDifficulty.getItems().add(menuItemEasy); menuDifficulty.getItems().add(menuItemMedium); menuDifficulty.getItems().add(menuItemHard);
+
+// Create the Options menu 
+Menu menuOptions = new Menu("_Options"); 
+menuOptions.getItems().add(menuItemSound); 
+menuOptions.getItems().add(menuItemMusic); 
+menuOptions.getItems().add(menuDifficulty);
+```
+
+Figure 10-3 shows this menu in action.
+
+> Figure 10-3: A menu with a submenu.
+
+![Figure 10-3](./assets/Figure-10-3.png)
+
+## Creating Custom Menu Items
+
+A custom menu item is a menu item that can contain any JavaFX node. This allows you to easily convert any JavaFX node into a menu item. For example, you can turn a text field, choice box, or combo box into a menu item by adding it to a custom menu item and then adding the custom menu item to a menu. Figure 10-4 shows an example of a custom menu item that contains a text field.
+
+> Figure 10-4: A custom menu item that contains a text field.
+
+![Figure 10-4](./assets/Figure-10-4.png)
+
+To create a custom menu item, use the CustomMenuItem class. Table 10-6 shows the details of this class.
+
+**Table 10-6 The CustomMenuItem Class**
+
+| Constructor                                 | Description                                                  |
+| ------------------------------------------- | ------------------------------------------------------------ |
+| CustomMenuItem()                            | Creates an empty custom menu item.                           |
+| CustomMenuItem(Node content)                | Creates a custom menu item with the specified node as its content. |
+| CustomMenuItem(Node content, boolean value) | Creates a custom menu item with the specified node as its content and the specified hideOnClick setting. |
+
+| Method                                          | Description                                                  |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+| Node getContent()                               | Gets the menu item’s content.                                |
+| void setContent(Node content)                   | Sets the menu item’s content.                                |
+| void setHideOnClick(boolean value)              | Sets the HideOnClick property. This property should be set to false for most custom menu items. |
+| boolean isHideOnClick()                         | Indicates the HideOnClick setting.                           |
+| boolean isDisable()                             | Returns true if the menu item is disabled.                   |
+| void setDisable()                               | Disables the menu item.                                      |
+| void setDisable(boolean value)                  | If value is true, disables the menu item. Otherwise, enables the menu item. |
+| setOnAction(EventHandler \<ActionEvent\> value) | Sets an action event handler that’s called when the user selects this menu item. |
+
+As you can see, you can specify the node that you want to add as the custom menu item’s content either in the constructor or via the setContent method.
+
+One common problem with custom menu items is that they have a tendency to disappear when the user clicks them. That’s because the default behavior for menu items is to disappear as soon as they’re clicked. For most custom menu items, that’s not desirable. For example, if a custom menu item contains a text field but the text field disappears whenever the user clicks it, the user can’t enter anything into the text field.
+
+To avoid that, you can call the setHideOnClick method with a value of false as its parameter. This suppresses the hide-on-click behavior, allowing the user to click the custom menu item to select it. Then, the user can enter data into the field. Note: You can also set the hide-on-click behavior via the class constructor.
+
+The following example shows how to create a text field custom menu item and add it to a menu:
+
+```java
+TextField txtName = new TextField(); 
+txtName.setPromptText("Player Name"); 
+CustomMenuItem menuItemName = new CustomMenuItem(txtName); 
+menuItemName.setHideOnClick(false);
+menuOptions.getItems().add(menuItemName);
+```
+
