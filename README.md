@@ -1,54 +1,54 @@
 # JavaFX-For-Dummies-zh
 > 跟阿呆学 JavaFX
 
-<img src="assets/book-cover.jpg" alt="JavaFX For Dummies" width="320" align="right"/>
+<img src="./assets/book-cover.jpg" alt="JavaFX For Dummies" width="320" align="right"/>
 
 ## 目录
 
-- [介绍](docs/Introduction.md)
-  - [关于本书](docs/Introduction.md#关于本书)
-  - [鲁莽的假设](docs/Introduction.md#鲁莽的假设)
-  - [本书组织架构](docs/Introduction.md#本书组织架构)
-    - [第一部分：开始使用 JavaFX](docs/Introduction.md#第一部分开始使用-JavaFX)
-    - [第二部分：JavaFX 控件](docs/Introduction.md#第二部分JavaFX-控件)
-    - [第三部分：加强你的场景设计](docs/Introduction.md#第三部分加强你的场景设计)
-    - [第四部分：让你的程序活起来](docs/Introduction.md#第四部分让你的程序活起来)
-    - [第五部分：“十”之部分](docs/Introduction.md#第五部分十之部分)
-  - [本书使用的图标](docs/Introduction.md#本书使用的图标)
-  - [本书之外](docs/Introduction.md#本书之外)
-  - [下一步该去哪儿](docs/Introduction.md#下一步该去哪儿)
-- [第一部分：开始使用 JavaFX](docs/Part-Ⅰ.md)
-  - [第 1 章：你好，JavaFX！](docs/Chapter-1.md)
-    - [JavaFX 是什么？](docs/Chapter-1.md#Javafx-是什么)
-    - [仔细研究 JavaFX 的可能性](docs/Chapter-1.md#仔细研究-JavaFX-的可能性)
-    - [看看一个简单的 JavaFX 程序](docs/Chapter-1.md#看看一个简单的-JavaFX-程序)
-    - [下载和安装 JavaFX](docs/Chapter-1.md#下载和安装-JavaFX)
-      - [下载 JDK 8](docs/Chapter-1.md#下载-JDK-8)
-      - [安装 JDK 8](docs/Chapter-1.md#安装-JDK-8)
-      - [设置 Path](docs/Chapter-1.md#设置-Path)
-    - [使用记事本开发 Click Me 程序](docs/Chapter-1.md#使用记事本开发-Click-Me-程序)
-    - [使用 TextPad 开发 Click Me 程序](docs/Chapter-1.md#使用-TextPad-开发-Click-Me-程序)
-    - [使用 IDE 创建 Click Me 程序](docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
-  - [第 2 章：深入 JavaFX 程序设计](docs/Chapter-2.md)
-    - [再看 Click Me 程序](docs/Chapter-2.md#再看-Click-Me-程序)
-    - [导入 JavaFX 相关包](docs/Chapter-2.md#导入-JavaFX-相关包)
-    - [继承 Application 类](docs/Chapter-2.md#继承-Application-类)
-    - [启动应用程序](docs/Chapter-2.md#启动应用程序)
-    - [重写 start 方法](docs/Chapter-2.md#重写-start-方法)
-    - [创建按钮](docs/Chapter-2.md#创建按钮)
-    - [处理活动事件](docs/Chapter-2.md处理活动事件#)
-    - [创建布局面板](docs/Chapter-2.md#创建布局面板)
-    - [场景搭建](docs/Chapter-2.md#场景搭建)
-    - [舞台设置](docs/Chapter-2.md#舞台设置)
-    - [检查 Click Counter 程序](docs/Chapter-2.md#检查-Click-Counter-程序)
-  - [第 3 章：事件处理](docs/Chapter-3.md)
+- [介绍](./docs/Introduction.md)
+  - [关于本书](./docs/Introduction.md#关于本书)
+  - [鲁莽的假设](./docs/Introduction.md#鲁莽的假设)
+  - [本书组织架构](./docs/Introduction.md#本书组织架构)
+    - [第一部分：开始使用 JavaFX](./docs/Introduction.md#第一部分开始使用-JavaFX)
+    - [第二部分：JavaFX 控件](./docs/Introduction.md#第二部分JavaFX-控件)
+    - [第三部分：加强你的场景设计](./docs/Introduction.md#第三部分加强你的场景设计)
+    - [第四部分：让你的程序活起来](./docs/Introduction.md#第四部分让你的程序活起来)
+    - [第五部分：“十”之部分](./docs/Introduction.md#第五部分十之部分)
+  - [本书使用的图标](./docs/Introduction.md#本书使用的图标)
+  - [本书之外](./docs/Introduction.md#本书之外)
+  - [下一步该去哪儿](./docs/Introduction.md#下一步该去哪儿)
+- [第一部分：开始使用 JavaFX](./docs/Part-Ⅰ.md)
+  - [第 1 章：你好，JavaFX！](./docs/Chapter-1.md)
+    - [JavaFX 是什么？](./docs/Chapter-1.md#Javafx-是什么)
+    - [仔细研究 JavaFX 的可能性](./docs/Chapter-1.md#仔细研究-JavaFX-的可能性)
+    - [看看一个简单的 JavaFX 程序](./docs/Chapter-1.md#看看一个简单的-JavaFX-程序)
+    - [下载和安装 JavaFX](./docs/Chapter-1.md#下载和安装-JavaFX)
+      - [下载 JDK 8](./docs/Chapter-1.md#下载-JDK-8)
+      - [安装 JDK 8](./docs/Chapter-1.md#安装-JDK-8)
+      - [设置 Path](./docs/Chapter-1.md#设置-Path)
+    - [使用记事本开发 Click Me 程序](./docs/Chapter-1.md#使用记事本开发-Click-Me-程序)
+    - [使用 TextPad 开发 Click Me 程序](./docs/Chapter-1.md#使用-TextPad-开发-Click-Me-程序)
+    - [使用 IDE 创建 Click Me 程序](./docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
+  - [第 2 章：深入 JavaFX 程序设计](./docs/Chapter-2.md)
+    - [再看 Click Me 程序](./docs/Chapter-2.md#再看-Click-Me-程序)
+    - [导入 JavaFX 相关包](./docs/Chapter-2.md#导入-JavaFX-相关包)
+    - [继承 Application 类](./docs/Chapter-2.md#继承-Application-类)
+    - [启动应用程序](./docs/Chapter-2.md#启动应用程序)
+    - [重写 start 方法](./docs/Chapter-2.md#重写-start-方法)
+    - [创建按钮](./docs/Chapter-2.md#创建按钮)
+    - [处理活动事件](./docs/Chapter-2.md处理活动事件#)
+    - [创建布局面板](./docs/Chapter-2.md#创建布局面板)
+    - [场景搭建](./docs/Chapter-2.md#场景搭建)
+    - [舞台设置](./docs/Chapter-2.md#舞台设置)
+    - [检查 Click Counter 程序](./docs/Chapter-2.md#检查-Click-Counter-程序)
+  - [第 3 章：事件处理](./docs/Chapter-3.md)
     - 检查事件
     - 事件处理 
     - 实现 EventHandler 接口
     - 使用内部类处理事件
     - 使用匿名内部类处理事件
     - 使用 Lambda 表达式处理事件
-  - [第 4 章：设置窗口和场景布局](docs/Chapter-4.md)
+  - [第 4 章：设置窗口和场景布局](./docs/Chapter-4.md)
     - 检验 Stage 类
     - 检验 Scene 类
     - 切换场景
@@ -115,18 +115,18 @@
       - 删除行
       - 编辑单元格
     - 创建可编辑表格的程序
-  - [第 10 章：创建菜单](docs/Chapter-10.md)
-    - [介绍用于创建菜单的类](docs/Chapter-10.md#)
-    - [创建基本菜单栏](docs/Chapter-10.md#介绍用于创建菜单的类)
-    - [创建菜单](docs/Chapter-10.md#创建菜单)
-    - [创建菜单项](docs/Chapter-10.md#创建菜单项)
-    - [使用分割线](docs/Chapter-10.md#使用分割线)
-    - [使用操作监听器](docs/Chapter-10.md#使用操作监听器)
-    - [创建可更改的菜单](docs/Chapter-10.md#创建可更改的菜单)
-    - [使用多选和单选菜单项](docs/Chapter-10.md#使用多选和单选菜单项)
-    - [创建子菜单](docs/Chapter-10.md#创建子菜单)
-    - [创建自定义菜单项](docs/Chapter-10.md#创建自定义菜单项)
-- 第三部分：加强你的场景设计
+  - [第 10 章：创建菜单](./docs/Chapter-10.md)
+    - [介绍用于创建菜单的类](./docs/Chapter-10.md#)
+    - [创建基本菜单栏](./docs/Chapter-10.md#介绍用于创建菜单的类)
+    - [创建菜单](./docs/Chapter-10.md#创建菜单)
+    - [创建菜单项](./docs/Chapter-10.md#创建菜单项)
+    - [使用分割线](./docs/Chapter-10.md#使用分割线)
+    - [使用操作监听器](./docs/Chapter-10.md#使用操作监听器)
+    - [创建可更改的菜单](./docs/Chapter-10.md#创建可更改的菜单)
+    - [使用多选和单选菜单项](./docs/Chapter-10.md#使用多选和单选菜单项)
+    - [创建子菜单](./docs/Chapter-10.md#创建子菜单)
+    - [创建自定义菜单项](./docs/Chapter-10.md#创建自定义菜单项)
+- [第三部分：加强你的场景设计](./docs/Part-Ⅲ.md)
   - 第 11 章：更多与精确场景设计有关的布局面板
     - 使用 StackPane 布局
     - 使用 TilePane 布局
