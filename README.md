@@ -127,7 +127,7 @@
     - [创建子菜单](./docs/Chapter-10.md#创建子菜单)
     - [创建自定义菜单项](./docs/Chapter-10.md#创建自定义菜单项)
 - [第三部分：加强你的场景设计](./docs/Part-Ⅲ.md)
-  - 第 11 章：更多与精确场景设计有关的布局面板
+  - [第 11 章：更多与精确场景设计有关的布局面板](./docs/Chapter-11.md)
     - 使用 StackPane 布局
     - 使用 TilePane 布局
     - 使用 ScrollPane 布局
