@@ -270,7 +270,74 @@ To create a check menu item, use the CheckMenuItem class, whose constructors and
 
 **Table 10-4 The CheckMenuItem Class**
 
-| Constructor | Description |
-| ----------- | ----------- |
-|             |             |
+| Constructor                | Description                                        |
+| -------------------------- | -------------------------------------------------- |
+| CheckMenuItem(String name) | Creates a check menu item with the specified name. |
 
+| Method                                          | Description                                                  |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+| boolean isSelected()                            | Returns true if the item is checked.                         |
+| void setSelected(boolean value)                 | Specify true to check the item or false to uncheck the item. |
+| String getText()                                | Gets the menu item’s text.                                   |
+| void setText(String text)                       | Sets the menu item’s text.                                   |
+| boolean isDisable()                             | Returns true if the menu item is disabled.                   |
+| void setDisable()                               | Disables the menu item.                                      |
+| void setDisable(boolean value)                  | If value is true, disables the menu item. Otherwise, enables the menu item. |
+| setOnAction(EventHandler \<ActionEvent\> value) | Sets an action event handler that’s called when the user selects this menu item. |
+
+Initially, the check menu item is not checked. If you want the default setting for the item to be checked, call the setSelected method, like this:
+
+```java
+menuItemMusic.setSelected(true);
+```
+
+To test the state of the check menu item, you use the isSelected method, as in this example:
+
+```java
+if (menuItemMusic.isSelected() == true) 
+  System.out.println("Your mamma can't dance.");
+else
+  System.out.println("Your daddy can't rock and roll.");
+```
+
+Here two different messages display on the console, depending on the setting of the check box for the musicItem menu item.
+
+To create a radio menu item, use the RadioMenuItem class shown in Table 10-5.
+
+**Table 10-5 The RadioMenuItem Class**
+
+| Constructor                | Description                                        |
+| -------------------------- | -------------------------------------------------- |
+| RadioMenuItem(String name) | Creates a radio menu item with the specified name. |
+
+| Method                                          | Description                                                  |
+| ----------------------------------------------- | ------------------------------------------------------------ |
+| void setToggleGroup(ToggleGroup group)          | Assigns this radio menu item to a toggle group.              |
+| ToggleGroup getToggleGroup()                    | Retrieves the toggle group that this radio menu item is a member of. |
+| boolean isSelected()                            | Returns true if the item is checked.                         |
+| void setSelected(boolean value)                 | Specify true to check the item or false to uncheck the item. |
+| String getText()                                | Gets the menu item’s text.                                   |
+| void setText(String text)                       | Sets the menu item’s text.                                   |
+| boolean isDisable()                             | Returns true if the menu item is disabled.                   |
+| void setDisable()                               | Disables the menu item.                                      |
+| void setDisable(boolean value)                  | If value is true, disables the menu item. Otherwise, enables the menu item. |
+| setOnAction(EventHandler \<ActionEvent\> value) | Sets an action event handler that’s called when the user selects this menu item. |
+
+As you can see, this class is almost the same as the CheckMenuItem class. The only significant difference is the addition of the setToggleGroup method, which lets you add a radio menu item to a toggle group. Here’s a snippet of code that creates three radio menu items, then creates a toggle group and adds the three radio menu items to the group:
+
+```java
+RadioMenuItem menuItemEasy = new RadioMenuItem("_Easy"); 
+RadioMenuItem menuItemMedium = new RadioMenuItem("_Medium");
+RadioMenuItem menuItemHard = new RadioMenuItem("_Hard");
+
+ToggleGroup groupDifficulty = new ToggleGroup();
+
+menuItemEasy.setToggleGroup(groupDifficulty);
+menuItemMedium.setToggleGroup(groupDifficulty); menuItemHard.setToggleGroup(groupDifficulty);
+```
+
+## Creating Submenus
+
+A submenu is a menu within a menu. Submenus are possible because the Menu class is itself a subclass of the MenuItem class, which means that any item in a menu can itself be another menu. When the user clicks a submenu, the submenu opens to reveal its menu items. Submenus can be created within submenus, as many levels deep as you wish. But few menus are nested more than two or three levels deep.
+
+The following example creates a version of the Options menu that isolates the three difficulty choices into a separate submenu named Difficulty:
