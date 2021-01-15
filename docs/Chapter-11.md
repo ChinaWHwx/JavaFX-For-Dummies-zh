@@ -168,3 +168,171 @@ To create a tile pane, you use the TilePane class, as I describe in Table 11-2.
 | TilePane(Orientation orientation, Node. . . children)        |                                                              |
 | TilePane(Orientation orientation, double hgap, double vgap, Node. . . children) |                                                              |
 
+| Method                                         | Description                                                  |
+| ---------------------------------------------- | ------------------------------------------------------------ |
+| ObservableList\<Node\> getChildren()           | Returns the collection of all child nodes that have been added to the tile pane. The collection is returned as an ObservableList type, which includes the methods add and addAll, which lets you add one or more nodes to the list. |
+| void setHgap(double value)                     | Sets the size of the gap that appears between columns.       |
+| void setVgap(double value)                     | Sets the size of the gap that appears between rows.          |
+| void setOrientation(Orientation orientation)   | Sets the orientation. Allowable values are Orientation.HORIZONTAL and Orientation.VERTICAL. |
+| void setPrefColumns(int value)                 | Sets the number of columns preferred for this tile pane.     |
+| void setPrefRows(int value)                    | Sets the number of rows preferred for this tile pane.        |
+| void setPrefTileWidth(double value)            | Sets the preferred width for each cell.                      |
+| void setPrefTileHeight(double value)           | Sets the preferred height for each cell.                     |
+| static void setMargin(Node node, Insets value) | Sets the margin for a particular node. See Table 5-2 in Chapter 5 for an explanation of the Insets class. |
+| void setMinHeight(double value)                | Sets the minimum height of the tile pane.                    |
+| void setMaxHeight(double value)                | Sets the maximum height of the tile pane.                    |
+| void setPrefHeight(double value)               | Sets the preferred height of the tile pane.                  |
+| void setMinWidth(double value)                 | Sets the minimum width of the tile pane.                     |
+| void setMaxWidth(double value)                 | Sets the maximum width of the tile pane.                     |
+| void setPrefWidth(double value)                | Sets the preferred width of the tile pane.                   |
+| void setPadding(Insets value)                  | Sets the padding around the inside edges of the tile pane. See Table 5-2 in Chapter 5 for an explanation of the Insets class. |
+
+```java
+TilePane tile1 = new TilePane(); 
+tile1.setHgap(10); 
+tile1.setVgap(10); 
+tile1.setPadding(new Insets(10,10,10,10));
+for (int i=1; i<13; i++){
+  Rectangle r = new Rectangle(100, 100); 
+  r.setFill(Color.LIGHTGRAY); 
+  Label l = new Label("A-" + i); 
+  StackPane s = new StackPane(r, l); 
+  tile1.getChildren().add(s);
+}
+```
+
+As you can see, a for loop is used to create 12 labeled rectangles, which are added to the tile pane. In the for loop, I first create a 100x100-pixel rectangle and set its color to light gray. Then, I create a label and assign it a text value that consists of the string “A-” followed by an integer value. Finally, I create a stack pane and add the rectangle and the label to it. The result is that the label appears on top of the rectangle. I then add the stack pane to the tile pane.
+
+## Using the ScrollPane Layout
+
+When a layout is too large to fit in a window, you want to provide horizontal or vertical scroll bars (or both) so the user can scroll to see the entire layout. The easiest way to do that is with a scroll pane. A scroll pane envelops a single node with an area that automatically displays horizontal or vertical scroll bars whenever necessary. Thus, the scroll bars are not displayed if the entire layout fits within the scroll pane. If the layout is taller than the scroll pane, a vertical scroll bar appears. And if the layout is wider than the scroll pane, a horizontal scroll bar appears.
+
+Technically, a scroll pane is not really a layout pane. The ScrollPane class is a descendant of the Control class, not the Pane class. Even so, scroll panes are typically used in conjunction with layout panes to accommodate layouts that are too large to fit onscreen.
+
+Figure 11-5 shows a tile pane similar to the ones shown in the preceding section contained within a scroll pane. As you can see, the tile pane in this example displays two tiles per row, and a vertical scroll bar is visible, allowing the user to scroll to see all the tiles. To create margins around the scroll pane, I added the scroll pane to a stack pane and then set margins on the stack pane.
+
+> Figure 11-5: A tile pane contained within a scroll pane.
+
+![Figure 11-5](./assets/Figure-11-5.png)
+
+To create a scroll pane, use the ScrollPane class depicted in Table 11-3.
+
+**Table 11-3 ScrollPane Constructors and Methods**
+
+| Constructor           | Description                                          |
+| --------------------- | ---------------------------------------------------- |
+| ScrollPane()          | Creates an empty scroll pane.                        |
+| ScrollPane(Node node) | Creates a scroll pane with the specified child node. |
+
+| Method                                                | Description                                                  |
+| ----------------------------------------------------- | ------------------------------------------------------------ |
+| void getContent(Node node)                            | Sets the node contained within this scroll pane.             |
+|                                                       | Note: The allowable values for the following two methods are shown at the end of this table. |
+| void setHbarPolicy(ScrollPane. ScrollBarPolicy value) | Sets the policy for the horizontal scroll bar.               |
+| void setVbarPolicy(ScrollPane. ScrollBarPolicy value) | Sets the policy for the vertical scroll bar.                 |
+| void setPannable(boolean value)                       | If true, the user can pan the contents of the scroll pane using the mouse. The default is false. |
+| void setMinHeight(double value)                       | Sets the minimum height of the scroll pane.                  |
+| void setMaxHeight(double value)                       | Sets the maximum height of the scroll pane.                  |
+| void setPrefHeight(double value)                      | Sets the preferred height of the scroll pane.                |
+| void setMinWidth(double value)                        | Sets the minimum width of the scroll pane.                   |
+| void setMaxWidth(double value)                        | Sets the maximum width of the scroll pane.                   |
+| void setPrefWidth(double value)                       | Sets the preferred width of the scroll pane.                 |
+| void setPadding(Insets value)                         | Sets the padding around the inside edges of the tile pane. See Table 5-2 in Chapter 5 for an explanation of the Insets class. |
+
+| ScrollBarPolicy Enumeration           | Description                              |
+| ------------------------------------- | ---------------------------------------- |
+| ScrollPane. ScrollBarPolicy.ALWAYS    | Always show a scroll bar.                |
+| ScrollPane. ScrollBarPolicy.NEVER     | Never show a scroll bar.                 |
+| ScrollPane. ScrollBarPolicy.AS_NEEDED | Show a scroll bar only when it’s needed. |
+
+The easiest way to create a scroll pane is to call the ScrollPane constructor and pass the node you want scrolled as a parameter, like this:
+
+```java
+ScrollPane spane = new ScrollPane(tile1);
+```
+
+You will most likely also want to set the size constraints for the scroll pane. The following code fixes the width at 250 and allows the layout to determine the height, with a preferred height of 400:
+
+```java
+spane.setMaxWidth(250); 
+spane.setMinWidth(250); 
+spane.setPrefWidth(250); 
+spane.setPrefHeight(400);
+```
+
+If you want, you can set a policy for the vertical and horizontal scroll bars. By default, the scroll bars appear only if necessary. If you want a scroll bar to always appear, even when it isn’t necessary, set the policy to ALWAYS as in this example:
+
+```java
+spane.setVBarPolicy(ScrollBarPolicy.ALWAYS);
+```
+
+The complete program used to create the scroll pane shown in Figure 11-5 is shown in Listing 11-1.
+
+**Listing 11-1: The ScrolledTile Program**
+
+```java
+import javafx.application.*; 
+import javafx.stage.*; 
+import javafx.scene.*; 
+import javafx.scene.layout.*; 
+import javafx.scene.control.*; 
+import javafx.scene.shape.*; 
+import javafx.scene.paint.*; 
+import javafx.geometry.*;
+
+public class ScrolledTile extends Application 
+{
+  public static void main(String[] args) 
+  { 
+    launch(args); 
+  }
+
+  @Override public void start(Stage primaryStage) 
+  {
+
+    TilePane tile1 = new TilePane();                                              // →20
+    tile1.setHgap(10); 
+    tile1.setVgap(10); 
+    tile1.setPrefColumns(2); 
+    tile1.setPadding(new Insets(10,10,10,10));
+    for (int i=1; i<13; i++)                                                      // →25
+    {
+      Rectangle r = new Rectangle(100, 100); 
+      r.setFill(Color.LIGHTGRAY); 
+      Label l = new Label("A-" + i);
+      StackPane s = new StackPane(r, l); 
+      tile1.getChildren().add(s);
+    }
+
+    ScrollPane spane = new ScrollPane(tile1);                                     // →34
+    spane.setMinWidth(250); 
+    spane.setPrefWidth(250); 
+    spane.setMaxWidth(250); 
+    spane.setPrefHeight(400); 
+    spane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);                       // →39
+
+    StackPane stack = new StackPane(spane);                                       // →41
+    stack.setMargin(spane, new Insets(40,40,40,40));
+
+    Scene scene = new Scene(stack);                                               // →44
+    primaryStage.setScene(scene); 
+    primaryStage.setTitle("Scrolled Tiles"); 
+    primaryStage.show();
+  }
+}
+```
+
+The following paragraphs describe the highlights of this program:
+
+➝ 20：This line and the four lines that follow it create the tile pane, set the horizontal and vertical gaps to 10 pixels, set the preferred width to two columns, and set the padding.
+
+➝ 25：A for loop is used to create 12 labeled rectangles and add them to the tile pane.
+
+➝ 34：These lines create the scroll pane and set its size. The width is fixed at 250 pixels. The preferred height is 400 pixels, but the scroll pane’s height can grow or shrink as needed to fill the scene.
+
+➝ 39：The vertical scroll bar will always be displayed, even if it isn’t necessary.
+
+➝ 41：A stack pane is used here for the sole purpose of providing 40 pixels of margin around the scroll pane.
+
+➝ 44：The stack pane is added to the scene, and the scene is finalized and displayed.
+

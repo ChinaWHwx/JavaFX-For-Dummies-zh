@@ -29,7 +29,7 @@ JavaFX 作为附加包出现已经有一段时间了，但是从 Java 8 开始�
 
 因为 JavaFX 现在是 Java 标准的一部分，所以可以在任何包含 Java 8 运行时环境（JRE）的设备上运行 JavaFX 程序。这些设备包括计算机、平板、智能手机和其他支持 JDK8 的设备。
 
-<img src="assets/technical-stuff.png" width="80" />Oracle 已经宣布 JavaFX 最终将取代Swing。尽管 Java 8 仍然支持Swing，并且短期不会改变，但 Oracle 把主要精力放在 JavaFX 的新特性上。最终，Swing 将被淘汰。
+<img src="assets/technical-stuff.png" width="80" />Oracle 已经宣布 JavaFX 最终将取代Swing。尽管 Java 8 仍然支持 Swing，并且短期内还不会改变，但 Oracle 把主要精力放在 JavaFX 的新特性上。最终，Swing 将被淘汰。
 
 ## 仔细研究 JavaFX 的可能性
 
