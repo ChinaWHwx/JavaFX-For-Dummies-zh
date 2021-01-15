@@ -204,49 +204,24 @@ JDK 提供两个版本供用户下载：
    
    ![Figure 1-4](assets/Figure-1-4.png)
 
-4. In the System Variables list, scroll to the Path variable, select it, and then click the Edit button.
+4. **在系统变量列表中，滚动到 Path 变量，选择它，然后单击“编辑”按钮。**
 
-   A little dialog box pops up to let you edit the value of the Path variable.
+   将会弹出一个小对话框，让你编辑 Path 变量的值。
 
-   在“系统变量”列表中，滚动到“路径”变量，选择它，然后单击“编辑”按钮。
-   弹出一个小对话框，让您编辑Path变量的值。
+5. **在 Path 值的开头添加 JDK bin 文件夹的名称。**
 
-   在“系统变量”列表中，滚动到Path变量，选择它，然后单击“编辑”按钮。
-   弹出一个小对话框，让您编辑Path变量的值。
+   使用分号将 bin 文件夹与 path 中可能已存在的其他信息分开。
 
-5. Add the JDK bin folder to the beginning of the Path value.
-
-   Use a semicolon to separate the bin folder from the rest of the information that may already be in the path.
-
-   Note: The name of the bin folder may vary on your system, as in this example:
-
-   将JDK bin文件夹添加到Path值的开头。
-   使用分号将bin文件夹与路径中可能已存在的其他信息分开。
-   注意：bin文件夹的名称在您的系统上可能会有所不同，例如以下示例：
-
-   在“Path”值的开头添加“JDK bin”文件夹。
-   使用分号将bin文件夹与路径中可能已经存在的其他信息分开。
-   注意:bin文件夹的名称在你的系统中可能会有所不同，例如下面这个例子:
+   **注意：** bin 文件夹的名称在你的系统上可能会有所不同，例如以下示例：
 
    ```
    c:\Program Files\Java\jdk1.8.0\bin;other directories...
    ```
 
-6. Click OK three times to exit.
-
-   The first OK gets you back to the Environment Variables dialog box; the second OK gets you back to the System Properties page; and the third OK closes the System Properties page.
-
-   单击确定三次，退出。
+6. **单击“确定”三次，退出。**
    第一个确定使您返回到“环境变量”对话框；第二个“确定”使您返回“系统属性”页面；第三个“确定”关闭“系统属性”页面。
 
-   单击“确定”三次退出。
-   第一个OK返回到环境变量对话框;第二个OK让您回到系统属性页面;第三个OK关闭系统属性页面。
-
-For Linux or Solaris, the procedure depends on which shell you’re using. For more information, consult the documentation for the shell you’re using. Note that this step is not necessary on Mac systems.
-
-对于Linux或Solaris，此过程取决于您使用的外壳。有关更多信息，请查阅所用外壳的文档。请注意，在Mac系统上，此步骤不是必需的。
-
-对于Linux或Solaris，这个过程取决于您使用的shell。要了解更多信息，请参考您正在使用的shell的文档。注意，这个步骤在Mac系统上是不必要的。
+对于 Linux 或 Solaris 操作系统，此过程取决于你使用的 shell。要了解更多信息，请参考正在使用的 shell 的文档。注意，以上步骤在 Mac 系统上不是必需的。
 
 ## 使用记事本开发 Click Me 程序
 
