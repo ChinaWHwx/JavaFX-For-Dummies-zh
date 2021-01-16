@@ -225,11 +225,7 @@ JDK 提供两个版本供用户下载：
 
 ## 使用记事本开发 Click Me 程序
 
-安装JDK 8之后，就可以使用JavaFX。严格来说，除JDK 8之外，开发Java程序所需的唯一其他工具是文本编辑器和对命令提示符的访问。使用文本编辑器创建Java源文件，并以扩展名.java保存文件。然后，在命令提示符下，使用Java的命令行工具编译并运行该程序。
-
-安装JDK 8之后，JavaFX就可以由您自己处理了。严格地说，除了JDK 8之外，开发Java程序所需的其他工具只有文本编辑器和对命令提示符的访问。使用文本编辑器，您可以创建Java源文件，并以. Java扩展名保存该文件。然后，在命令提示符处，使用Java的命令行工具编译和运行程序。
-
-After you install JDK 8, JavaFX is at your disposal. Strictly speaking, the only other tools besides JDK 8 you need to develop Java programs is a text editor and access to a command prompt. With the text editor, you create the Java source file, saving the file with the extension .java. Then, at the command prompt, you use Java’s command-line tools to compile and run the program.
+安装 JDK 8 之后，就可以使用 JavaFX 了。严格地讲，除了 JDK 8 之外，开发 Java 程序所需的其他工具只有文本编辑器和对命令提示符的访问。使用文本编辑器创建  Java 源文件，以扩展名 .java 保存。然后，在命令提示符下，使用 Java 命令行工具编译并运行该程序。
 
 Windows附带了免费的文本编辑器记事本，足以创建简单的Java源文件。记事本是一种通用的文本编辑器，对Java源代码的特殊性一无所知。结果，记事本无法为您提供任何帮助，例如缩进，左右括号匹配或引起语法错误等细节。
 
