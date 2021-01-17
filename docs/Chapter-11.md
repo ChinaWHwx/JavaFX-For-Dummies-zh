@@ -336,3 +336,47 @@ The following paragraphs describe the highlights of this program:
 
 ➝ 44：The stack pane is added to the scene, and the scene is finalized and displayed.
 
+## Using the GridPane Layout
+
+The grid pane layout manager lets you arrange GUI elements in a grid of rows and columns. Unlike a tile pane, the rows and columns of a grid pane do not have to be the same size. Instead, the grid pane layout automatically adjusts the width of each column and the height of each row based on the components you add to the panel.
+
+Here are some important features of the grid pane layout manager:
+
+> ✓ You can specify which cell you want each component to go in, and you can control each component’s position in the panel.
+>
+> ✓ You can create components that span multiple rows or columns, such as a button two columns wide or a list box four rows high.
+>
+> ✓ You can tell GridPane to stretch a component to fill the entire space allotted to it if the component isn’t already big enough to fill the entire area. You can specify that this stretching be done horizontally, vertically, or both.
+>
+> ✓ If a component doesn’t fill its allotted area, you can tell the grid pane layout manager how you want the component to be positioned within the area — for example, left- or right-aligned.
+
+The following sections describe the ins and outs of working with grid pane layouts.
+
+### Sketching out a plan
+
+Before you create a grid pane layout, draw a sketch showing how you want the components to appear in the panel. Then slice the panel into rows and columns, and number the rows and columns starting with zero in the top-left corner. Figure 11-6 shows such a sketch for an application that lets a user order a pizza.
+
+> Figure 11-6: Sketching out a panel.
+
+![Figure 11-6](./assets/Figure-11-6.png)
+
+After you have the panel sketched out, list the components, their x and y coordinates on the grid, their alignment, and whether each component spans more than one row or column. Here’s an example:
+
+| 组件             | x    | y    | 对齐 | 跨度 |
+| ---------------- | ---- | ---- | ---- | ---- |
+| "Name" 标签      | 0    | 0    | 右   |      |
+| "Phone" 标签     | 0    | 1    | 右   |      |
+| "Address" 标签   | 0    | 2    | 右   |      |
+| Name 文本框      | 1    | 0    | 左   | 2    |
+| Phone 文本框     | 1    | 1    | 左   | 2    |
+| Address 文本框   | 1    | 2    | 左   | 2    |
+| Size 单选按钮    | 0    | 3    | 左   |      |
+| Style 单选按钮   | 1    | 3    | 左   |      |
+| Toppings 多选项  | 2    | 3    | 左   |      |
+| OK 和 Close 按钮 | 2    | 4    | 右   |      |
+
+After you lay out the grid, you can write the code to put each component in its proper place.
+
+### Creating a grid pane
+
+Table 11-4 shows the most frequently used constructors and methods of the GridPane class, which you use to create a grid pane.
