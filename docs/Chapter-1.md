@@ -225,13 +225,11 @@ JDK 提供两个版本供用户下载：
 
 ## 使用记事本开发 Click Me 程序
 
-安装 JDK 8 之后，就可以使用 JavaFX 了。严格地讲，除了 JDK 8 之外，开发 Java 程序所需的其他工具只有文本编辑器和对命令提示符的访问。使用文本编辑器创建  Java 源文件，以扩展名 .java 保存。然后，在命令提示符下，使用 Java 命令行工具编译并运行该程序。
+安装 JDK 8 之后，就可以使用 JavaFX 了。严格地讲，除了 JDK 8 之外，开发 Java 程序所需的其他工具只有文本编辑器和命令行。使用文本编辑器创建  Java 源文件，以扩展名 .java 保存。然后，在命令提示符下，使用 Java 命令行工具编译并运行该程序。
 
-Windows附带了免费的文本编辑器记事本，足以创建简单的Java源文件。记事本是一种通用的文本编辑器，对Java源代码的特殊性一无所知。结果，记事本无法为您提供任何帮助，例如缩进，左右括号匹配或引起语法错误等细节。
+Windows 附带的免费文本编辑器——记事本，足以创建简单的 Java 源文件。但记事本是一个通用的文本编辑器，它并不了解 Java 源代码的任何特性。因此，在缩进、匹配左右大括号或提醒你注意语法错误等细节方面它无法提供任何帮助。
 
-Windows自带的免费文本编辑器记事本足以创建简单的Java源文件。Notepad是一个通用的文本编辑器，它不了解任何Java源代码的特性。因此，记事本在缩进、匹配左右大括号或提醒您注意语法错误等细节方面没有提供任何帮助。
-
-Windows comes with the free text-editor Notepad that is adequate enough for creating simple Java source files. Notepad is a generic text editor that doesn’t know anything about the peculiarities of Java source code. As a result, Notepad doesn’t give you any assistance with details such as indenting, matching up left and right braces, or drawing your attention to syntax errors.
+同样，记事本在编译、运行或者调试 Java 程序方面也
 
 记事本也不会为您提供有关编译，运行或调试Java程序的任何帮助。但是记事本确实具有免费和易于使用的优势。而且，它已经在您的计算机上，因此无需安装其他任何东西。
 
