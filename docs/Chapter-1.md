@@ -225,119 +225,59 @@ JDK 提供两个版本供用户下载：
 
 ## 使用记事本开发 Click Me 程序
 
-安装 JDK 8 之后，就可以使用 JavaFX 了。严格地讲，除了 JDK 8 之外，开发 Java 程序所需的其他工具只有文本编辑器和命令行。使用文本编辑器创建  Java 源文件，以扩展名 .java 保存。然后，在命令提示符下，使用 Java 命令行工具编译并运行该程序。
+安装 JDK 8 之后，就可以使用 JavaFX 了。严格地讲，除了 JDK 8 之外，开发 Java 程序所需的其他工具只有文本编辑器和命令行。使用文本编辑器创建  Java 源文件，以扩展名 `.java` 保存。然后，在命令提示符下，使用 Java 命令行工具编译并运行该程序。
 
-Windows 附带的免费文本编辑器——记事本，足以创建简单的 Java 源文件。但记事本是一个通用的文本编辑器，它并不了解 Java 源代码的任何特性。因此，在缩进、匹配左右大括号或提醒你注意语法错误等细节方面它无法提供任何帮助。
+Windows 附带的免费文本编辑器——记事本，足以创建简单的 Java 源文件。但记事本是一个通用的文本编辑器，它并不了解 Java 源代码的任何特性。因此，它在缩进、匹配左右大括号或提醒你注意语法错误等细节方面无法提供任何帮助。
 
-同样，记事本在编译、运行或者调试 Java 程序方面也
+同样，记事本也没办法编译、运行或者调试 Java 程序。但好处是它免费而且易于使用，你也不需要再安装其他软件。
 
-记事本也不会为您提供有关编译，运行或调试Java程序的任何帮助。但是记事本确实具有免费和易于使用的优势。而且，它已经在您的计算机上，因此无需安装其他任何东西。
+以下是使用记事本和 Java 命令行工具创建 Click Me 程序的步骤：
 
-记事本也不会为您编译、运行或调试Java程序提供任何帮助。但是记事本有免费和简单使用的优点。而且，它已经在你的电脑上了，所以没有其他东西可以安装。
+1. **打开记事本。**
 
-Nor will Notepad give you any help with compiling, running, or debugging a Java program. But Notepad does have the advantage of being free and simple to use. And, it’s already on your computer, so there’s nothing else to install.
+   要在 Windows 7 或 8 中做到这一点，你需要：
 
-以下是使用记事本和Java命令行工具创建Click Me程序的步骤：
+   ​	a.单击“开始”按钮（或按键盘上的 <kbd>Windows</kbd> 键）。
 
-以下是使用记事本和Java的命令行工具创建Click Me程序的步骤:
+   ​	b.输入“记事本”，然后按下回车。
 
-Here are the steps for creating the Click Me program using Notepad and Java’s command-line tools:
+   这时候记事本便会显示，并给你提供一个空的文本编辑窗口。
 
-1. Start Notepad.
+2. **在编辑窗口中输入清单1-1中所示的 Click Me 程序。**
 
-   To do that in Windows 7 or 8:
+   <img src="assets/warning.png" width="80"/>确保输入的文本与清单中显示的完全一致。完成之后，记得仔细检查，确保输入无误。
 
-   ​	a. Click the Start button (or press the Windows key on your keyboard).
+   图 1-5 展示了正确输入 Click Me 程序后的显示结果。 （图中显示的记事本窗口不够大，不足以显示整个源文件，你可以通过滚动窗口看到整个文件。）
 
-   ​	b. Type notepad and then press Enter.
-
-   Notepad comes to life, presenting you with an empty text editing window.
-
-   启动记事本。
-   要在Windows 7或8中做到这一点:
-   a.单击“开始”按钮(或按键盘上的“Windows”键)。
-   b.输入“记事本”，按“Enter”。
-   记事本出现了，给你一个空的文本编辑窗口。
-
-2. Type the Click Me program text shown in Listing 1-1 into the editing window.
-
-   在编辑窗口中输入清单1-1中所示的Click Me程序文本。
-
-   在编辑窗口中输入清单1-1中所示的Click Me程序文本。
-
-   <img src="assets/warning.png" width="80"/>Be sure to type the text exactly as it appears in the listing. When you’re done, carefully review your work to make sure you typed it correctly.
-
-   确保输入的文字与清单中显示的文字完全相同。完成后，请仔细检查您的工作以确保正确键入。
-
-   请确保键入的文本与清单中显示的完全一致。当你完成时，仔细检查你的工作，以确保你输入正确。
-
-   Figure 1-5 shows how the Click Me program appears when correctly entered into Notepad. (Note that the Notepad window shown in the figure is not large enough to display the entire source file; you must scroll the window to see the entire file.)
-
-   图1-5显示了正确输入记事本后，Click Me程序的显示方式。 （请注意，图中显示的“记事本”窗口不足以显示整个源文件；您必须滚动窗口才能看到整个文件。）
-
-   图1-5显示了在记事本中输入正确后，点击我程序是如何出现的。(请注意，图中显示的记事本窗口不够大，不足以显示整个源文件;你必须滚动窗口才能看到整个文件。)
-
-   > Figure 1-5: The Click Me program in Notepad. 记事本中的“单击我”程序。记事本中的“点击我”程序。
+   > 图 1-5：记事本中的 Click Me 程序。
 
    ![Figure 1-5](assets/Figure-1-5.png)
 
-3. Choose File➪Save to save the file using the name ClickMe.java.
+3. **使用 `ClickMe.java` 作为为名称，选择“文件”➪“保存”。**
 
-   You can save the file in any folder you wish, but it is very important that the name be exactly ClickMe.java.
+   可以保存在任何你想存放的文件夹里，但是文件名必须为 `ClickMe.java`。
 
-   选择“文件”→“保存”以使用名称ClickMe.java保存文件。
-   您可以将文件保存在所需的任何文件夹中，但是名称准确为ClickMe.java非常重要。
+   <img src="assets/tip.png" width="80"/>Java 源文件的名称必须与类的名称完全匹配，包括大小写形式。所以，如果将文件另存为 `clickme.java` 而不是 `ClickMe.java`，Click Me 程序将无法运行。
 
-   选择文件➪ClickMe.java Save以保存文件使用的名字。
-   您可以将文件保存在任何您想要的文件夹中，但非常重要的是文件名必须准确地命名为ClickMe.java。
+4. **打开命令提示窗口。**
 
-   <img src="assets/tip.png" width="80"/>The name of a Java source file must exactly match the name of the class it contains, right down to capitalization. Thus, if you save the file as clickme.java instead of ClickMe.java, the Click Me program won’t work.
+   在 Windows 7 或 8 中，打开窗口需要：
 
-   Java源文件的名称必须与包含的类的名称完全匹配，直到大写为止。因此，如果将文件另存为clickme.java而不是ClickMe.java，则Click Me程序将无法运行。
+   ​	a.单击“开始”按钮（或按键盘上的 <kbd>Windows</kbd> 键）。
 
-   Java源文件的名称必须与它所包含的类的名称完全匹配，甚至要大写。因此，如果您将文件保存为ClickMe. java而不是ClickMe。java，点击我的程序不能工作。
+   ​	b.输入“cmd”，然后按下回车。
 
-4. Open a command prompt window.
+5. **使用 `cd` 命令切换到步骤 3 中保存源文件的文件夹。**
 
-   In Windows 7 or 8, to open the window:
-
-   ​	a. Click the Start button or press the Windows key
-
-   ​	b. Type cmd and press Enter.
-
-   打开命令提示符窗口。
-   在Windows 7或8中，打开窗口：
-   一个单击开始按钮或按Windows键
-   b。输入cmd，然后按Enter。
-
-   打开命令提示符窗口。
-   在Windows 7或Windows 8中，打开窗口的方法如下:
-   a.单击“开始”按钮或按“Windows”键
-   b.输入cmd，按“Enter”。
-
-5. Use the cd command to change to the folder in which you saved the source file in Step 3.
-
-   For example, if you saved the file in C:\Java, enter the following command:
-
-   使用cd命令更改为在步骤3中保存源文件的文件夹。
-   例如，如果您将文件保存在C：\ Java中，请输入以下命令：
-
-   使用cd命令切换到步骤3中保存源文件的文件夹。
-   例如，将文件保存在“C:\Java”目录下，输入如下命令:
+   例如，如果你将文件保存在 `C:\Java` 中，请输入以下命令：
 
    ```
    cd C:\Java
    ```
 
-6. Use the javac command to compile the program.
+6. **使用 `javac` 命令编译程序。**
 
-   Enter the following command:
-
-   使用javac命令来编译程序。
    输入以下命令：
-
-   使用javac命令编译程序。
-   输入如下命令:
 
    ```
    javac ClickMe.java
