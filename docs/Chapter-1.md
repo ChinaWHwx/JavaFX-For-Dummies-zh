@@ -368,7 +368,7 @@ IDE（集成开发环境）是一种功能强大的工具，它结合了复杂�
 
 在本章的剩余部分，我将向你展示如何在 Eclipse 中创建 Click Me 程序。虽然在 NetBeans 中创建 Click Me 程序的步骤不同，但概念是相同的。
 
-要开始使用 Eclipse，请访问 www.eclipse.org， 单击 Download Eclipse 按钮，下载当前适用于 Java 开发人员版本的 Eclipse IDE。与大多数程序不同，Eclipse 没有复杂的安装程序。你只需下载 Zip 文件，解压缩，然后直接从解压到的文件夹中运行 Eclipse 可执行文件（`eclipse.exe`）。
+要开始使用 Eclipse，请访问 www.eclipse.org ，单击 Download Eclipse 按钮，下载当前适用于 Java 开发人员版本的 Eclipse IDE。与大多数程序不同，Eclipse 没有复杂的安装程序。你只需下载 Zip 文件，解压缩，然后直接从解压到的文件夹中运行 Eclipse 可执行文件（`eclipse.exe`）。
 
 <img src="assets/tip.png" width="80"/>如果你使用的是 Windows，为了更方便地启动 Eclipse，可能需要为它添加一个桌面快捷方式。为此，请打开包含 `eclipse.exe` 文件的文件夹，右键单击该文件并将其拖到桌面上，释放鼠标按钮，然后从出现的菜单中选择“创建快捷方式”。这样，你就可以通过双击桌面快捷方式来启动 Eclipse 了。
 
