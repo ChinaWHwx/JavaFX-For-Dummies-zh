@@ -4,7 +4,7 @@
 >
 > - 快速了解什么是 JavaFX，可以使用它做什么
 > - 查看一个基本的 JavaFX 程序
-> - 下载，安装和配置 Java 8 以便构建你自己的 JavaFX 程序
+> - 下载、安装和配置 Java 8 以便构建你自己的 JavaFX 程序
 > - 使用记事本和命令提示符这种较困难的方式构建 JavaFX 程序
 > - 使用 TextPad 简化 JavaFX 编程
 > - 使用 IDE（例如 Eclipse 或 NetBeans）进行 JavaFX 编程
@@ -283,356 +283,159 @@ Windows 附带的免费文本编辑器——记事本，足以创建简单的 Ja
    javac ClickMe.java
    ```
 
-   Assuming you typed the program exactly right, the javac command doesn’t display any messages at all. If the program contains any errors, the compiler displays one or more error messages. If that happens, open the source file in Notepad, edit the text to correct the errors, save the file, and then repeat this step until no errors display.
+   如果 你输入的程序完全正确，`javac` 命令不会显示任何消息。如果程序有错误，编译器会显示错误消息。这时候需要在记事本中打开源文件，修改错误后保存文件，然后重复这个步骤，直到没有错误显示为止。
 
-   假设您输入的程序完全正确，则javac命令根本不会显示任何消息。如果程序包含任何错误，则编译器将显示一个或多个错误消息。如果发生这种情况，请在记事本中打开源文件，编辑文本以更正错误，保存文件，然后重复此步骤，直到没有错误显示为止。
+7. **使用 `java` 命令运行程序。**
 
-   假设您键入的程序完全正确，那么javac命令根本不会显示任何消息。如果程序包含任何错误，编译器将显示一条或多条错误消息。如果出现这种情况，请在记事本中打开源文件，编辑文本以纠正错误，保存文件，然后重复此步骤，直到没有错误显示为止。
+  输入如下命令：
+  
+  ```bash
+  java ClickMe
+  ```
+  
+  会出现如图 1-6 所示的窗口。
 
-7. Use the java command to run the program.
+	> 图 1-6： Click Me 程序运行中
+	
+	![Figure 1-6](assets/Figure-1-6.png)
 
-   Enter the following command:
+8. **点击 `Click Me Please!`  按钮。**
 
-   使用java命令运行程序。
-   输入以下命令：
+   点击后，按钮上显示的文字将变为 ` You clicked me!`。
 
-   使用java命令运行程序。
-   输入如下命令:
+9. **单击关闭按钮关闭 Click Me 程序。**
 
-   ```
-   java ClickMe
-   ```
-
-   The window, as shown in Figure 1-6, appears.
-
-   出现如图1-6所示的窗口。
-
-   进入如图1-6所示界面。
-
-   > Figure 1-6: The Click Me program in action. 实施中的“点击我”程序。 “点击我”程序正在运行。
-
-   ![Figure 1-6](assets/Figure-1-6.png)
-
-8. Click the Click Me Please! button.
-
-   When you click the button, the text displayed on the button changes to You clicked me!.
-
-   单击“请单击我”！按钮。
-   当您单击按钮时，按钮上显示的文本将更改为“您单击了我！”。
-
-   请点击点击我!按钮。
-   当你点击按钮时，按钮上显示的文字变成你点击了我!
-
-9. Close the Click Me program by clicking its Close button.
-
-   Congratulations! You’ve successfully created your first JavaFX program!
-
-   通过单击“关闭我”程序的“关闭”按钮，关闭该程序。
-   恭喜你！您已经成功创建了第一个JavaFX程序！
-
-   通过点击“点击我”程序的关闭按钮来关闭它。
-   恭喜你!您已经成功地创建了您的第一个JavaFX程序!
+   恭喜！你已经成功创建了第一个 JavaFX 程序！
 
 ## 使用 TextPad 开发 Click Me 程序
 
-TextPad是一种廉价的（$ 33）文本编辑器，您可以将其与Java Development Kit（JDK）集成以简化编码，编译和运行Java程序的任务。它不是真正的集成开发环境（IDE），因为它缺少集成调试，代码生成器和用于创建图形用户界面的拖放工具等功能。
+TextPad 是一个便宜的文本编辑器（$33），你可以将其与 Java 开发工具包（JDK）进行集成，以简化编码、编译和运行 Java 程序的任务。因为缺少集成调试，代码生成器和用于创建图形用户界面的拖放工具等功能，所以它不是真正的集成开发环境（IDE）。
 
-TextPad是一个便宜的文本编辑器(33美元)，你可以集成到Java开发工具包(JDK)，以简化编码、编译和运行Java程序的任务。它不是一个真正的集成开发环境(IDE)，因为它缺乏诸如集成调试、代码生成器和用于创建图形用户界面的拖放工具等特性。
+因为简单和快速，TextPad  成为了开发 Java 程序的流行工具。它是学习 Java 的理想选择，因为它易于使用，让你可以专注于学习 Java，而不是学习如何使用复杂的开发环境。
 
-TextPad is an inexpensive ($33) text editor that you can integrate with the Java Development Kit (JDK) to simplify the task of coding, compiling, and running Java programs. It isn’t a true integrated development environment (IDE), as it lacks features such as integrated debugging, code generators, and drag-and-drop tools for creating graphical user interfaces.
+你可以从 www.textpad.com 网站下载太阳神软件解决方案（Helios Software Solutions）提供的 TextPad 免费评估版。你可以免费使用评估版，但是如果决定保留该程序，则必须付费。（Helios接受在线信用卡付款）
 
-TextPad由于其简单性和速度而成为开发Java程序的流行工具。学习Java非常容易，因此非常适合学习Java，因此您可以专注于学习Java，而不是学习如何使用复杂的开发环境。
+如果电脑上已经安装了Java JDK，在安装 TextPad 时，它会进行自动配置以支持编译和运行 Java 程序。如果在安装 TextPad 之后才安装 JDK，为了使 TextPad 支持 Java，需要打开首选项对话框（通过选择 Configure➪Preferences），在对话框左侧目录中选择“工具”，然后选择 Add➪Java SDK Commands。
 
-TextPad是开发Java程序的流行工具，因为它的简单性和速度。它是学习Java的理想选择，因为它易于使用，因此您可以将精力集中在学习Java上，而不是学习如何使用复杂的开发环境。
+将 TextPad 配置为编译和运行 Java 程序后，可以按照以下步骤创建 Click Me 程序：
 
-TextPad is a popular tool for developing Java programs because of its simplicity and speed. It’s ideal for learning Java because it’s easy to use, so you can concentrate on learning Java rather than on learning how to use a complicated development environment.
+1. **启动 TextPad。**
 
-您可以从Helios Software Solutions的www.textpad.com下载免费的TextPad评估版。您可以免费使用评估版，但是如果决定保留该程序，则必须付费。 （Helios接受在线信用卡付款。）
+   TextPad 会自动打开一个名为 Document1 的空白源文档。
 
-你可以从Helios Software Solutions网站www.textpad.com下载免费的TextPad评估版。你可以免费使用评估版本，但如果你决定保留这个程序，你必须付费。(太阳神接受信用卡在线支付。)
+2. **选择 File➪Save，输入 `ClickMe.java`，点击 Save。**
 
-You can download a free evaluation version of TextPad from Helios Software Solutions at www.textpad.com. You can use the evaluation version free of charge, but if you decide to keep the program, you must pay for it. (Helios accepts credit card payments online.)
+   文件会以 `ClickMe.java` 为名称进行保存。在输入文本前，以扩展名 `.java` 保存文件可以使 TextPad 进入 Java 编辑模式，这能让你更容易地输入和编辑 Click Me 程序的 Java 源代码。
 
-如果您的计算机上已经安装了Java JDK，则在安装TextPad时，TextPad会自动将其自身配置为编译和运行Java程序。如果在安装TextPad之后安装JDK，则需要通过打开“首选项”对话框（通过选择“配置”>“首选项”），在对话框左侧树中选择“工具”，然后选择“添加”来配置TextPad for Java。 Java SDK命令。
+3. **将清单 1-1 中 Click Me 程序对应文本输入到 Document1 窗口中。**
 
-如果你的电脑上已经安装了Java JDK，当你安装TextPad时，TextPad会自动配置自己来编译和运行Java程序。如果你安装JDK安装TextPad之后,您需要配置文本编辑Java通过打开Preferences对话框(通过选择配置➪偏好),选择树中的工具对话框的左边,然后选择添加➪Java SDK的命令。
+   TextPad 的基本文本编辑功能几乎与你使用过的其他文本编辑器一致，所以你在输入和编辑 Click Me 程序的文本时应该不会遇到什么麻烦。
 
-If the Java JDK is already installed on your computer, when you install TextPad, TextPad automatically configures itself to compile and run Java programs. If you install the JDK after you install TextPad, you need to configure TextPad for Java by opening the Preferences dialog box (by choosing Configure➪Preferences), selecting Tools in the tree on the left side of the dialog box, and then choosing Add➪Java SDK Commands.
+   在编辑文本时，你可能会注意到 TextPad 上一些有用的 Java 编辑特性。例如，TextPad 在输入左括号时会自动缩进你的代码，然后在输入右括号时恢复到前一个缩进。TextPad 还使用不同的颜色来表示关键字、变量和其他 Java 编程元素。
 
-将TextPad配置为编译和运行Java程序后，可以按照以下步骤创建Click Me程序：
+   图 1-7 展示了 Click Me 程序在 TextPad 中是如何显示的。
 
-将TextPad配置为编译和运行Java程序后，可以通过以下步骤创建Click Me程序:
-
-After you configure TextPad to compile and run Java programs, you can create the Click Me program by following these steps:
-
-1. Start TextPad.
-
-   TextPad automatically opens with an empty source document named Document1.
-
-   启动TextPad。
-   TextPad会自动打开，并带有一个名为Document1的空源文档。
-
-   启动文本编辑。
-   TextPad会自动打开一个名为Document1的空源文档。
-
-2. Choose File➪Save, type ClickMe.java, and then click Save.
-
-   This saves the file with the name ClickMe.java. Saving the file with a name that uses the extension .java before you enter any text into the file lets TextPad slip into Java editing mode, which makes it easier for you to enter and edit the Java source code for the Click Me program.
-
-   选择“文件”→“保存”，键入ClickMe.java，然后单击“保存”。
-   这会将文件保存为名称ClickMe.java。在文件中输入任何文本之前，使用扩展名.java来保存文件，可使TextPad进入Java编辑模式，这使您更容易输入和编辑Click Me程序的Java源代码。
-
-   选择文件➪保存,ClickMe类型。java，然后单击Save。
-   这将保存名为ClickMe.java的文件。在向文件中输入任何文本之前，以. Java扩展名保存文件，这可以让TextPad进入Java编辑模式，这使您更容易输入和编辑Click Me程序的Java源代码。
-
-3. Type the text of the Click Me program from Listing 1-1 into the Document1 window.
-
-   The basic text-editing capabilities of TextPad are similar to just about any other text editor you’ve worked with, so you should have no trouble entering and editing the text of the Click Me program.
-
-   As you edit the text, you may notice some of TextPad’s useful Java editing features. For example, TextPad automatically indents your code whenever you type an opening bracket, and then reverts to the previous indent when you type a closing bracket. TextPad also uses different colors to indicate keywords, variables, and other Java programming elements.
-
-   Figure 1-7 shows how the Click Me program appears in TextPad.
-
-   将清单1-1中的Click Me程序的文本键入到Document1窗口中。
-   TextPad的基本文本编辑功能几乎与您使用过的其他任何文本编辑器都相似，因此您可以轻松输入和编辑Click Me程序的文本。
-   在编辑文本时，您可能会注意到TextPad的一些有用的Java编辑功能。例如，每当您输入一个方括号时，TextPad都会自动缩进您的代码，然后在您输入一个方括号时，它会恢复为上一个缩进。 TextPad还使用不同的颜色来指示关键字，变量和其他Java编程元素。
-   图1-7显示了Click Me程序在TextPad中的显示方式。
-
-   将清单1-1中的Click Me程序的文本输入Document1窗口。
-   TextPad的基本文本编辑功能与您使用过的任何其他文本编辑器类似，所以您在输入和编辑Click Me程序的文本时应该不会遇到任何麻烦。
-   在编辑文本时，您可能会注意到TextPad的一些有用的Java编辑特性。例如，TextPad在输入左括号时自动缩进代码，然后在输入右括号时恢复到前一个缩进。TextPad还使用不同的颜色来表示关键字、变量和其他Java编程元素。
-   图1-7显示了“点击我”程序在TextPad中的显示方式。
-
-   > Figure 1-7: The Click Me program in TextPad. TextPad中的Click Me程序。
+   > 图 1-7：TextPad 中的 Click Me 程序。
 
    ![Figure 1-7](assets/Figure-1-7.png)
 
-4. Choose Tools➪Compile Java to compile the program.
+4. **选择 Tools➪Compile Java 以编译程序。**
 
-   If you prefer, you can use the keyboard shortcut Ctrl+1. Either way, the changes to your source file are automatically saved and the javac command is invoked to compile the program. If the program compiles successfully, the message Tool completed successfully appears in the Tool Results pane.
+   如果你愿意，还可以使用键盘快捷键 <kbd>Ctrl + 1</kbd>。无论哪种方式，都会自动保存对源文件的更改，并调用 `javac` 命令来编译程序。如果编译成功，Tool Results 面板会显示 `Tool completed successfully` 消息。
 
-   If you made a mistake entering the Click Me program, the compiler generates error messages that display in the Tool Results pane. If you double-click the first line of each error message, TextPad takes you to the spot where the error occurred so you can correct the error.
+   如果在输入 Click Me 程序时出了错，Tool Results 面板会显示编译器生成的错误消息。双击每个错误消息的第一行，TextPad 会将你带到发生错误的位置，以便更正错误。
 
-   选择“工具”→“编译Java”以编译程序。
-   如果愿意，可以使用键盘快捷键Ctrl + 1。无论哪种方式，都会自动保存对源文件的更改，并调用javac命令来编译程序。如果程序编译成功，则“工具结果”窗格中将显示消息“工具已成功完成”。
-   如果您输入Click Me程序时出错，则编译器会生成错误消息，这些消息将显示在“工具结果”窗格中。如果双击每个错误消息的第一行，TextPad会将您带到发生错误的位置，以便您可以更正错误。
+5. **选择 Tools➪Run Java Application 以运行程序。**
 
-   选择工具➪编译Java编译程序。
-   如果您愿意，您可以使用键盘快捷键Ctrl+1。无论采用哪种方式，对源文件的更改都会自动保存，并调用javac命令来编译程序。如果程序成功编译，“工具结果窗格”中将显示消息工具completed successfully。
-   如果在输入Click Me程序时出错，编译器将生成错误消息，显示在“工具结果”窗格中。如果双击每个错误消息的第一行，TextPad将把您带到错误发生的地方，以便您可以纠正错误。
+   首先会打开一个命令行提示符窗口，然后会打开 Click Me 程序窗口（参考图 1-6）。
 
-5. Choose Tools➪Run Java Application to run the program.
+6. **点击 `Click Me Please!`  按钮。**
 
-   A command prompt window opens and then the Click Me program window opens (refer to Figure 1-6).
+   点击后，按钮上显示的文字将变为 ` You clicked me!`。
 
-   选择工具➪运行Java应用程序以运行该程序。
-   打开命令提示符窗口，然后打开“单击我”程序窗口（请参见图1-6）。
+7. **单击关闭按钮关闭 Click Me 程序。**
 
-   选择工具➪运行Java应用程序来运行程序。
-   打开命令提示符窗口，然后打开“点击我的程序”窗口(如图1-6所示)。
+   Click Me 程序窗口已被关闭，但是命令行提示符窗口仍然可见，上面会显示“按任意键继续”的消息。
 
-6. Click the Click Me Please! button.
-
-   When you click the button, the text displayed on the button changes to You clicked me!.
-
-   单击“请单击我”！按钮。
-   当您单击按钮时，按钮上显示的文本将更改为“您单击了我！”。
-
-   请点击点击我!按钮。
-   当你点击按钮时，按钮上显示的文字变成你点击了我!
-
-7. Close the Click Me program by clicking its Close button.
-
-   The Click Me program window is closed, but the command prompt window remains visible, displaying the message Press any key to continue. . .
-
-   通过单击“关闭我”程序的“关闭”按钮，关闭该程序。
-   “单击我”程序窗口已关闭，但命令提示符窗口仍然可见，显示消息按任意键继续。 。 。
-
-   通过点击“点击我”程序的关闭按钮来关闭它。
-   “点击我”程序窗口关闭了，但是“命令提示符”窗口仍然可见，显示“按任意键继续”的消息。
-
-8. Press any key to close the command prompt window.
-
-   That’s all there is to it!
-   
-   按任意键关闭命令提示符窗口。
-   这里的所有都是它的！
-   
-   按任意键关闭命令提示符窗口。
-   就是这样!
+8. **按任意键关闭命令行提示符窗口。**
+   就这么简单！
 
 ## 使用 IDE 创建 Click Me 程序
 
-IDE或集成开发环境是一个功能强大的工具，它结合了复杂的文本编辑功能以及以各种编程语言编译，执行和调试程序的能力。 IDE可以跟踪组成单个Java编程项目的多个源文件，甚至可以跟踪源文件的多个版本。
+IDE（集成开发环境）是一种功能强大的工具，它结合了复杂的文本编辑功能以及用于各种编程语言进行编译、执行和调试程序的能力。 IDE 可以跟踪组成一个 Java 编程项目的多个源文件，甚至源文件的多个版本。
 
-集成开发环境是一种功能强大的工具，它结合了复杂的文本编辑特性以及用各种编程语言编译、执行和调试程序的能力。一个IDE可以跟踪组成一个Java编程项目的多个源文件，甚至可以跟踪源文件的多个版本。
+在 Java 编程中，最受欢迎的两个 IDE 是 Eclipse 和 NetBeans。两者都是免费的，功能也相当，所以选择哪一款凭你喜好。可以从 www.eclipse.org 网站下载 Eclipse，或者从 https://netbeans.org 网站下载 NetBeans。
 
-An IDE, or integrated development environment, is a powerful tool that combines sophisticated text-editing features along with the ability to compile, execute, and debug programs in a variety of programming languages. An IDE can keep track of multiple source files that make up a single Java programming project and can even keep track of multiple versions of the source files.
+在本章的剩余部分，我将向你展示如何在 Eclipse 中创建 Click Me 程序。虽然在 NetBeans 中创建 Click Me 程序的步骤不同，但概念是相同的。
 
-用于Java编程的两个最受欢迎的IDE是Eclipse和NetBeans。两者都是免费的，并且两者在功能上具有可比性。因此，使用哪种选择是一个优先事项。您可以从www.eclipse.org下载Eclipse。您可以从https://netbeans.org获得NetBeans。
+要开始使用 Eclipse，请访问 www.eclipse.org，单击 Download Eclipse 按钮，下载当前适用于 Java 开发人员版本的 Eclipse IDE。与大多数程序不同，Eclipse 没有复杂的安装程序。你只需下载 Zip 文件，解压缩，然后直接从解压到的文件夹中运行 Eclipse 可执行文件（`eclipse.exe`）。
 
-用于Java编程的两个最流行的ide是Eclipse和NetBeans。两者都是免费的，而且在功能上都可以比较。所以选择哪一种是一个偏好问题。您可以从www.eclipse.org下载Eclipse。你可以在https://netbeans.org上购买NetBeans。
+<img src="assets/tip.png" width="80"/>如果你使用的是 Windows，为了更方便地启动 Eclipse，可能需要为它添加一个桌面快捷方式。为此，请打开包含 `eclipse.exe` 文件的文件夹，右键单击该文件并将其拖到桌面上，释放鼠标按钮，然后从出现的菜单中选择“创建快捷方式”。这样，你就可以通过双击桌面快捷方式来启动 Eclipse 了。
 
-The two most popular IDEs for Java programming are Eclipse and NetBeans. Both are free, and both are comparable in their features. So the choice of which to use is a matter of preference. You can download Eclipse from www.eclipse.org. You can get NetBeans at https://netbeans.org.
+以下是在 Eclipse 中创建 Click Me 程序的步骤：
 
-在本章的其余部分，我将向您展示如何在Eclipse中创建Click Me程序。尽管在NetBeans中创建Click Me程序的步骤不同，但是概念相同。
+1. **通过运行 `Eclipse.exe` 或双击其桌面快捷方式启动 Eclipse。**
 
-在本章的其余部分，我将向您展示如何在Eclipse中创建Click Me程序。虽然在NetBeans中创建Click Me程序的步骤不同，但概念是相同的。
+   Eclipse 启动，如图 1-8 所示。
 
-In the rest of this chapter, I show you how to create the Click Me program in Eclipse. Although the steps for creating the Click Me program in NetBeans are different, the concepts are the same.
-
-要开始使用Eclipse，请访问www.eclipse.org，单击“下载Eclipse”按钮，然后下载适用于Java开发人员的Eclipse IDE的当前版本。与大多数程序不同，Eclipse没有复杂的安装程序。您只需下载Zip文件，解压缩所有文件，然后直接从解压缩到的文件夹中运行Eclipse可执行文件（eclipse.exe）。
-
-要开始使用Eclipse，请访问www.eclipse.org，单击下载Eclipse按钮，并下载当前版本的Java开发人员Eclipse IDE。与大多数程序不同，Eclipse没有复杂的安装程序。您只需下载Zip文件，解压所有文件，然后直接从解压到的文件夹中运行Eclipse可执行文件(Eclipse .exe)。
-
-To get started with Eclipse, go to www.eclipse.org, click the Download Eclipse button, and download the current version of Eclipse IDE for Java Developers. Unlike most programs, Eclipse doesn’t have a complicated setup program. You just download the Zip file, extract all the files, and then run the Eclipse executable file (eclipse.exe) directly from the folder you extracted it to.
-
-如果您使用的是Windows，则可能要为Eclipse添加桌面快捷方式，以使其启动起来更加方便。为此，请打开包含eclipse.exe文件的文件夹，右键单击该文件并将其拖到桌面上，释放鼠标按钮，然后从出现的菜单中选择“创建快捷方式”。然后，您可以通过双击此桌面快捷方式来启动Eclipse。
-
-如果您使用的是Windows，您可能需要为Eclipse添加一个桌面快捷方式，以便更方便地启动它。为此，打开包含eclipse.exe文件的文件夹，右键单击该文件并将其拖到桌面上，释放鼠标按钮，并从出现的菜单中选择“创建快捷方式”。然后双击这个桌面快捷方式就可以启动Eclipse了。
-
-<img src="assets/tip.png" width="80"/>If you’re using Windows, you may want to add a desktop shortcut for Eclipse to make it more convenient to start. To do that, open the folder that contains the eclipse.exe file, right-click the file and drag it to the desktop, release the mouse button, and choose Create Shortcut from the menu that appears. Then you can start Eclipse by double-clicking this desktop shortcut.
-
-以下是在Eclipse中创建Click Me程序的步骤：
-
-以下是在Eclipse中创建Click Me程序的步骤:
-
-Here are the steps for creating the Click Me program in Eclipse:
-
-1. Start Eclipse by running the Eclipse.exe program file or doubleclicking its desktop shortcut.
-
-   Eclipse comes to life, as shown in Figure 1-8.
-
-   通过运行Eclipse.exe程序文件或双击其桌面快捷方式来启动Eclipse。
-   Eclipse变得栩栩如生，如图1-8所示。
-
-   通过运行Eclipse.exe程序文件或双击其桌面快捷方式启动Eclipse。
-   Eclipse出现了，如图1-8所示。
-
-   > Figure 1-8: Eclipse awaits your command. Eclipse等待您的命令。
-
-   ![Figure 1-8](assets/Figure-1-8.png)
-
-2. Choose File➪New➪Java Project.
-
-   The New Java Project dialog box appears, as shown in Figure 1-9.
-
-   选择文件➪新建➪Java项目。
-出现“新建Java项目”对话框，如图1-9所示。
+   > 图 1-8：Eclipse 等待你的命令。
    
 
-选择文件➪新的➪Java项目。
-   系统弹出“新建Java项目”对话框，如图1-9所示。
+![Figure 1-8](assets/Figure-1-8.png)
 
-   > Figure 1-9: Creating a new Java project. 创建一个新的Java项目。
+2. **选择 File➪New➪Java Project。**
+
+   出现 New Java Project 对话框，如图 1-9 所示。
+
+   > 图 1-9：创建一个新的 Java 项目。
 
    ![Figure 1-9](assets/Figure-1-9.png)
 
-3. Type ClickMe in the Project Name field and then click Finish.
+3. **在 Project Name 文本框中输入 `ClickMe`，然后点击 Finish。**
 
-   Eclipse sets up the project and adds the project to the Package Explorer pane at the left side of the screen, as shown in Figure 1-10. (Initially, the project is collapsed so that just the top line of the project appears. For this figure, I expanded the project to reveal the subfolders named src and JRE System Library.)
+   Eclipse 建立项目并将其添加到屏幕左侧的 Package Explorer 窗格中，如图 1-10 所示。(最初，项目是折叠的，只显示项目的顶部一行。在此图中，我展开项目，显示出了名为 `src` 和 `JRE System Library` 的子文件夹。)
 
-   在“项目名称”字段中键入ClickMe，然后单击“完成”。
-   Eclipse设置项目并将其添加到屏幕左侧的Package Explorer窗格中，如图1-10所示。 （最初，该项目已折叠，因此仅显示项目的顶行。对于此图，我扩展了项目以显示名为src和JRE System Library的子文件夹。）
-
-   在项目名称字段中键入ClickMe，然后单击Finish。
-   Eclipse设置项目，并将项目添加到屏幕左侧的Package Explorer窗格中，如图1-10所示。(最初，项目是折叠的，只显示项目的顶部一行。在此图中，我展开了项目，显示了名为src和JRE系统库的子文件夹。)
-
-   > Figure 1-10: The ClickMe project shows up in the Package Explorer pane.
+   > 图 1-10：ClickMe 项目显示在 Package Explorer 窗格中。
    >
-   > ClickMe项目将显示在“程序包资源管理器”窗格中。
-   >
-   > ClickMe项目显示在Package Explorer窗格中。
 
    ![Figure 1-10](assets/Figure-1-10.png)
 
 
-4. Choose File➪New➪Class.
+4. **选择 File➪New➪Class。**
 
-   The New Java Class dialog box appears, as shown in Figure 1-11.
-
-   选择文件➪新建➪类。
-   弹出“新建Java类”对话框，如图1-11所示。
-
-   选择文件➪新的➪类。
-   系统弹出“新建Java类”对话框，如图1-11所示。
-
-5. Type ClickMe in the Name field and then click Finish.
-
-   Eclipse adds a file named ClickMe.java to the src folder and opens the file in the editing pane, as shown in Figure 1-12. Notice that Eclipse has also added a short stub of code to help you get started with the class.
-
-   在“名称”字段中键入ClickMe，然后单击“完成”。
-   Eclipse将一个名为ClickMe.java的文件添加到src文件夹，并在编辑窗格中打开该文件，如图1-12所示。注意，Eclipse还添加了一小段代码，以帮助您开始使用该类。
-
-   在名称字段中键入ClickMe，然后单击Finish。
-   Eclipse将一个名为ClickMe.java的文件添加到src文件夹，并在编辑窗格中打开该文件，如图1-12所示。请注意，Eclipse还添加了一小段代码存根，以帮助您开始使用该类。
-
-6. Delete the code stub in the ClickMe.java file; then type the text from Listing 1-1 into the editing pane.
-
-   Figure 1-13 shows what the ClickMe.java file looks like when you have correctly entered the program text.
-
-   删除ClickMe.java文件中的代码存根；然后将清单1-1中的文本输入到编辑窗格中。
-   图1-13显示了正确输入程序文本后ClickMe.java文件的外观。
-
-   删除ClickMe.java文件中的代码存根;然后将清单1-1中的文本输入到编辑窗格中。
-   图1-13显示了正确输入程序文本后的ClickMe.java文件。
-
-   > Figure 1-11: Adding a class file to the ClickMe project.
-   >
-   > 将类文件添加到ClickMe项目。
-   >
-   > 向ClickMe项目添加一个类文件。
+   弹出 New Java Class 对话框，如图 1-11 所示。
+   
+   > 图 1-11：向 ClickMe 项目添加一个类文件。
 
    ![Figure 1-11](assets/Figure-1-11.png)
 
-7. Choose Run➪Run to run the program.
+5. **在 Name 文本框中输入 ClickMe，然后单击 Finish。**
 
-   The Click Me program window opens, as shown earlier in Figure 1-6.
+   Eclipse 会将一个名为 `ClickMe.java` 的文件添加到 `src` 文件夹，并在编辑窗口中打开该文件，如图 1-12 所示。注意，Eclipse 还添加了一小段代码，以帮助你开始使用该类。
 
-   选择运行→运行以运行程序。
-   将打开“单击我”程序窗口，如图1-6所示。
+   > 图 1-12：Eclipse 显示新创建的 ClickMe.java 文件。
+   >
 
-   选择运行程序➪跑。
-   如图1-6所示。
+   ![Figure 1-12](assets/Figure-1-12.png)
 
-8. Click the Click Me Please! button.
+6. **删除 `ClickMe.java` 文件中的代码，然后将清单 1-1 中的文本输入到编辑窗口中。**
+图 1-13 显示了正确输入程序文本后 ClickMe.java 文件的外观。
+  
+> 图1-13：在 Eclipse 中完成的 Click Me 程序。
+   >
 
-   When you click the button, the text displayed on the button changes to You clicked me!.
+   ![Figure 1-13](assets/Figure-1-13.png)
 
-   单击“请单击我”！按钮。
-   当您单击按钮时，按钮上显示的文本将更改为“您单击了我！”。
+7. **选择 Run➪Run 以运行程序。**
+将打开 Click Me 程序窗口，如之前的图 1-6 所示。
+  
+8. **点击 `Click Me Please!`  按钮。**
 
-   请点击点击我!按钮。
-   当你点击按钮时，按钮上显示的文字变成你点击了我!
+   点击后，按钮上显示的文字将变为 ` You clicked me!`。
 
-9. Close the Click Me program by clicking its Close button.
+9. **单击关闭按钮关闭 Click Me 程序。**
 
-   Congratulations! You have successfully created and run the Click Me program using Eclipse.
-   
-   通过单击“关闭我”程序的“关闭”按钮，关闭该程序。
-   恭喜你！您已经成功使用Eclipse创建并运行了Click Me程序。
-   
-   通过点击“点击我”程序的关闭按钮来关闭它。
-   恭喜你!您已经使用Eclipse成功地创建并运行了Click Me程序。
+   恭喜！你使用 Eclipse 成功创建并运行了 Click Me 程序。
 
-Now that you’ve seen you can develop the simple Click Me program using Notepad and command-line tools, the simple TextPad Java text editor, or a more complicated IDE such as Eclipse, you’re ready to start discovering the specifics of how JavaFX programs work. So, in Chapter 2, I detail what every line of this simple program does. Onward and upward!
+既然你已经知道可以使用记事本和命令行工具、简单 Java文本编辑器 TextPad 或更复杂的 IDE（如 Eclipse）来开发简单的 Click Me 程序，那么就可以开始探索 JavaFX 程序工作的细节了。所以，在第二章中，我将对这个简单程序的每一行进行详细说明。勇往直前！
 
-既然您已经看到了可以使用记事本和命令行工具，简单的TextPad Java文本编辑器或更复杂的IDE（例如Eclipse）开发简单的Click Me程序，那么您就可以开始发现JavaFX的细节了。程序工作。因此，在第二章中，我详细介绍了此简单程序的每一行。步步高升！
-
-现在，您已经看到可以使用记事本和命令行工具、简单的TextPad Java文本编辑器或更复杂的IDE(如Eclipse)开发简单的Click Me程序，现在可以开始了解JavaFX程序工作的细节了。因此，在第二章中，我将详细说明这个简单程序的每一行操作。向前,向上!
-
-> Figure 1-12: Eclipse displays the newly created ClickMe. java file.
->
-> Eclipse显示新创建的ClickMe。 java文件。
->
-> Eclipse显示新创建的ClickMe。java文件。
-
-![Figure 1-12](assets/Figure-1-12.png)
-
-> Figure 1-13: The finished Click Me program in Eclipse.
->
-> 图1-13：在Eclipse中完成的Click Me程序。
->
-> 图1-13:Eclipse中完成的点击我程序
-
-![Figure 1-13](assets/Figure-1-13.png)
