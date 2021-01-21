@@ -287,17 +287,17 @@ Windows 附带的免费文本编辑器——记事本，足以创建简单的 Ja
 
 7. **使用 `java` 命令运行程序。**
 
-  输入如下命令：
+   输入如下命令：
   
-  ```bash
-  java ClickMe
-  ```
+   ```bash
+   java ClickMe
+   ```
   
-  会出现如图 1-6 所示的窗口。
+   会出现如图 1-6 所示的窗口。
 
-	> 图 1-6： Click Me 程序运行中
+   > 图 1-6： Click Me 程序运行中
 	
-	![Figure 1-6](assets/Figure-1-6.png)
+   ![Figure 1-6](assets/Figure-1-6.png)
 
 8. **点击 `Click Me Please!`  按钮。**
 
