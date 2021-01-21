@@ -297,6 +297,7 @@ Windows 附带的免费文本编辑器——记事本，足以创建简单的 Ja
 
 	> 图 1-6： Click Me 程序运行中
 	
+	
 	![Figure 1-6](assets/Figure-1-6.png)
 
 8. **点击 `Click Me Please!`  按钮。**
