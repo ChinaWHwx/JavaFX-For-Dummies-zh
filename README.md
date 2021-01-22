@@ -78,7 +78,7 @@
     - 使用多选框
     - 使用单选按钮
     - 查看一个披萨订单应用程序
-- 第二部分：JavaFX 控件
+- [第二部分：JavaFX 控件](./docs/Part-Ⅱ.md)
   - 第 7 章：JavaFX 节点层级介绍
     - JavaFX 包概述
     - Node 类
