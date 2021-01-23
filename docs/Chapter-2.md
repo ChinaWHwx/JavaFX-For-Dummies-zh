@@ -8,51 +8,27 @@
 > + 创建用户单击按钮时调用的事件处理程序
 > + 验证 Click Me 程序的增强版本
 
-在第1章中，我向您介绍了一个名为Click Me程序的简单JavaFX程序，并简要描述了该程序的工作方式。在本章中，我将这个程序放在显微镜下，并对其进行了详细研究。在完成本章时，您将了解Click Me程序的每一行是如何工作的以及为什么需要这样做。然后，您就可以开始研究更多JavaFX编程的细微差别了。
-
-在第一章中，我将向您介绍一个名为Click Me程序的简单JavaFX程序，并简要描述该程序是如何工作的。在这一章中，我把这个程序放在显微镜下，仔细地研究它。当您完成本章时，您将理解Click Me程序的每一行是如何工作的，以及为什么需要它。然后，您就可以开始研究JavaFX编程的更细微的技术了。
-
-In Chapter 1, I introduce you to a simple JavaFX program called the Click Me program and briefly describe how that program works. In this chapter, I put this program under the microscope and examine it in close detail. By the time you finish this chapter, you’ll understand how every line of the Click Me program works and why it’s required. Then, you’ll be ready to start figuring out more nuanced techniques of JavaFX programming.
+在第 1 章中，我介绍了名为 Click Me 的简单的 JavaFX 程序，并简单描述了它是如何工作的。本章中，我会把这个程序放在显微镜下，详细研究。阅读完本章，你将了解 Click Me 程序的每一行是如何工作的，以及为什么需要这样做。然后， 你就可以开始研究 JavaFX 编程更细微的技术了。
 
 ## 再看 Click Me 程序
 
-图2-1显示了运行中的Click Me程序。如您所见，此程序显示一个简单的按钮，其中包含单词Click me please!。该图未显示的是，当用户单击按钮时，按钮上的文本将变为“我已被点击！”。
+图 2-1 展示了运行中的 Click Me 程序。若你所见，上面显示了一个包含 `Click me please!` 几个字的简单按钮。图中没有展示出来的是，当用户单击按钮时，它上面的文字将变成 `I’ve Been Clicked!`。
 
-图2-1显示了“点击我”程序的运行。正如你所看到的，这个程序显示了一个简单的按钮，包含了“请点击我!”图中没有显示的是，当用户单击按钮时，按钮上的文字变成I 've Been Clicked!
-
-Figure 2-1 shows the Click Me program in action. As you can see, this program displays a simple button that contains the words Click me please!. What the figure does not show is that when the user clicks the button, the text on the button becomes I’ve Been Clicked!.
-
-> Figure 2-1: The Click Me program in action.
+> 图 2-1：运行中的 Click Me 程序。
 
 ![Figure 2-1](./assets/Figure-2-1.png)
 
-尽管这个程序很简单，但它展示了你需要掌握的大多数基本技术，以弄清楚如何编写JavaFX程序:
+尽管这个程序很简单，但它展示了大多数你需要掌握的用于编写 JavaFX 程序所需的基本技术：
 
-尽管该程序很简单，但是它展示了您掌握如何编写JavaFX程序所需掌握的大多数基本技术：
-
-Although this program is simple, it demonstrates most of the essential techniques you need to master to figure out how to write JavaFX programs:
-
-> 它显示了一个用户界面，包括一个标准类型的用户界面控件-在这种情况下，一个按钮。它响应用户的输入，当用户点击按钮时生成。它更新显示来确认用户的操作。
+> ✓ 显示一个用户界面，上面包含一个标准控件 —— 这个例子中是按钮。
 >
-> ✓它显示一个包含标准类型的用户界面控件的用户界面-在这种情况下为按钮。✓它响应用户单击该按钮时生成的用户输入。✓它更新显示以确认用户的操作。
+> ✓ 对用户的输入进行响应，出现在用户点击按钮时。
 >
-> ✓ It displays a user interface that includes a standard type of user interface control — in this case, a button.
->
-> ✓ It responds to the user’s input, generated when the user clicks the button.
->
-> ✓ It updates the display to confirm the user’s action.
+> ✓ 更新显示以确认用户的操作。
 
-许多JavaFX程序都是这个简单主题的变体:创建用户界面，响应用户的输入，然后更新显示以反映用户的输入。一个更现实的JavaFX程序所显示的用户界面无疑不仅仅显示一个按钮。响应用户输入而执行的处理可能包括其他步骤，例如在数据库中查找信息或执行计算。而且，与简单地更改按钮上显示的文字相比，显示器无疑会以更复杂的方式更新。但是，在大多数真实的JavaFX程序中都可以找到这些基本元素的变体。
+许多 JavaFX 程序都由这个简单主题变化而来：创建用户界面，响应用户的输入，然后更新显示以反映用户的输入。更为实际的 JavaFX 程序显示的用户界面必定不仅仅只有一个按钮。为响应用户输入而执行的处理还可能包括其他步骤，比如在数据库中查找信息或是执行计算。毫无疑问，显示的内容也将以更复杂的方式进行更新，而不仅仅是更改按钮上显示的文本。不过，在大多数真实的 JavaFX 程序中都可以找到这些基本要素的变体。
 
-许多JavaFX程序都是此简单主题的变体：创建用户界面，响应用户的输入，然后更新显示以反映用户的输入。更为现实的JavaFX程序显示的用户界面无疑将显示不仅仅是一个按钮。响应于用户输入而执行的处理将可能包括其他步骤，例如在数据库中查找信息或执行计算。毫无疑问，将以更复杂的方式更新显示内容，而不仅仅是更改按钮上显示的文本。但是，在大多数实际的JavaFX程序中都可以找到这些基本元素的变体。
-
-Many JavaFX programs are variations of this simple theme: Create a user interface, respond to the user’s input, and then update the display to reflect the user’s input. The user interface displayed by a more realistic JavaFX program will undoubtedly display more than just a single button. The processing performed in response to user input will likely include additional steps, such as looking up information in a database or performing calculations. And the display will undoubtedly be updated in more complicated ways than simply changing the text displayed on a button. But variations on these basic elements are found in most real-world JavaFX programs.
-
-清单2-1显示了Click Me程序的实际JavaFX代码。在本章的其余部分中，我将详细解释这个程序的每一行。
-
-清单2-1显示了Click Me程序的实际JavaFX代码。在本章的其余部分中，我将详细解释该程序的每一行。
-
-Listing 2-1 shows the actual JavaFX code for the Click Me program. In the remaining sections of this chapter, I explain every line of this program in detail.
+清单 2-1 显示了 Click Me 程序的完整代码。本章的剩余部分将对这个程序的每一行进行详细解释。
 
 **Listing 2-1: The Click Me Program**
 
@@ -73,19 +49,19 @@ public class ClickMe extends Application {
 
   @Override 
   public void start(Stage primaryStage) {
-    // Create the button 
+    // 创建按钮
     btn = new Button(); 
     btn.setText("Click me please!"); 
     btn.setOnAction(e -> buttonClick());
 
-    // Add the button to a layout pane
+    // 将按钮添加到布局面板中
     BorderPane pane = new BorderPane(); 
-    pane.setCenter(btn);
-
-    // Add the layout pane to a scene 
+    pane.setCenter(btn); 
+    
+    // 将布局面板添加到场景中
     Scene scene = new Scene(pane, 300, 250);
 
-    // Finalize and show the stage 
+    // 完成并展示舞台
     primaryStage.setScene(scene); 
     primaryStage.setTitle("The Click Me App"); 
     primaryStage.show();
@@ -101,13 +77,9 @@ public class ClickMe extends Application {
 }
 ```
 
-## 导入 JavaFX 相关包
+## 导入 JavaFX 包
 
-与任何Java程序一样，JavaFX程序以一系列引用程序将使用的各种JavaFX包的导入语句开始。Click Me程序包含以下五个导入语句:
-
-像任何Java程序一样，JavaFX程序以一系列import语句开头，这些语句引用该程序将使用的各种JavaFX程序包。 Click Me程序包括以下五个导入语句：
-
-Like any Java program, JavaFX programs begin with a series of import statements that reference the various JavaFX packages that the program will use. The Click Me program includes the following five import statements:
+JavaFX 程序与其他 Java 程序一样，以一系列 `import` 语句开头，这些语句引入了程序将会使用的各种 JavaFX 包。Click Me 程序包含了以下五个 `import` 语句：
 
 ```java
 import javafx.application.*; 
@@ -117,49 +89,17 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 ```
 
-如您所见，所有的JavaFX包都以JavaFX开头。Click Me程序使用五个不同的JavaFX包中的类:
+如你所见，所有的 JavaFX 包都以 `javafx` 开头。Click Me 程序使用的类来自五个不同的 JavaFX 包：
 
-如您所见，所有JavaFX软件包均以javafx开头。 Click Me程序使用来自五个不同的JavaFX软件包的类：
-
-As you can see, all the JavaFX packages begin with javafx. The Click Me program uses classes from five distinct JavaFX packages:
-
-> ✓javafx。application:这个包定义了JavaFX应用程序所依赖的核心类:application。您可以在本章后面的“扩展应用程序类”一节中了解更多关于应用程序类的信息。
+> **✓ `javafx.application`：** 这个包中定义了所有 JavaFX 应用程序都依赖的核心类：`Application`。稍后你会在本章“继承 Application 类”一节中了解到更多关于 `Application` 类的信息。
 >
-> ✓javafx.application：此包定义了所有JavaFX应用程序所依赖的核心类：Application。您可以在本章后面的“扩展应用程序类”一节中阅读有关Application类的更多信息。
+> **✓ `javafx.stage`：** 这个包中最重要的类是 `Stage`，它定义了所有用户界面对象的顶级容器。`Stage` 是 JavaFX 应用程序的最高级别的窗口，应用程序所有的用户界面元素都显示在其中。
 >
-> ✓ javafx.application: This package defines the core class on which
+> **✓ `javafx.scene`：** 这个包中最重要的类是 `Scene`，它是一个容纳着程序显示的所有用户界面元素的容器。
 >
-> all JavaFX applications depend: Application. You read more about the Application class in the section “Extending the Application Class” later in this chapter.
+> **✓ `javafx.scene.layout`：** 这个包中定义了一种特殊类型的用户界面元素，布局管理器。它们的工作是确定每个控件在用户界面中的显示位置。
 >
-> ✓javafx。stage:这个包中最重要的类是Stageclass，它定义了所有用户接口对象的顶级容器。Stage是JavaFX应用程序的最高级别窗口，所有应用程序的用户界面元素都显示在这个窗口中。
->
-> ✓javafx.stage：此包中最重要的类是Stageclass，它为所有用户界面对象定义了顶级容器。 Stage是JavaFX应用程序的最高级别的窗口，其中显示了该应用程序的所有用户界面元素。
->
-> ✓ javafx.stage: The most important class in this package is Stage
->
-> class, which defines the top-level container for all user interface objects. Stage is a JavaFX application’s highest-level window, within which all the application’s user-interface elements are displayed.
->
-> ✓javafx。scene:这个包中最重要的类是scene类，它是一个容器，容纳程序显示的所有用户界面元素。
->
-> ✓javafx.scene：此包中最重要的类是Scene类，它是一个容器，其中包含程序显示的所有用户界面元素。
->
-> ✓ javafx.scene: The most important class in this package is the Scene class, which is a container that holds all the user interface elements displayed by the program.
->
-> ✓javafx.scene。布局:这个包定义了一种特殊类型的用户界面元素，称为布局管理器。布局管理器的工作是确定在用户界面中显示的每个控件的位置。
->
-> ✓javafx.scene.layout：此包定义了一种特殊的用户界面元素，称为布局管理器。布局管理器的工作是确定在用户界面中显示的每个控件的位置。
->
-> ✓ javafx.scene.layout: This package defines a special type of user-
->
-> interface element called a layout manager. The job of a layout manager is to determine the position of each control displayed in the user interface.
->
-> ✓javafx.scene。控件:此包包含定义单个用户界面控件的类，如按钮、文本框和标签。Click Me程序只使用了这个包中的一个类:Button，它表示用户可以单击的按钮。
->
-> ✓javafx.scene.control：此程序包包含用于定义各个用户界面控件的类，例如按钮，文本框和标签。ClickMe程序仅使用该程序包中的一个类：Button，它表示用户可以通过按钮点击。
->
-> ✓ javafx.scene.control: This package contains the classes that define individual user interface controls such as buttons, text boxes, and labels.
->
-> The Click Me program uses just one class from this package: Button, which represents a button that the user can click.
+> **✓ `javafx.scene.control`：** 这个包中定义了各个用户界面控件对应的类，如按钮、文本框和标签。Click Me 程序只使用了这个包中的一个类：Button，它表示一个用户可以点击的按钮。
 
 ## 继承 Application 类
 

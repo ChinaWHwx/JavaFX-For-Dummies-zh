@@ -31,7 +31,7 @@
     - [使用 IDE 创建 Click Me 程序](./docs/Chapter-1.md#使用-IDE-创建-Click-Me-程序)
   - [第 2 章：深入 JavaFX 程序设计](./docs/Chapter-2.md)
     - [再看 Click Me 程序](./docs/Chapter-2.md#再看-Click-Me-程序)
-    - [导入 JavaFX 相关包](./docs/Chapter-2.md#导入-JavaFX-相关包)
+    - [导入 JavaFX 包](./docs/Chapter-2.md#导入-JavaFX-包)
     - [继承 Application 类](./docs/Chapter-2.md#继承-Application-类)
     - [启动应用程序](./docs/Chapter-2.md#启动应用程序)
     - [重写 start 方法](./docs/Chapter-2.md#重写-start-方法)
