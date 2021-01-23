@@ -112,6 +112,7 @@ public class ClickMe extends Application {
     // 将按钮添加到布局面板中
     BorderPane pane = new BorderPane(); 
     pane.setCenter(btn); 
+    
     // 将布局面板添加到场景中
     Scene scene = new Scene(pane, 300, 250);
 
