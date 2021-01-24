@@ -30,7 +30,7 @@
 
 清单 2-1 显示了 Click Me 程序的完整代码。本章的剩余部分将对这个程序的每一行进行详细解释。
 
-**Listing 2-1: The Click Me Program**
+**清单 2-1：Click Me 程序**
 
 ```java
 import javafx.application.*; 
@@ -212,66 +212,35 @@ Click Me 程序的 `start` 方法如下所示：
 
 你将在本章后续部分找到这些代码块的相关细节。但是在继续之前，我想额外指出一些有关 start 方法的重要细节：
 
-> 在Application类中，start方法被定义为一个抽象方法，所以当你在JavaFX程序中包含一个start方法时，你实际上覆盖了抽象的start方法。
+> ✓ 在 `Application` 类中，`start` 方法被定义为一个抽象方法，所以当你在 JavaFX 程序中包含 `start` 方法时，实际上覆盖了抽象的 start 方法。
 >
-> ✓start方法在Application类中定义为抽象方法，因此，当您在JavaFX程序中包含start方法时，实际上是在覆盖抽象start方法。
+> <img src="assets/tip.png" width="80"/>尽管不是必需的，但最好还是用 `@override` 注解明确声明你重写了 `start` 方法。如果省略了这个注解，当你拼错了方法名（例如，写成了 `Start` 而不是 `start`），或者列出的参数不正确，Java 会认为你是在定义一个新方法，而不是覆盖 start 方法。
 >
-> ✓ The start method is defined as an abstract method in the Application class, so when you include a start method in a JavaFX program, you’re actually overriding the abstract start method.
+> ✓ 与 `main` 方法不同，`start` 方法不是静态方法。当你从静态 `main` 方法调用 `launch` 方法时，`launch` 方法将创建 `Application` 类的一个实例，然后调用 `start` 方法。
 >
-> 尽管这不是必需的，但是包含@override注释以显式声明您正在覆盖start方法总是一个好主意。如果您忽略了这个注释，然后在拼写命名的方法时犯了错误(例如，Start而不是Start)，或者如果您列出的参数不正确，Java会认为您在定义一个新方法，而不是覆盖Start方法。
+> ✓ `start` 方法接受一个参数：`Stage` 对象，应用程序的用户界面将在其上进行显示。当应用程序调用你的 `start` 方法时，会通过 `primaryStage` 参数传递主舞台（primary stage）。因此，你可以在稍后的 `start` 方法中使用 `primaryStage` 参数来引用应用程序的舞台。
 >
-> 尽管不是必需的，但最好还是包含@override注释以明确声明您覆盖了start方法。如果您省略了此批注，然后在拼写命名方法（例如，使用Start而不是start）时出错，或者您错误地列出了参数，则Java会认为您是在定义新方法，而不是覆盖start方法。
->
-> <img src="assets/tip.png" width="80"/>Although it isn’t required, it’s always a good idea to include the @override annotation to explicitly state that you’re overriding the start method. If you omit this annotation and then make a mistake in spelling the method named (for example, Start instead of start) or if you list the parameters incorrectly, Java thinks you’re defining a new method instead of overriding the start method.
->
-> 与main方法不同，start方法不是一个静态方法。当您从静态main方法调用launch方法时，launch方法将创建应用程序类的一个实例，然后调用start方法。
->
-> ✓与main方法不同，start方法不是静态方法。当您从静态main方法调用启动方法时，启动方法会创建Application类的实例，然后调用start方法。
->
-> ✓ Unlike the main method, the start method is not a static method.
->
-> When you call the launch method from the static main method, the launch method creates an instance of your Application class and then calls the start method.
->
-> start方法接受一个参数:应用程序的用户界面将在其上显示的Stage对象。当应用程序调用您的start方法时，应用程序通过primaryStage参数传递主阶段(称为主阶段)。因此，您可以在稍后的start方法中使用primaryStage参数来引用应用程序的阶段。
->
-> ✓start方法接受一个参数：将在其上显示应用程序用户界面的Stage对象。当应用程序调用您的start方法时，该应用程序通过primaryStage参数传递主阶段（称为主阶段）。因此，您可以稍后在start方法中使用primaryStage参数来引用应用程序的阶段。
->
-> ✓ The start method accepts one parameter: the Stage object on which
->
-> the application’s user interface will display. When the application calls your start method, the application passes the main stage — known as the primary stage — via the primaryStage parameter. Thus, you can use the primaryStage parameter later in the start method to refer to the application’s stage.
 
 ## 创建按钮
 
-Click Me程序显示的按钮是使用名为button的类创建的。该类是可用于创建用户界面控件的众多类之一。Button类和大多数其他控件类都可以在javafx.scene.control包中找到。要创建一个按钮，只需定义一个button类型的变量，然后像这样调用button构造函数:
+Click Me 程序显示的按钮是使用名为 `Button` 的类创建的。该类是可用于创建用户界面控件的众多类之一。 `Button` 和其他大多数控件类可以在 `javafx.scene.control`  包中找到。
 
-Click Me程序显示的按钮是使用名为Button的类创建的。此类是可用于创建用户界面控件的众多类之一。在包javafx.scene.control中可以找到Button类和大多数其他控件类。要创建按钮，只需定义类型为Button的变量，然后按如下所示调用Button构造函数即可：
-
-The button displayed by the Click Me program is created using a class named Button. This class is one of many classes that you can use to create user interface controls. The Button class and most of the other control classes are found in the package javafx.scene.control.
-
-To create a button, simply define a variable of type Button and then call the Button constructor like this:
+要创建一个按钮，只需定义一个 `Button` 类型的变量，然后调用它的构造函数：
 
 ```java
 Button btn; 
 btn = new Button();
 ```
 
-在清单2-1中的代码中，btn变量被声明为start方法之外的类变量，而Button对象实际上是在start方法内创建的。控件通常声明为类变量，以便您可以从类中定义的任何方法访问它们。正如您在下一节(“处理操作事件”)中所发现的，当用户单击按钮时，将调用一个名为buttonClicked的单独方法。通过将btn变量定义为类变量，start方法和buttonClicked方法都可以访问按钮。要设置按钮显示的文本值，调用setText方法，传递要显示为字符串的文本:
+在清单 2-1 中的代码中，`btn` 在 `start` 方法之外声明为类变量，而 `Button` 对象实际上是在 `start` 方法内创建的。控件通常声明为类变量，以便你可以在类中定义的任何方法中访问它们。正如你会在下一节（“处理操作事件”）了解到的，当用户单击按钮时，将调用一个名为 `buttonClicked` 的单独方法。通过将 `btn` 定义为类变量，`start` 方法和 `buttonClicked` 方法都可以对它进行访问。
 
-在清单2-1中的代码中，btn变量在start方法之外声明为类变量，而Button对象实际上是在start方法中创建的。控件通常被声明为类变量，以便您可以从类中定义的任何方法访问它们。正如您在下一节（“处理动作事件”）中发现的那样，当用户单击按钮时，将调用名为buttonClicked的单独方法。通过将btn变量定义为类变量，start方法和buttonClicked方法都可以访问按钮。要设置按钮显示的文本值，请调用setText方法，并将要显示的文本作为字符串传递：
-
-In the code in Listing 2-1, the btn variable is declared as a class variable outside of the start method but the Button object is actually created within the start method. Controls are often declared as class variables so that you can access them from any method defined within the class. As you discover in the following section (“Handling an Action Event”), a separate method named buttonClicked is called when the user clicks the button. By defining the btn variable as a class variable, both the start method and the buttonClicked method have access to the button.
-
-To set the text value displayed by the button, call the setText method, passing the text to be displayed as a string:
+要设置按钮显示的文本，可以调用 `setText` 方法，并将要显示的文本作为字符串进行传递：
 
 ```java
 btn.setText("Click me please!");
 ```
 
-这里有一些关于按钮的额外花絮:
-
-以下是有关按钮的一些其他提示：
-
-Here are a few additional tidbits about buttons:
+以下是有关按钮的一些其他花絮：
 
 > ✓按钮构造函数允许你把要在按钮上显示的文本作为参数传递，就像下面这个例子:
 >
