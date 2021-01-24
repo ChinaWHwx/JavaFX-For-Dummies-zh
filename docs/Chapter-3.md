@@ -1,30 +1,54 @@
 # 第 3 章  事件处理
 
-> **In This Chapter**
+> **在本章节**
 >
-> + Understanding important event concepts
-> + Working with event-handling classes and interfaces
-> + Extending the EventHandler interface
-> + Using inner and anonymous classes for event handling
-> + Using Lambda expressions for event handling
+> + 理解重要事件的概念
+> + 使用事件处理相关的类和接口
+> + 扩展 `EventHandler` 接口
+> + 使用内部类和匿名类进行事件处理
+> + 使用 Lambda 表达式进行事件处理
+
+在第2章中，我将讨论两个程序，它们显示包含按钮的简单场景，并在用户单击按钮时做出响应。这些程序通过提供事件发生时执行的事件处理程序来响应用户单击按钮时触发的事件。
+
+在第2章中，我讨论了两个程序，这些程序显示包含一个按钮的简单场景，并在用户单击该按钮时做出响应。这些程序通过提供事件发生时执行的事件处理程序来响应用户单击按钮时触发的事件。
 
 In Chapter 2, I discuss two programs that display simple scenes that include a button and that respond when the user clicks the button. These programs respond to the event triggered when the user clicks the button by providing an event handler that’s executed when the event occurs.
 
+在本章中，您将阅读更多关于事件处理如何在JavaFX中工作的细节。我将讨论JavaFX如何生成事件以及如何分派事件，以便您的程序能够响应它们。您会发现JavaFX程序可以处理的事件种类很多。您还了解了处理JavaFX事件的几种编程技术。
+
+在本章中，您将了解有关JavaFX中事件处理如何工作的更多详细信息。我将讨论事件的产生方式以及JavaFX如何分派事件，以便您的程序可以响应它们。您会发现JavaFX程序可以处理的多种事件。您将了解用于处理JavaFX事件的几种编程技术。
+
 In this chapter, you read more details about how event handling works in JavaFX. I discuss how events are generated and how they’re dispatched by JavaFX so that your programs can respond to them. You discover the many varieties of events that can be processed by a JavaFX program. And you figure out several programming techniques for handling JavaFX events.
 
+最后，在本章中，您将了解属性绑定的思想，它允许您编写代码来响应某些类型的类字段(称为属性字段)的值的更改。在JavaFX中，属性绑定有时用于需要调用Swing中的事件处理程序的情况。
+
+最后，在本章中，您将介绍属性绑定的概念，该属性使您可以编写代码来响应某些类型的类字段（称为属性字段）的值更改。在JavaFX中，有时会在Swing中要求使用事件处理程序的情况下使用属性绑定。
+
 Finally, in this chapter you’re introduced to the idea of property bindings, which let you write code that responds to changes in the value of certain types of class fields, dubbed property fields. In JavaFX, property bindings are sometimes used in situations that would’ve called for an event handler in Swing.
+
+尽管事件处理主要用于响应按钮单击，但它也可以用于响应其他类型的用户交互。例如，您可以使用事件处理来编写当用户从组合框中进行选择、将鼠标移到标签上或按下键盘上的键时执行的代码。本章中的事件处理技术也适用于这些事件。
+
+尽管事件处理主要用于响应按钮的单击，但是它也可以用于响应其他类型的用户交互。例如，您可以使用事件处理来编写当用户从组合框进行选择，将鼠标移到标签上或按键盘上的键时执行的代码。本章中的事件处理技术也适用于这些事件。
 
 <img src="assets/tip.png" width="80"/>Although event handling is used mostly to respond to button clicks, it can also be used to respond to other types of user interactions. You can use event handling, for example, to write code that’s executed when the user makes a selection from a combo box, moves the mouse over a label, or presses a key on the keyboard. The event-handling techniques in this chapter work for those events as well.
 
 ## 检查事件
 
+事件是当用户使用一个用户界面组件做一些值得注意的事情时生成的对象。然后，将此事件对象传递给您创建的特殊方法，称为事件处理程序。事件处理程序可以检查事件对象，确定发生的事件类型，并相应地作出响应。如果用户单击按钮，事件处理程序可能会将用户通过文本字段输入的任何数据写入文件。如果用户将鼠标光标传递到标签上，事件处理程序可能会更改该标签显示的文本。如果用户从组合框中选择一个项，事件处理程序可能会使用选中的值在数据库中查找信息。可能性是无限的!
+
+事件是当用户使用您的用户界面组件之一进行值得注意的操作时生成的对象。然后，此事件对象将传递到您创建的特殊方法，称为事件处理程序。事件处理程序可以检查事件对象，确定确切的事件类型，并做出相应的响应。如果用户单击按钮，则事件处理程序可能会将用户通过文本字段输入的任何数据写入文件。如果用户将鼠标光标移到标签上，则事件处理程序可能会更改标签显示的文本。并且，如果用户从组合框中选择一项，则事件处理程序可能会使用选择的值来查找数据库中的信息。可能性是无止境！
+
 An event is an object that’s generated when the user does something noteworthy with one of your user-interface components. Then this event object is passed to a special method you create, called an event handler. The event handler can examine the event object, determine exactly what type of event occurred, and respond accordingly. If the user clicks a button, the event handler might write any data entered by the user via text fields to a file. If the user passes the mouse cursor over a label, the event handler might change the text displayed by the label. And if the user selects an item from a combo box, the event handler might use the value that was selected to look up information in a database. The possibilities are endless!
+
+事件由javafx.event类的实例表示。事件或其众多子类中的一个。表3-1列出了最常用的事件类。
+
+事件由类javafx.event.Event或其多个子类之一的实例表示。表3-1列出了最常用的事件类。
 
 An event is represented by an instance of the class javafx.event.Event or one of its many subclasses. Table 3-1 lists the most commonly used event classes.
 
-**Table 3-1 Commonly Used Event Classes**
+**表 3-1 常用的事件类**
 
-| Event Class | Package             | Description                                                  |
+| 事件类      | 包                  | 描述                                                         |
 | ----------- | ------------------- | ------------------------------------------------------------ |
 | ActionEvent | javafx.event        | Created when the user performs an action with a button or other component. Usually this means that the user clicked the button, but the user can also invoke a button action by tabbing to the button and pressing the Enter key. This is the most commonly used event class, as it represents the most common types of user-interface events. |
 | InputEvent  | javafx. scene.input | Created when an event that results from user input, such as a mouse or key click, occurs. |
@@ -33,7 +57,7 @@ An event is represented by an instance of the class javafx.event.Event or one of
 | TouchEvent  | javafx. scene.input | Created when a user initiates a touch event on a device that allows touch input. |
 | WindowEvent | javafx.stage        | Created when the status of the window (stage) changes.       |
 
-<img src="assets/tip.png" width="80"/>Here are four important terms you need to know:
+<img src="assets/tip.png" width="80"/>您需要了解以下四个重要术语：
 
 > ✓ Event: An object that’s created when the user does something noteworthy with a component, such as clicking it.
 >
