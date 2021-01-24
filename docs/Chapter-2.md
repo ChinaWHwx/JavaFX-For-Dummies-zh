@@ -8,7 +8,7 @@
 > + 创建用户单击按钮时调用的事件处理程序
 > + 验证 Click Me 程序的增强版本
 
-在第 1 章中，我介绍了名为 Click Me 的简单的 JavaFX 程序，并简单描述了它是如何工作的。本章中，我会把这个程序放在显微镜下，详细研究。阅读完本章，你将了解 Click Me 程序的每一行是如何工作的，以及为什么需要这样做。然后， 你就可以开始研究 JavaFX 编程更细微的技术了。
+在第 1 章中，我介绍了名为 Click Me 的简单的 JavaFX 程序，并简单描述了它是如何工作的。本章中，我会把这个程序放在显微镜下，进行详细研究。阅读完本章，你将了解 Click Me 程序的每一行是如何工作的，以及为什么需要这样做。然后， 你就可以开始研究 JavaFX 编程更细微的技术了。
 
 ## 再看 Click Me 程序
 
@@ -49,19 +49,19 @@ public class ClickMe extends Application {
 
   @Override 
   public void start(Stage primaryStage) {
-    // 创建按钮
+    // Create the button 
     btn = new Button(); 
     btn.setText("Click me please!"); 
     btn.setOnAction(e -> buttonClick());
 
-    // 将按钮添加到布局面板中
+    // Add the button to a layout pane 
     BorderPane pane = new BorderPane(); 
-    pane.setCenter(btn); 
-    
-    // 将布局面板添加到场景中
+    pane.setCenter(btn);
+
+    // Add the layout pane to a scene 
     Scene scene = new Scene(pane, 300, 250);
 
-    // 完成并展示舞台
+    // Finalize and show the stage 
     primaryStage.setScene(scene); 
     primaryStage.setTitle("The Click Me App"); 
     primaryStage.show();
@@ -103,83 +103,43 @@ import javafx.scene.control.*;
 
 ## 继承 Application 类
 
-JavaFX应用程序是扩展JavaFX .application的Java类。应用程序类。因此，Click Me应用程序的主类声明如下:
-
-JavaFX应用程序是扩展javafx.application的Java类。应用程序类。因此，Click Me应用程序主类的声明是这样的：
-
-A JavaFX application is a Java class that extends the javafx.application. Application class. Thus, the declaration for the Click Me application’s main class is this:
+JavaFX 应用程序是一个继承了 `javafx.application. Application` 的 Java 类。因此，Click Me 应用程序的主类声明是这样的：
 
 ```java
 public class ClickMe extends Application
 ```
 
-在这里，ClickMe应用程序是由一个名为ClickMe的类定义的，它扩展了application类。
+在这里，Click Me 应用程序由继承了 `Application` 的 `ClickMe` 的类定义。
 
-在这里，Click Me应用程序由名为ClickMe的类定义，该类扩展了Application类。
-
-Here, the Click Me application is defined by a class named ClickMe, which extends the Application class.
-
-因为整个javafx。在Click Me程序的第1行导入应用程序包，应用程序类不必完全合格。如果您省略了javafx的import语句。应用程序包中，ClickMe类声明必须如下所示:
-
-因为整个javafx.application包都是在Click Me程序的第1行中导入的，所以Application类不必完全合格。如果省略javafx.application包的import语句，则ClickMe类声明必须看起来像这样：
-
-<img src="assets/technical-stuff.png" width="80"/>Because the entire javafx.application package is imported in line 1 of the Click Me program, the Application class does not have to be fully qualified. If you omit the import statement for the javafx.application package, the ClickMe class declaration would have to look like this:
+<img src="assets/technical-stuff.png" width="80"/>因为在 Click Me 程序的第 1 行中导入了整个 `javafx.application` 包，所以 `Application` 类不需要使用全限定名。如果省略了 `javafx.application` 包的 `import` 语句，`ClickMe` 类的声明需要变成这样：
 
 ```java
 public class ClickMe extends javafx.application.Application
 ```
 
-Application类负责管理所谓的JavaFX应用程序的生命周期。生命周期包括以下步骤:
+`Application` 类负责管理 JavaFX 应用程序的生命周期。生命周期包括以下步骤：
 
-Application类负责管理所谓的JavaFX应用程序的生命周期。生命周期包括以下步骤：
+1. 创建 `Application` 类的一个实例。
 
-The Application class is responsible for managing what is called the lifecycle of a JavaFX application. The lifecycle consists of the following steps:
+2. 调用 `init` 方法。
 
-1. 创建 Application 类的实例。
+   `init` 方法的默认实现不做任何事情，可以通过覆盖 `init` 方法，在应用程序的用户界面显示之前执行你想要的任何处理。
 
-2. 调用 init 方法。
+3. 调用 `start` 方法。
 
-   init方法的默认实现不做任何事情，但是您可以覆盖init方法，以在应用程序的用户界面显示之前提供您想要执行的任何处理。
+   `start` 方法是一个抽象方法，这意味着 `Application` 类没有提供默认实现。因此，你必须提供自己的 `start` 方法版本。`start` 方法负责构建和显示用户界面。（更多信息，稍后请阅读“重写 start 方法”一节）
 
-   init方法的默认实现不执行任何操作，但是您可以覆盖init方法以提供想要在应用程序的用户界面显示之前执行的所有处理。
+4. 等待应用程序结束，这通常发生在用户通过关闭主应用程序窗口或选择程序的退出命令来指示程序结束时。
 
-   The default implementation of the init method does nothing, but you can override the init method to provide any processing you want to be performed before the application’s user interface displays.
+   在此期间，应用程序并不是真正空闲的。相反，它忙于响应用户事件，例如单击按钮或从下拉列表中选择。
 
-3. 调用 start 方法。
+5. 调用 `stop` 方法。
 
-   start方法是一个抽象方法，这意味着没有作为应用程序类的一部分提供默认实现。因此，您必须提供自己的start方法版本。start方法负责构建和显示用户界面。(更多信息，请参阅本章后面的“覆盖启动方法”一节。
-
-   start方法是一种抽象方法，这意味着没有默认的实现作为Application类的一部分提供。因此，您必须提供自己的start方法版本。 start方法负责构建和显示用户界面。 （有关更多信息，请参阅本章后面的“覆盖启动方法”一节。
-
-   The start method is an abstract method, which means that there is no default implementation provided as a part of the Application class. Therefore, you must provide your own version of the start method. The start method is responsible for building and displaying the user interface. (For more information, see the section “Overriding the start Method” later in this chapter.
-
-4. 等待应用程序结束，这通常发生在用户通过关闭主应用程序窗口或选择程序的exit命令表示程序结束时。
-
-   等待应用程序结束，这通常发生在用户通过关闭主应用程序窗口或选择程序的退出命令来指示程序结束时。
-
-   Wait for the application to end, which typically happens when the user signals the end of the program by closing the main application window or choosing the program’s exit command.
-
-   在此期间，应用程序并不是真正闲置的。相反，它忙于执行响应用户事件的操作，例如单击按钮或从下拉列表中选择项。
-
-   在这段时间内，该应用程序并不是真正处于空闲状态。相反，它忙于响应用户事件执行操作，例如单击按钮或从下拉列表中选择一项。
-
-   During this time, the application isn’t really idle. Instead, it’s busy performing actions in response to user events, such as clicking a button or choosing an item from a drop-down list.
-
-5. 调用 stop 方法。
-
-   与init方法一样，stop方法的默认实现不做任何事情，但是您可以覆盖它，以便在程序结束时执行任何必要的处理，例如关闭数据库资源或保存文件。
-
-   与init方法一样，stop方法的默认实现不会执行任何操作，但是您可以覆盖它以在程序终止时执行必要的任何处理，例如关闭数据库资源或保存文件。
-
-   Like the init method, the default implementation of the stop method doesn’t do anything, but you can override it to perform any processing necessary as the program terminates, such as closing database resources or saving files.
+   与`init` 方法一样，`stop` 方法的默认实现没有任何操作。你可以通过覆盖它，以实现在程序结束时执行一些必要的处理，例如关闭数据库或是保存文件。
 
 ## 启动应用程序
 
-如您所知，Java程序的标准入口点是主要方法。点击我程序的主要方法如下:
-
-如您所知，Java程序的标准入口点是主要方法。这是Click Me程序的主要方法：
-
-As you know, the standard entry-point for Java programs is the main method. Here is the main method for the Click Me program:
+你应该知道，`main` 方法是 Java 程序的标准入口。以下就是 Click Me 程序的 `main` 方法：
 
 ```java
 public static void main(String[] args) { 
@@ -187,15 +147,11 @@ public static void main(String[] args) {
 }
 ```
 
-如您所见，main方法仅包含一个语句，即对Application类的launch方法的调用。launch方法实际上是启动JavaFX应用程序的方法。 launch方法是静态方法，因此可以在main方法的静态上下文中调用它。它创建Application类的实例，然后启动JavaFX生命周期，调用init和start方法，等待应用程序完成，然后调用stop方法。启动方法直到JavaFX应用程序结束才返回。假设您为Click Me程序编写了如下主要方法：
+如你所见，`main` 方法只包含一条语句，即对 `Application` 类的 `launch` 方法的调用。
 
-如您所见，main方法只包含一条语句，即对应用程序类的launch方法的调用。launch方法是实际启动JavaFX应用程序的方法。launch方法是一个静态方法，因此可以在main方法的静态上下文中调用它。它创建应用程序类的一个实例，然后启动JavaFX生命周期，调用init和start方法，等待应用程序完成，然后调用stop方法。在JavaFX应用程序结束之前，launch方法不会返回。假设你为Click Me程序编写了这样的主方法:
+`launch` 方法实际上是启动 `JavaFX` 应用程序的方法。 `launch` 方法是静态方法，所以可以在 `main` 方法的静态上下文中被调用。它创建了一个 `Application` 类实例，然后启动 JavaFX 生命周期，调用 `init` 和 `start` 方法，等待应用程序完成，再调用 `stop` 方法。
 
-As you can see, the main method consists of just one statement, a call to the Application class’ launch method.
-
-The launch method is what actually starts a JavaFX application. The launch method is a static method, so it can be called in the static context of the main method. It creates an instance of the Application class and then starts the JavaFX lifecycle, calling the init and start methods, waiting for the application to finish, and then calling the stop method.
-
-The launch method doesn’t return until the JavaFX application ends. Suppose you wrote the main method for the Click Me program like this:
+`starty` 方法直到 JavaFX 应用程序结束时才会返回。假设你为 Click Me 程序编写的 `main` 方法是这样的：
 
 ```java
 public static void main(String[] args) {
@@ -205,23 +161,15 @@ public static void main(String[] args) {
 }
 ```
 
-然后，当JavaFX应用程序窗口打开时，您将看到在控制台窗口中显示启动JavaFX。当您关闭JavaFX应用程序窗口时，您将在控制台窗口中看到Finished。
-
-然后，当JavaFX应用程序窗口打开时，控制台窗口中将显示启动JavaFX。关闭JavaFX应用程序窗口后，您将在控制台窗口中看到“完成”。
-
-Then, you would see Launching JavaFX displayed in the console window while the JavaFX application window opens. When you close the JavaFX application window, you would then see Finished in the console window.
+当 JavaFX 应用程序窗口打开时，你会看到控制台窗口显示 `Launching JavaFX`。当你关闭 JavaFX 应用程序窗口，你会看到控制台显示 `Finished`。
 
 ## 重写 start 方法
 
-每个JavaFX应用程序都必须包含一个start方法。您要编写代码来创建用户界面元素，程序的用户将在start方法中与之交互。例如，清单2-1中的start方法所包含的代码显示了一个带有文本“Click me please!”当启动JavaFX应用程序时，JavaFX框架在应用程序类初始化后调用start方法。Click Me程序的start方法如下所示:
+每个 JavaFX 应用程序都必须包含一个 `start` 方法。在 `start` 方法中，你可以编写代码创建与用户进行交互的界面元素。例如，清单 2-1 中的 `start` 方法包含的代码展示了一个带有 `Click me please!` 字样的按钮。
 
-每个JavaFX应用程序都必须包含一个start方法。您编写代码，以在start方法中创建程序用户将与之交互的用户界面元素。例如，清单2-1中的start方法包含显示带有按钮Click me的代码的代码！当启动JavaFX应用程序时，JavaFX框架在Application类初始化之后调用start方法。 Click Me程序如下所示：
+当 JavaFX 应用程序启动时，JavaFX 框架会在 `Application` 类初始化之后调用 `start` 方法。
 
-Every JavaFX application must include a start method. You write the code that creates the user interface elements your program’s user will interact with in the start method. For example, the start method in Listing 2-1 contains code that displays a button with the text Click me please!
-
-When a JavaFX application is launched, the JavaFX framework calls the start method after the Application class has been initialized.
-
-The start method for the Click Me program looks like this:
+Click Me 程序的 `start` 方法如下所示：
 
 ```java
 @Override public void start(Stage primaryStage) {
@@ -244,47 +192,25 @@ The start method for the Click Me program looks like this:
 }
 ```
 
-为了创建Click Me程序的用户界面，start方法执行以下四个基本步骤:
+为了创建 Click Me 程序的用户界面，`start` 方法执行了以下四个基本步骤：
 
-要为Click Me程序创建用户界面，start方法执行以下四个基本步骤：
+1. 创建一个名为 `btn` 的按钮控件，将其文本设置为 `Click me please!`，并指定用户单击按钮时调用名为 `buttonClick` 的方法。
 
-To create the user interface for the Click Me program, the start method performs the following four basic steps:
+   有关此代码的详细说明，请参阅本章后面的“创建按钮”和“处理操作事件”部分。
 
-1. 创建一个名为btn的按钮控件，设置其文本为“请点击我!”，并指定当用户单击按钮时将调用一个名为buttonClick的方法。有关这段代码的更详细解释，请参阅本章后面的“创建按钮”和“处理动作事件”部分。
+2. 创建一个名为 `pane` 的布局面板，并将按钮添加到其中。
 
-   创建一个名为btn的按钮控件，将其文本设置为Click me please !，并指定当用户单击该按钮时将调用一个名为buttonClick的方法。有关此代码的详细说明，请参阅本章后面的“创建按钮”和“处理动作事件”部分。
+   更多细节，请参阅本章后面的“创建布局面板”部分。
 
-   Create a button control named btn, set its text to Click me please!, and specify that a method named buttonClick will be called when the user clicks the button. For a more detailed explanation of this code, see the sections “Creating a Button” and “Handling an Action Event” later in this chapter.
+3. 创建一个名为 `scene` 的场景，并将布局面板添加到其中。
 
-2. 创建一个名为pane的布局窗格，并将按钮添加到其中。更多细节，请参阅本章后面的“创建布局窗格”部分。
+   更多细节，请参阅本章后面的“场景搭建”部分。
 
-   创建一个名为“窗格”的布局窗格，并向其中添加按钮。有关更多详细信息，请参阅本章后面的“创建布局窗格”一节。
+4. 通过设置场景、设置舞台标题、展示舞台，最终完成舞台（stage）搭建。
 
-   Create a layout pane named pane and add the button to it.
+   请参阅本章后面的“舞台设置”部分了解更多细节。
 
-   For more details, see the section “Creating a Layout Pane” later in this chapter.
-
-3. 创建一个名为scene的场景，并添加布局窗格给它。更多细节，请参阅本章后面的“制作场景”部分。
-
-   创建一个名为Scene的场景并向其中添加布局窗格。有关更多详细信息，请参见本章后面的“制作场景”部分。
-
-   Create a scene named scene and add the layout pane to it.
-
-   For more details, see the “Making a Scene” section later in this chapter.
-
-4. 通过设定场景、设定舞台标题、展示舞台来结束舞台。请参阅本章后面的“舞台设置”部分了解更多细节。
-
-   通过设置场景，设置舞台标题和显示舞台来最终确定舞台。有关更多详细信息，请参见本章后面的“设置舞台”部分。
-
-   Finalize the stage by setting the scene, setting the stage title, and showing the stage.
-
-   See the “Setting the Stage” section later in this chapter for more details.
-
-您将在本章的后面部分找到这些代码块的相关细节。但在我继续之前，我想指出一些额外的关于start方法的重要细节:
-
-您将在本章的后面找到每个这些代码块的相关细节。但是在继续之前，我想指出一些有关start方法的其他重要细节：
-
-You find pertinent details of each of these blocks of code later in this chapter. But before I proceed, I want to point out a few additional salient details about the start method:
+你将在本章后续部分找到这些代码块的相关细节。但是在继续之前，我想额外指出一些有关 start 方法的重要细节：
 
 > 在Application类中，start方法被定义为一个抽象方法，所以当你在JavaFX程序中包含一个start方法时，你实际上覆盖了抽象的start方法。
 >
@@ -377,7 +303,7 @@ Here are a few additional tidbits about buttons:
 >
 > from higher-level parent class called javafx.scene.Node. Node is the base class of all user-interface elements that can be displayed in a scene. A control is a specific type of node, but there are other types of nodes. In other words, all controls are nodes, but not all nodes are controls. You can read more about several other types of nodes later in this book.
 
-## 处理活动事件
+## 处理操作事件
 
 当用户单击按钮时，将触发一个动作事件。您的程序可以通过提供一个事件处理程序来响应事件，该处理程序只是一些在事件发生时执行的代码。Click Me程序通过为按钮设置事件处理程序来工作;事件处理程序的代码将更改按钮上显示的文本。正如你在第3章中读到的，在JavaFX中有几种处理事件的方法。现在，我简要介绍一个最简单的方法，它只要求您指定在事件发生时调用一个方法，然后提供实现该方法的代码。要指定用户单击按钮时要调用的方法，可以调用按钮类的setOnAction方法。在清单2-1中是这样做的:
 

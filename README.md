@@ -36,7 +36,7 @@
     - [启动应用程序](./docs/Chapter-2.md#启动应用程序)
     - [重写 start 方法](./docs/Chapter-2.md#重写-start-方法)
     - [创建按钮](./docs/Chapter-2.md#创建按钮)
-    - [处理活动事件](./docs/Chapter-2.md处理活动事件#)
+    - [处理操作事件](./docs/Chapter-2.md处理操作事件#)
     - [创建布局面板](./docs/Chapter-2.md#创建布局面板)
     - [场景搭建](./docs/Chapter-2.md#场景搭建)
     - [舞台设置](./docs/Chapter-2.md#舞台设置)
