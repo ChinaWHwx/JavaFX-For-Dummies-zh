@@ -1,4 +1,4 @@
-# Chapter 3 Handling Events
+# 第 3 章  事件处理
 
 > **In This Chapter**
 >
@@ -16,7 +16,7 @@ Finally, in this chapter you’re introduced to the idea of property bindings, w
 
 <img src="assets/tip.png" width="80"/>Although event handling is used mostly to respond to button clicks, it can also be used to respond to other types of user interactions. You can use event handling, for example, to write code that’s executed when the user makes a selection from a combo box, moves the mouse over a label, or presses a key on the keyboard. The event-handling techniques in this chapter work for those events as well.
 
-## Examining Events
+## 检查事件
 
 An event is an object that’s generated when the user does something noteworthy with one of your user-interface components. Then this event object is passed to a special method you create, called an event handler. The event handler can examine the event object, determine exactly what type of event occurred, and respond accordingly. If the user clicks a button, the event handler might write any data entered by the user via text fields to a file. If the user passes the mouse cursor over a label, the event handler might change the text displayed by the label. And if the user selects an item from a combo box, the event handler might use the value that was selected to look up information in a database. The possibilities are endless!
 
@@ -51,7 +51,7 @@ An event is represented by an instance of the class javafx.event.Event or one of
 | ---------------------- | --------------------------- |
 | void handle\<T event\> | Called when an event occurs |
 
-## Handling Events
+## 处理事件
 
 Now that you know the basic classes and interfaces that are used for event handling, you’re ready to figure out how to wire them to create a program that responds to events.
 
@@ -104,7 +104,7 @@ Here are three steps you must take to handle a JavaFX event:
 
    Every component that serves as an event source provides a method that lets you register event handlers to listen for the event. For example, a Button control provides a setOnAction method that lets you register an event handler for the action event. In the setOnAction method, you specify the event handler object as a parameter. The exact way you do that depends on which of the various techniques you used to create the event handler.
 
-## Implementing the EventHandler Interface
+## 实现 EventHandler 接口
 
 To see how all these elements work together in a complete program, Figure 3-1 shows the output from a simple program called AddSubtract1. This program displays a label and two buttons, one titled Add and the other titled Subtract. The label initially displays the number 0. Each time the user clicks the Add button, the value displayed by the label is increased by one; each time the user clicks the Subtract button, the value is decreased by one.
 
@@ -225,7 +225,7 @@ The EventHandler interface is a generic interface, which means that you must spe
 
 ➝ 64：The label’s text value is set to the string equivalent of the iCounter variable.
 
-## Handling Events with Inner Classes
+## 使用内部类处理事件
 
 An inner class is a class that’s nested within another class. Inner classes are commonly used for event handlers. That way, the class that defines the application doesn’t also have to implement the event handler. Instead, it includes an inner class that handles the events.
 
@@ -324,7 +324,7 @@ This program works essentially the same way as the program shown in Listing 3-1,
 
 ➝ 56：The handle method here is identical to the handle method in the AddSubtract1 program (see Listing 3-1) but resides in the inner ClickHandler class instead of in the outer class.
 
-## Handling Events with Anonymous Inner Classes
+## 使用匿名内部类处理事件
 
 An anonymous inner class, usually just called an anonymous class, is a class that’s defined on the spot, right at the point where you need it. Because you code the body of the class right where you need it, you don’t have to give it a name; that’s why it’s called an anonymous class.
 
@@ -418,7 +418,7 @@ The following paragraphs highlight the key points of how this program uses anony
 
 ➝ 41：This time, the handle method decrements the counter variable and updates the label text to display the new counter value.
 
-## Using Lambda Expressions to Handle Events
+## 使用 Lambda 表达式处理事件
 
 Java 8 introduces a new feature that in some ways is similar to anonymous classes, but with more concise syntax. More specifically, a Lambda expression lets you create an anonymous class that implements a specific type of interface — a functional interface — which has one and only one abstract method.
 

@@ -42,12 +42,12 @@
     - [舞台设置](./docs/Chapter-2.md#舞台设置)
     - [检查 Click Counter 程序](./docs/Chapter-2.md#检查-Click-Counter-程序)
   - [第 3 章：事件处理](./docs/Chapter-3.md)
-    - 检查事件
-    - 事件处理 
-    - 实现 EventHandler 接口
-    - 使用内部类处理事件
-    - 使用匿名内部类处理事件
-    - 使用 Lambda 表达式处理事件
+    - [检查事件](./docs/Chapter-3.md#检查事件)
+    - [处理事件](./docs/Chapter-3.md#处理事件)
+    - [实现 EventHandler 接口](./docs/Chapter-3.md#实现-EventHandler-接口)
+    - [使用内部类处理事件](./docs/Chapter-3.md#使用内部类处理事件)
+    - [使用匿名内部类处理事件](./docs/Chapter-3.md#使用匿名内部类处理事件)
+    - [使用 Lambda 表达式处理事件](./docs/Chapter-3.md#使用-Lambda-表达式处理事件])
   - [第 4 章：设置窗口和场景布局](./docs/Chapter-4.md)
     - 检验 Stage 类
     - 检验 Scene 类
