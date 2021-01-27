@@ -32,7 +32,7 @@ Finally, in this chapter you’re introduced to the idea of property bindings, w
 
 <img src="assets/tip.png" width="80"/>Although event handling is used mostly to respond to button clicks, it can also be used to respond to other types of user interactions. You can use event handling, for example, to write code that’s executed when the user makes a selection from a combo box, moves the mouse over a label, or presses a key on the keyboard. The event-handling techniques in this chapter work for those events as well.
 
-## 检查事件
+## 调查事件
 
 事件是当用户使用一个用户界面组件做一些值得注意的事情时生成的对象。然后，将此事件对象传递给您创建的特殊方法，称为事件处理程序。事件处理程序可以检查事件对象，确定发生的事件类型，并相应地作出响应。如果用户单击按钮，事件处理程序可能会将用户通过文本字段输入的任何数据写入文件。如果用户将鼠标光标传递到标签上，事件处理程序可能会更改该标签显示的文本。如果用户从组合框中选择一个项，事件处理程序可能会使用选中的值在数据库中查找信息。可能性是无限的!
 
