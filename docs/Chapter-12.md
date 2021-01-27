@@ -18,3 +18,4 @@ In this chapter, I first discuss how to switch an entire application between two
 JavaFX comes with two built-in themes: Modena and Caspian. Modena is a new theme that was introduced with JavaFX 8; Caspian is an older theme that was used with previous versions of JavaFX.
 
 Figure 12-1 shows a version of the Pizza Order application that I present in Chapter 11; it includes a pair of radio buttons to allow the user to switch between the Modena and Caspian themes. The window on the left side of the figure shows the Modena theme; the Caspian theme is shown on the right.
+
