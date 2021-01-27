@@ -240,37 +240,19 @@ btn = new Button();
 btn.setText("Click me please!");
 ```
 
-以下是有关按钮的一些其他花絮：
+以下是有关按钮的一些趣闻：
 
-> ✓按钮构造函数允许你把要在按钮上显示的文本作为参数传递，就像下面这个例子:
->
-> ✓Button构造函数允许您传递要在按钮上显示的文本作为参数，如以下示例所示：
->
-> ✓ The Button constructor allows you to pass the text to be displayed on the button as a parameter, as in this example:
+> ✓ `Button` 构造函数允许你把要在按钮上显示的文本作为参数传递，如下：
 >
 > ```java
-> Btn = new Button("Click me please!");
+>Btn = new Button("Click me please!");
 > ```
 >
-> 如果以这种方式设置按钮的文本，则不需要调用setTitle方法。
+> 如果以这种方式设置按钮的文本，就不需要再调用 `setTitle` 方法。
+> 
+> <img src="assets/technical-stuff.png" width="50"/> ✓ `Button` 类是父类 `javafx.scene.control.Control` 派生的众多类之一。该类还派生了许多其他类，包括 `Label`，`TextField`，`ComboBox`，`CheckBox` 和 `RadioButton`。
 >
-> 如果以此方式设置按钮的文本，则无需调用setTitle方法。
->
-> If you set the button’s text in this way, you don’t need to call the setTitle method.
->
-> Button类是父类javafx.scene.control.Control派生出来的众多类之一。许多其他类都是从这个类派生出来的，包括Label、TextField、ComboBox、CheckBox和RadioButton。
->
-> ✓Button类是从称为javafx.scene.control.Control的父类派生的众多类之一。该类派生了许多其他类，包括Label，TextField，ComboBox，CheckBox和RadioButton。
->
-> <img src="assets/technical-stuff.png" width="50"/>✓ The Button class is one of many classes that are derived from a parent class known as javafx.scene.control.Control. Many other classes derive from this class, including Label, TextField, ComboBox, CheckBox, and RadioButton.
->
-> 控件类是一个派生自高级父类javafx.scene.Node的不同类。Node是可以在场景中显示的所有用户界面元素的基类。控件是一种特定类型的节点，但也有其他类型的节点。换句话说，所有的控件都是节点，但不是所有的节点都是控件。您可以在本书后面阅读更多关于其他几种类型的节点。
->
-> ✓Control类是从更高级别的父类javafx.scene.Node派生的几种不同类之一。节点是可以在场景中显示的所有用户界面元素的基类。控件是特定类型的节点，但是还有其他类型的节点。换句话说，所有控件都是节点，但并非所有节点都是控件。您可以在本书后面的内容中详细了解其他几种类型的节点。
->
-> <img src="assets/technical-stuff.png" width="50"/>✓ The Control class is one of several different classes that are derived
->
-> from higher-level parent class called javafx.scene.Node. Node is the base class of all user-interface elements that can be displayed in a scene. A control is a specific type of node, but there are other types of nodes. In other words, all controls are nodes, but not all nodes are controls. You can read more about several other types of nodes later in this book.
+> <img src="assets/technical-stuff.png" width="50"/>✓ `Control` 类是从更高级别的父类 `javafx.scene.Node` 派生的几种类之一。`Node` 是所有可以在场景中显示的用户界面元素的基类。控件是一种特定类型的节点，除此之外，还有其他类型的节点。换句话说，所有控件都是节点，但并非所有节点都是控件。你可以在本书后面的内容中详细了解其他几种类型的节点。
 
 ## 处理操作事件
 
