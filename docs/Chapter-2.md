@@ -99,7 +99,7 @@ import javafx.scene.control.*;
 >
 > **✓ `javafx.scene.layout`：** 这个包中定义了一种特殊类型的用户界面元素，布局管理器。它们的工作是确定每个控件在用户界面中的显示位置。
 >
-> **✓ `javafx.scene.control`：** 这个包中定义了各个用户界面控件对应的类，如按钮、文本框和标签。Click Me 程序只使用了这个包中的一个类：Button，它表示一个用户可以点击的按钮。
+> **✓ `javafx.scene.control`：** 这个包中定义了各个用户界面控件对应的类，如按钮、文本框和标签。Click Me 程序只使用了这个包中的一个类：`Button`，它表示一个用户可以点击的按钮。
 
 ## 继承 Application 类
 
@@ -214,7 +214,7 @@ Click Me 程序的 `start` 方法如下所示：
 
 > ✓ 在 `Application` 类中，`start` 方法被定义为一个抽象方法，所以当你在 JavaFX 程序中包含 `start` 方法时，实际上覆盖了抽象的 start 方法。
 >
-> <img src="assets/tip.png" width="80"/>尽管不是必需的，但最好还是用 `@override` 注解明确声明你重写了 `start` 方法。如果省略了这个注解，当你拼错了方法名（例如，写成了 `Start` 而不是 `start`），或者列出的参数不正确，Java 会认为你是在定义一个新方法，而不是覆盖 start 方法。
+> <img src="assets/tip.png" width="50"/>尽管不是必需的，但最好还是用 `@override` 注解明确声明你重写了 `start` 方法。如果省略了这个注解，当你拼错了方法名（例如，写成了 `Start` 而不是 `start`），或者列出的参数不正确，Java 会认为你是在定义一个新方法，而不是覆盖 start 方法。
 >
 > ✓ 与 `main` 方法不同，`start` 方法不是静态方法。当你从静态 `main` 方法调用 `launch` 方法时，`launch` 方法将创建 `Application` 类的一个实例，然后调用 `start` 方法。
 >
@@ -254,47 +254,31 @@ btn.setText("Click me please!");
 >
 > <img src="assets/technical-stuff.png" width="50"/>✓ `Control` 类是从更高级别的父类 `javafx.scene.Node` 派生的几种类之一。`Node` 是所有可以在场景中显示的用户界面元素的基类。控件是一种特定类型的节点，除此之外，还有其他类型的节点。换句话说，所有控件都是节点，但并非所有节点都是控件。你可以在本书后面的内容中详细了解其他几种类型的节点。
 
-## 处理操作事件
+## 处理活动事件
 
-当用户单击按钮时，将触发一个动作事件。您的程序可以通过提供一个事件处理程序来响应事件，该处理程序只是一些在事件发生时执行的代码。Click Me程序通过为按钮设置事件处理程序来工作;事件处理程序的代码将更改按钮上显示的文本。正如你在第3章中读到的，在JavaFX中有几种处理事件的方法。现在，我简要介绍一个最简单的方法，它只要求您指定在事件发生时调用一个方法，然后提供实现该方法的代码。要指定用户单击按钮时要调用的方法，可以调用按钮类的setOnAction方法。在清单2-1中是这样做的:
+用户单击按钮时，会触发一个活动事件。你的程序可以通过提供一个事件处理程序（指的是一些在事件发生时执行的代码）来响应事件。Click Me 程序便是通过给按钮设置代码为更改按钮上显示文本的处理程序来工作。
 
-用户单击按钮时，将触发动作事件。您的程序可以通过提供事件处理程序来响应事件，该事件处理程序只是事件发生时将执行的少量代码。 Click Me程序通过为按钮设置事件处理程序来工作。事件处理程序的代码更改了按钮上显示的文本。正如您在第3章中所读到的那样，在JavaFX中有几种处理事件的方法。现在，我简要介绍一下最简单的方法之一，它只需要您指定在事件发生时就调用一个方法，然后提供实现该方法的代码。要指定当用户单击某个方法时要调用的方法按钮，则调用按钮类的setOnAction方法。清单2-1的操作如下：
+正如你从第 3 章读到的，JavaFX 中有几种处理事件的方法。现在，我简要介绍最简单的方法，它只需要你指定事件发生时调用的方法，并提供实现该方法的代码。
 
-When the user clicks a button, an action event is triggered. Your program can respond to the event by providing an event handler, which is simply a bit of code that will be executed whenever the event occurs. The Click Me program works by setting up an event handler for the button; the code for the event handler changes the text displayed on the button.
-
-As you read in Chapter 3, there are several ways to handle events in JavaFX. For now, I look briefly at one of the simplest methods, which requires simply that you specify that a method be called whenever the event occurs and then provide the code to implement that method.
-
-To specify the method to be called when the user clicks a button, you call the setOnAction method of the button class. Here’s how it’s done in Listing 2-1:
+要指定用户单击按钮时调用的方法，可以调用 `Button` 类的 `setOnAction` 方法。如清单 2-1 所示：
 
 ```java
 btn.setOnAction(e -> buttonClick());
 ```
 
-如果这里使用的语法看起来有点陌生，那是因为它使用了Java 8的一个新特性，称为Lambda表达式。正如本例中所使用的，这个新语法有三个元素:
+<img src="assets/tip.png" width="80"/>这里使用的语法可能看起来有点陌生，因为它使用了 Java 8 的一个新特性 —— Lambda 表达式。在示例中，这个新语法包含三个元素：
 
-如果此处使用的语法看起来有些陌生，那是因为它使用了Java 8的一项新功能，即Lambda表达式。在此示例中，此新语法包含三个元素：
-
-<img src="assets/tip.png" width="80"/>If the syntax used here seems a little foreign, that’s because it uses a new feature of Java 8 called Lambda expressions. As used in this example, there are three elements to this new syntax:
-
-> ✓参数e表示ActionEvent类型的对象，程序可以使用该对象获取有关事件的详细信息.Click Me程序会忽略此参数，因此至少现在也可以忽略它。✓箭头运算符（- >）是Java 8中引入的用于Lambda表达式的新运算符。✓方法调用buttonClick（）只需调用名为buttonClick的方法。
+> ✓ 参数 `e` 表示一个 `ActionEvent` 类型的对象，程序可以使用它来获取事件的详细信息。
 >
-> 参数e表示一个ActionEvent类型的对象，程序可以使用它来获取事件的详细信息。Click Me程序会忽略这个参数，因此您也可以忽略它，至少目前是这样。箭头操作符(->)是Java 8中引入的一个新操作符，用于Lambda表达式。方法调用buttonClick()简单地调用名为buttonClick的方法。
+> Click Me 程序忽略了这个参数，你也可以忽略它，至少现在是这样。
 >
-> ✓ The argument e represents an object of type ActionEvent, which the program can use to get detailed information about the event.
+> ✓ 箭头操作符（->）是 Java 8 中引入的用于 Lambda 表达式的新运算符。
 >
-> The Click Me program ignores this argument, so you can ignore it too, at least for now.
->
-> ✓ The arrow operator (->) is a new operator introduced in Java 8 for use with Lambda expressions.
->
-> ✓ The method call buttonClick() simply calls the method named buttonClick.
+> ✓ `buttonClick()` 简单地调用名为 `buttonClick` 的方法。
 
-我将在第3章讨论Lambda表达式。在buttonClick作为用户单击按钮时调用的方法建立之后，下一步是编写buttonClick方法的代码。您可以在清单2-1的底部找到它:
+我将在第 3 章讨论 Lambda 表达式。
 
-我将在第3章中讨论Lambda表达式。在将buttonClick建立为用户单击按钮时要调用的方法之后，下一步是对buttonClick方法进行编码。在清单2-1的底部附近可以找到它：
-
-I discuss Lambda expressions in Chapter 3.
-
-After buttonClick has been established as the method to call when the user clicks the button, the next step is to code the buttonClick method. You find it near the bottom of Listing 2-1:
+在将 `buttonClick` 作为用户单击按钮时调用的方法之后，下一步是编写 `buttonClick` 方法的代码。你可以在清单 2-1 的底部找到它：
 
 ```java
 public void buttonClick() {
@@ -306,72 +290,36 @@ public void buttonClick() {
 }
 ```
 
-该方法使用if语句交替地将按钮显示的文本更改为“您单击了我!”或者请点击我!换句话说，如果按钮的文字是“请点击我!”当用户点击按钮时，buttonClicked方法将文本更改为“您点击了我!”否则，if语句将按钮的文本更改为单击me please!。buttonClicked方法使用Button类的两个方法来执行它的工作:
+该方法使用 `if` 语句交替地将按钮显示的文本更改为 `You clicked me!` 或 `Click me please!`。换句话说，如果按钮上的文本是 `Click me please!`，当用户单击按钮时，`buttonClicked` 方法会把它改为 `You clicked me!`。反之，`if` 语句会将按钮的文本更改回 `Click me please!`。
 
-此方法使用if语句将按钮显示的文本交替更改为您单击我！或请点击我！换句话说，如果按钮的文字是“请点击我！”当用户单击按钮时，buttonClicked方法会将文本更改为“您单击了我！”。否则，if语句会将按钮的文本更改回Click me please！。buttonClicked方法使用Button类的两种方法来执行其工作：
+`buttonClicked` 使用 `Button` 类的两个方法来完成它的工作：
 
-This method uses an if statement to alternately change the text displayed by the button to either You clicked me! or Click me please!. In other words, if the button’s text is Click me please! when the user clicks the button, the buttonClicked method changes the text to You clicked me!. Otherwise, the if statement changes the button’s text back to Click me please!.
-
-The buttonClicked method uses two methods of the Button class to perform its work:
-
-> ▼getText:返回按钮显示的字符串文本▼setText:设置按钮显示的文本
+> **✓ getText：** 以字符串形式返回按钮上显示的文本
 >
-> ✓getText：以字符串形式返回按钮显示的文本✓setText：设置按钮显示的文本
->
-> ✓ getText: Returns the text displayed by the button as a string 
->
-> ✓ setText: Sets the text displayed by the button
+> **✓ setText：** 设置按钮显示的文本
 
-有关处理事件的更多信息，请参见第3章。
-
-有关处理事件的更多信息，请参见第3章。
-
-<img src="assets/cross-reference.png" width="80"/>For more information about handling events, see Chapter 3.
+<img src="assets/cross-reference.png" width="80"/>有关处理事件的更多信息，请参阅第 3 章。
 
 ## 创建布局面板
 
-按钮本身并不是很有用。你必须在屏幕上显示它，用户才能点击它。而且任何现实的JavaFX程序都有不止一个控件。当您将第二个控件添加到用户界面时，您需要一种方法来指定控件之间的相对位置。例如，如果您的应用程序有两个按钮，您是希望它们垂直堆叠，一个在另一个之上，还是并排堆叠?
+光有按钮没什么作用，你必须将它显示在屏幕上，用户才能对它进行点击。实际的 JavaFX 程序都有不止一个控件。当你将第二个控件添加到用户界面时，你需要一种方法来指定控件之间的相对位置。比如，如果你的应用程序有两个按钮，你是希望它们一个在另一个之上垂直堆放，还是并排摆放?
 
-就其本身而言，按钮不是很有用。您实际上必须在屏幕上显示它，用户才能单击它。而且任何现实的JavaFX程序都将具有多个控件。在用户界面中添加第二个控件后，就需要一种方法来指定控件之间的相对位置。例如，如果您的应用程序有两个按钮，您是否希望它们垂直堆叠，一个在另一个之上或并排堆叠？
+此时布局面板就能派的上用场。布局面板是容器类的一种，你可以往其中添加一个或多个用户界面元素。然后，布局面板会根据这些元素的相对关系决定如何准备地显示它们。
 
-By itself, a button is not very useful. You must actually display it on the screen for the user to be able to click it. And any realistic JavaFX program will have more than one control. The moment you add a second control to your user interface, you need a way to specify how the controls are positioned relative to one another. For example, if your application has two buttons, do you want them to be stacked vertically, one above the other, or side by side?
+要使用布局面板，首先要创建它的实例。然后，将一个或多个控件添加到面板中。在这一步，你可以指定面板显示时控件是如何摆放的细节。将所有的控件添加到面板中并进行排列后，再将面板添加到场景中。
 
-这就是布局窗格的作用所在。布局窗格是一个容器类，您可以向其添加一个或多个用户界面元素。然后，布局窗格确定如何精确地显示这些元素之间的相对关系。
+JavaFX 总共提供了 8 种不同类型的布局面板，都是由 `javafx.scene.layout` 包中类定义的。Click Me 程序使用了一种称为边界面板的布局类型，它将面板中的内容摆放在五个常规区域：顶部、左侧、右侧、底部和中心。`BorderPane` 类非常适合这样的布局：在顶部有菜单和工具栏，在底部有状态栏，可选任务面板或工具栏在左边或右边，主工作区域在屏幕中央。
 
-这就是布局窗格的来源。布局窗格是一个容器类，您可以在其中添加一个或多个用户界面元素。然后，布局窗格将准确确定如何相对于彼此显示这些元素。
-
-That’s where layout panes come in. A layout pane is a container class to which you can add one or more user-interface elements. The layout pane then determines exactly how to display those elements relative to each other.
-
-要使用布局窗格，首先要创建该窗格的实例。然后，将一个或多个控件添加到窗格中。这样做时，您可以指定在显示窗格时如何安排控件的详细信息。在您将所有控件添加到窗格中并按此顺序排列它们之后，您将窗格添加到场景中。
-
-要使用布局窗格，请首先创建窗格的实例。然后，您将一个或多个控件添加到窗格中。这样做时，您可以指定在显示窗格时如何排列控件的详细信息。将所有控件添加到窗格中并进行排列后，将窗格添加到场景中。
-
-To use a layout pane, you first create an instance of the pane. Then, you add one or more controls to the pane. When you do so, you can specify the details of how the controls will be arranged when the pane is displayed. After you add all the controls to the pane and arrange them just so, you add the pane to the scene.
-
-JavaFX总共提供了八种不同类型的布局窗格，都是由JavaFX .scene.layout包中的类定义的。Click Me程序使用一种称为边框窗格的布局类型，它将窗格内容排列为五个一般区域:顶部、左侧、右侧、底部和中间。BorderPane类非常适合这样的布局:在顶部有菜单和工具栏，在底部有状态栏，可选任务窗格或工具栏在左边或右边，主工作区域在屏幕中央。
-
-JavaFX总共提供了八种不同类型的布局窗格，所有这些窗格均由包javafx.scene.layout中的类定义。 Click Me程序使用一种称为边框窗格的布局类型，该布局将窗格的内容分为五个常规区域：顶部，左侧，右侧，底部和中间。 BorderPane类非常适合于布局，其中您具有元素，例如顶部的菜单和工具栏，底部的状态栏，左侧或右侧的可选任务窗格或工具栏以及位于中间的主工作区屏幕。
-
-JavaFX provides a total of eight distinct types of layout panes, all defined by classes in the package javafx.scene.layout. The Click Me program uses a type of layout called a border pane, which arranges the contents of the pane into five general regions: top, left, right, bottom, and center. The BorderPane class is ideal for layouts in which you have elements such as a menu and toolbar at the top, a status bar at the bottom, optional task panes or toolbars on the left or right, and a main working area in the center of the screen.
-
-在Click Me程序中创建边框窗格的行是
-
-在“单击我”程序中创建边框窗格的行是
-
-The lines that create the border pane in the Click Me program are
+Click Me 程序中创建边界面板的代码是：
 
 ```java
 BorderPane pane = new BorderPane(); 
 pane.setCenter(btn);
 ```
 
-在这里，使用name窗格声明了一个BorderPane类型的变量，并调用BorderPane构造函数来创建一个新的BorderPane对象。然后，使用setCenter方法将按钮(btn)显示在窗格的中心区域。这里有一些其他有趣的细节布局窗格:
+在这里，声明了一个名为 `pane` 的 `BorderPane` 类型的变量，并调用 `BorderPane` 构造函数创建了一个新的 `BorderPane` 对象。然后，使用 `setCenter` 方法将按钮（btn）显示在面板的中心区域。
 
-在这里，使用名称窗格声明了BorderPane类型的变量，并调用BorderPane构造函数来创建新的BorderPane对象。然后，使用setCenter方法在窗格的中心区域显示按钮（btn）。以下是有关布局窗格的其他一些有趣的细节：
-
-Here, a variable of type BorderPane is declared with the name pane, and the BorderPane constructor is called to create a new BorderPane object. Then, the setCenter method is used to display the button (btn) in the center region of the pane.
-
-Here are a few other interesting details about layout panes:
+以下是有关布局面板一些其他有趣的细节：
 
 > ✓ Layout panes automatically adjust the exact position of the elements
 >
