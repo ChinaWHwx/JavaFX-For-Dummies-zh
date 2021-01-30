@@ -1,4 +1,4 @@
-# 第 2 章  深入 JavaFX 程序设计
+# 第 2 章 深入 JavaFX 程序设计
 
 > **在本章节**
 >
@@ -18,7 +18,7 @@
 
 ![Figure 2-1](./assets/Figure-2-1.png)
 
-尽管这个程序很简单，但它展示了大多数你需要掌握的用于编写 JavaFX 程序所需的基本技术：
+尽管这个程序很简单，但它展示了大多数你需要掌握的用于编写 JavaFX 程序的基本技术：
 
 > ✓ 显示一个用户界面，上面包含一个标准控件 —— 这个例子中是按钮。
 >
@@ -321,121 +321,49 @@ pane.setCenter(btn);
 
 以下是有关布局面板一些其他有趣的细节：
 
-> 布局窗格会根据布局中包含的元素的大小以及布局窗格显示的空间大小自动调整它们所包含的元素的确切位置。
+> ✓ 布局面板会根据布局中包含的元素的大小以及显示布局面板的空间的大小，自动调整其所包含元素的位置。
 >
-> 布局窗格会根据布局中包含的元素的大小以及显示布局窗格的空间的大小，自动调整其所包含元素的确切位置。
+> <img src="assets/technical-stuff.png" width="50"/> ✓ 前面说过，控件是一种节点，你将在本书后面的内容中了解其他类型的节点。是的，如你你刚刚读到的，布局面板也是一种节点。
 >
-> ✓ Layout panes automatically adjust the exact position of the elements they contain based on the size of the elements contained in the layout as well as on the size of the space in which the layout pane is displayed.
+> ✓ 边界面板的每个区域都可以包含一个节点。因为布局面板本身是节点的一种，所以边界窗格的每个区域都可以包含另一个布局面板。例如，假设你想在边界面板的中心区域显示三个控件。为此，你需要创建第二个布局面板并将三个控件添加到其中。然后，将第二个布局面板设置到第一个布局面板的中心区域。
 >
-> 我前面说过，控件是一种节点类型，您将在本书后面阅读其他类型的节点。嗯，您刚刚读到的是一个:布局窗格也是一种节点类型。
->
-> 前面我说过，控件是节点的一种，您将在本书后面的内容中了解其他类型的节点。好吧，您只读了一个：布局窗格也是节点的一种。
->
-> <img src="assets/technical-stuff.png" width="50"/>✓ I said earlier that controls are a type of node, and that you would read about other types of nodes later in this book. Well, you just read about one: A layout pane is also a type of node.
->
-> 边框窗格的每个区域都可以包含一个节点。因为layoutpane本身是一种节点类型，边框窗格的每个区域都可以包含另一个布局窗格。例如，假设您想在边框窗格的中心区域显示三个控件。为此，您需要创建第二个布局窗格并将三个控件添加到其中。然后，将第二个布局窗格设置为在第一个布局窗格的中心区域显示的节点。
->
-> 边框窗格的每个区域都可以包含一个节点。因为布局窗格本身是节点的一种，所以边框窗格的每个区域都可以包含另一个布局窗格。例如，假设您要在边框窗格的中心区域中显示三个控件。为此，您将创建第二个布局窗格，并向其中添加三个控件。然后，将第二个布局窗格设置为要在第一个布局窗格的中央区域中显示的节点。
->
-> ✓ Each region of a border pane can contain a node. Because a layout pane itself is a type of node, each region of a border pane can contain another layout pane. For example, suppose you want to display three controls in the center region of a border pane. To do that, you’d create a second layout pane and add the three controls to it. Then, you’d set the second layout pane as the node to be displayed in the center region of the first layout pane.
->
-> 您可以在第5章中阅读更多关于BorderPane类和其他一些常用的布局窗格的内容。您还可以阅读第13章中不常用的布局窗格。
->
-> 在第5章中，您将了解有关BorderPane类和其他一些常用布局面板的更多信息。在第13章中，您还将了解到一些不常用的布局面板。
->
-> <img src="assets/cross-reference.png" width="50"/>✓ You read more about the BorderPane class and a few other commonly used layout panes in Chapter 5. You also can read about the layout panes that aren’t as commonly used in Chapter 13.
+> <img src="assets/cross-reference.png" width="50"/>✓ 你可以在第 5 章阅读到更多关于 `BorderPane` 类和其他常用的布局面板相关的内容。在第 13 章中，你还将了解到一些不常用的布局面板。
 
 ## 场景搭建
 
-在您创建一个包含您想要显示的控件的布局窗格之后，下一步是创建一个将显示布局窗格的场景。你可以用一行代码来声明一个Scene类型的变量并调用Scene类构造函数。以下是我如何在点击我程序中做到这一点:
-
-创建包含要显示的控件的布局窗格之后，下一步是创建一个将显示布局窗格的场景。您可以在一行声明了Scene类型的变量并调用Scene类构造函数的代码中完成此操作。这是我在“点击我”程序中的操作方法：
-
-After you create a layout pane that contains the controls you want to display, the next step is to create a scene that will display the layout pane. You can do that in a single line of code that declares a variable of type Scene and calls the Scene class constructor. Here’s how I did it in the Click Me program:
+在创建了包含要显示的控件的布局面板之后，下一步是创建一个用于显示布局面板的场景（scene）。可以用一行代码声明 `Scene` 类型的变量并调用它的构造函数来完成此操作。以下是我在 Click Me 程序中的做法：
 
 ```java
 Scene scene = new Scene(pane, 300, 250);
 ```
 
-Scene构造函数接受三个参数:
+`Scene` 类的构造函数接受三个参数：
 
-Scene构造函数接受三个参数：
-
-The Scene constructor accepts three arguments:
-
-> 一个节点对象，表示要由场景显示的根节点。
+> ✓ 一个 `node` 对象，代表场景中显示的根节点（root node）。
 >
-> 一个节点对象，代表场景要显示的根节点。
+> 一个场景只能有一个根节点，因此根节点通常是一个布局面板，该面板依次包含要显示的其他控件。在 Click Me 程序中，根节点是包含着按钮的边界布局面板。
 >
-> ✓ A node object that represents the root node to be displayed by the scene.
+> ✓ 场景宽度（以像素为单位）。
 >
-> 一个场景只能有一个根节点，因此根节点通常是一个布局窗格，该窗格依次包含要显示的其他控件。在Click Me程序中，根注释是包含按钮的边框布局窗格。
->
-> 一个场景只能有一个根节点，因此该根节点通常是一个布局窗格，而该窗格又包含要显示的其他控件。在Click Me程序中，根注释是包含按钮的边框布局窗格。
->
-> A scene can have only one root node, so the root node is usually a layout pane, which in turn contains other controls to be displayed. In the Click Me program, the root note is the border layout pane that contains the button.
->
-> 以像素为单位的场景宽度。
->
-> 场景的宽度（以像素为单位）。
->
-> ✓ The width of the scene in pixels. 
->
-> 以像素为单位的场景高度。
->
-> 场景的高度（以像素为单位）。
->
-> ✓ The height of the scene in pixels.
-
-注意:如果你省略了宽度和高度，场景将根据根节点中包含的元素的大小自动调整大小。
+> ✓ 场景高度（以像素为单位）。
 
 注意：如果省略宽度和高度，将根据根节点中包含的元素的大小自动调整场景的大小。
 
-Note: If you omit the width and height, the scene will be sized automatically based on the size of the elements contained within the root node.
-
-你可以在第4章中找到Scene类的一些额外功能。
-
-您可以在第4章中找到Scene类的一些其他功能。
-
-<img src="assets/cross-reference.png" width="80"/>You can find out about some additional capabilities of the Scene class in Chapter 4.
+<img src="assets/cross-reference.png" width="80"/>你可以在第 4 章中找到 `Scene` 类的一些其他功能。
 
 ## 舞台设置
 
-如果场景表示应用程序显示的节点(控件和布局窗格)，那么stage表示显示场景的窗口。当JavaFX框架调用应用程序的start方法时，它传递给您一个Stage类的实例，该类表示应用程序的主阶段——即表示应用程序主窗口的阶段。该引用通过primaryStage参数传递。
+如果场景（scene）表示应用程序所有要显示的节点（控件和布局面板），那么舞台（stage ）就表示显示场景的窗口。当 JavaFX 框架调用应用程序的 `start` 方法时，会通过 `primaryStage` 参数传递一个 `Stage` 类的实例，其表示应用程序的主舞台 —— 即应用程序主窗口的舞台。
 
-如果场景表示应用程序显示的节点（控件和布局窗格），则阶段表示在其中显示场景的窗口。当JavaFX框架调用您的应用程序的start方法时，它将为您传递一个Stage类的实例，该实例代表该应用程序的主要阶段-即代表该应用程序的主窗口的阶段。此引用通过primaryStage参数传递。
+创建了场景之后，你就可以完成主舞台，以便显示场景。为此，至少要做两件事:
 
-If the scene represents the nodes (controls and layout panes) that are displayed by the application, the stage represents the window in which the scene is displayed. When the JavaFX framework calls your application’s start method, it passes you an instance of the Stage class that represents the application’s primary stage — that is, the stage that represents the application’s main window. This reference is passed via the primaryStage argument.
-
-创建了场景之后，现在就可以完成主要阶段，以便可以显示场景。要做到这一点，你至少要做两件事:
-
-创建场景后，您现在就可以完成主要阶段的准备工作，以便可以显示场景了。为此，您必须至少做两件事：
-
-Having created your scene, you’re now ready to finalize the primary stage so that the scene can be displayed. To do that, you must do at least two things:
-
-> 调用主舞台的setScene方法设置要显示的场景。
+> ✓ 调用主舞台的 `setScene` 方法来设置要显示的场景。
 >
-> ✓调用主要阶段的setScene方法来设置要显示的场景。
+> ✓ 调用主舞台的 `show` 方法来显示场景。
 >
-> ✓ Call the setScene method of the primary stage to set the scene to be displayed.
->
-> 调用主舞台的show方法来显示场景。
->
-> ✓调用主要阶段的show方法显示场景。
->
-> ✓ Call the show method of the primary stage to display the scene.
->
-> 调用show方法后，应用程序的窗口对用户是可见的，然后用户可以开始与控件交互。
->
-> 调用show方法后，用户可以看到应用程序的窗口，然后用户可以开始与其控件进行交互。
->
-> After you call the show method, your application’s window becomes visible to the user and the user can then begin to interact with its controls.
+> 调用 `show` 方法后，应用程序的窗口对用户可见，用户可以开始与其中的控件进行交互。
 
-在应用程序的标题栏中设置显示的标题也是一种习惯。这可以通过调用主阶段的setTitle方法实现。Click Me应用程序的start方法的最后三行执行以下功能:
-
-习惯上设置显示在应用程序标题栏中的标题。您可以通过调用主阶段的setTitle方法来实现。 Click Me应用程序的start方法的最后三行执行以下功能：
-
-It’s also customary to set the title displayed in the application’s title bar. You do that by calling the setTitle method of the primary stage. The last three lines of the start method for the Click Me application perform these functions:
+习惯上也会将标题设置在应用程序标题栏上进行显示，你可以通过调用主舞台的 `setTitle` 方法来实现。 Click Me 应用程序 `start` 方法的最后三行便实现了以上功能：
 
 ```java
 primaryStage.setScene(scene); 
@@ -443,41 +371,21 @@ primaryStage.setTitle("The Click Me App");
 primaryStage.show();
 ```
 
-当最后一行调用show方法时，舞台显示——换句话说，如图2-1所示的窗口显示在屏幕上。
+当最后一行的 `show` 方法被调用时，舞台便显示出来 —— 换句话说，如图 2-1 所示的窗口将显示在屏幕上。
 
-当最后一行调用show方法时，舞台显示-换句话说，图2-1中显示的窗口显示在屏幕上。
-
-When the last line calls the show method, the Stage displays — in other words, the window that was shown in Figure 2-1 displays onscreen.
-
-你可以在第4章阅读Stage类的额外功能。
-
-您可以在第4章中了解Stage类的其他功能。
-
-<img src="assets/cross-reference.png" width="80"/>You can read about additional capabilities of the Stage class in Chapter 4.
+<img src="assets/cross-reference.png" width="80"/>你可以在第 4 章了解到 `Stage` 类的其他功能。
 
 ## 检查 Click Counter 程序
 
-现在我已经解释了Click Me程序的每一行细节，现在来看一下Click Me程序的一个略微增强的版本，称为Click Counter程序。在清单1-1(第1章)所示的Click Me程序中，当用户单击按钮时，按钮上显示的文本会发生变化。在单击计数器程序中，另一种称为标签的控件类型显示用户单击按钮的次数。
+我已经对 Click Me 程序的每一行进行了详细解释，现在来看一下 Click Me 程序一个略微增强的版本 —— Click Counter。在第 1 章的清单 1-1 所示的 Click Me 程序中，当用户单击按钮时，按钮上显示的文本会发生变化。而在 Click Counter 程序中，用户单击按钮的次数会显示在一种称为标签（label）的控件中。
 
-现在我已经解释了Click Me程序的每一行细节，现在来看一下Click Me程序的一个略微增强的版本，称为Click Counter程序。在清单1-1(第1章)所示的Click Me程序中，当用户单击按钮时，按钮上显示的文本会发生变化。在单击计数器程序中，另一种称为标签的控件类型显示用户单击按钮的次数。
+图 2-2 展示了运行中的 Click Counter 程序。顶部的窗口展示了首次启动 Click Counter 程序时的样子。如你所见，标签中显示的文本是 `You have not clicked the button.`。第二个窗口显示了第一次单击按钮后程序的样子。在这里，标签显示 `You have clicked once.`。第二次单击按钮时，标签再次更改，如第三个窗口所示。在这里，标签显示 `You have clicked 2 times.`。在此之后，每次点击按钮时，标签上显示的数字都会更新，以指示按钮被点击了多少次。
 
-Now that I’ve explained the details of every line of the Click Me program, I look at a slightly enhanced version of the Click Me program called the Click Counter program. In the Click Me program that was shown in Listing 1-1 (in Chapter 1), the text displayed on the button changes when the user clicks the button. In the Click Counter program, an additional type of control called a label displays the number of times the user has clicked the button.
-
-如图2-2所示。该图顶部的窗口显示了首次启动时单击计数器程序的显示方式。如您所见，窗口顶部的text标签将显示您没有单击按钮的文本。第二个窗口显示第一次单击按钮后程序的样子。在这里，标签显示您点击了一次。第二次单击按钮时，标签再次更改，如第三个窗口所示。在这里，标签显示你点击了2次。在此之后，每次单击按钮时，标签显示的数字就会更新，以指示按钮被单击了多少次。
-
-图2-2显示了运行中的Click Counter程序。此图顶部的窗口显示了首次启动Click Counter程序时的显示方式。如您所见，窗口顶部的文本标签显示您尚未单击按钮的文本。第二个窗口显示第一次单击该按钮后程序的外观。在这里，标签显示为“您单击过一次”。再次单击该按钮时，标签将再次更改，如第三个窗口所示。在这里，标签显示为“您单击了两次”。此后，每次您单击按钮时，标签显示的数字都会更新，以指示单击按钮的次数。
-
-Figure 2-2 shows the Click Counter program in operation. The window at the top of this figure shows how the Click Counter program appears when you first start it. As you can see, the text label at the top of the window displays the text You have not clicked the button. The second window shows what the program looks like after you click the button the first time. Here, the label reads You have clicked once. When the button is clicked a second time, the label changes again, as shown in the third window. Here, the label reads You have clicked 2 times. After that, the number displayed by the label updates each time you click the button to indicate how many times the button has been clicked.
-
-> Figure 2-2: The Click Counter program in action.
+> 图 2-2：运行中的 Click Counter 程序。
 
 ![Figure 2-2](./assets/Figure-2-2.png)
 
-清单2-2显示了点击计数器程序的源代码，下面的段落描述了它如何工作的关键点:
-
-清单2-2显示了Click Counter程序的源代码，以下各段描述了其工作原理的要点：
-
-Listing 2-2 shows the source code for the Click Counter program, and the following paragraphs describe the key points of how it works:
+清单 2-2 展示了 Click Counter 程序的源代码，紧跟着描述了它是如何工作的关键点:
 
 **Listing 2-2: The Click Counter Program**
 
@@ -540,136 +448,68 @@ public class ClickCounter extends Application                                   
 }
 ```
 
-以下段落解释了Click Me程序的要点:➝1:import语句引用了Click Me程序将使用的javafx包。➝7:ClickMe类扩展了javafx.application。应用程序，从而指定ClickMe类是JavaFX应用程序。➝9:与任何Java程序一样，main方法是所有JavaFX程序的主要入口点。
+以下段落说明了 Click Me 程序的要点：
 
-以下各段解释了Click Me程序的要点：➝1：import语句引用了Click Me程序将使用的javafx包。➝7：ClickMe类扩展了javafx.application.Application，因此指定了ClickMe类是JavaFX应用程序。➝9：与任何Java程序一样，main方法是所有JavaFX程序的主要入口点。
+➝ 1：`import` 语句引用了 Click Me 程序将要用到的 `javafx` 包。
 
-The following paragraphs explain the key points of the Click Me program:
+➝ 7：`ClickMe` 类继承了 `javafx.application.Application`，说明 `ClickMe` 类是一个 JavaFX 应用程序。
 
-➝ 1：The import statements reference the javafx packages that will be used by the Click Me program.
+➝ 9：与其他 Java 程序一样，`main` 方法是所有 JavaFX 程序的主入口。
 
-➝ 7：The ClickMe class extends javafx.application.Application, thus specifying that the ClickMe class is a JavaFX application.
+➝ 11：`main` 方法调用 `Application` 类定义的 `launch` 方法。`launch ` 方法先创建 `ClickMe` 类的实例，再调用 `start` 方法。
 
-➝ 9：As with any Java program, the main method is the main entry point for all JavaFX programs.
+➝ 14：`javafx.scene.control.Button` 类型的一个变量 `btn` 被声明为一个类变量。代表 JavaFX 控件的变量通常被定义为类变量，以便可以在该类的任何方法中进行访问。
 
-➝11:main方法调用由Application类定义的launch方法。然后，launch方法创建ClickMe类的实例，然后调用start方法。➝14:一个名为btn的变量，类型为javafx.scene.control。Button被声明为一个类变量。表示JavaFX控件的变量通常定义为类变量，以便类中的任何方法都可以访问它们。➝15:一个名为lbl的类变量，类型为javafx.scene.control。Label表示Label控件，以便可以从类中的任何方法访问它。
+➝ 15：一个名为 `lbl`，类型为 `javafx.scene.control.Label` 的类变量，可以在类的任何方法中访问它。
 
-➝11：主要方法调用启动方法，该方法由Application类定义。然后，启动方法将创建ClickMe类的实例，然后调用启动方法。➝14：将名为btn的javafx.scene.control.Button类型的变量声明为类变量。代表JavaFX控件的变量通常被定义为类变量，以便可以通过该类中的任何方法进行访问。➝15：名为javafx.scene.control类型的lbl的类变量。 Label表示Label控件，以便可以从类中的任何方法对其进行访问。
+➝ 16：一个名为 `iClickCount` 的类变量，用于跟踪用户单击按钮的次数。
 
-➝ 11：The main method calls the launch method, which is defined by the Application class. The launch method, in turn, creates an instance of the ClickMe class and then calls the start method.
+➝ 18：在 `start` 方法的声明上使用了 `@override` 注解，表示该方法覆盖了 `Application` 类提供的默认 `start` 方法。 `start` 方法接受一个名为 `primaryStage` 的参数，它表示 Click Me 应用程序将在其中显示用户界面的窗口。
 
-➝ 14：A variable named btn of type javafx.scene.control.Button is declared as a class variable. Variables representing JavaFX controls are commonly defined as class variables so that they can be accessed by any method in the class.
+➝ 21：`start` 方法首先会创建一个 `Button` 对象，并将其赋值给一个名为 `btn` 的变量。
 
-➝ 15：A class variable named lbl of type javafx.scene.control. Label represents the Label control so that it can be accessed from any method in the class.
+➝ 22：调用按钮的 `setText` 方法将它显示的文本设置为 `Click me please!`。
 
-➝16:一个名为iClickCount的类变量将用于跟踪用户单击按钮的次数。➝18:start方法的声明使用@override注释，表示该方法覆盖应用程序类提供的默认启动方法。start方法接受一个名为primaryStage的参数，该参数表示单击Me应用程序将在其中显示其用户界面的窗口。➝21:start方法首先创建一个按钮对象，并将其赋值给一个名为btn的变量。
+➝ 23：调用 `setOnAction` 为按钮创建事件处理程序。在这里，使用 Lambda 表达式在用户单击按钮时调用 `buttonClick ` 方法。
 
-➝16：一个名为iClickCount的类变量将用于跟踪用户单击按钮的次数。➝18：start方法的声明使用@override批注，指示此方法将覆盖提供的默认start方法通过Application类。 start方法接受一个名为primaryStage的参数，该参数表示Click Me应用程序将在其中显示其用户界面的窗口。➝21：start方法通过创建一个Button对象并将其分配给一个名为btn的变量开始。
+➝ 26：调用 `Label` 类的构造函数创建一个新标签。
 
-➝ 16：A class variable named iClickCount will be used to keep track of the number of times the user clicks the button.
+➝ 27：调用标签的 `setText` 方法将标签的初始文本值设置为 `You have not clicked the button.`。
 
-➝ 18：The declaration of the start method uses the @override annotation, indicating that this method overrides the default start method provided by the Application class. The start method accepts a parameter named primaryStage, which represents the window in which the Click Me application will display its user interface.
+➝ 30：调用 `BorderPane` 类的构造函数创建一个边界面板对象，并将名为 `pane` 的变量作为它的引用 。边界面板将用于控制屏幕上显示的控件的布局。
 
-➝ 21：The start method begins by creating a Button object and assigning it to a variable named btn.
+➝ 31：调用边界面板的 `setTop` 方法将标签添加到边界面板的顶部区域。
 
-➝22:该按钮的setText方法被调用来设置按钮显示的文本点击我请!➝23:setOnAction被调用来为按钮创建一个事件处理程序。这里，使用Lambda表达式在用户单击按钮时调用buttonClick方法。➝26:调用Label类的构造函数来创建一个新标签。
+➝ 32：调用边界面板的 `setCenter` 方法将按钮添加到边界面板的中心区域。
 
-➝22：调用按钮的setText方法将按钮显示的文本设置为“请单击我！”。➝23：调用setOnAction为按钮创建事件处理程序。这里，只要用户单击按钮，就使用Lambda表达式简单地调用buttonClick方法。➝26：Label类的构造函数被调用以创建新标签。
+➝ 35：调用 `Scene` 类的构造函数创建一个场景对象，并将第 30 行创建的边界面板传递给它的构造函数，从而将边界面板作为场景的根节点。此外，还将场景的尺寸设置为宽度 300 像素，高度 250 像素。
 
-➝ 22：The button’s setText method is called to set the text displayed by the button to Click me please!.
+➝ 39：`primaryStage` 的 `setScene` 方法用于将场景添加到主舞台。
 
-➝ 23：The setOnAction is called to create an event handler for the button. Here, a Lambda expression is used to simply call the buttonClick method whenever the user clicks the button.
+➝ 40：`setTitle` 方法用于设置在主舞台标题栏中显示的文本。
 
-➝ 26：The constructor of the Label class is called to create a new label.
+➝ 41：调用 `show` 方法以显示主舞台。当这一行执行后，屏幕上将显示如图 2-1 所示的窗口，用户可以开始与程序进行交互。
 
-➝27:标签的setText方法被调用来将标签的初始文本值设置为您没有单击按钮。➝30:通过调用BorderPane类的构造函数创建边框窗格对象，并通过名为pane的变量引用边框窗格。边框窗格将用于控制屏幕上显示的控件的布局。➝31:边框窗格的setTop方法被调用，以将标签添加到边框窗格的顶部区域。
+➝ 44：每当用户单击按钮时，都会调用 `buttonClick` 方法。
 
-➝27：调用标签的setText方法将标签的初始文本值设置为您尚未单击按钮。➝30：通过调用BorderPane类的构造函数创建边框窗格对象，并通过a引用边框窗格名为窗格的变量。边框将用于控制屏幕上显示的控件的布局。➝31：调用边框的setTop方法将标签添加到边框的顶部区域。
+➝ 46：`iClickCount ` 变量会递增，以表示用户已经单击了按钮。
 
-➝ 27：The label’s setText method is called to set the initial text value of the label to You have not clicked the button.
+➝ 47：`if` 语句用于确定按钮是被点击了一次还是多次。
 
-➝ 30：A border pane object is created by calling the constructor of the BorderPane class, referencing the border pane via a variable named pane. The border pane will be used to control the layout of the controls displayed on the screen.
+➝ 49：如果按钮第一次被点击，将标签文本被设置为 `You have clicked once.`。
 
-➝ 31：The border pane’s setTop method is called to add the label to the top region of the border pane.
+➝ 53：否则，将标签文本设置为表示按钮被点击了多少次的字符串。
 
-➝32:将调用边框窗格的setCenter方法来将按钮添加到边框窗格的中心区域。➝35:通过调用scene类的构造函数来创建场景对象，将第30行创建的边框窗格传递给构造函数，以将边框窗格建立为场景的根节点。此外，场景的尺寸设置为300像素的宽度和250像素的高度。➝39:使用primaryStage的setScene方法将场景添加到primary stage。
+就是这样。如果你理解了 Click Counter 程序工作的细节，就可以继续学习第 3 章了。如果你还在纠结一些问题，我建议你花些时间回顾这一章，并在 TextPad、Eclipse 或 NetBeans 中尝试尝试 Click Counter 程序。
 
-➝32：调用边框窗格的setCenter方法以将按钮添加到边框窗格的中心区域。➝35：通过调用Scene类的构造函数，并将在第30行中创建的边框窗格传递给构造函数，以将边框窗格建立为场景的根节点。另外，场景的尺寸设置为宽度300像素，高度250像素。➝39：primaryStage的setScene方法用于将场景添加到主要舞台。
+以下段落有助于阐明 Click Counter 程序和 JavaFX 中一些可能绊住你的关键点：
 
-➝ 32：The border pane’s setCenter method is called to add the button to the center region of the border pane.
-
-➝ 35：A scene object is created by calling the constructor of the Scene class, passing the border pane created in line 30 to the constructor to establish the border pane as the root node of the scene. In addition, the dimensions of the scene are set to 300 pixels in width and 250 pixels in height.
-
-➝ 39：The setScene method of the primaryStage is used to add the scene to the primary stage.
-
-➝40:setTitle方法用于设置主阶段的标题栏显示的文本。➝41:调用show方法来显示主阶段。当这一行执行后，屏幕上显示如图2-1所示的窗口，用户可以开始与程序进行交互。➝44:每当用户单击按钮时，buttonClick方法被调用。
-
-➝40：setTitle方法用于设置在主舞台标题栏中显示的文本。➝41：调用show方法以显示主舞台。执行此行后，屏幕上将显示如图2-1所示的窗口，并且用户可以开始与程序进行交互。➝44：每当用户单击按钮时，都会调用buttonClick方法。
-
-➝ 40：The setTitle method is used to set the text displayed in the primary stage’s title bar.
-
-➝ 41：The show method is called to display the primary stage. When this line is executed, the window that was shown in Figure 2-1 displays on the screen and the user can begin to interact with the program.
-
-➝ 44：The buttonClick method is called whenever the user clicks the button.
-
-➝46:iClickCount变量会递增，表示用户已经单击了按钮。➝47:一个if语句用于确定按钮是否被点击了一次或多次。➝49:如果按钮被点击一次，标签文本被设置为你已经点击一次。➝53:否则，标签文本将被设置为一个字符串，该字符串表示按钮被点击了多少次。
-
-➝46：iClickCount变量递增以表示用户已单击按钮。➝47：if语句用于确定是否已单击按钮一次或多次。➝49：如果单击过按钮一次，标签文本设置为您单击一次。➝53：否则，标签文本设置为一个字符串，该字符串指示单击按钮的次数。
-
-➝ 46：The iClickCount variable is incremented to indicate that the user has clicked the button.
-
-➝ 47：An if statement is used to determine whether the button has been clicked one or more times.
-
-➝ 49：If the button has been clicked once, the label text is set to You have clicked once.
-
-➝ 53：Otherwise, the label text is set to a string that indicates how many times the button has been clicked.
-
-就是这样。如果您理解了Click Counter程序如何工作的细节，就可以进入第3章了。如果你还在为一些观点而挣扎，我建议你花些时间回顾这一章，并在TextPad、Eclipse或NetBeans中尝试点击计数器程序。
-
-这里的所有都是它的。如果您了解Click Counter程序的工作原理的详细信息，就可以继续学习第3章。如果您仍在努力解决一些问题，建议您花些时间阅读本章并尝试使用Click Counter。 TextPad，Eclipse或NetBeans中的程序。
-
-That’s all there is to it. If you understand the details of how the Click Counter program works, you’re ready to move on to Chapter 3. If you’re still struggling with a few points, I suggest you spend some time reviewing this chapter and experimenting with the Click Counter program in TextPad, Eclipse, or NetBeans.
-
-以下段落有助于澄清一些关键的症结，可能会绊倒你的点击计数器程序和JavaFX一般:
-
-以下段落有助于阐明一些可能使您不熟悉Click Counter程序和JavaFX的关键症结所在：
-
-The following paragraphs help clarify some of the key sticking points that might be tripping you up about the Click Counter program and JavaFX in general:
-
-> 什么时候程序从静态切换到非静态?与每个Java程序一样，JavaFX程序的主要入口点是静态main方法。
+> **✓ 程序什么时候从静态（static）切换到非静态（non-static）？** 像每个 Java 程序一样，JavaFX程序的主要入口点是静态 `main` 方法。
 >
-> 程序什么时候从静态切换到非静态？像每个Java程序一样，JavaFX程序的主要入口点是静态main方法。
+> 在大多数 JavaFX 程序中，静态 `main` 方法只做一件事：调用 `launch ` 方法启动程序的 JavaFX 部分。`launch` 方法会创建 `ClickCounter` 类的实例，然后调用 `start` 方法。此时，因为已经创建了 `ClickCounter` 类的实例，该程序不再在静态上下文中运行。
 >
-> ✓ When does the program switch from static to non-static? Like every Java program, the main entry point of a JavaFX program is the static main method.
+> **✓ `primaryStage` 变量从哪里来？** 当 `launch ` 方法调用 `launch ` 方法时，`primaryStage` 变量将传递到 `start ` 方法。因此，`start` 方法接收 `primaryStage` 变量作为参数。
 >
-> 在大多数JavaFX程序中，静态main方法只做一件事:
+> <img src="assets/technical-stuff.png" width="50"/>这就是为什么你找不到 `primaryStage` 变量单独的声明。
 >
-> 在大多数JavaFX程序中，static main方法仅做一件事：
->
-> In most JavaFX programs, the static main method does just one thing:
->
-> 它调用launch方法来启动程序的JavaFX部分。launch方法创建ClickCounter类的实例，然后调用start方法。此时，程序不再在静态上下文中运行，因为已经创建了ClickCounter类的实例。
->
-> 它调用启动方法来启动程序的JavaFX部分。启动方法创建ClickCounter类的实例，然后调用start方法。此时，该程序不再在静态上下文中运行，因为已经创建了ClickCounter类的实例。
->
-> It calls the launch method to start the JavaFX portion of the program. The launch method creates an instance of the ClickCounter class and then calls the start method. At that point, the program is no longer running in a static context because an instance of the ClickCounter class has been created.
->
-> primaryStage变量从哪里来?当启动方法调用启动方法时，primaryStage变量被传递给启动方法。因此，start方法接收primaryStage变量作为参数。
->
-> ✓primaryStage变量来自哪里？当启动方法调用启动方法时，primaryStage变量将传递到启动方法。因此，start方法接收primaryStage变量作为参数。
->
-> ✓ Where does the primaryStage variable come from? The primaryStage variable is passed to the start method when the launch method calls the start method. Thus, the start method receives the primaryStage variable as a parameter.
->
-> 这就是为什么您不会为primaryStage变量找到单独的变量声明。
->
-> 因此，您不会为primaryStage变量找到单独的变量声明。
->
-> <img src="assets/technical-stuff.png" width="50"/>That’s why you won’t find a separate variable declaration for the primaryStage variable.
->
-> ->操作符是如何工作的?->操作符用于创建Lambda表达式。Lambda表达式是Java 8的一个新特性，用于以前需要匿名类的情况。如果您不理解Lambda表达式的工作原理，也不必担心。我会在第三章详细解释。
->
-> ->运算符如何工作？ ->运算符用于创建所谓的Lambda表达式。 Lambda表达式是Java 8的一项新功能，用于以前需要匿名类的情况。如果您不了解Lambda表达式的工作原理，请不要担心。我将在第3章中详细解释它们。
->
-> ✓ How does the -> operator work? The -> operator is used to create
->
-> what is known as a Lambda expression. Lambda expressions are a new feature of Java 8 that are used in situations that would’ve previously required an anonymous class. Don’t worry if you don’t understand how the Lambda expression works. I explain them in detail in Chapter 3.
+> **✓ ->操作符是如何工作的？** `->` 操作符用于创建所谓的 Lambda 表达式。Lambda 表达式是 Java 8 的一个新特性，用于替代以前需要匿名类的情况。如果你不了解 Lambda 表达式的工作原理，也不必担心。我会在第 3 章详细解释。
