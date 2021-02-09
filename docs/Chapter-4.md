@@ -107,7 +107,7 @@ The following paragraphs point out some of the ins and outs of using the Stage c
 > primaryStage.setFullScreen(true);
 > ```
 >
-> When your stage enters fullscreen mode, JavaFX displays a message advising the user on how to exit fullscreen mode.
+> <img src="assets/tip.png" width="50"/>When your stage enters fullscreen mode, JavaFX displays a message advising the user on how to exit fullscreen mode.
 >
 > **✓ If, for some reason, you want to start your program minimized to an icon, use the setIconified method:**
 >
