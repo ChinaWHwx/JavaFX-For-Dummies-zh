@@ -8,17 +8,9 @@
 > + 使用内部类和匿名类进行事件处理
 > + 使用 Lambda 表达式进行事件处理
 
-在第2章中，我将讨论两个程序，它们显示包含按钮的简单场景，并在用户单击按钮时做出响应。这些程序通过提供事件发生时执行的事件处理程序来响应用户单击按钮时触发的事件。
+在第 2 章，我介绍了两个程序，它们都是显示一个按钮并在用户单击时做出响应的简单场景。当用户单击按钮时，程序通过提供的事件处理程序来响应触发的事件。
 
-在第2章中，我讨论了两个程序，这些程序显示包含一个按钮的简单场景，并在用户单击该按钮时做出响应。这些程序通过提供事件发生时执行的事件处理程序来响应用户单击按钮时触发的事件。
-
-In Chapter 2, I discuss two programs that display simple scenes that include a button and that respond when the user clicks the button. These programs respond to the event triggered when the user clicks the button by providing an event handler that’s executed when the event occurs.
-
-在本章中，您将阅读更多关于事件处理如何在JavaFX中工作的细节。我将讨论JavaFX如何生成事件以及如何分派事件，以便您的程序能够响应它们。您会发现JavaFX程序可以处理的事件种类很多。您还了解了处理JavaFX事件的几种编程技术。
-
-在本章中，您将了解有关JavaFX中事件处理如何工作的更多详细信息。我将讨论事件的产生方式以及JavaFX如何分派事件，以便您的程序可以响应它们。您会发现JavaFX程序可以处理的多种事件。您将了解用于处理JavaFX事件的几种编程技术。
-
-In this chapter, you read more details about how event handling works in JavaFX. I discuss how events are generated and how they’re dispatched by JavaFX so that your programs can respond to them. You discover the many varieties of events that can be processed by a JavaFX program. And you figure out several programming techniques for handling JavaFX events.
+在本章中，你将了解到更多关于 JavaFX 事件处理的详细信息。我将阐述在 JavaFX 中事件是如何产生与分发，以便你的程序可以响应它们的。你会发现 JavaFX 程序可以处理的事件种类很多，还会了解到用于处理 JavaFX 事件的几种编程技巧。
 
 最后，在本章中，您将了解属性绑定的思想，它允许您编写代码来响应某些类型的类字段(称为属性字段)的值的更改。在JavaFX中，属性绑定有时用于需要调用Swing中的事件处理程序的情况。
 
