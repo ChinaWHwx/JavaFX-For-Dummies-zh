@@ -17,7 +17,7 @@
   - [本书使用的图标](./docs/Introduction.md#本书使用的图标)
   - [本书之外](./docs/Introduction.md#本书之外)
   - [下一步该去哪儿](./docs/Introduction.md#下一步该去哪儿)
-- [第一部分：开始使用 JavaFX](./docs/Part-Ⅰ.md)
+- [第一部分：开始使用 JavaFX](./docs/Part-1.md)
   - [第 1 章：你好，JavaFX！](./docs/Chapter-1.md)
     - [JavaFX 是什么？](./docs/Chapter-1.md#Javafx-是什么)
     - [仔细研究 JavaFX 的可能性](./docs/Chapter-1.md#仔细研究-JavaFX-的可能性)
@@ -78,7 +78,7 @@
     - 使用多选框
     - 使用单选按钮
     - 查看一个披萨订单应用程序
-- [第二部分：JavaFX 控件](./docs/Part-Ⅱ.md)
+- [第二部分：JavaFX 控件](./docs/Part-2.md)
   - [第 7 章：JavaFX 节点层级介绍](./docs/Chapter-7.md)
     - JavaFX 包概述
     - Node 类
@@ -126,7 +126,7 @@
     - [使用多选和单选菜单项](./docs/Chapter-10.md#使用多选和单选菜单项)
     - [创建子菜单](./docs/Chapter-10.md#创建子菜单)
     - [创建自定义菜单项](./docs/Chapter-10.md#创建自定义菜单项)
-- [第三部分：加强你的场景设计](./docs/Part-Ⅲ.md)
+- [第三部分：加强你的场景设计](./docs/Part-3.md)
   - [第 11 章：更多与精确场景设计有关的布局面板](./docs/Chapter-11.md)
     - 使用 StackPane 布局
     - 使用 TilePane 布局
