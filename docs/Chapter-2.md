@@ -508,7 +508,7 @@ public class ClickCounter extends Application                                   
 >
 > 在大多数 JavaFX 程序中，静态 `main` 方法只做一件事：调用 `launch ` 方法启动程序的 JavaFX 部分。`launch` 方法会创建 `ClickCounter` 类的实例，然后调用 `start` 方法。此时，因为已经创建了 `ClickCounter` 类的实例，该程序不再在静态上下文中运行。
 >
-> **✓ `primaryStage` 变量从哪里来？** 当 `launch ` 方法调用 `launch ` 方法时，`primaryStage` 变量将传递到 `start ` 方法。因此，`start` 方法接收 `primaryStage` 变量作为参数。
+> **✓ `primaryStage` 变量从哪里来？** 当 `launch ` 方法调用 `launch ` 方法时，`primaryStage` 变量将传递到 `start` 方法。因此，`start` 方法接收 `primaryStage` 变量作为参数。
 >
 > <img src="assets/technical-stuff.png" width="50"/>这就是为什么你找不到 `primaryStage` 变量的单独声明。
 >
