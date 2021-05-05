@@ -1,6 +1,6 @@
 # 第二部分 JavaFX 控件
 
-![Part-Ⅱ](./assets/Part-Ⅱ.png)
+![Part-2](./assets/Part-2.png)
 
 **在本部分……**
 
