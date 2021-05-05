@@ -1,6 +1,6 @@
 ## 关于作者
 
-**道格·洛韦（Doug Lowe）** 在发明 Java 的人还在读小学时就开始写计算机编程相关的书籍了。He’s written books on COBOL, FORTRAN, Visual Basic, IBM mainframe computers, mid-range systems, PC’s, web programming, and probably a few he’s completely forgotten about. He’s the author of more than 30 For Dummies books, including Java All-In-One For Dummies, 4th Edition; Java For Dummies Quick Reference; Networking For Dummies, 10th Edition; Networking All-In-One For Dummies, 4th Edition; PowerPoint 2013 For Dummies; and Electronics All-In-One For Dummies. He lives in that sunny Formerly-All-American city Fresno, California, where his motto is, “Buster Posey Got Out, Why Can’t I?”
+**道格·洛韦（Doug Lowe）** 在发明 Java 的人还在读小学时就开始写计算机编程相关的书籍了。他写过关于 COBOL、FORTRAN、Visual Basic、IBM 大型机、中型系统、PC、网络编程的书，可能还有一些他完全忘记了。他是 30 多本 *For Dummies* 系列书籍的作者，包括：《Java All-In-One For Dummies, 4th Edition》、《Java For Dummies Quick Reference》、《Networking For Dummies, 10th Edition》、《Networking All-In-One For Dummies, 4th Edition》、《PowerPoint 2013 For Dummies》和《Electronics All-In-One For Dummies》。他住在阳光明媚的前全美城市弗雷斯诺，加利福尼亚。他的座右铭是：“Buster Posey Got Out, Why Can’t I?”
 
 ## Dedication
 
