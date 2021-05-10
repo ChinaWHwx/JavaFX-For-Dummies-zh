@@ -2,9 +2,11 @@
 
 **道格·洛韦（Doug Lowe）** 在发明 Java 的人还在读小学时就开始写计算机编程相关的书籍了。他写过关于 COBOL、FORTRAN、Visual Basic、IBM 大型机、中型系统、PC、网络编程的书，可能还有一些他完全忘记了。他是 30 多本 *For Dummies* 系列书籍的作者，包括：《Java All-In-One For Dummies, 4th Edition》、《Java For Dummies Quick Reference》、《Networking For Dummies, 10th Edition》、《Networking All-In-One For Dummies, 4th Edition》、《PowerPoint 2013 For Dummies》和《Electronics All-In-One For Dummies》。他住在阳光明媚的前全美城市弗雷斯诺，加利福尼亚。他的座右铭是：“Buster Posey Got Out, Why Can’t I?”
 
-## Dedication
+## 赠言
 
 To my amazing father-in-law Gordon Gearhart, who passed away while I was trying to write this book. Thank you for making this world a better place.
+
+致我令人敬佩岳父戈登·吉尔哈特先生，他在我试图写这本书的时候去世了。谢谢你让这个世界变得更美好。
 
 ## Author’s Acknowledgments
 
