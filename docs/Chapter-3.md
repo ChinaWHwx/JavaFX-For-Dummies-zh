@@ -12,17 +12,9 @@
 
 在本章中，你将了解到更多关于 JavaFX 事件处理的详细信息。我将阐述在 JavaFX 中事件是如何产生与分发，以便你的程序可以响应它们的。你会发现 JavaFX 程序可以处理的事件种类很多，还会了解到用于处理 JavaFX 事件的几种编程技巧。
 
-最后，在本章中，您将了解属性绑定的思想，它允许您编写代码来响应某些类型的类字段(称为属性字段)的值的更改。在JavaFX中，属性绑定有时用于需要调用Swing中的事件处理程序的情况。
+最后，你将了解到属性绑定的思想，它允许你编写的代码能够响应类中某些类型字段（属性字段）值的更改。在 JavaFX 中，属性绑定有时用于需要调用 Swing 中事件处理器的情况。
 
-最后，在本章中，您将介绍属性绑定的概念，该属性使您可以编写代码来响应某些类型的类字段（称为属性字段）的值更改。在JavaFX中，有时会在Swing中要求使用事件处理程序的情况下使用属性绑定。
-
-Finally, in this chapter you’re introduced to the idea of property bindings, which let you write code that responds to changes in the value of certain types of class fields, dubbed property fields. In JavaFX, property bindings are sometimes used in situations that would’ve called for an event handler in Swing.
-
-尽管事件处理主要用于响应按钮单击，但它也可以用于响应其他类型的用户交互。例如，您可以使用事件处理来编写当用户从组合框中进行选择、将鼠标移到标签上或按下键盘上的键时执行的代码。本章中的事件处理技术也适用于这些事件。
-
-尽管事件处理主要用于响应按钮的单击，但是它也可以用于响应其他类型的用户交互。例如，您可以使用事件处理来编写当用户从组合框进行选择，将鼠标移到标签上或按键盘上的键时执行的代码。本章中的事件处理技术也适用于这些事件。
-
-<img src="assets/tip.png" width="80"/>Although event handling is used mostly to respond to button clicks, it can also be used to respond to other types of user interactions. You can use event handling, for example, to write code that’s executed when the user makes a selection from a combo box, moves the mouse over a label, or presses a key on the keyboard. The event-handling techniques in this chapter work for those events as well.
+<img src="assets/tip.png" width="80"/>事件处理不仅仅用于响应按钮的单击，还可以响应其他类型的交互。例如，当用户进行下拉框的选择、鼠标移动到标签上或是按下键盘中某个按键时都可以使用事件处理执行代码。
 
 ## 调查事件
 
