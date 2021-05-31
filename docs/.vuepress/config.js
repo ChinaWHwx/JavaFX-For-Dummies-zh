@@ -10,6 +10,7 @@ module.exports = {
     logo: '/favicon.png',
     nav: [
       { text: '首页', link: '/' },
+      { text: '正文', link: '/Introduction' },
       { text: '购买本书', link: 'https://www.amazon.com/JavaFX-Dummies-Doug-Lowe/dp/1118385349' },
     ],
     // 仓库相关
