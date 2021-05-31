@@ -1,4 +1,4 @@
-# Chapter 8 Choosing from a List
+# 第 8 章 从列表中选择
 
 > **In This Chapter**
 >

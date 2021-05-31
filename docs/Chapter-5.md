@@ -1,4 +1,4 @@
-# Chapter 5 Using Layout Panes to Arrange Your Scenes
+# 第 5 章 使用布局面板布置场景
 
 > **In This Chapter**
 >

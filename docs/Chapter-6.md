@@ -1,4 +1,4 @@
-# Chapter 6 Getting Input from the User
+# 第 6 章 获取用户输入
 
 > **In This Chapter**
 >

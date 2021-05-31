@@ -1,4 +1,4 @@
-# Chapter 7 Introducing the JavaFX Node Hierarchy
+# 第 7 章 JavaFX 节点层级介绍
 
 > **In This Chapter**
 >

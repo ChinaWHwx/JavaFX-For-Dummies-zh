@@ -1,4 +1,4 @@
-# Chapter 4 Setting the Stage and Scene Layout
+# 第 4 章 设置窗口和场景布局
 
 > **In This Chapter**
 >
@@ -173,7 +173,6 @@ Listing 4-1 shows a program named SceneSwitcher that combines the scenes from th
 > ✓ When the SceneSwitcher program is first run, it displays the ClickCounter scene as shown on the left side of the figure.
 >
 > ✓ When the user clicks the Switch Scene button, the scene switches to the AddSubtract scene, as shown in the right side of the figure.
->
 
 > Figure 4-1: The SceneSwitcher program.
 

@@ -1,4 +1,4 @@
-# Chapter 12 Skinning Your Application with CSS
+# 第 12 章 使用 CSS 为程序换肤
 
 > **In This Chapter**
 >
