@@ -62,9 +62,7 @@ module.exports = {
       owner: 'Angus-Liu',
       repo: 'JavaFX-For-Dummies-zh',
       clientId: '17e6a1497f68b4ebef89',
-      clientSecret: '094b06e2d60b0c35dc9ef2d69931402b71b12060',
-      // 自动创建评论
-      autoCreateIssue: true,
+      clientSecret: '094b06e2d60b0c35dc9ef2d69931402b71b12060'
     },
   },
 }
