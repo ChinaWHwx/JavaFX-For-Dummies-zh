@@ -3,8 +3,8 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
-  title: 'JavaFX For Dummies',
-  description: '跟阿呆学 JavaFX',
+  title: '跟阿呆学 JavaFX',
+  description: '《JavaFX For Dummies》中文版',
   // 主题配置
   themeConfig: {
     logo: '/favicon.png',
@@ -17,7 +17,7 @@ module.exports = {
     docsDir: 'docs',
     docsBranch: 'main',
     editLinks: true,
-    editLinkText: '帮助改善翻译！',
+    editLinkText: '翻译有错？帮助改进:)',
     // 侧边栏配置
     sidebar: [
       '/Introduction',
