@@ -1,11 +1,11 @@
-# JavaFX-For-Dummies-zh（跟阿呆学 JavaFX）[↗️](https://www.angus-liu.cn/JavaFX-For-Dummies-zh/)
+# JavaFX-For-Dummies-zh（跟阿呆学 JavaFX）
 
 <p>
   <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/Angus-Liu/JavaFX-For-Dummies-zh?style=flat-square"/>
   </a>
   <a href="https://www.angus-liu.cn/JavaFX-For-Dummies-zh/">
-    <img src="https://img.shields.io/badge/Page-JavaFX--For--Dummies-informational?style=flat-square"/>
+    <img src="https://img.shields.io/badge/Website-JavaFX--For--Dummies-informational?style=flat-square"/>
   </a>
   <a href="https://travis-ci.com/github/Angus-Liu/JavaFX-For-Dummies-zh">
     <img src="https://img.shields.io/travis/com/Angus-Liu/JavaFX-For-Dummies-zh/main?style=flat-square"/>
