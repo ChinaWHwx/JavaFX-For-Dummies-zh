@@ -4,7 +4,7 @@ heroImage: '/cover.jpg'
 heroText: 跟阿呆学 JavaFX
 tagline: 《JavaFX For Dummies》中文版
 actionText: 开始阅读 →
-actionLink: /Chapter-1
+actionLink: /Introduction
 features:
 - title: 基础
   details: 安装 JavaFX 开发工具，包括 JavaFX SDK、Java SE JDK 和 NetBeans。
