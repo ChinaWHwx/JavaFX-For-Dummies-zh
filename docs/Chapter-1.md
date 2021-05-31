@@ -17,7 +17,7 @@
 
 本章的目的是让你准备好开始学习如何编写 JavaFX 程序。因此，在本章中你将看到一个简单的 JavaFX 程序示例。在 JavaFX 之旅的早期阶段，你或许不能完全理解这个程序。但不要气馁，在第 2 章中，我会对它逐行分析，以便你了解它的作用所在。在这一章中，我主要从高层关注 JavaFX 是什么，你可以用它做什么，以及如何为 JavaFX 编程设置你的计算机。
 
-<img src="assets/remember.png" width="80" />本书中的所有代码都可以从 www.dummies.com/extras/javafx 下载。
+<img src="./assets/remember.png" width="80" />本书中的所有代码都可以从 www.dummies.com/extras/javafx 下载。
 
 
 
@@ -25,13 +25,13 @@
 
 简而言之，JavaFX 是一系列 Java 包的集合，它允许你为 Java 应用程序添加精美的图形用户界面。借助 JavaFX，你可以创建传统 Windows 风格的用户界面，其中包括熟悉的控件，如标签、按钮、文本框、复选框、下拉列表等。你还可以为这些用户界面添加一些特殊效果，例如光源，透视图和动画。这就是 JavaFX 中的 FX 由来。
 
-<img src="assets/technical-stuff.png" width="80"/>JavaFX 出现之前，在 Java 中创建图形用户界面的主要方法是通过 Swing API。JavaFX 在许多方面与 Swing 有相似之处，所以如果你曾经使用过 Swing 为 Java 程序创建用户界面，这对学习 JavaFX 来说会是一个良好的开端。
+<img src="./assets/technical-stuff.png" width="80"/>JavaFX 出现之前，在 Java 中创建图形用户界面的主要方法是通过 Swing API。JavaFX 在许多方面与 Swing 有相似之处，所以如果你曾经使用过 Swing 为 Java 程序创建用户界面，这对学习 JavaFX 来说会是一个良好的开端。
 
 JavaFX 作为附加包出现已经有一段时间了，但是从 Java 8 开始，它成为了 Java 平台官方标准的一部分。因此，在安装了 Java 8 开发工具包（*JDK 8*）之后，你就可以开始使用喜欢的开发工具开发 JavaFX 应用程序了。在本章的后面，你将知道如何下载和安装 JDK 8，以及如何使用三款流行的 Java 开发工具：TextPad、Eclipse 和 NetBeans 来创建一个简单的 JavaFX 程序。
 
 因为 JavaFX 现在是 Java 标准的一部分，所以可以在任何包含 Java 8 运行时环境（JRE）的设备上运行 JavaFX 程序。这些设备包括计算机、平板、智能手机和其他支持 JDK8 的设备。
 
-<img src="assets/technical-stuff.png" width="80" />Oracle 已经宣布 JavaFX 最终将取代Swing。尽管 Java 8 仍然支持 Swing，并且短期内还不会改变，但 Oracle 把主要精力放在 JavaFX 的新特性上。最终，Swing 将被淘汰。
+<img src="./assets/technical-stuff.png" width="80" />Oracle 已经宣布 JavaFX 最终将取代Swing。尽管 Java 8 仍然支持 Swing，并且短期内还不会改变，但 Oracle 把主要精力放在 JavaFX 的新特性上。最终，Swing 将被淘汰。
 
 
 
@@ -52,9 +52,8 @@ JavaFX 开始大放异彩的地方在于它能够使用级联样式表（*CSS*�
 图 1-2 显示了图 1-1 中所示形式的一种变体，这次使用了 CSS 进行格式化，为表单添加了背景图片，增强了文本格式，并修改了按钮的外观。
 
 > 图 1-2：JavaFX 允许你使用 CSS 指定用户界面元素的格式。
->
 
-![Figure 1-2](assets/Figure-1-2.png)
+![Figure 1-2](./assets/Figure-1-2.png)
 
 除了 CSS，JavaFX 还提供了许多其他功能。其中最重要的有：
 
@@ -79,9 +78,8 @@ JavaFX 开始大放异彩的地方在于它能够使用级联样式表（*CSS*�
 图 1-3 显示了一个非常简单的 JavaFX 程序的用户界面，它只包含一个按钮。最初，按钮上显示的文字是 `Click me please!`。当按钮被点击后，文本变成了 `You clicked me!`。如果再次点击，文本会变回 `Click me please!` 。此后，每次单击按钮时，文本在 `Click me please!` 和 `You clicked me!` 之前交替变换。
 
 > 图 1-3：Click Me 程序。
->
 
-![Figure 1-3](assets/Figure-1-3.png)
+![Figure 1-3](./assets/Figure-1-3.png)
 
 为了让你了解 JavaFX 编程是什么样的，清单 1-1 完整展示了这个程序。这里我不会解释程序工作的细节 —— 我会在第 2 章对它进行详细研究。现在，我只想让你对 JavaFX 编程有个总体认知。
 
@@ -152,7 +150,6 @@ public class ClickMe extends Application {
 >- 调用舞台的 `show` 方法显示应用程序的 GUI（图形用户界面）。 
 > 
 >✓ 每当用户单击按钮时，都会调用 `buttonClick` 方法。此方法检查按钮当前显示的文本，并进行相应更改。因此，每次用户单击该按钮时，按钮的文本都会从 `Click me please!` 变为 `You clicked me!` ，反之亦然。
-> 
 
 如果你发现这个程序的某些地方（或者全部）让你感到困惑，请不要担心。我写这一章的目的是让你看一眼这个简单的 JavaFX 程序，而不是让你对这个程序如何工作的细节感到不知所措。正如前面提到的，我将在第 2 章逐行回顾这个程序的细节。
 
@@ -178,7 +175,7 @@ JDK 提供两个版本供用户下载：
 >
 >   离线版本需要先下载 JDK 安装包文件到你的电脑，然后再安装。
 
-<img src="assets/tip.png" width="80"/>建议你使用离线版本，不仅安装速度更快，而且在下次需要重新安装 JDK 时也不需要再次下载。
+<img src="./assets/tip.png" width="80"/>建议你使用离线版本，不仅安装速度更快，而且在下次需要重新安装 JDK 时也不需要再次下载。
 
 ### 安装 JDK 8
 
@@ -211,7 +208,7 @@ JDK 提供两个版本供用户下载：
    
    > 图 1-4： “环境变量”对话框。
    
-   ![Figure 1-4](assets/Figure-1-4.png)
+   ![Figure 1-4](./assets/Figure-1-4.png)
 
 4. **在系统变量列表中，滚动到 Path 变量，选择它，然后单击“编辑”按钮。**
 
@@ -256,19 +253,19 @@ Windows 附带的免费文本编辑器——记事本，足以创建简单的 Ja
 
 2. **在编辑窗口中输入清单1-1中所示的 Click Me 程序。**
 
-   <img src="assets/warning.png" width="80"/>确保输入的文本与清单中显示的完全一致。完成之后，记得仔细检查，确保输入无误。
+   <img src="./assets/warning.png" width="80"/>确保输入的文本与清单中显示的完全一致。完成之后，记得仔细检查，确保输入无误。
 
    图 1-5 展示了正确输入 Click Me 程序后的显示结果。 （图中显示的记事本窗口不够大，不足以显示整个源文件，你可以通过滚动窗口看到整个文件。）
 
    > 图 1-5：记事本中的 Click Me 程序。
 
-   ![Figure 1-5](assets/Figure-1-5.png)
+   ![Figure 1-5](./assets/Figure-1-5.png)
 
 3. **使用 `ClickMe.java` 作为为名称，选择“文件”➪“保存”。**
 
    可以保存在任何你想存放的文件夹里，但是文件名必须为 `ClickMe.java`。
 
-   <img src="assets/tip.png" width="80"/>Java 源文件的名称必须与类的名称完全匹配，包括大小写形式。所以，如果将文件另存为 `clickme.java` 而不是 `ClickMe.java`，Click Me 程序将无法运行。
+   <img src="./assets/tip.png" width="80"/>Java 源文件的名称必须与类的名称完全匹配，包括大小写形式。所以，如果将文件另存为 `clickme.java` 而不是 `ClickMe.java`，Click Me 程序将无法运行。
 
 4. **打开命令提示窗口。**
 
@@ -308,7 +305,7 @@ Windows 附带的免费文本编辑器——记事本，足以创建简单的 Ja
 
    > 图 1-6： Click Me 程序运行中
 	
-   ![Figure 1-6](assets/Figure-1-6.png)
+   ![Figure 1-6](./assets/Figure-1-6.png)
 
 8. **点击 `Click Me Please!`  按钮。**
 
@@ -350,7 +347,7 @@ TextPad 是一个便宜的文本编辑器（$33），你可以将其与 Java 开
 
    > 图 1-7：TextPad 中的 Click Me 程序。
 
-   ![Figure 1-7](assets/Figure-1-7.png)
+   ![Figure 1-7](./assets/Figure-1-7.png)
 
 4. **选择 Tools➪Compile Java 以编译程序。**
 
@@ -385,7 +382,7 @@ IDE（集成开发环境）是一种功能强大的工具，它结合了复杂�
 
 要开始使用 Eclipse，请访问 www.eclipse.org ，单击 Download Eclipse 按钮，下载当前适用于 Java 开发人员版本的 Eclipse IDE。与大多数程序不同，Eclipse 没有复杂的安装程序。你只需下载 Zip 文件，解压缩，然后直接从解压到的文件夹中运行 Eclipse 可执行文件（`eclipse.exe`）。
 
-<img src="assets/tip.png" width="80"/>如果你使用的是 Windows，为了更方便地启动 Eclipse，可能需要为它添加一个桌面快捷方式。为此，请打开包含 `eclipse.exe` 文件的文件夹，右键单击该文件并将其拖到桌面上，释放鼠标按钮，然后从出现的菜单中选择“创建快捷方式”。这样，你就可以通过双击桌面快捷方式来启动 Eclipse 了。
+<img src="./assets/tip.png" width="80"/>如果你使用的是 Windows，为了更方便地启动 Eclipse，可能需要为它添加一个桌面快捷方式。为此，请打开包含 `eclipse.exe` 文件的文件夹，右键单击该文件并将其拖到桌面上，释放鼠标按钮，然后从出现的菜单中选择“创建快捷方式”。这样，你就可以通过双击桌面快捷方式来启动 Eclipse 了。
 
 以下是在 Eclipse 中创建 Click Me 程序的步骤：
 
@@ -395,7 +392,7 @@ IDE（集成开发环境）是一种功能强大的工具，它结合了复杂�
 
    > 图 1-8：Eclipse 等待你的命令。
    
-   ![Figure 1-8](assets/Figure-1-8.png)
+   ![Figure 1-8](./assets/Figure-1-8.png)
 
 2. **选择 File➪New➪Java Project。**
 
@@ -403,16 +400,15 @@ IDE（集成开发环境）是一种功能强大的工具，它结合了复杂�
 
    > 图 1-9：创建一个新的 Java 项目。
 
-   ![Figure 1-9](assets/Figure-1-9.png)
+   ![Figure 1-9](./assets/Figure-1-9.png)
 
 3. **在 Project Name 文本框中输入 `ClickMe`，然后点击 Finish。**
 
    Eclipse 建立项目并将其添加到屏幕左侧的 Package Explorer 窗格中，如图 1-10 所示。(最初，项目是折叠的，只显示项目的顶部一行。在此图中，我展开项目，显示出了名为 `src` 和 `JRE System Library` 的子文件夹。)
 
    > 图 1-10：ClickMe 项目显示在 Package Explorer 窗格中。
-   >
 
-   ![Figure 1-10](assets/Figure-1-10.png)
+![Figure 1-10](./assets/Figure-1-10.png)
 
 
 4. **选择 File➪New➪Class。**
@@ -421,24 +417,23 @@ IDE（集成开发环境）是一种功能强大的工具，它结合了复杂�
    
    > 图 1-11：向 ClickMe 项目添加一个类文件。
 
-   ![Figure 1-11](assets/Figure-1-11.png)
+   ![Figure 1-11](./assets/Figure-1-11.png)
 
 5. **在 Name 文本框中输入 ClickMe，然后单击 Finish。**
 
    Eclipse 会将一个名为 `ClickMe.java` 的文件添加到 `src` 文件夹，并在编辑窗口中打开该文件，如图 1-12 所示。注意，Eclipse 还添加了一小段代码，以帮助你开始使用该类。
 
    > 图 1-12：Eclipse 显示新创建的 ClickMe.java 文件。
-   >
-
-   ![Figure 1-12](assets/Figure-1-12.png)
-
+   
+   ![Figure 1-12](./assets/Figure-1-12.png)
+   
 6. **删除 `ClickMe.java` 文件中的代码，然后将清单 1-1 中的文本输入到编辑窗口中。**
 
    图 1-13 显示了正确输入程序文本后 ClickMe.java 文件的外观。
   
    > 图1-13：在 Eclipse 中完成的 Click Me 程序。
 
-   ![Figure 1-13](assets/Figure-1-13.png)
+   ![Figure 1-13](./assets/Figure-1-13.png)
 
 7. **选择 Run➪Run 以运行程序。**
   
