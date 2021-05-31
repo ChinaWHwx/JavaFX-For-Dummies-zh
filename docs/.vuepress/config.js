@@ -52,5 +52,19 @@ module.exports = {
   // markdown 配置
   markdown: {
     // lineNumbers: true
-  }
+  },
+  // 插件配置
+  plugins: {
+    '@vssue/vuepress-plugin-vssue': {
+      // 设置 `platform` 而不是 `api`
+      platform: 'github',
+      // 其他的 Vssue 配置
+      owner: 'Angus-Liu',
+      repo: 'JavaFX-For-Dummies-zh',
+      clientId: '17e6a1497f68b4ebef89',
+      clientSecret: '094b06e2d60b0c35dc9ef2d69931402b71b12060',
+      // 自动创建评论
+      autoCreateIssue: true,
+    },
+  },
 }
