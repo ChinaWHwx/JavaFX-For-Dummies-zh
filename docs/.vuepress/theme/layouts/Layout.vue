@@ -39,7 +39,7 @@
       <template #bottom>
         <slot name="page-bottom" />
         <!-- Vssue 评论组件 -->
-        <Vssue class="theme-default-content content__default" :options="{ locale: 'zh' }" />
+        <Vssue class="theme-default-content content__default" style="padding:0" :options="{ locale: 'zh' }" />
       </template>
     </Page>
   </div>
