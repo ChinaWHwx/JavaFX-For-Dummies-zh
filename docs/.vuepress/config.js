@@ -3,7 +3,7 @@ module.exports = {
   head: [
     ['link', { rel: 'icon', href: '/favicon.png' }]
   ],
-  title: '跟阿呆学 JavaFX',
+  title: 'JavaFX For Dummies',
   description: '《JavaFX For Dummies》中文版',
   // 主题配置
   themeConfig: {

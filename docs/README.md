@@ -1,8 +1,8 @@
 ---
 home: true
 heroImage: '/cover.jpg'
-heroText: JavaFX For Dummies
-tagline: 跟阿呆学 JavaFX
+heroText: 跟阿呆学 JavaFX
+tagline: 《JavaFX For Dummies》中文版
 actionText: 开始阅读 →
 actionLink: /Chapter-1
 features:
