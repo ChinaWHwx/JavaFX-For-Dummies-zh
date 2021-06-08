@@ -33,7 +33,7 @@ When a JavaFX application is launched, a stage known as the primary stage is aut
 
 You can then use the primary stage to create the application’s user interface by adding a scene, which contains one or more controls or other user-interface nodes.
 
-<img src="assets/tip.png" width="80"/>In many cases, you will need to access the primary stage outside of the scope of the start method. You can easily make this possible by defining a class field and using it to reference the primary stage. You see an example of how to do that later in this chapter, in the section “Switching Scenes.”
+<img src="assets/tip.png" width="50"/>In many cases, you will need to access the primary stage outside of the scope of the start method. You can easily make this possible by defining a class field and using it to reference the primary stage. You see an example of how to do that later in this chapter, in the section “Switching Scenes.”
 
 The primary stage initially takes on the default characteristics of a normal windowed application, which depends on the operating system within which the program will run. You can, if you choose, change these defaults to suit the needs of your application. At the minimum, you should always set the window title. You may also want to change details, such as whether the stage is resizable and various aspects of the stage’s appearance.
 

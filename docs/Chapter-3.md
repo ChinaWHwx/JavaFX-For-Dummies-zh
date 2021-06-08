@@ -14,7 +14,7 @@
 
 最后，你将了解到属性绑定的思想，它允许你编写的代码能够响应类中某些类型字段（属性字段）值的更改。在 JavaFX 中，属性绑定有时用于需要调用 Swing 中事件处理器的情况。
 
-<img src="assets/tip.png" width="80"/>事件处理不仅仅用于响应按钮的单击，还可以响应其他类型的交互。例如，当用户进行下拉框的选择、鼠标移动到标签上或是按下键盘中某个按键时都可以使用事件处理执行代码。
+<img src="assets/tip.png" width="50"/>事件处理不仅仅用于响应按钮的单击，还可以响应其他类型的交互。例如，当用户进行下拉框的选择、鼠标移动到标签上或是按下键盘中某个按键时都可以使用事件处理执行代码。
 
 ## 调查事件
 
@@ -41,7 +41,7 @@ An event is represented by an instance of the class javafx.event.Event or one of
 | TouchEvent  | javafx. scene.input | Created when a user initiates a touch event on a device that allows touch input. |
 | WindowEvent | javafx.stage        | Created when the status of the window (stage) changes.       |
 
-<img src="assets/tip.png" width="80"/>您需要了解以下四个重要术语：
+<img src="assets/tip.png" width="50"/>您需要了解以下四个重要术语：
 
 > ✓ Event: An object that’s created when the user does something noteworthy with a component, such as clicking it.
 >

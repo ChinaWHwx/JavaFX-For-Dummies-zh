@@ -41,7 +41,7 @@ r1.setFill(Color.RED);
 
 The Color class defines a number of constants for commonly used colors. In this section, I use just three: LIGHTGRAY, DARKGRAY, and DIMGRAY.
 
-<img src="assets/technical-stuff.png" width="80"/>The Rectangle class is in the javafx.scene.shape package, and the Color class is in javafx.scene.paint. Thus, you need to include the following import statements to use these classes:
+<img src="assets/technical-stuff.png" width="50"/>The Rectangle class is in the javafx.scene.shape package, and the Color class is in javafx.scene.paint. Thus, you need to include the following import statements to use these classes:
 
 ```java
 import javafx.scene.shapes.*; 

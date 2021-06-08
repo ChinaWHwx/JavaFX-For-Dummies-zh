@@ -111,7 +111,7 @@ public class ClickMe extends Application
 
 在这里，Click Me 应用程序由继承了 `Application` 的 `ClickMe` 的类定义。
 
-<img src="assets/technical-stuff.png" width="80"/>因为在 Click Me 程序的第 1 行中导入了整个 `javafx.application` 包，所以 `Application` 类不需要使用全限定名。如果省略了 `javafx.application` 包的 `import` 语句，`ClickMe` 类的声明需要变成这样：
+<img src="assets/technical-stuff.png" width="50"/>因为在 Click Me 程序的第 1 行中导入了整个 `javafx.application` 包，所以 `Application` 类不需要使用全限定名。如果省略了 `javafx.application` 包的 `import` 语句，`ClickMe` 类的声明需要变成这样：
 
 ```java
 public class ClickMe extends javafx.application.Application
@@ -219,7 +219,6 @@ Click Me 程序的 `start` 方法如下所示：
 > ✓ 与 `main` 方法不同，`start` 方法不是静态方法。当你从静态 `main` 方法调用 `launch` 方法时，`launch` 方法将创建 `Application` 类的一个实例，然后调用 `start` 方法。
 >
 > ✓ `start` 方法接受一个参数：`Stage` 对象，应用程序的用户界面将在其上进行显示。当应用程序调用你的 `start` 方法时，会通过 `primaryStage` 参数传递主舞台（primary stage）。因此，你可以在稍后的 `start` 方法中使用 `primaryStage` 参数来引用应用程序的舞台。
->
 
 ## 创建按钮
 
@@ -266,7 +265,7 @@ btn.setText("Click me please!");
 btn.setOnAction(e -> buttonClick());
 ```
 
-<img src="assets/tip.png" width="80"/>这里使用的语法可能看起来有点陌生，因为它使用了 Java 8 的一个新特性 —— Lambda 表达式。在示例中，这个新语法包含三个元素：
+<img src="assets/tip.png" width="50"/>这里使用的语法可能看起来有点陌生，因为它使用了 Java 8 的一个新特性 —— Lambda 表达式。在示例中，这个新语法包含三个元素：
 
 > ✓ 参数 `e` 表示一个 `ActionEvent` 类型的对象，程序可以使用它来获取事件的详细信息。
 >
@@ -298,7 +297,7 @@ public void buttonClick() {
 >
 > **✓ setText：** 设置按钮显示的文本
 
-<img src="assets/cross-reference.png" width="80"/>有关处理事件的更多信息，请参阅第 3 章。
+<img src="assets/cross-reference.png" width="50"/>有关处理事件的更多信息，请参阅第 3 章。
 
 ## 创建布局面板
 
@@ -349,7 +348,7 @@ Scene scene = new Scene(pane, 300, 250);
 
 注意：如果省略宽度和高度，将根据根节点中包含的元素的大小自动调整场景的大小。
 
-<img src="assets/cross-reference.png" width="80"/>你可以在第 4 章中找到 `Scene` 类的一些其他功能。
+<img src="assets/cross-reference.png" width="50"/>你可以在第 4 章中找到 `Scene` 类的一些其他功能。
 
 ## 舞台设置
 
@@ -373,7 +372,7 @@ primaryStage.show();
 
 当最后一行的 `show` 方法被调用时，舞台便显示出来 —— 换句话说，如图 2-1 所示的窗口将显示在屏幕上。
 
-<img src="assets/cross-reference.png" width="80"/>你可以在第 4 章了解到 `Stage` 类的其他功能。
+<img src="assets/cross-reference.png" width="50"/>你可以在第 4 章了解到 `Stage` 类的其他功能。
 
 ## 检查 Click Counter 程序
 

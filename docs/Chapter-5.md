@@ -8,7 +8,7 @@
 
 Controlling the layout of components in a scene is often one of the most difficult aspects of working with JavaFX. In fact, at times it can be downright exasperating. Often the components almost seem to have minds of their own. They get stubborn and refuse to budge. They line up on top of one another when you want them to be side by side. You make a slight change to a label or text field, and the whole scene seems to rearrange itself. At times, you want to put your fist through the monitor.
 
-<img src="assets/warning.png" width="80"/>I recommend against putting your fist through your monitor. You’ll make a mess, cut your hand, and have to spend money on a new monitor — and when you get your computer working again, the components still won’t line up the way you want them to be.
+<img src="assets/warning.png" width="50"/>I recommend against putting your fist through your monitor. You’ll make a mess, cut your hand, and have to spend money on a new monitor — and when you get your computer working again, the components still won’t line up the way you want them to be.
 
 The problem isn’t with the components; it’s with the layout panes, which determine where each component appears in its frame or panel. Layout panes are special classes whose sole purpose in life is to control the arrangement of the nodes that appear in a scene. JavaFX provides several distinct types of layout panes; each type uses a different approach to controlling the arrangement of nodes. The trick to successfully lay out a scene is to use the layout panes in the correct combination to achieve the arrangement you want.
 
@@ -32,7 +32,7 @@ JavaFX provides many different layout panes for you to work with. I explain the 
 
 To give you a general idea of the results that can be achieved with each of these four layout panes, Figure 5-1 shows four sample windows that each use one of the layout panes.
 
-<img src="assets/cross-reference.png" width="80"/>Chapter 11 discusses additional types of layout panes.
+<img src="assets/cross-reference.png" width="50"/>Chapter 11 discusses additional types of layout panes.
 
 > Figure 5-1: Four commonly used types of layout panes.
 
@@ -514,7 +514,7 @@ The border layout is a pane that is carved into five regions: Top, Left, Center,
 
 ![Figure 5-6](./assets/Figure-5-6.png)
 
-<img src="assets/tip.png" width="80"/>Border layout is the ideal layout manager for applications that have a traditional window arrangement in which menus and toolbars are displayed at the top of the window, a status bar or OK and Cancel buttons are displayed at the bottom, a navigation pane is displayed on the left, various task panes are displayed on the right, and content is displayed in the middle.
+<img src="assets/tip.png" width="50"/>Border layout is the ideal layout manager for applications that have a traditional window arrangement in which menus and toolbars are displayed at the top of the window, a status bar or OK and Cancel buttons are displayed at the bottom, a navigation pane is displayed on the left, various task panes are displayed on the right, and content is displayed in the middle.
 
 You use the BorderPane class to create a border layout. Table 5-7 lists the constructors and the most commonly used methods for the BorderPane class.
 
@@ -568,7 +568,7 @@ The third constructor listed in Table 5-7 lets you add nodes to all five regions
 BorderPane pane = new BorderPane(centerPane, topPane, rightPane, bottomPane, leftPane);
 ```
 
-<img src="assets/tip.png" width="80"/>Here are a few additional important points to know about the BorderPane class:
+<img src="assets/tip.png" width="50"/>Here are a few additional important points to know about the BorderPane class:
 
 > ✓ If you don’t add a node to one of the regions, that region is not rendered.
 >

@@ -217,7 +217,7 @@ public void menuAction(ActionEvent e) {
 }
 ```
 
-<img src="assets/tip.png" width="80"/>Here’s a sample action listener that you may want to use while you’re figuring out how to work with menus. This action listener simply displays the text of each menu item on the console whenever the user chooses a menu command. That way, you can be certain you’re setting up your menus and action listeners properly:
+<img src="assets/tip.png" width="50"/>Here’s a sample action listener that you may want to use while you’re figuring out how to work with menus. This action listener simply displays the text of each menu item on the console whenever the user chooses a menu command. That way, you can be certain you’re setting up your menus and action listeners properly:
 
 ```java
 public void menuAction(ActionEvent e){ 

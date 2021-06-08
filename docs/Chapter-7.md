@@ -139,7 +139,7 @@ hbox.getChildren().addAll(lblAddress, txtAddress);
 
 The getChildren method returns an object of type ObservableList, which in turn extends the List interface. Between them, these two interfaces define a few dozen methods that you can use to manipulate the parent’s child nodes. Table 7-2 lists a few of the more commonly used of these methods.
 
-<img src="assets/technical-stuff.png" width="80"/>Interestingly, the getParent method is defined in the Parent class with protected access. That means that although the getParent method is available to any class that inherits the Parent class, the getParent method is not accessible to the outside world. For the getParent method to become public, a class that inherits the Parent class must override the getParent method with public access.
+<img src="assets/technical-stuff.png" width="50"/>Interestingly, the getParent method is defined in the Parent class with protected access. That means that although the getParent method is available to any class that inherits the Parent class, the getParent method is not accessible to the outside world. For the getParent method to become public, a class that inherits the Parent class must override the getParent method with public access.
 
 **Table 7-2 Commonly Used ObservableList Methods**
 
@@ -161,7 +161,7 @@ That’s precisely what the Pane class does. The Pane class is the base class of
 
 As you can see, the getChildren method in the Pane class simply calls the getChildren method of its superclass (Parent) and returns the result.
 
-<img src="assets/tip.png" width="80"/>One class derived from the Parent class which you may use on occasion is the Group class. The Group class is a bit like a layout pane such as HBox or FlowPane, except that it doesn’t provide any actual layout for the child nodes it contains. When you create a Group, you can pass the child nodes to the constructor, like this:
+<img src="assets/tip.png" width="50"/>One class derived from the Parent class which you may use on occasion is the Group class. The Group class is a bit like a layout pane such as HBox or FlowPane, except that it doesn’t provide any actual layout for the child nodes it contains. When you create a Group, you can pass the child nodes to the constructor, like this:
 
 ```java
 Group group = new Group(Node1, Node2, Node3);
@@ -240,7 +240,7 @@ If you don’t specify any height or width constraints, all three — minimum, p
 
 Note: In many cases, the contents of a region will resize automatically to fill whatever space is available to it. Thus, if the user dynamically resizes the window that contains the scene, the size of all the regions contained within the scene may expand or contract to fill the available space.
 
-<img src="assets/tip.png" width="80"/>If you want to set an exact value for a region’s width or height, set all three parameters (minimum, preferred, and maximum) to the same value. For example:
+<img src="assets/tip.png" width="50"/>If you want to set an exact value for a region’s width or height, set all three parameters (minimum, preferred, and maximum) to the same value. For example:
 
 ```java
 lbl.setMinWidth(150); 

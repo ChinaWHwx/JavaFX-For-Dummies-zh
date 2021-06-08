@@ -285,7 +285,7 @@ Table 6-2 lists the parse methods for the various wrapper classes. Note: Each of
 | Float         | parseFloat(String)  |
 | Double        | parseDouble(String) |
 
-<img src="assets/tip.png" width="80"/>If your program uses more than one or two numeric-entry text fields, consider creating separate methods to validate the user’s input. The following code snippet shows a method that accepts a text field and a string that provides an error message to be displayed if the data entered in the field can’t be converted to an int. The method returns a Boolean value that indicates whether the field contains a valid integer:
+<img src="assets/tip.png" width="50"/>If your program uses more than one or two numeric-entry text fields, consider creating separate methods to validate the user’s input. The following code snippet shows a method that accepts a text field and a string that provides an error message to be displayed if the data entered in the field can’t be converted to an int. The method returns a Boolean value that indicates whether the field contains a valid integer:
 
 ```java
 private boolean isInt(TextField f, String msg) {
@@ -396,7 +396,7 @@ Pepperoni
 Anchovies
 ```
 
-<img src="assets/technical-stuff.png" width="80"/>If you want, you can add event listeners to check boxes to respond to events generated when the user clicks those check boxes. Suppose that your restaurant has anchovies on the menu, but you refuse to actually make pizzas with anchovies on them. Here’s a method you can call in an event listener to display a message if the user tries to check the Anchovies check box; after displaying the message, the method then clears the check box:
+<img src="assets/technical-stuff.png" width="50"/>If you want, you can add event listeners to check boxes to respond to events generated when the user clicks those check boxes. Suppose that your restaurant has anchovies on the menu, but you refuse to actually make pizzas with anchovies on them. Here’s a method you can call in an event listener to display a message if the user tries to check the Anchovies check box; after displaying the message, the method then clears the check box:
 
 ```java
 public void chkAnchovies_Click(){ 
@@ -411,7 +411,7 @@ To add this event listener to the Anchovies check box, call its setOnAction meth
 chkAnchovies.setOnAction(e -> chkAnchovies_Click());
 ```
 
-<img src="assets/tip.png" width="80"/>Add a listener to a check box only if you need to provide immediate feedback to the user when she selects or deselects the box. In most applications, you wait until the user clicks a button to examine the state of any check boxes in the frame.
+<img src="assets/tip.png" width="50"/>Add a listener to a check box only if you need to provide immediate feedback to the user when she selects or deselects the box. In most applications, you wait until the user clicks a button to examine the state of any check boxes in the frame.
 
 ## Using Radio Buttons
 
@@ -423,7 +423,7 @@ Radio buttons are similar to check boxes, but with a crucial difference: They tr
 
 To work with radio buttons, you use two classes. First, you create the radio buttons themselves with the RadioButton class, whose constructors and methods are shown in Table 6-4. Then you create a group for the buttons with the ToggleGroup class and add the radio buttons to the toggle group.
 
-<img src="assets/technical-stuff.png" width="80"/>A ToggleGroup object is simply a way of associating a set of radio buttons so that only one of the buttons can be selected. The toggle group object itself is not a control and is not displayed. To display radio buttons, you add the individual radio buttons, not the toggle group, to a layout pane.
+<img src="assets/technical-stuff.png" width="50"/>A ToggleGroup object is simply a way of associating a set of radio buttons so that only one of the buttons can be selected. The toggle group object itself is not a control and is not displayed. To display radio buttons, you add the individual radio buttons, not the toggle group, to a layout pane.
 
 **Table 6-4 Various RadioButton Constructors and Methods**
 
@@ -468,9 +468,9 @@ rdoMedium.setToggleGroup(sizeGroup);
 rdoLarge.setToggleGroup(sizeGroup);
 ```
 
-<img src="assets/remember.png" width="80"/>Toggle groups have nothing to do with how radio buttons display. To display radio buttons, you must still add them to a layout pane. And there’s no rule that says that all the radio buttons within a toggle group must be added to the same layout pane. However, it is customary to display all the radio buttons in a single toggle group together on the scene so that the user can easily see that the radio buttons belong together.
+<img src="assets/remember.png" width="50"/>Toggle groups have nothing to do with how radio buttons display. To display radio buttons, you must still add them to a layout pane. And there’s no rule that says that all the radio buttons within a toggle group must be added to the same layout pane. However, it is customary to display all the radio buttons in a single toggle group together on the scene so that the user can easily see that the radio buttons belong together.
 
-<img src="assets/technical-stuff.png" width="80"/>If you’ve worked with radio buttons in Swing, you’ll want to note an important distinction between the way JavaFX toggle groups work versus how button groups work in Swing. In JavaFX, radio buttons that are outside a toggle group are independent of one another. In Swing, radio buttons that are outside a button group are all part of a default group. Thus, in JavaFX, always add radio buttons to a toggle group, even if the scene has only a single toggle group.
+<img src="assets/technical-stuff.png" width="50"/>If you’ve worked with radio buttons in Swing, you’ll want to note an important distinction between the way JavaFX toggle groups work versus how button groups work in Swing. In JavaFX, radio buttons that are outside a toggle group are independent of one another. In Swing, radio buttons that are outside a button group are all part of a default group. Thus, in JavaFX, always add radio buttons to a toggle group, even if the scene has only a single toggle group.
 
 ## Looking at a Pizza Order Application
 
