@@ -70,7 +70,7 @@ module.exports = {
         label: 'English',
         ariaLabel: 'Languages',
         nav: [
-          { text: 'Home', link: '/' },
+          { text: 'Home', link: '/en/' },
           { text: 'Introduction', link: '/en/Introduction' },
           { text: 'Buy', link: 'https://www.amazon.com/JavaFX-Dummies-Doug-Lowe/dp/1118385349' },
         ],
